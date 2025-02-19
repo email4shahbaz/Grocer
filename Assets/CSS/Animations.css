@@ -1,0 +1,50 @@
+/* Fullscreen Logo Cover */
+.logo-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* Background color of the cover screen */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+  
+  /* Hide the cover after animation */
+  .logo-cover.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  /* Logo Animation */
+  .animated-logo {
+    width: 300px; /* Default size for larger screens */
+    animation: zoom-in-out 2s ease-in-out infinite;
+  }
+  
+  /* Keyframes for Zoom-In and Zoom-Out Animation */
+  @keyframes zoom-in-out {
+    0%, 100% {
+      transform: scale(1); /* Original size */
+    }
+    50% {
+      transform: scale(1.2); /* Slightly zoomed in */
+    }
+  }
+  
+  /* Responsive Design for Mobile View */
+  @media (max-width: 768px) {
+    .animated-logo {
+      width: 200px; /* Smaller size for mobile devices */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .animated-logo {
+      width: 150px; /* Even smaller size for very small devices */
+    }
+  }
+  

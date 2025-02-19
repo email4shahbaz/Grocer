@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.homeSubNavBarLayout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.homeSubNavBarItem1 {
+     width: 17%; 
+}
+
+.homeSubNavBarItem2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.homeSubNavBarItem3 {
+    /* width: 22%; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.SubnavIconsAdjustment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Quicksand';
+    color: #253D4E;
+}
+
+.SupportcenterHeading1 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #53B175;
+    margin: 0px;
+    font-family: 'Quicksand';
+    white-space: nowrap;
+}
+
+.SupportcenterHeading2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #253D4E;
+    margin: 0px;
+    font-family: 'Quicksand';
+    white-space: nowrap;
+}
+
+.SupportCenterMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Explore_all_categories_Btn {
+    background-color: var(--green);
+    color: white;
+    border-radius: 12px;
+    /* padding: 12px; */
+    font-family: Quicksand;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    white-space:nowrap;
+}
+
+.Explore_all_categories_Btn:Hover {
+    background-color: var(--hovergreen);
+}
+
+.ullists_subhomenav {
+    margin-left: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.support_li {
+    margin-left: 30px;
+}
+
+.Number_Support {
+    color: var(--green);
+}
+
+.active_subNav {
+    color: var(--green);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (max-width:575px) {
+    .home_page_nav_two {
+        display: none;
+    }
+}

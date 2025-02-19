@@ -1,0 +1,59 @@
+[
+    {
+        "id": "1",
+        "name": "Chips",
+        "price": 10,
+        "discountedPrice": 9,
+        "sku": "SNK001",
+        "image": ["Assets/Images/Products/chips.png"],
+        "description": "Crispy Chips",
+        "detailedDescription": "Light and crispy chips, perfect for snacking or parties. Available in a variety of flavors.",
+        "rating": 4,
+        "categoryName": "Snacks",
+        "tags": ["Crispy", "Tasty", "Snack"],
+        "nutrition": {
+            "calories": 152,
+            "protein": "2g",
+            "fats": "10g",
+            "carbohydrates": "15g"
+        }
+    },
+    {
+        "id": "2",
+        "name": "Cheese",
+        "price": 5,
+        "discountedPrice": 4.75,
+        "sku": "SNK002",
+        "image": ["Assets/Images/Products/cheese.png"],
+        "description": "Fresh and Organic",
+        "detailedDescription": "Rich and creamy cheese, perfect for sandwiches, burgers, or as a topping. High in calcium.",
+        "rating": 3,
+        "categoryName": "Snacks",
+        "tags": ["Creamy", "Rich", "Organic"],
+        "nutrition": {
+            "calories": 402,
+            "protein": "25g",
+            "fats": "33g",
+            "carbohydrates": "1.3g"
+        }
+    },
+    {
+        "id": "3",
+        "name": "Almonds",
+        "price": 3,
+        "discountedPrice": 2.85,
+        "sku": "SNK003",
+        "image": ["/Assets/Images/Products/almonds.jpg"],
+        "description": "Fresh and Organic",
+        "detailedDescription": "Crunchy and nutritious almonds, perfect for snacking, baking, or adding to desserts. High in protein and vitamins.",
+        "rating": 5,
+        "categoryName": "Snacks",
+        "tags": ["Crunchy", "Healthy", "Organic"],
+        "nutrition": {
+            "calories": 576,
+            "protein": "21g",
+            "fats": "49g",
+            "carbohydrates": "22g"
+        }
+    }
+]

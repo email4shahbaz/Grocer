@@ -1,0 +1,13 @@
+[
+    { "name": "Fruits", "icon": "Assets/Images/Products/Apple.png", "file": "fruits.json" },
+    { "name": "Vegetables", "icon": "Assets/Images/Products/Vegitables.png", "file": "vegetables.json" },
+    { "name": "Dairy", "icon": "Assets/Images/Products/butter.png", "file": "dairy.json" },
+    { "name": "Beverages", "icon": "Assets/Images/Products/beverages.png", "file": "beverages.json" },
+    { "name": "Snacks", "icon": "Assets/Images/Products/snacks.jpg", "file": "snacks.json" },
+    { "name": "Fresh Fruits", "icon": "Assets/Images/Products/banana.png", "file": "fruits.json" },
+    { "name": "Fresh Vegetables", "icon": "Assets/Images/Products/potatto.png", "file": "vegetables.json" },
+    { "name": "Dairy", "icon": "Assets/Images/Products/cheese.jpg", "file": "dairy.json" },
+    { "name": "Beverages", "icon": "Assets/Images/Products/beverages.png", "file": "beverages.json" },
+    { "name": "Snacks", "icon": "Assets/Images/Products/chips.png", "file": "snacks.json" }
+
+]

@@ -1,0 +1,78 @@
+[
+    {
+      "id": 1,
+      "question": "What is your return policy?",
+      "answer": "You can return any item within 30 days of purchase as long as it is in its original condition."
+    },
+    {
+      "id": 2,
+      "question": "Do you offer international shipping?",
+      "answer": "Currently, we only ship within the country. International shipping will be available soon."
+    },
+    {
+      "id": 3,
+      "question": "How can I track my order?",
+      "answer": "You can track your order through the 'My Orders' section in your account dashboard."
+    },
+    {
+      "id": 4,
+      "question": "What payment methods do you accept?",
+      "answer": "We accept Visa, MasterCard, PayPal, and bank transfers."
+    },
+    {
+      "id": 5,
+      "question": "Is my payment information secure?",
+      "answer": "Yes, all transactions are encrypted and processed securely through our trusted payment gateways."
+    },
+    {
+      "id": 6,
+      "question": "Can I pay cash on delivery?",
+      "answer": "Yes, cash on delivery is available for select locations."
+    },
+    {
+      "id": 7,
+      "question": "Are your products organic?",
+      "answer": "Most of our products are organic and sourced from certified suppliers. Look for the organic label on the product page."
+    },
+    {
+      "id": 8,
+      "question": "Can I request a custom product?",
+      "answer": "Yes, please contact our customer support team for custom product inquiries."
+    },
+    {
+      "id": 9,
+      "question": "What if the product I want is out of stock?",
+      "answer": "You can subscribe to notifications on the product page, and we'll notify you once it's back in stock."
+    },
+    {
+      "id": 10,
+      "question": "How long does shipping take?",
+      "answer": "Standard shipping takes 3-5 business days. Express shipping options are available at checkout."
+    },
+    {
+      "id": 11,
+      "question": "Can I change my shipping address after placing an order?",
+      "answer": "Yes, you can update your shipping address within 24 hours of placing the order by contacting our support team."
+    },
+    {
+      "id": 12,
+      "question": "Do you offer free shipping?",
+      "answer": "Free shipping is available on orders over $50."
+    },
+    {
+      "id": 13,
+      "question": "How do I return a product?",
+      "answer": "To return a product, visit the 'My Orders' section, select the item, and click 'Request Return.'"
+    },
+    {
+      "id": 14,
+      "question": "How long does it take to process a refund?",
+      "answer": "Refunds are processed within 5-7 business days after we receive the returned item."
+    },
+    {
+      "id": 15,
+      "question": "Can I exchange a product?",
+      "answer": "Yes, exchanges are possible for items of the same value. Contact our support team for assistance."
+    }
+  ]
+  

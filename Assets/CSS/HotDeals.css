@@ -1,0 +1,302 @@
+/* Root  */
+:root {
+    --green: #53B175;
+    --hovergreen: #3a975c;
+}
+
+body {
+    min-width: 320px;
+    font-family: Quicksand;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hot_deals_main_heading {
+    font-family: 'Mulish';
+    text-align: center;
+    font-weight: 700;
+    font-size: 31px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #4E4E4E;
+}
+
+/* Hero */
+/* .hot_deals_hero_main {
+    background-image: url(../Images/Banner/Hot_Deal_Banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+} */
+
+
+
+
+
+.hot_deals_hero_main {
+    background-image: url('/Assets/Images/Banner/Hot_Deal_Banner.jpg'); /* Replace with the correct path */
+    background-size: contain; /* Ensures the image covers the full container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    width: 100%; /* Full width */
+    height: calc(100vh - 80px); /* Full viewport height minus header (if any) */
+    max-height: 700px; /* Ensures the banner does not stretch too tall */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    .hot_deals_hero_main {
+        height: 80vh; /* Reduce height on medium screens */
+        background-size: contain; /* Contain image without cropping */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hot_deals_hero_main {
+        height: 60vh; /* Let content dictate the height */
+        background-size: contain; /* Ensure full image visibility */
+    
+}
+}
+@media screen and (max-width: 480px) {
+    .hot_deals_hero_main {
+        height: 40vh; /* Further reduce height on small screens */
+        background-size: contain; /* Full cover on smaller screens */
+    }
+}
+
+
+
+
+.hot_deals_hero_sub_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    
+}
+
+.hot_deals_hero_description {
+    width: 40%;
+}
+
+.hot_deals_hero_red_text {
+    font-size: 32px;
+    font-weight: 500;
+    font-family: Quicksand;
+    color: #FD2D20;
+}
+
+.hot_deals_hero_green_text {
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--green);
+    font-family: poppins;
+}
+
+.hot_deals_hero_black_text {
+    font-size: 57px;
+    font-weight: 700;
+    color: #4E4E4E;
+    font-family: poppins;
+}
+
+.hot_deals_hero_green_text_black {
+    color: #4E4E4E !important;
+}
+
+.hot_deals_hero_image {
+    padding: 50px 0px 50px 0px;
+}
+
+/* Hot Deals For You */
+.hot_deals_for_you1 {
+    width: 30%;
+}
+.hotdealsHeadingSub{
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--green);
+    font-family: poppins;
+}
+.hot_deals_for_you1_text_black {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: poppins;
+    color: #4E4E4E;
+}
+
+.hot_deals_for_you1 h2 {
+    font-size: 40px;
+    font-family: poppins;
+    font-weight: 700;
+}
+
+.hot_deals_for_you1_text_green {
+    color: #4E4E4E;
+}
+.HotdealsParaSub{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Quicksand;
+    color: #000000;
+}
+
+.hotdealsSub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+    gap: 50px;
+}
+
+.hot_deals_for_you2 img {
+    margin: auto;
+    display: block;
+}
+
+.hot_deals_for_you2 p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Quicksand;
+}
+
+.hot_deals_categories {
+    margin-top: 50px;
+}
+
+.hot_deals_for_you2 h1 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Quicksand;
+    margin-bottom: 15px;
+}
+
+.hot_deals_categories h1 {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: poppins;
+    margin-bottom: 30px;
+    color: #4E4E4E;
+}
+
+.category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
+}
+
+.hot_deals_categories_image {
+    clip-path: circle(50%);
+    width: 75%;
+}
+
+.hot_deals_category_name {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Mulish;
+    color: #29292E;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.category_item_image {
+    width: 100%;
+    /* height: 200px; */
+    text-align: center;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HotDealsCatgeoryMain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.HotDealsCategoryCard{
+    width: 16.66%;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width:768px) {
+    .HotDealsCategoryCard {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .hot_deals_categories_image {
+        clip-path: circle(50%);
+        width: 75%;
+    }
+    .hot_deals_hero_image {
+        display: none;
+    }
+
+    .hotdealsSub {
+        flex-direction: column;
+    }
+
+    .hot_deals_for_you1 {
+        width: 80%;
+    }
+
+    .hot_deals_categories h1 {
+        text-align: center;
+    }
+
+    .category_item_image {
+        width: 100%;
+        text-align: center;
+        border-radius: 50%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hot_deals_hero_description {
+        width: 80%;
+        margin: auto;
+        padding: 15px 0px 15px 0px;
+    }
+
+    .hot_deals_hero_red_text {
+        font-size: 16px;
+        font-weight: 500;
+        font-family: Quicksand;
+        color: #FD2D20;
+    }
+
+    .hot_deals_main_heading {
+        font-family: poppins;
+        text-align: center;
+        font-weight: 600;
+        font-size: 20px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        color: #4E4E4E;
+    }
+
+    .hot_deals_hero_green_text {
+        font-size: 36px;
+        font-weight: 700;
+        color: var(--green);
+        font-family: poppins;
+    }
+
+    .hot_deals_hero_black_text {
+        font-size: 32px;
+        font-weight: 700;
+        color: black;
+        font-family: poppins;
+    }
+}

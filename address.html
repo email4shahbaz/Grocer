@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <meta name="description"
+        content="Grocer offers a wide variety of groceries including fresh produce, dairy products, meats, and household essentials. Shop online and get everything you need delivered to your doorstep." />
+    <meta name="keywords"
+        content="grocery, online grocery, fresh produce, dairy products, meats, household essentials, Grocer" />
+    <meta name="author" content="Software System" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Grocer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:title" content="Grocer - Your One-Stop Grocery Shop" />
+    <meta property="og:description"
+        content="Grocer offers a wide variety of groceries including fresh produce, dairy products, meats, and household essentials. Shop online and get everything you need delivered to your doorstep." />
+    <meta property="og:image"
+        content="https://grocer.softwaresystems.us/storage/app/public/restaurant/2024-05-30-665896300dbbd.png" />
+    <meta property="og:url" content="https://groceapp.softwaresystems.us/" />
+    <meta property="og:type" content="website" />
+    <link rel="shortcut icon" href="https://grocer.softwaresystems.us/storage/app/public/restaurant/{{ $favicon }}"
+        type="image/x-icon" />
+    <title>Address</title>
+    <!-- {{-- Quicksand --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
+    <!-- {{-- Poppins --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Mulish --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Roboto --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Inter --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Bootstrap 5 --}} -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <!-- {{-- Bootstrap 5 Icons --}} -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- {{-- Font Awesome Icons CDN --}} -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- {{-- Setting Page Css Custom Style --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Setting.css">
+    <!-- {{-- NavBar Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Navbar.css">
+    <!-- {{-- Setting Sidebar Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Components/Setting-Sidebar.css">
+
+    <!-- {{-- History Page Css Custom Style --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/History.css">
+    <!-- {{-- NavBar Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Navbar.css">
+    <!-- {{-- My Orders Page Css Custom Style --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/MyOrders.css">
+    <!-- {{-- Setting Sidebar Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Components/Setting-Sidebar.css">
+    <!-- {{-- Setting Page Css Custom Style --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Setting.css">
+    <link rel="stylesheet" href="/Assets/CSS/Address.css">
+    <link rel="stylesheet" href="Assets/CSS/cart_dropdown.css">
+    <link rel="stylesheet" href="Assets/CSS/cart.css">
+    <link rel="stylesheet" href="/Assets/CSS/navbar_side_icons.css">
+    <link rel="stylesheet" href="/Assets/CSS/Animations.css">
+        <!-- {{-- Wishlist Page Css Custom Style --}} -->
+        <link rel="stylesheet" href="/Assets/CSS/wishlist.css">
+         <!-- {{-- SubNav Home Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/subnav_home.css">
+    <title>History</title>
+</head>
+<body>
+<!-- Animated Logo Cover -->
+<div id="logo-cover" class="logo-cover d-flex justify-content-center align-items-center">
+    <img src="Assets/Images/Icons/GrocerLogo.png" alt="Grocer Logo" class="animated-logo" />
+  </div>
+  
+<!-- Animated Logo End -->
+
+    <div class="container-fluid w-100">
+    <!--********** NAVIGATION **********-->
+  <!--********** NAVIGATION **********-->
+  <div class="web-container">
+
+
+
+
+    <!-- Top Small Header -->
+    <div class="top-header">
+        <div class="container top-header-container">
+            <div class="top-header-left">
+                <span class="animated-icon-text">
+                    <i id="animatedIcon" class="bi bi-truck"></i> 
+                    <span id="animatedText"></span>
+                </span>
+            </div>
+            <div class="top-header-right">
+                <a href="faq.html">Help & FAQs</a>
+                <span>|</span>
+                <a href="authentication/register.html">Sign In / Register</a>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+            <nav class="navbar navbar-expand-lg bg-white shadow-sm main_navbar">
+                <div class="container d-flex">
+                    <div class="logo_main_image">
+                        <!-- {{-- MVSideBarOpenIcon --}} -->
+                        <a href="" class="SideBarOpenIcon" id="sidebarToggle">
+                            <!-- <img src="Assets/Images/SmallIcons/SideBarOpenIcon.webp" alt="collapseIcon" loading="lazy" /> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-justify sidebarIcon" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+                              </svg>
+                        </a>
+                        <!-- {{-- MVSideBarOpenIcon --}} -->
+                        <a href="/index.html"> <img src="/Assets/Images/Icons/GrocerLogo.webp"
+                                onerror="this.src='/Assets/IMAGES/ErrorImage.webp'" wire:navigate href="/index.html"
+                                alt="Grocer__Logo" class="mainlogo" loading="lazy" /></a>
+                    </div>
+    
+    
+    <!-- {{-- ****************Mobile View Profile and Cart******************** --}} -->
+    <div class="mobile_cart_profile">
+        <div class="mobile_image_profile">
+            <a href="/setting.html">
+                <img src="Assets/Images/Banner/user4.webp" class="user_profile_image user_profile_image_nav"
+                    alt="userImage" loading="lazy" />
+            </a>
+        </div>
+      
+    <!-- Mobile Drawer Cart -->
+    <div class="cart-drawer-overlay"></div>
+    <div class="cart-drawer" id="mobileCartDrawer">
+    <div class="cart-drawer-header">
+    <span class="cart-drawer-title">Your Cart</span>
+    <span class="cart-drawer-close" id="mobileCartDrawerClose">&times;</span>
+    </div>
+    <div class="cart-drawer-body">
+    <!-- Cart items will dynamically render here -->
+    </div>
+    <div class="cart-drawer-footer">
+    <!-- Footer for total price and buttons -->
+    </div>
+    </div>
+    
+    <!-- Mobile Cart Button -->
+    <div class="mobile-cart-button">
+    <h1 class="mobile-cart-heading position-relative">
+    <img src="Assets/Images/SmallIcons/ShopCart.webp" alt="cartImage" loading="lazy" id="openMobileCartDrawer" />
+    <span class="position-absolute translate-middle cart-badge border border-light wishlist_badge" id="mobileCartBadge">
+    0
+    </span>
+    </h1>
+    </div>
+    
+    
+    
+    </div>
+    <!-- {{-- ****************Mobile View Profile and Cart******************** --}} -->
+     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll ul_nav" style="--bs-scroll-height: 100px">
+                        <li class="nav-item search_button">
+                            <form class="d-flex" onsubmit="event.preventDefault();">
+                                <div class="input-group searchButtonCate">
+                                    <select name="" id="" wire:model.live="search_category"
+                                        class="SerachwithCategoriesLists">
+                                        <option value="All Categories">All Categories</option>
+                                        <option value="{{ $item['id'] }}">Fruits</option>
+                                    </select>
+                                    <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="" />
+                                    <input type="text" wire:model.live.debounce.300ms="search_query"
+                                        class="shadow-md border-0 search_inp" maxlength="20"
+                                        placeholder="Search for items..." aria-label="Search" autocomplete="off" />
+                                    <button class="btn rounded-0 shadow-md search_btn" type="submit">
+                                         <img src="Assets/Images/SmallIcons/search.webp" alt="searchIcon" loading="lazy" />
+                                       
+                                    </button>
+                                </div>
+                            </form>
+                        </li>
+                     
+                            <li class="nav-item d-flex whishlist_button">
+                                <h1 class="wishlist_heading position-relative">
+                                    <img src="Assets/Images/SmallIcons/WishlistHeart.webp" alt="wishlistIcon" loading="lazy" />
+                                    <span class="position-absolute translate-middle wishlist_badge_counter border border-light">
+                                        0
+                                        <span class="visually-hidden">New alerts</span>
+                                    </span>
+                                </h1>
+                                <a class="nav-link wislistHeading" href="/wishlist.html" wire:navigate>Wishlist</a>
+                            </li>
+                           
+    <!-- Drawer Structure -->
+    
+    <div class="cart-drawer-overlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <span class="cart-drawer-title">Your Cart</span>
+            <span class="cart-drawer-close" id="cartDrawerClose">&times;</span>
+        </div>
+        <div class="cart-drawer-body">
+            <!-- Dynamic cart items will be rendered here -->
+        </div>
+        <div class="cart-drawer-footer">
+            <!-- Footer with total price and buttons -->
+        </div>
+    </div>
+    
+    <!-- Replace Mini Cart Button in Navigation -->
+    <li class="nav-item d-flex cart_button">
+        <h1 class="cart_heading position-relative">
+            <img src="Assets/Images/SmallIcons/ShopCart.webp" alt="cartButton" loading="lazy" />
+            <span class="position-absolute translate-middle wishlist_badge border border-light" id="cartBadge">
+                0
+            </span>
+        </h1>
+        <a href="#" class="mycartCustom" id="openCartDrawer">
+            <div>
+                <h3 class="mycartCustomHeading1">My Cart</h3>
+                <h3 class="mycartCustomHeading2">$0.00</h3>
+            </div>
+            <div>
+                <img src="Assets/Images/SmallIcons/ArrowDown.svg" alt="ArrowDown" loading="lazy" />
+            </div>
+        </a>
+    </li>
+    
+                        
+    <li class="nav-item dropdown d-flex profile_image">
+        <img src="Assets/Images/Banner/user4.webp" class="user_profile_image user_profile_image_nav"
+            alt="UserImage" loading="lazy" />
+     
+        <div class="dropdown">
+            <a class="nav-link loginheadingNav" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Account
+            <!-- <img src="Assets/Images/SmallIcons/ArrowDown.svg" alt="" /> -->
+        </a>
+            <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="/history.html">Order History</a></li>
+                <li><a class="dropdown-item" href="/setting.html">Settings</a></li>
+                <li><a class="dropdown-item" href="/orders.html">Orders</a></li>
+                <hr class="dropdown-divider">
+                <li><a class="dropdown-item" href="/authentication/login.html">Login</a></li>
+                <li><a class="dropdown-item" href="/authentication/register.html">Register</a></li>
+            </ul>
+        </div>
+        </li>         
+                </div>
+     
+            </nav>
+    <!-- search.html (Mobile View) -->
+    <div class="search_component">
+        <form class="d-flex" >
+            <div class="input-group searchButtonCate">
+                <select name="" id="mobile_search_category" wire:model.live="search_category" class="SerachwithCategoriesLists">
+                    <option value="All Categories">All Categories</option>
+                    <option value="Fruits">Fruits</option>
+                </select>
+                <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="divider" />
+                <input type="text" id="mobile_search_input" class="form-control shadow-md border-0 search_inp" maxlength="20"
+                    placeholder="Search for items..." aria-label="Search" autocomplete="off" />
+                <button class="btn rounded-0 shadow-md search_btn">
+                    <img src="Assets/Images/SmallIcons/search.webp" alt="searchIcon" loading="lazy" />
+                </button>
+            </div>
+        </form>
+        <!-- Suggestions Container -->
+        <div id="mobile_search_suggestions" class="search-suggestions" style="display:none;"></div>
+    </div>
+    
+       
+        <!--********** NAVIGATION **********-->
+    
+    
+    
+    
+    
+    <!-- Sidebar Navigation -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="sidebar-nav" id="sidebarNav">
+        <div class="sidebar-header">
+            <!-- {{-- MVSideBarOpenIcon --}} -->
+           <img src="/Assets/Images/Icons/GrocerLogo.webp"
+                onerror="this.src='/Assets/IMAGES/ErrorImage.webp'" wire:navigate href="/index.html"
+                alt="Grocer__Logo" class="mainlogo" loading="lazy" />
+            <button id="closeSidebar" class="close-sidebar-btn">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="navbar">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+                <hr>
+                <li class="nav-item"><a href="/about-us.html" class="nav-link">About Us</a></li>
+                <hr>
+                <li class="nav-item"><a href="/wishlist.html" class="nav-link">Wishlist</a></li>
+                <hr>
+                <li class="nav-item"><a href="/history.html" class="nav-link">History</a></li>
+                <hr>
+                <li class="nav-item"><a href="/faq.html" class="nav-link">Q&A</a></li>
+                <hr>
+                <li class="nav-item"><a href="/orders.html" class="nav-link">Order</a></li>
+                <hr>
+                <li class="nav-item"><a href="/setting.html" class="nav-link">Settings</a></li>
+                <hr>
+                <li class="nav-item"><a href="/hot-deals.html" class="nav-link">Hot Deals</a></li>
+                <hr>
+                <li class="nav-item"><a href="/promotions.html" class="nav-link">Promotions</a></li>
+               <hr>
+                <li class="nav-item"><a href="/new-products.html" class="nav-link">New Products</a></li>
+                <hr>
+                <li class="nav-item"><a href="/category.html" class="nav-link">Browse Categories</a></li>
+                <hr>
+                <li class="nav-item"><a href="/contact-us.html" class="nav-link">Contact Us</a></li>
+                 
+            </ul>
+        </nav>
+    </div>
+    
+    
+    
+    
+    
+    
+        <!--********** HOME SUB NAV **********-->
+        
+    <nav class="navbar navbar-expand-lg bg-white d-sm-none d-md-none d-lg-block home_page_nav_two"
+    style="border-top: 1px solid #f1f1f1;">
+    <div class="container homeSubNavBarLayout">
+    
+        <!-- Browse All Categories Button -->
+        <div class="homeSubNavBarItem1">
+            <button class="Explore_all_categories_Btn" onclick="toggleDropdown()">
+                <i class="bi bi-grid"></i> &nbsp; Browse All Categories <i class="bi bi-chevron-down"></i>
+            </button>
+        </div>
+    
+      <!-- Dropdown Menu -->
+<div class="category-dropdown container-fluid" id="categoryDropdown" style="display: none;">
+    <!-- Left Side: Image Section with Text -->
+     <div class="d-flex">
+
+   
+    <div class="category-image-container"  style="background-color: #53B175;">
+        <div class="category-image">
+            <img src="Assets/Images/Banner/front-view-vegetable.jpg" alt="Category Image">
+        </div>
+
+        <div class="category-text">
+            <h2>Organic Foods</h2>
+            <p>Discover the freshest organic foods sourced directly from nature. Packed with flavor and nutrition, perfect for a healthy lifestyle.</p>
+            <div class="discount-offer">
+                <span>Save up to 20% off on Organic Foods</span>
+            </div>
+            <a href="/category.html">
+            <button class="order-now-btn">Order Now</button>
+        </a>
+        </div>
+    </div>
+
+    <!-- Right Side: Category Grid -->
+    <div class="category-grid">
+        <div class="category-item">
+            <img src="Assets/Images/Icons/milk.png" alt="">
+            <span>Fruits</span>
+        </div>
+        <div class="category-item">
+            <img src="Assets/Images/Icons/wine.png" alt="">
+            <span>Vegetables</span>
+        </div>
+        <div class="category-item">
+            <img src="Assets/Images/Icons/clothing.png" alt="">
+            <span>Dairy</span>
+        </div>
+        <div class="category-item">
+            <img src="Assets/Images/Icons/seafood.png" alt="">
+            <span>Beverages</span>
+        </div>
+        <div class="category-item">
+            <img src="Assets/Images/Icons/pet.png" alt="">
+            <span>Snacks</span>
+        </div>
+        <div class="category-item">
+            <img src="Assets/Images/Icons/fastfood.png" alt="">
+            <span>Fruits</span>
+        </div>
+        <div class="category-item">
+            <img src="Assets/Images/Icons/baking.png" alt="">
+            <span>Beverages</span>
+        </div>
+        <div class="category-item">
+            <img src="Assets/Images/Icons/vegetables.png" alt="">
+            <span>Vegetables</span>
+        </div>
+        <div class="category-item">
+            <img src="Assets/Images/Icons/fruit.png" alt="">
+            <span>Fresh Fruit</span>
+        </div>
+        <div class="category-item">
+            <img src="Assets/Images/Icons/bread.png" alt="">
+            <span>Bread and Juice</span>
+        </div>
+    </div>
+</div>
+    <!-- Show More Link -->
+    <div class="show-more">
+        <a href="/category.html">
+            <span style="color: #53B175;">+ Show more...</span>
+        </a>
+    </div>
+</div>
+
+
+    
+        <!-- Navbar Links -->
+        <div class="homeSubNavBarItem2">
+            <ul class="navbar-nav ullists_subhomenav">
+                <li class="nav-item"><a href="/index.html" class="SubnavIconsAdjustment"><i class="bi bi-house navbar-icon"></i> Home</a></li>
+               
+                <li class="nav-item"><a href="/hot-deals.html" class="SubnavIconsAdjustment"><i class="bi bi-fire navbar-icon"></i> Hot Deals</a></li>
+                <li class="nav-item"><a href="/promotions.html" class="SubnavIconsAdjustment"><i class="bi bi-tags navbar-icon"></i> Promotions</a></li>
+                <li class="nav-item"><a href="/new-products.html" class="SubnavIconsAdjustment"><i class="bi bi-megaphone navbar-icon"></i> New Products</a></li>
+              
+            </ul>
+        </div>
+    
+        <!-- Support Center -->
+        <div class="homeSubNavBarItem3">
+            <ul class="navbar-nav ullistsLast">
+                <li class="nav-item support_li">
+                    <div class="SupportCenterMain">
+                        <a href="tel:9039829228282">
+                            <h3 class="SupportcenterHeading1">
+                                <i class="bi bi-telephone Number_Support"></i>
+                                &nbsp;9039829228282&nbsp;
+                            </h3>
+                        </a>
+                        <span class="support-separator">|</span>
+                        <div>
+                            <h3 class="SupportcenterHeading2">24/7 Support Center</h3>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    
+    </div>
+    </nav>
+    
+    
+    
+        
+        <!--********** HOME SUB NAV **********-->
+    
+    <!--********** NAVIGATION **********-->
+     <!--********* BREADCRUMBS *********-->
+     <div class="breadcrumbs">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="/" wire:navigate>Home</a></li>
+                <li><a href="" wire:navigate>Address</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--********* BREADCRUMBS *********-->
+        <div class="MainSettingContainer">
+            <div class="SettingHistorySideBar">
+                <aside class="Setting_aside">
+                    <div class="User_profile_image">
+                        <img src="/Assets/Images/Banner/user4.webp" alt="">
+                        <h1>John</h1>
+                        <p>john@gmail.com</p>
+                    </div>
+                
+                
+                    <div class="Setting_items">
+                        <ul>
+                            <a wire:navigate href="/address.html">
+                                <li class="{{ request()->is('address') ? 'active_item' : '' }}">
+                                    <i class="bi bi-house"></i>
+                                    Address
+                                </li>
+                            </a>
+                            <a wire:navigate href="/history.html">
+                                <li class="{{ request()->is('history') ? 'active_item' : '' }}">
+                                    <i class="bi bi-clock"></i>
+                                    History
+                                </li>
+                            </a>
+                            <a wire:navigate href="/orders.html">
+                                <li class="{{ request()->is('orders') ? 'active_item' : '' }}">
+                                    <i class="bi bi-coin"></i>
+                                    My Orders
+                                </li>
+                            </a>
+                            <a wire:navigate href="/setting.html">
+                                <li class="{{ request()->is('settings') ? 'active_item' : '' }}">
+                                    <i class="bi bi-person-circle"></i>
+                                    Settings
+                                </li>
+                            </a>
+                            <a wire:navigate href="/">
+                                <li class="{{ request()->is('settings') ? 'active_item' : '' }}">
+                                    <i class="bi bi-dash-circle"></i>
+                                    Sign Out
+                                </li>
+                            </a>
+                
+                        </ul>
+                    </div>
+                </aside>
+                
+            </div>
+            <div class="OrderHistoryMyOrder">
+                <div class="container">
+                    <!-- {{-- Mobile View Component --}} -->
+                    <div class="MVBreadCrumbs">
+                        <a href="/" wire:navigate>Home</a>
+                        <img src="/Assets/Images/SmallIcons/BreadcrumsCenter.webp" alt="">
+                        <a href="" wire:navigate>Address</a>
+                    </div>
+                    <!-- {{-- Mobile View Component --}} -->
+                    <!-- {{-- ****************Main Heading**************** --}} -->
+                    <div class="AddressHeadingandBTNMain">
+                        <h1 class="Address_main_heading">Address</h1>
+                        <button class="addressEditBTN" data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button>
+                    </div>
+                </div>
+                <div class="container-fluid mt-2 tablemainAddress table_container_order">
+                    <table class="w-100 address_table_">
+                        <thead>
+                            <tr>
+                                <td>
+                                    <h5 class="tableheadingAddress"><strong>Name</strong></h5>
+                                </td>
+                                <td>
+                                    <h5 class="tableheadingAddress"><strong>Number</strong></h5>
+                                </td>
+                                <td>
+                                    <h5 class="tableheadingAddress"><strong>Address</strong></h5>
+                                </td>
+                                <td>
+                                    <h5 class="tableheadingAddress"><strong>Address Type</strong></h5>
+                                </td>
+                                <td>
+                                    <h5 class="tableheadingAddress"><strong>Actions</strong></h5>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- {{-- *************ROW # 1************* --}} -->
+                                <tr>
+                                    <td class="TableContentHeadingAddress">Anas Nasr</td>
+                                    <td class="TableContentHeadingAddress">03458620683</td>
+                                    <td class="TableContentHeadingAddress">Johar Town Lahore</td>
+                                    <td class="TableContentHeadingAddress">Home</td>
+                                    <td>
+                                        <button class="addressDeleteBTN"
+                                            wire:click="deleteAddress({{ $address['id'] }})">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableContentHeadingAddress">Anas Nasr</td>
+                                    <td class="TableContentHeadingAddress">03458620683</td>
+                                    <td class="TableContentHeadingAddress">Johar Town Lahore</td>
+                                    <td class="TableContentHeadingAddress">Home</td>
+                                    <td>
+                                        <button class="addressDeleteBTN"
+                                            wire:click="deleteAddress({{ $address['id'] }})">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableContentHeadingAddress">Anas Nasr</td>
+                                    <td class="TableContentHeadingAddress">03458620683</td>
+                                    <td class="TableContentHeadingAddress">Johar Town Lahore</td>
+                                    <td class="TableContentHeadingAddress">Home</td>
+                                    <td>
+                                        <button class="addressDeleteBTN"
+                                            wire:click="deleteAddress({{ $address['id'] }})">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableContentHeadingAddress">Anas Nasr</td>
+                                    <td class="TableContentHeadingAddress">03458620683</td>
+                                    <td class="TableContentHeadingAddress">Johar Town Lahore</td>
+                                    <td class="TableContentHeadingAddress">Home</td>
+                                    <td>
+                                        <button class="addressDeleteBTN"
+                                            wire:click="deleteAddress({{ $address['id'] }})">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableContentHeadingAddress">Anas Nasr</td>
+                                    <td class="TableContentHeadingAddress">03458620683</td>
+                                    <td class="TableContentHeadingAddress">Johar Town Lahore</td>
+                                    <td class="TableContentHeadingAddress">Home</td>
+                                    <td>
+                                        <button class="addressDeleteBTN"
+                                            wire:click="deleteAddress({{ $address['id'] }})">Delete</button>
+                                    </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <h1 class="AddressModalHeading">Add Address</h1>
+                                <div class="modal-body">
+                                    <form class="AddressModalForm" wire:submit.prevent="AddAddress">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="" class="AddressLabel">Name</label><br>
+                                                <input type="text" class="Addressinp" wire:model="name">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="" class="AddressLabel">Number</label><br>
+                                                <input type="number" class="Addressinp" wire:model="number">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="" class="AddressLabel">Address Type</label><br>
+                                                <select class="Addressinp" wire:model="addressType">
+                                                    <option value="">Select Address Type</option>
+                                                    <option value="Home">Home</option>
+                                                    <option value="Office">Office</option>
+                                                </select>
+                                            </div>
+    
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="" class="AddressLabel">Address</label><br>
+                                                <input type="text" class="Addressinp" wire:model="address">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button class="AddresssubmitBTN" data-bs-dismiss="modal"
+                                                type="submit">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script src="/Assets/JS/index.js"></script>
+        <script src="/Assets/JS/featured.js"></script>
+        <script src="/Assets/JS/bestsell.js"></script>
+        <script src="/Assets/JS/homelasttopsell.js"></script>
+        <script src="/Assets/JS/homelasttrending.js"></script>
+        <script src="/Assets/JS/homelastpopular.js"></script>
+        <script src="/Assets/JS/homelastlatest.js"></script>
+        <script src="/Assets/JS/top_sell_products.js"></script>
+        <script src="/Assets/JS/cart.js"></script>
+        <script src="/Assets/JS/product_details.js"></script>
+        <script src="/Assets/JS/cart_dropdown.js"></script>
+        <script src="/Assets/JS/search_product.js"></script>
+        <script src="/Assets/JS/category_product.js"></script>
+        <script src="/Assets/JS/wishlist.js"></script>
+        <script src="/Assets/JS/mob_search.js"></script>
+        <script src="/Assets/JS/sidebar_icons.js"></script>
+        <script src="/Assets/JS/Animations.js"></script>
+        <script src="/Assets/JS/browse_category_dropdown.js"></script>
+        <script src="/Assets/JS/navbar.js"></script>
+</body>
+</html>

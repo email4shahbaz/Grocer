@@ -1,0 +1,299 @@
+.FeaturedProductsCard {
+    padding: 20px;
+    border: 1px solid rgba(173, 173, 173, 0.25);
+    border-radius: 3px;
+    min-width: 150px;
+    max-width: 300px;
+}
+.nameAndUnitHeading{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+.featuredProductImage{
+    width: 70%;
+}
+.nameAndUnitHeading h4{
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-family: 'Quicksand';
+    font-weight: 600;
+
+}
+.featuredCartAlert {
+    position: fixed;
+    top: 77px;
+    right: 10px;
+    width: 30%;
+    font-size: 12px;
+    font-family: 'Quicksand';
+    font-weight: 900;
+    z-index: 10;
+    text-align: justify;
+}
+
+.PriceDivFeaturedProduct {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.progress-bar{
+    background-color: #10B64C;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+.pricetag {
+    font-size: 18px;
+    color: #10B64C;
+    font-family: Quicksand;
+    font-weight: 600;
+    margin: 0px;
+}
+
+
+.crosspricetag {
+    font-size: 14px;
+    color: #ADADAD;
+    font-weight: 500;
+    margin: 0px;
+    font-family: Quicksand;
+}
+
+.addbutton {
+    width: 90px;
+    font-size: 14px;
+    color: #10B64C;
+    background-color: #DEF9EC;
+    padding: 7px 10px !important;
+    border-radius: 2px;
+    font-weight: 500;
+    font-family: Quicksand;
+    transition: all 0.3s ease-in-out;
+}
+
+.addbutton:Hover {
+    background-color: #9df1c9;
+}
+
+.categoryname {
+    color: #ADADAD;
+    font-size: 12px;
+    font-family: Quicksand;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.card_heading {
+    color: #253D4E;
+    font-size: 16px;
+    font-family: Quicksand;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.productby1 {
+    font-size: 12px;
+    color: #ADADAD;
+    font-weight: 400;
+    font-family: Quicksand;
+}
+
+.productby2 {
+    font-size: 12px;
+    color: #10B64C;
+    font-weight: 400;
+    font-family: Quicksand;
+}
+/* *********Rating Stars********* */
+.RatingStars {
+    gap: 5px;
+}
+
+.unChecked {
+    color: #D4D4D4;
+}
+
+/* *********Rating Stars********* */
+@media screen and (max-width:375px) {
+    .FeaturedProductsCard {
+        padding: 5px;
+        border: 1px solid rgba(173, 173, 173, 0.25);
+        border-radius: 3px;
+        min-width: 170px;
+        max-width: 300px;
+    }
+    .PriceDivFeaturedProduct {
+        display: block;
+        width: 100%;
+    }
+    .addbutton {
+        width: 100%;
+    }
+    .pricetag {
+        font-size: 12px;
+    }
+}
+@media screen and (min-width:376px) and (max-width:500px) {
+    .FeaturedProductsCard {
+        padding: 5px;
+        border: 1px solid rgba(173, 173, 173, 0.25);
+        border-radius: 3px;
+        min-width: 192px;
+        max-width: 300px;
+    }
+    .PriceDivFeaturedProduct {
+        display: block;
+        width: 100%;
+    }
+    .addbutton {
+        width: 100%;
+    }
+    .pricetag {
+        font-size: 12px;
+    }
+
+    .crosspricetag {
+        font-size: 10px;
+    }
+
+    .productcardImage {
+        height: 130px;
+    }
+
+    .ImageDiv {
+        height: auto;
+    }
+
+    .featuredCartAlert {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        width: 90%;
+        font-size: 12px;
+        font-family: 'Quicksand';
+        font-weight: 900;
+        z-index: 10;
+        text-align: justify;
+    }
+}
+
+@media screen and (min-width:501px) and (max-width:991px) {
+    .FeaturedProductsCard {
+        padding: 4px
+    }
+
+    .featuredCartAlert {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        width: 45%;
+        font-size: 12px;
+        font-family: 'Quicksand';
+        font-weight: 900;
+        z-index: 10;
+        text-align: justify;
+    }
+}
+
+
+
+.ProductsCard_Animations {
+    transition: all 0.3s ease-in-out;
+}
+
+.ProductsCard_Animations:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(173, 173, 173, 0.5);
+    
+}
+
+.ProductCardImage {
+    transition: transform 0.3s ease-in-out;
+}
+
+.ProductsCard_Animations:hover .ProductCardImage {
+    transform: scale(1.05);
+}
+
+.addbutton {
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.ProductsCard_Animations:hover .addbutton {
+    background-color: #7af1b5;
+    transform: scale(1);
+}
+
+
+
+/* Products Card Hover Effects Wishlist and Eye Appear */
+
+
+/* Hide icons by default */
+.product-overlay-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.wishlist-icon, .eye-icon {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #53B175;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.wishlist-icon:hover, .eye-icon:hover {
+    color: #3a975c; /* Example color for hover effect */
+    opacity: 1;
+}
+
+/* Show icons on hover */
+.FeaturedProductsCard:hover .product-overlay-icons {
+    display: flex;
+}
+
+
+
+
+
+
+/* Add this CSS */
+.product-card {
+    position: relative;
+    
+}
+
+.product-card .wishlist-icon,
+.product-card .eye-icon {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+   
+}
+
+.product-card:hover .wishlist-icon,
+.product-card:hover .eye-icon {
+    display: flex;
+}

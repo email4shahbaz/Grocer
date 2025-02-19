@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <meta name="description"
+        content="Grocer offers a wide variety of groceries including fresh produce, dairy products, meats, and household essentials. Shop online and get everything you need delivered to your doorstep." />
+    <meta name="keywords"
+        content="grocery, online grocery, fresh produce, dairy products, meats, household essentials, Grocer" />
+    <meta name="author" content="Software System" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Grocer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:title" content="Grocer - Your One-Stop Grocery Shop" />
+    <meta property="og:description"
+        content="Grocer offers a wide variety of groceries including fresh produce, dairy products, meats, and household essentials. Shop online and get everything you need delivered to your doorstep." />
+    <meta property="og:image"
+        content="https://grocer.softwaresystems.us/storage/app/public/restaurant/2024-05-30-665896300dbbd.png" />
+    <meta property="og:url" content="https://groceapp.softwaresystems.us/" />
+    <meta property="og:type" content="website" />
+    <link rel="shortcut icon" href="https://grocer.softwaresystems.us/storage/app/public/restaurant/{{ $favicon }}"
+        type="image/x-icon" />
+    <title>Product review</title>
+    <!-- {{-- Quicksand --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
+    <!-- {{-- Poppins --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Mulish --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Roboto --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Inter --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Bootstrap 5 --}} -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <!-- {{-- Bootstrap 5 Icons --}} -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- {{-- Font Awesome Icons CDN --}} -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- {{-- NavBar Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Navbar.css" />
+    <!-- {{-- Footer Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Footer.css">
+    <!-- {{-- Bread Crumbs Style  --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Components/breadCrumbs.css">
+    <link rel="stylesheet" href="/Assets/CSS/ProductReview.css">
+    <link rel="stylesheet" href="Assets/CSS/cart.css">
+    <link rel="stylesheet" href="Assets/CSS/cart_dropdown.css">
+    <link rel="stylesheet" href="/Assets/CSS/Animations.css">
+        <!-- {{-- Wishlist Page Css Custom Style --}} -->
+        <link rel="stylesheet" href="/Assets/CSS/wishlist.css">
+         <!-- {{-- SubNav Home Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/subnav_home.css">
+</head>
+
+<body>
+    <!-- Animated Logo Cover -->
+<div id="logo-cover" class="logo-cover d-flex justify-content-center align-items-center">
+    <img src="Assets/Images/Icons/GrocerLogo.png" alt="Grocer Logo" class="animated-logo" />
+  </div>
+  
+<!-- Animated Logo End -->
+    <!--********** NAVIGATION **********-->
+  <!-- Top Small Header -->
+<div class="top-header">
+    <div class="container top-header-container">
+        <div class="top-header-left">
+            <span class="animated-icon-text">
+                <i id="animatedIcon" class="bi bi-truck"></i> 
+                <span id="animatedText"></span>
+            </span>
+        </div>
+        <div class="top-header-right">
+            <a href="faq.html">Help & FAQs</a>
+            <span>|</span>
+            <a href="authentication/register.html">Sign In / Register</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+        <nav class="navbar navbar-expand-lg bg-white shadow-sm main_navbar">
+            <div class="container d-flex">
+                <div class="logo_main_image">
+                    <!-- {{-- MVSideBarOpenIcon --}} -->
+                    <a href="" class="SideBarOpenIcon" id="sidebarToggle">
+                        <!-- <img src="Assets/Images/SmallIcons/SideBarOpenIcon.webp" alt="collapseIcon" loading="lazy" /> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-justify sidebarIcon" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+                          </svg>
+                    </a>
+                    <!-- {{-- MVSideBarOpenIcon --}} -->
+                    <a href="/index.html"> <img src="/Assets/Images/Icons/GrocerLogo.webp"
+                            onerror="this.src='/Assets/IMAGES/ErrorImage.webp'" wire:navigate href="/index.html"
+                            alt="Grocer__Logo" class="mainlogo" loading="lazy" /></a>
+                </div>
+
+
+<!-- {{-- ****************Mobile View Profile and Cart******************** --}} -->
+<div class="mobile_cart_profile">
+    <div class="mobile_image_profile">
+        <a href="/setting.html">
+            <img src="Assets/Images/Banner/user4.webp" class="user_profile_image user_profile_image_nav"
+                alt="userImage" loading="lazy" />
+        </a>
+    </div>
+  
+<!-- Mobile Drawer Cart -->
+<div class="cart-drawer-overlay"></div>
+<div class="cart-drawer" id="mobileCartDrawer">
+<div class="cart-drawer-header">
+<span class="cart-drawer-title">Your Cart</span>
+<span class="cart-drawer-close" id="mobileCartDrawerClose">&times;</span>
+</div>
+<div class="cart-drawer-body">
+<!-- Cart items will dynamically render here -->
+</div>
+<div class="cart-drawer-footer">
+<!-- Footer for total price and buttons -->
+</div>
+</div>
+
+<!-- Mobile Cart Button -->
+<div class="mobile-cart-button">
+<h1 class="mobile-cart-heading position-relative">
+<img src="Assets/Images/SmallIcons/ShopCart.webp" alt="cartImage" loading="lazy" id="openMobileCartDrawer" />
+<span class="position-absolute translate-middle cart-badge border border-light wishlist_badge" id="mobileCartBadge">
+0
+</span>
+</h1>
+</div>
+
+
+
+</div>
+<!-- {{-- ****************Mobile View Profile and Cart******************** --}} -->
+ <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll ul_nav" style="--bs-scroll-height: 100px">
+                    <li class="nav-item search_button">
+                        <form class="d-flex" onsubmit="event.preventDefault();">
+                            <div class="input-group searchButtonCate">
+                                <select name="" id="" wire:model.live="search_category"
+                                    class="SerachwithCategoriesLists">
+                                    <option value="All Categories">All Categories</option>
+                                    <option value="{{ $item['id'] }}">Fruits</option>
+                                </select>
+                                <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="" />
+                                <input type="text" wire:model.live.debounce.300ms="search_query"
+                                    class="shadow-md border-0 search_inp" maxlength="20"
+                                    placeholder="Search for items..." aria-label="Search" autocomplete="off" />
+                                <button class="btn rounded-0 shadow-md search_btn" type="submit">
+                                     <img src="Assets/Images/SmallIcons/search.webp" alt="searchIcon" loading="lazy" />
+                                   
+                                </button>
+                            </div>
+                        </form>
+                    </li>
+                 
+                        <li class="nav-item d-flex whishlist_button">
+                            <h1 class="wishlist_heading position-relative">
+                                <img src="Assets/Images/SmallIcons/WishlistHeart.webp" alt="wishlistIcon" loading="lazy" />
+                                <span class="position-absolute translate-middle wishlist_badge_counter border border-light">
+                                    0
+                                    <span class="visually-hidden">New alerts</span>
+                                </span>
+                            </h1>
+                            <a class="nav-link wislistHeading" href="/wishlist.html" wire:navigate>Wishlist</a>
+                        </li>
+                       
+<!-- Drawer Structure -->
+
+<div class="cart-drawer-overlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+        <span class="cart-drawer-title">Your Cart</span>
+        <span class="cart-drawer-close" id="cartDrawerClose">&times;</span>
+    </div>
+    <div class="cart-drawer-body">
+        <!-- Dynamic cart items will be rendered here -->
+    </div>
+    <div class="cart-drawer-footer">
+        <!-- Footer with total price and buttons -->
+    </div>
+</div>
+
+<!-- Replace Mini Cart Button in Navigation -->
+<li class="nav-item d-flex cart_button">
+    <h1 class="cart_heading position-relative">
+        <img src="Assets/Images/SmallIcons/ShopCart.webp" alt="cartButton" loading="lazy" />
+        <span class="position-absolute translate-middle wishlist_badge border border-light" id="cartBadge">
+            0
+        </span>
+    </h1>
+    <a href="#" class="mycartCustom" id="openCartDrawer">
+        <div>
+            <h3 class="mycartCustomHeading1">My Cart</h3>
+            <h3 class="mycartCustomHeading2">$0.00</h3>
+        </div>
+        <div>
+            <img src="Assets/Images/SmallIcons/ArrowDown.svg" alt="ArrowDown" loading="lazy" />
+        </div>
+    </a>
+</li>
+
+                    
+<li class="nav-item dropdown d-flex profile_image">
+    <img src="Assets/Images/Banner/user4.webp" class="user_profile_image user_profile_image_nav"
+        alt="UserImage" loading="lazy" />
+ 
+    <div class="dropdown">
+        <a class="nav-link loginheadingNav" href="#" role="button" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Account
+        <!-- <img src="Assets/Images/SmallIcons/ArrowDown.svg" alt="" /> -->
+    </a>
+        <ul class="dropdown-menu custom-dropdown-menu">
+            <li><a class="dropdown-item" href="/history.html">Order History</a></li>
+            <li><a class="dropdown-item" href="/setting.html">Settings</a></li>
+            <li><a class="dropdown-item" href="/orders.html">Orders</a></li>
+            <hr class="dropdown-divider">
+            <li><a class="dropdown-item" href="/authentication/login.html">Login</a></li>
+            <li><a class="dropdown-item" href="/authentication/register.html">Register</a></li>
+        </ul>
+    </div>
+    </li>          
+            </div>
+ 
+        </nav>
+<!-- search.html (Mobile View) -->
+<div class="search_component">
+    <form class="d-flex" >
+        <div class="input-group searchButtonCate">
+            <select name="" id="mobile_search_category" wire:model.live="search_category" class="SerachwithCategoriesLists">
+                <option value="All Categories">All Categories</option>
+                <option value="Fruits">Fruits</option>
+            </select>
+            <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="divider" />
+            <input type="text" id="mobile_search_input" class="form-control shadow-md border-0 search_inp" maxlength="20"
+                placeholder="Search for items..." aria-label="Search" autocomplete="off" />
+            <button class="btn rounded-0 shadow-md search_btn">
+                <img src="Assets/Images/SmallIcons/search.webp" alt="searchIcon" loading="lazy" />
+            </button>
+        </div>
+    </form>
+    <!-- Suggestions Container -->
+    <div id="mobile_search_suggestions" class="search-suggestions" style="display:none;"></div>
+</div>
+
+   
+    <!--********** NAVIGATION **********-->
+
+
+
+
+
+<!-- Sidebar Navigation -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="sidebar-nav" id="sidebarNav">
+    <div class="sidebar-header">
+        <!-- {{-- MVSideBarOpenIcon --}} -->
+       <img src="/Assets/Images/Icons/GrocerLogo.webp"
+            onerror="this.src='/Assets/IMAGES/ErrorImage.webp'" wire:navigate href="/index.html"
+            alt="Grocer__Logo" class="mainlogo" loading="lazy" />
+        <button id="closeSidebar" class="close-sidebar-btn">
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+            <hr>
+            <li class="nav-item"><a href="/about-us.html" class="nav-link">About Us</a></li>
+            <hr>
+            <li class="nav-item"><a href="/wishlist.html" class="nav-link">Wishlist</a></li>
+            <hr>
+            <li class="nav-item"><a href="/history.html" class="nav-link">History</a></li>
+            <hr>
+            <li class="nav-item"><a href="/faq.html" class="nav-link">Q&A</a></li>
+            <hr>
+            <li class="nav-item"><a href="/orders.html" class="nav-link">Order</a></li>
+            <hr>
+            <li class="nav-item"><a href="/setting.html" class="nav-link">Settings</a></li>
+            <hr>
+            <li class="nav-item"><a href="/hot-deals.html" class="nav-link">Hot Deals</a></li>
+            <hr>
+            <li class="nav-item"><a href="/promotions.html" class="nav-link">Promotions</a></li>
+           <hr>
+            <li class="nav-item"><a href="/new-products.html" class="nav-link">New Products</a></li>
+            <hr>
+            <li class="nav-item"><a href="/category.html" class="nav-link">Browse Categories</a></li>
+            <hr>
+            <li class="nav-item"><a href="/contact-us.html" class="nav-link">Contact Us</a></li>
+             
+        </ul>
+    </nav>
+</div>
+
+
+
+
+
+
+    <!--********** HOME SUB NAV **********-->
+    
+<nav class="navbar navbar-expand-lg bg-white d-sm-none d-md-none d-lg-block home_page_nav_two"
+style="border-top: 1px solid #f1f1f1;">
+<div class="container homeSubNavBarLayout">
+
+    <!-- Browse All Categories Button -->
+    <div class="homeSubNavBarItem1">
+        <button class="Explore_all_categories_Btn" onclick="toggleDropdown()">
+            <i class="bi bi-grid"></i> &nbsp; Browse All Categories <i class="bi bi-chevron-down"></i>
+        </button>
+    </div>
+
+    <!-- Dropdown Menu -->
+<div class="category-dropdown container-fluid" id="categoryDropdown" style="display: none;">
+    <!-- Left Side: Image Section with Text -->
+     <div class="d-flex">
+
+   
+    <div class="category-image-container"  style="background-color: #53B175;">
+        <div class="category-image">
+            <img src="Assets/Images/Banner/front-view-vegetable.jpg" alt="Category Image">
+        </div>
+
+        <div class="category-text">
+            <h2>Organic Foods</h2>
+            <p>Discover the freshest organic foods sourced directly from nature. Packed with flavor and nutrition, perfect for a healthy lifestyle.</p>
+            <div class="discount-offer">
+                <span>Save up to 20% off on Organic Foods</span>
+            </div>
+            <a href="/category.html">
+            <button class="order-now-btn">Order Now</button>
+        </a>
+        </div>
+    </div>
+
+    <!-- Right Side: Category Grid -->
+    <div class="category-grid">
+        <div class="category-item">
+            <img src="Assets/Images/Icons/milk.png" alt="">
+            <span>Fruits</span>
+        </div>
+        <div class="category-item">
+            <img src="Assets/Images/Icons/wine.png" alt="">
+            <span>Vegetables</span>
+        </div>
+        <div class="category-item">
+            <img src="Assets/Images/Icons/clothing.png" alt="">
+            <span>Dairy</span>
+        </div>
+        <div class="category-item">
+            <img src="Assets/Images/Icons/seafood.png" alt="">
+            <span>Beverages</span>
+        </div>
+        <div class="category-item">
+            <img src="Assets/Images/Icons/pet.png" alt="">
+            <span>Snacks</span>
+        </div>
+        <div class="category-item">
+            <img src="Assets/Images/Icons/fastfood.png" alt="">
+            <span>Fruits</span>
+        </div>
+        <div class="category-item">
+            <img src="Assets/Images/Icons/baking.png" alt="">
+            <span>Beverages</span>
+        </div>
+        <div class="category-item">
+            <img src="Assets/Images/Icons/vegetables.png" alt="">
+            <span>Vegetables</span>
+        </div>
+        <div class="category-item">
+            <img src="Assets/Images/Icons/fruit.png" alt="">
+            <span>Fresh Fruit</span>
+        </div>
+        <div class="category-item">
+            <img src="Assets/Images/Icons/bread.png" alt="">
+            <span>Bread and Juice</span>
+        </div>
+    </div>
+</div>
+    <!-- Show More Link -->
+    <div class="show-more">
+        <a href="/category.html">
+            <span style="color: #53B175;">+ Show more...</span>
+        </a>
+    </div>
+</div>
+
+
+
+    <!-- Navbar Links -->
+    <div class="homeSubNavBarItem2">
+        <ul class="navbar-nav ullists_subhomenav">
+            <li class="nav-item"><a href="/index.html" class="SubnavIconsAdjustment"><i class="bi bi-house navbar-icon"></i> Home</a></li>
+           
+            <li class="nav-item"><a href="/hot-deals.html" class="SubnavIconsAdjustment"><i class="bi bi-fire navbar-icon"></i> Hot Deals</a></li>
+            <li class="nav-item"><a href="/promotions.html" class="SubnavIconsAdjustment"><i class="bi bi-tags navbar-icon"></i> Promotions</a></li>
+            <li class="nav-item"><a href="/new-products.html" class="SubnavIconsAdjustment"><i class="bi bi-megaphone navbar-icon"></i> New Products</a></li>
+          
+        </ul>
+    </div>
+
+    <!-- Support Center -->
+    <div class="homeSubNavBarItem3">
+        <ul class="navbar-nav ullistsLast">
+            <li class="nav-item support_li">
+                <div class="SupportCenterMain">
+                    <a href="tel:9039829228282">
+                        <h3 class="SupportcenterHeading1">
+                            <i class="bi bi-telephone Number_Support"></i>
+                            &nbsp;9039829228282&nbsp;
+                        </h3>
+                    </a>
+                    <span class="support-separator">|</span>
+                    <div>
+                        <h3 class="SupportcenterHeading2">24/7 Support Center</h3>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>
+</nav>
+
+
+
+    
+    <!--********** HOME SUB NAV **********-->
+    <!--********** NAVIGATION **********-->
+    <!--********* BREADCRUMBS *********-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="/" wire:navigate>Home</a></li>
+                <li><a href="" wire:navigate>Product Review</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--********* BREADCRUMBS *********-->
+    <div class="container wishlist_main_container">
+        <h1 class="ProductReviewMainHeading">Order # 100038</h1>
+        <div class="mainProductDetailsSummary">
+            <h3 class="OrderDetailsSummary"><i class="bi bi-cash-stack"></i> 300$
+                 | </h3>
+            <h3 class="OrderDetailsSummary"><i class="bi bi-calendar"></i>2024-09-10 |</h3>
+            <h3 class="OrderDetailsSummary"><i
+                    class="bi bi-geo-alt"></i>Sargodha</h3>
+        </div>
+        <h3 class="ProductReviewLabel">Overall Rating (Click to rate)</h3>
+        <div class="ratingsMainContain">
+            <label class="starLabel">
+                <input type="radio" name="rating" value="1" wire:model="rating">
+                <svg viewBox="0 0 24 24" width="24px" height="24px">
+                    <g>
+                        <g>
+                            <path
+                                d="M9.362,9.158c0,0-3.16,0.35-5.268,0.584c-0.19,0.023-0.358,0.15-0.421,0.343s0,0.394,0.14,0.521 c1.566,1.429,3.919,3.569,3.919,3.569c-0.002,0-0.646,3.113-1.074,5.19c-0.036,0.188,0.032,0.387,0.196,0.506 c0.163,0.119,0.373,0.121,0.538,0.028c1.844-1.048,4.606-2.624,4.606-2.624s2.763,1.576,4.604,2.625 c0.168,0.092,0.378,0.09,0.541-0.029c0.164-0.119,0.232-0.318,0.195-0.505c-0.428-2.078-1.071-5.191-1.071-5.191 s2.353-2.14,3.919-3.566c0.14-0.131,0.202-0.332,0.14-0.524s-0.23-0.319-0.42-0.341c-2.108-0.236-5.269-0.586-5.269-0.586 s-1.31-2.898-2.183-4.83c-0.082-0.173-0.254-0.294-0.456-0.294s-0.375,0.122-0.453,0.294C10.671,6.26,9.362,9.158,9.362,9.158z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+            </label>
+            <label class="starLabel">
+                <input type="radio" name="rating" value="2" wire:model="rating">
+                <svg viewBox="0 0 24 24" width="24px" height="24px">
+                    <g>
+                        <g>
+                            <path
+                                d="M9.362,9.158c0,0-3.16,0.35-5.268,0.584c-0.19,0.023-0.358,0.15-0.421,0.343s0,0.394,0.14,0.521 c1.566,1.429,3.919,3.569,3.919,3.569c-0.002,0-0.646,3.113-1.074,5.19c-0.036,0.188,0.032,0.387,0.196,0.506 c0.163,0.119,0.373,0.121,0.538,0.028c1.844-1.048,4.606-2.624,4.606-2.624s2.763,1.576,4.604,2.625 c0.168,0.092,0.378,0.09,0.541-0.029c0.164-0.119,0.232-0.318,0.195-0.505c-0.428-2.078-1.071-5.191-1.071-5.191 s2.353-2.14,3.919-3.566c0.14-0.131,0.202-0.332,0.14-0.524s-0.23-0.319-0.42-0.341c-2.108-0.236-5.269-0.586-5.269-0.586 s-1.31-2.898-2.183-4.83c-0.082-0.173-0.254-0.294-0.456-0.294s-0.375,0.122-0.453,0.294C10.671,6.26,9.362,9.158,9.362,9.158z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+            </label>
+            <label class="starLabel">
+                <input type="radio" name="rating" value="3" wire:model="rating">
+                <svg viewBox="0 0 24 24" width="24px" height="24px">
+                    <g>
+                        <g>
+                            <path
+                                d="M9.362,9.158c0,0-3.16,0.35-5.268,0.584c-0.19,0.023-0.358,0.15-0.421,0.343s0,0.394,0.14,0.521 c1.566,1.429,3.919,3.569,3.919,3.569c-0.002,0-0.646,3.113-1.074,5.19c-0.036,0.188,0.032,0.387,0.196,0.506 c0.163,0.119,0.373,0.121,0.538,0.028c1.844-1.048,4.606-2.624,4.606-2.624s2.763,1.576,4.604,2.625 c0.168,0.092,0.378,0.09,0.541-0.029c0.164-0.119,0.232-0.318,0.195-0.505c-0.428-2.078-1.071-5.191-1.071-5.191 s2.353-2.14,3.919-3.566c0.14-0.131,0.202-0.332,0.14-0.524s-0.23-0.319-0.42-0.341c-2.108-0.236-5.269-0.586-5.269-0.586 s-1.31-2.898-2.183-4.83c-0.082-0.173-0.254-0.294-0.456-0.294s-0.375,0.122-0.453,0.294C10.671,6.26,9.362,9.158,9.362,9.158z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+            </label>
+            <label class="starLabel">
+                <input type="radio" name="rating" value="4" wire:model="rating">
+                <svg viewBox="0 0 24 24" width="24px" height="24px">
+                    <g>
+                        <g>
+                            <path
+                                d="M9.362,9.158c0,0-3.16,0.35-5.268,0.584c-0.19,0.023-0.358,0.15-0.421,0.343s0,0.394,0.14,0.521 c1.566,1.429,3.919,3.569,3.919,3.569c-0.002,0-0.646,3.113-1.074,5.19c-0.036,0.188,0.032,0.387,0.196,0.506 c0.163,0.119,0.373,0.121,0.538,0.028c1.844-1.048,4.606-2.624,4.606-2.624s2.763,1.576,4.604,2.625 c0.168,0.092,0.378,0.09,0.541-0.029c0.164-0.119,0.232-0.318,0.195-0.505c-0.428-2.078-1.071-5.191-1.071-5.191 s2.353-2.14,3.919-3.566c0.14-0.131,0.202-0.332,0.14-0.524s-0.23-0.319-0.42-0.341c-2.108-0.236-5.269-0.586-5.269-0.586 s-1.31-2.898-2.183-4.83c-0.082-0.173-0.254-0.294-0.456-0.294s-0.375,0.122-0.453,0.294C10.671,6.26,9.362,9.158,9.362,9.158z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+            </label>
+            <label class="starLabel">
+                <input type="radio" name="rating" value="5" wire:model="rating">
+                <svg viewBox="0 0 24 24" width="24px" height="24px">
+                    <g>
+                        <g>
+                            <path
+                                d="M9.362,9.158c0,0-3.16,0.35-5.268,0.584c-0.19,0.023-0.358,0.15-0.421,0.343s0,0.394,0.14,0.521 c1.566,1.429,3.919,3.569,3.919,3.569c-0.002,0-0.646,3.113-1.074,5.19c-0.036,0.188,0.032,0.387,0.196,0.506 c0.163,0.119,0.373,0.121,0.538,0.028c1.844-1.048,4.606-2.624,4.606-2.624s2.763,1.576,4.604,2.625 c0.168,0.092,0.378,0.09,0.541-0.029c0.164-0.119,0.232-0.318,0.195-0.505c-0.428-2.078-1.071-5.191-1.071-5.191 s2.353-2.14,3.919-3.566c0.14-0.131,0.202-0.332,0.14-0.524s-0.23-0.319-0.42-0.341c-2.108-0.236-5.269-0.586-5.269-0.586 s-1.31-2.898-2.183-4.83c-0.082-0.173-0.254-0.294-0.456-0.294s-0.375,0.122-0.453,0.294C10.671,6.26,9.362,9.158,9.362,9.158z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+            </label>
+        </div>
+        <h1 class="mt-3 mainProductsReviewTableHeading">Product Review</h1>
+        <form wire:submit.prevent="SubmitReviews">
+          <div class="productReviewRowheading">
+              <div class="ProductReviewProductImageDivHeading">
+                  <h3 class="mainHeadingRow"><strong>Product</strong></h3>
+              </div>
+              <div class="ProductReviewProductPriceDivHeading">
+                  <h3 class="mainHeadingRow"><strong>Price</strong></h3>
+              </div>
+              <div class="ProductReviewProductQuantityDivHeading">
+                  <h3 class="mainHeadingRow"><strong>Quantity</strong></h3>
+              </div>
+              <div class="ProductReviewProductRatingDivHeading">
+                  <h3 class="mainHeadingRow"><strong>Rating</strong></h3>
+              </div>
+          </div>
+              <div class="productReviewRow">
+                  <div class="ProductReviewProductImageDiv">
+                      <img src="/Assets/Images/Products/TOMATOOS.png"
+                          onerror="this.src='/Assets/Images/ERROR/ErrorImage.webp'" class=""
+                          alt="{{ $product['name'] }}">
+                      <h3 class="productnameheading">Tomato</h3>
+                  </div>
+                  <div class="ProductReviewProductPriceDiv">
+                      <h3 class="table_h3">100$</h3>
+                  </div>
+                  <div class="ProductReviewProductQtyDiv">
+                      <h3 class="table_qty">2</h3>
+                  </div>
+                  <div class="ProductReviewProductRatingDiv">
+                      <div class="ratingsMainContain">
+                        <label class="starLabel">
+                            <input type="radio" name="rating" value="1" wire:model="rating">
+                            <svg viewBox="0 0 24 24" width="24px" height="24px">
+                                <g>
+                                    <g>
+                                        <path
+                                            d="M9.362,9.158c0,0-3.16,0.35-5.268,0.584c-0.19,0.023-0.358,0.15-0.421,0.343s0,0.394,0.14,0.521 c1.566,1.429,3.919,3.569,3.919,3.569c-0.002,0-0.646,3.113-1.074,5.19c-0.036,0.188,0.032,0.387,0.196,0.506 c0.163,0.119,0.373,0.121,0.538,0.028c1.844-1.048,4.606-2.624,4.606-2.624s2.763,1.576,4.604,2.625 c0.168,0.092,0.378,0.09,0.541-0.029c0.164-0.119,0.232-0.318,0.195-0.505c-0.428-2.078-1.071-5.191-1.071-5.191 s2.353-2.14,3.919-3.566c0.14-0.131,0.202-0.332,0.14-0.524s-0.23-0.319-0.42-0.341c-2.108-0.236-5.269-0.586-5.269-0.586 s-1.31-2.898-2.183-4.83c-0.082-0.173-0.254-0.294-0.456-0.294s-0.375,0.122-0.453,0.294C10.671,6.26,9.362,9.158,9.362,9.158z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </label>
+                        <label class="starLabel">
+                            <input type="radio" name="rating" value="2" wire:model="rating">
+                            <svg viewBox="0 0 24 24" width="24px" height="24px">
+                                <g>
+                                    <g>
+                                        <path
+                                            d="M9.362,9.158c0,0-3.16,0.35-5.268,0.584c-0.19,0.023-0.358,0.15-0.421,0.343s0,0.394,0.14,0.521 c1.566,1.429,3.919,3.569,3.919,3.569c-0.002,0-0.646,3.113-1.074,5.19c-0.036,0.188,0.032,0.387,0.196,0.506 c0.163,0.119,0.373,0.121,0.538,0.028c1.844-1.048,4.606-2.624,4.606-2.624s2.763,1.576,4.604,2.625 c0.168,0.092,0.378,0.09,0.541-0.029c0.164-0.119,0.232-0.318,0.195-0.505c-0.428-2.078-1.071-5.191-1.071-5.191 s2.353-2.14,3.919-3.566c0.14-0.131,0.202-0.332,0.14-0.524s-0.23-0.319-0.42-0.341c-2.108-0.236-5.269-0.586-5.269-0.586 s-1.31-2.898-2.183-4.83c-0.082-0.173-0.254-0.294-0.456-0.294s-0.375,0.122-0.453,0.294C10.671,6.26,9.362,9.158,9.362,9.158z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </label>
+                        <label class="starLabel">
+                            <input type="radio" name="rating" value="3" wire:model="rating">
+                            <svg viewBox="0 0 24 24" width="24px" height="24px">
+                                <g>
+                                    <g>
+                                        <path
+                                            d="M9.362,9.158c0,0-3.16,0.35-5.268,0.584c-0.19,0.023-0.358,0.15-0.421,0.343s0,0.394,0.14,0.521 c1.566,1.429,3.919,3.569,3.919,3.569c-0.002,0-0.646,3.113-1.074,5.19c-0.036,0.188,0.032,0.387,0.196,0.506 c0.163,0.119,0.373,0.121,0.538,0.028c1.844-1.048,4.606-2.624,4.606-2.624s2.763,1.576,4.604,2.625 c0.168,0.092,0.378,0.09,0.541-0.029c0.164-0.119,0.232-0.318,0.195-0.505c-0.428-2.078-1.071-5.191-1.071-5.191 s2.353-2.14,3.919-3.566c0.14-0.131,0.202-0.332,0.14-0.524s-0.23-0.319-0.42-0.341c-2.108-0.236-5.269-0.586-5.269-0.586 s-1.31-2.898-2.183-4.83c-0.082-0.173-0.254-0.294-0.456-0.294s-0.375,0.122-0.453,0.294C10.671,6.26,9.362,9.158,9.362,9.158z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </label>
+                        <label class="starLabel">
+                            <input type="radio" name="rating" value="4" wire:model="rating">
+                            <svg viewBox="0 0 24 24" width="24px" height="24px">
+                                <g>
+                                    <g>
+                                        <path
+                                            d="M9.362,9.158c0,0-3.16,0.35-5.268,0.584c-0.19,0.023-0.358,0.15-0.421,0.343s0,0.394,0.14,0.521 c1.566,1.429,3.919,3.569,3.919,3.569c-0.002,0-0.646,3.113-1.074,5.19c-0.036,0.188,0.032,0.387,0.196,0.506 c0.163,0.119,0.373,0.121,0.538,0.028c1.844-1.048,4.606-2.624,4.606-2.624s2.763,1.576,4.604,2.625 c0.168,0.092,0.378,0.09,0.541-0.029c0.164-0.119,0.232-0.318,0.195-0.505c-0.428-2.078-1.071-5.191-1.071-5.191 s2.353-2.14,3.919-3.566c0.14-0.131,0.202-0.332,0.14-0.524s-0.23-0.319-0.42-0.341c-2.108-0.236-5.269-0.586-5.269-0.586 s-1.31-2.898-2.183-4.83c-0.082-0.173-0.254-0.294-0.456-0.294s-0.375,0.122-0.453,0.294C10.671,6.26,9.362,9.158,9.362,9.158z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </label>
+                        <label class="starLabel">
+                            <input type="radio" name="rating" value="5" wire:model="rating">
+                            <svg viewBox="0 0 24 24" width="24px" height="24px">
+                                <g>
+                                    <g>
+                                        <path
+                                            d="M9.362,9.158c0,0-3.16,0.35-5.268,0.584c-0.19,0.023-0.358,0.15-0.421,0.343s0,0.394,0.14,0.521 c1.566,1.429,3.919,3.569,3.919,3.569c-0.002,0-0.646,3.113-1.074,5.19c-0.036,0.188,0.032,0.387,0.196,0.506 c0.163,0.119,0.373,0.121,0.538,0.028c1.844-1.048,4.606-2.624,4.606-2.624s2.763,1.576,4.604,2.625 c0.168,0.092,0.378,0.09,0.541-0.029c0.164-0.119,0.232-0.318,0.195-0.505c-0.428-2.078-1.071-5.191-1.071-5.191 s2.353-2.14,3.919-3.566c0.14-0.131,0.202-0.332,0.14-0.524s-0.23-0.319-0.42-0.341c-2.108-0.236-5.269-0.586-5.269-0.586 s-1.31-2.898-2.183-4.83c-0.082-0.173-0.254-0.294-0.456-0.294s-0.375,0.122-0.453,0.294C10.671,6.26,9.362,9.158,9.362,9.158z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </label>
+                      </div>
+                  </div>
+              </div>
+
+          <div class="row">
+              <div class="col">
+                  <label for="" class="ProductReviewLabel">Write Comment</label><br>
+                  <textarea cols="30" rows="6" class="ProductRatingInp" wire:model="comment"></textarea>
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="col">
+                  <button type="submit" class="ProductReviewSubmitButton">
+                      Submit Product Review
+                  </button>
+              </div>
+          </div>
+      </form>
+
+        <!-- {{-- ******************************** --}} -->
+        <hr class="mt-5">
+    </div>
+
+    <!--********* FOOTER *********-->
+    <div class="container footermainWrapper">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-5">
+                <ul class="p-0">
+                    <li class="mb-4">
+                        <img src="https://grocer.softwaresystems.us/storage/app/public/restaurant/{{ $logo }}"
+                            onerror="this.src='Assets/Images/Icons/GrocerLogo.webp'" class="footer_logo" alt="grocer"
+                            loading="lazy">
+                    </li>
+                    <li class="footerFirstCol">
+                        <h3><img src="Assets/Images/SmallIcons/FooterLocationIcon.png" alt="Location" loading="lazy">
+                        </h3>
+                        <a href="https://www.google.com/maps?q=31.458753041842215, 74.27577565831574">
+                            <h3><strong>Address:</strong>&nbsp;&nbsp; Lahore Pakistan</h3>
+                        </a>
+                    </li>
+                    <li class="footerFirstCol">
+                        <h3><img src="Assets/Images/SmallIcons/FooterMobileIcon.png" alt="Phone" loading="lazy"></h3>
+                        <a href="tel:{{ $phone }}">
+                            <h3><strong>Call Us:</strong>&nbsp; 0282828829282</h3>
+                        </a>
+                    </li>
+                    <li class="footerFirstCol">
+                        <h3><img src="Assets/Images/SmallIcons/FooterEmailIcon.png" alt="Mail" loading="lazy"></h3>
+                        <a href="mailto:{{ $email }}">
+                            <h3><strong>Email:</strong>&nbsp;GrocerSupport@gmail.com</h3>
+                        </a>
+                    </li>
+                    <li class="footerFirstCol">
+                        <h3><img src="Assets/Images/SmallIcons/FooterClockIcon.png" alt="Clock" loading="lazy"></h3>
+                        <h3><strong>Work hours:</strong>&nbsp; 8:00 - 20:00, Sunday - Thursday</h3>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-2">
+                <ul class="p-0">
+                    <li class="mb-4">
+                        <h1 class="footerheadings">Account</h1>
+                    </li>
+                    <li class="mb-3">
+                        <a class="footerSubHeadings" href="/wishlist.html" wire:navigate>Wishlist</a>
+                    </li>
+                    <li class="mb-3">
+                        <a class="footerSubHeadings" href="/cart.html" wire:navigate>Cart</a>
+                    </li>
+                    <li class="mb-3">
+                        <a class="footerSubHeadings" href="/track.html" wire:navigate>Track Order</a>
+                    </li>
+                    <li class="mb-3">
+                        <a class="footerSubHeadings" href="/billing.html" wire:navigate>Shipping Details</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-2">
+                <ul class="p-0">
+                    <li class="mb-4">
+                        <h1 class="footerheadings">Useful links</h1>
+                    </li>
+                    <li class="mb-3 footerSubHeadings"><a class="footerSubHeadings" href="/about-us.html" wire:navigate>About
+                            Us</a></li>
+                    <li class="mb-3 footerSubHeadings"><a class="footerSubHeadings" href="/hot-deals.html" wire:navigate>Hot
+                            deals</a></li>
+                    <li class="mb-3 footerSubHeadings"><a class="footerSubHeadings" href="/promotions.html"
+                            wire:navigate>Promotions</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-sm-6 col-md-12 col-lg-2">
+                <ul class="p-0">
+                    <li class="mb-4">
+                        <h1 class="footerheadings">Help Center</h1>
+                    </li>
+                    <li class="mb-3 footerSubHeadings"><a class="footerSubHeadings" href="/refund.html"
+                            wire:navigate>Refund</a>
+                    </li>
+                    <li class="mb-3 footerSubHeadings"><a class="footerSubHeadings" href="/contact-us.html"
+                            wire:navigate>Contact
+                            Us</a></li>
+                    <li class="mb-3 footerSubHeadings"><a class="footerSubHeadings" href="/faq.html" wire:navigate>Q&A</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="MobileViewFooterIconsMain col-6 col-sm-6 col-md-12 col-lg-2">
+                <div class="MobileViewfootericons">
+                    <img src="Assets/Images/Icons/Payment1.webp" alt="paymentMethods" loading="lazy">
+                    <img src="Assets/Images/Icons/Payment2.webp" alt="paymentMethods" loading="lazy">
+                    <img src="Assets/Images/Icons/Payment3.webp" alt="paymentMethods" loading="lazy">
+                    <img src="Assets/Images/Icons/Payment4.webp" alt="paymentMethods" loading="lazy">
+                    <img src="Assets/Images/Icons/Payment5.webp" alt="paymentMethods" loading="lazy">
+                </div>
+                <div class="MobileViewFooterSocialIcons">
+                    <a href=""><img src="Assets/Images/SmallIcons/Footerfacebook.png" alt=""></a>
+                    <a href=""><img src="Assets/Images/SmallIcons/FooterTwitter.png" alt=""></a>
+                    <a href=""><img src="Assets/Images/SmallIcons/FooterPinterest.png" alt=""></a>
+                    <a href=""><img src="Assets/Images/SmallIcons/FooterInsta.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <hr class="footer_line mt-5">
+        <div class="rightReversedAndPaymentIconsMain mt-5 mb-0 mb-md-5">
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <h6 class="footerAllRightReversed">All right reversed</h6>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-6 footericons">
+                <img src="Assets/Images/Icons/Payment1.webp" alt="paymentMethods" loading="lazy">
+                <img src="Assets/Images/Icons/Payment2.webp" alt="paymentMethods" loading="lazy">
+                <img src="Assets/Images/Icons/Payment3.webp" alt="paymentMethods" loading="lazy">
+                <img src="Assets/Images/Icons/Payment4.webp" alt="paymentMethods" loading="lazy">
+                <img src="Assets/Images/Icons/Payment5.webp" alt="paymentMethods" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+    <!--********* FOOTER *********-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script>
+        document.querySelectorAll('.ratingsMainContain').forEach(container => {
+            container.querySelectorAll('.starLabel input').forEach(input => {
+                input.addEventListener('change', () => {
+                    const rating = input.value;
+                    container.querySelectorAll('.starLabel input').forEach((el, index) => {
+                        if (index < rating) {
+                            el.nextElementSibling.style.fill = '#ffeb49';
+                        } else {
+                            el.nextElementSibling.style.fill = '#dfdfdf';
+                        }
+                    });
+                });
+            });
+        });
+        
+          </script>
+    
+    
+<script src="Assets/JS/cart_dropdown.js"></script>
+<script src="Assets/JS/cart.js"></script>
+<script src="Assets/JS/product_details.js"></script>
+<script src="/Assets/JS/Animations.js"></script>
+<script src="/Assets/JS/browse_category_dropdown.js"></script>
+<script src="/Assets/JS/navbar.js"></script>
+
+</body>
+
+</html>

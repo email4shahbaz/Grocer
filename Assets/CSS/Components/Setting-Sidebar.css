@@ -1,0 +1,49 @@
+.container-fluid{
+    padding: 0px;
+}
+.Setting_aside{
+    background-color: #f3f3f3;
+    width: 100%;
+    height: 100%;
+}
+.User_profile_image{
+    text-align: center;
+    padding-top: 30px;
+}
+.User_profile_image img{
+    width: 100px;
+    border-radius: 50%;
+    height: 100px;
+}
+.User_profile_image h1{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+.User_profile_image p{
+    font-size: 14px;
+    font-weight: 400;
+}
+.Setting_items{
+    width: 100%;
+    margin-top: 150px;
+}
+.Setting_items ul{
+    padding-left: 30%;
+    padding-bottom: 50%;
+    margin: 0px;
+}
+.Setting_items ul li{
+    padding: 10px;
+}
+.Setting_items ul li a{
+    color: #7B7B7B;
+}
+.active_item{
+    color: black;
+    font-weight: 700;
+}
+.logout_btn{
+    border: none;
+    background-color: #F6F6F6;
+}

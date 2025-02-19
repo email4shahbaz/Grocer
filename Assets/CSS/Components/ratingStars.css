@@ -1,0 +1,19 @@
+.checked {
+    color: orange;
+}
+
+.unChecked {
+    color: #D4D4D4;
+}
+
+.NoOfstars {
+    font-size: 14px;
+    color: #ADADAD;
+    font-weight: 400;
+    font-family: poppins;
+}
+.SKUHeading{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: poppins;
+}

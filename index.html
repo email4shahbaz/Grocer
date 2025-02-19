@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <meta name="description"
+        content="Grocer offers a wide variety of groceries including fresh produce, dairy products, meats, and household essentials. Shop online and get everything you need delivered to your doorstep." />
+    <meta name="keywords"
+        content="grocery, online grocery, fresh produce, dairy products, meats, household essentials, Grocer" />
+    <meta name="author" content="Software System" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Grocer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:title" content="Grocer - Your One-Stop Grocery Shop" />
+    <meta property="og:description"
+        content="Grocer offers a wide variety of groceries including fresh produce, dairy products, meats, and household essentials. Shop online and get everything you need delivered to your doorstep." />
+    <meta property="og:image"
+        content="https://grocer.softwaresystems.us/storage/app/public/restaurant/2024-05-30-665896300dbbd.png" />
+    <meta property="og:url" content="https://groceapp.softwaresystems.us/" />
+    <meta property="og:type" content="website" />
+    <link rel="shortcut icon" href="https://grocer.softwaresystems.us/storage/app/public/restaurant/{{ $favicon }}"
+        type="image/x-icon" />
+    <title>Updated</title>
+    <!-- {{-- Quicksand --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
+    <!-- {{-- Poppins --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Mulish --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Roboto --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Inter --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Bootstrap 5 --}} -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <!-- {{-- Bootstrap 5 Icons --}} -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- {{-- Font Awesome Icons CDN --}} -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- {{-- Home Page custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Home.css" />
+    <!-- {{-- NavBar Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Navbar.css" />
+    <!--category style sheet-->
+    <link rel="stylesheet" href="/Assets/CSS/Components/Home_category.css" />
+    <!-- {{-- SubNav Home Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/subnav_home.css">
+    <!-- {{-- Card Home Category Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Components/cardhomeCategory.css">
+    <!-- {{-- Product Card Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Components/products.css">
+    <!-- {{-- Best Sell Card Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Components/bestsellcard.css">
+    <!-- {{-- Rating Stars Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Components/ratingStars.css">
+    <!-- {{-- Off Card Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Components/offcard.css">
+    <!-- {{-- Home Last Card Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Components/lastcardhome.css">
+    <!-- {{-- Footer Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Footer.css">
+    <link rel="stylesheet" href="/Assets/CSS/cart.css">
+    <link rel="stylesheet" href="/Assets/CSS/product_details.css">
+    <link rel="stylesheet" href="/Assets/CSS/Search.css">
+    <link rel="stylesheet" href="/Assets/CSS/cart_dropdown.css">
+    <link rel="stylesheet" href="/Assets/CSS/navbar_side_icons.css">
+    <!-- {{-- Wishlist Page Css Custom Style --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/wishlist.css">
+    <!-- Animation CSS File -->
+    <link rel="stylesheet" href="/Assets/CSS/Animations.css">
+    <link rel="stylesheet" href="/Assets/CSS/promo-popup.css">
+    <link rel="stylesheet" href="/Assets/CSS/deals.css">
+    <link rel="stylesheet" href="/Assets/CSS/quick-view.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="Assets/Images/Banner/Favicon.png" type="image/x-icon">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+
+
+    <!-- Animated Logo Cover -->
+    <div id="logo-cover" class="logo-cover d-flex justify-content-center align-items-center">
+
+        <img src="Assets/Images/Icons/GrocerLogo.png" alt="Grocer Logo" class="animated-logo" />
+
+    </div>
+
+
+
+
+    <!-- promotion popup -->
+    <div class="popup-container" id="popupContainer">
+        <div class="popup-box animate__animated animate__fadeInUp">
+            <button class="close-btn" onclick="closePopup()">&times;</button>
+            <div class="popup-content">
+                <div class="popup-text">
+                    <!-- Offer Badge -->
+                    <div class="offer-badge ">20% OFF</div>
+
+                    <h2 class="offer-heading">Get Free Delivery!</h2>
+                    <p class="offer-description">First order? We’ve Got You Covered! Enjoy <span
+                            class="free-delivery">FREE DELIVERY</span> on your first purchase.</p>
+                    <div class="offer-details">
+                        <span class="offer-expiry">Offer Ends Soon!</span>
+                    </div>
+
+                    <!-- Timer -->
+                    <!-- <div class="timer">
+    <div class="time-box" id="days">02</div>
+    <div class="time-separator">:</div>
+    <div class="time-box" id="hours">12</div>
+    <div class="time-separator">:</div>
+    <div class="time-box" id="minutes">55</div>
+    <div class="time-separator">:</div>
+    <div class="time-box" id="seconds">02</div>
+</div> -->
+                    <div class="timer" id="timer">05:00:00</div>
+
+
+
+                    <!-- This will display "Offer Ending Soon" after the timer ends -->
+
+
+
+                    <div class="shop-now my-5">
+                        <a href="category.html" class="shop-now-btn">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="popup-image">
+                    <img src="Assets/Images/Banner/Delivery-img.png" alt="Promo Image" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- promotion popup End -->
+
+
+
+    <!-- quick-view pop up -->
+    <!-- Quick View Modal -->
+    <div id="quick-view-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="quickViewLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="product-name">Product Name</h5>
+                    <!-- Close button (Bootstrap provides 'data-dismiss' functionality) -->
+                    <button type="button" class="close" style="border: none;" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img id="product-image" class="img-fluid w-100" alt="Product Image" loading="lazy">
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>Price:</strong> <span id="product-price">$0</span></p>
+                            <p id="discount-badge" class="badge"></p> <!-- Discount badge will appear here -->
+                            <p><strong>Description:</strong> <span id="product-description">No description
+                                    available.</span></p>
+                            <p><strong>SKU:</strong> <span id="product-sku">N/A</span></p>
+                            <p><strong>Category:</strong> <span id="product-category">Unknown</span></p>
+                            <p><strong>Tags:</strong> <span id="product-tags">No Tags</span></p>
+                            <p id="fomo-message" class="text-danger"></p> <!-- FOMO message will appear here -->
+                            <button id="addbutton" class="btn btn-success">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- quick-view pop up end -->
+
+
+
+    <!--********** NAVIGATION **********-->
+    <div class="web-container">
+
+
+
+
+        <!-- Top Small Header -->
+        <div class="top-header">
+            <div class="container top-header-container">
+                <div class="top-header-left">
+                    <a href="about-us.html">About Us</a>
+                    <span>|</span>
+                    <a href="contact-us.html">Contact Us</a>
+                    <span>|</span>
+                    <a href="faq.html">FAQs</a>
+                    <span>|</span>
+                    <a href="refund.html">Refund Order</a>
+
+                   
+                    
+                </div>
+                <div class="top-header-center">
+                    <span class="animated-icon-text">
+                        <i id="animatedIcon" class="bi bi-truck"></i>
+                        <span id="animatedText"></span>
+                    </span>
+                </div>
+                <div class="top-header-right">
+                    <a href="faq.html">Help & FAQs</a>
+                    <span>|</span>
+                    <a href="authentication/register.html">Sign In / Register</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <nav class="navbar navbar-expand-lg bg-white shadow-sm main_navbar">
+            <div class="container d-flex">
+                <div class="logo_main_image">
+                    <!-- {{-- MVSideBarOpenIcon --}} -->
+                    <a href="" class="SideBarOpenIcon" id="sidebarToggle">
+                        <!-- <img src="Assets/Images/SmallIcons/SideBarOpenIcon.webp" alt="collapseIcon" loading="lazy" /> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                            class="bi bi-justify sidebarIcon" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
+                        </svg>
+                    </a>
+                    <!-- {{-- MVSideBarOpenIcon --}} -->
+                    <a href="/index.html"> <img src="/Assets/Images/Icons/GrocerLogo.webp"
+                            onerror="this.src='/Assets/IMAGES/ErrorImage.webp'" wire:navigate href="/index.html"
+                            alt="Grocer__Logo" class="mainlogo" loading="lazy" /></a>
+                </div>
+
+
+                <!-- {{-- ****************Mobile View Profile and Cart******************** --}} -->
+                <div class="mobile_cart_profile">
+                    <div class="mobile_image_profile">
+                        <a href="/setting.html">
+                            <img src="Assets/Images/Banner/user4.webp" class="user_profile_image user_profile_image_nav"
+                                alt="userImage" loading="lazy" />
+                        </a>
+                    </div>
+
+                    <!-- Mobile Drawer Cart -->
+                    <div class="cart-drawer-overlay"></div>
+                    <div class="cart-drawer" id="mobileCartDrawer">
+                        <div class="cart-drawer-header">
+                            <span class="cart-drawer-title">Your Cart</span>
+                            <span class="cart-drawer-close" id="mobileCartDrawerClose">&times;</span>
+                        </div>
+                        <div class="cart-drawer-body">
+                            <!-- Cart items will dynamically render here -->
+                        </div>
+                        <div class="cart-drawer-footer">
+                            <!-- Footer for total price and buttons -->
+                        </div>
+                    </div>
+
+                    <!-- Mobile Cart Button -->
+                    <div class="mobile-cart-button">
+                        <h1 class="mobile-cart-heading position-relative">
+                            <img src="Assets/Images/SmallIcons/ShopCart.webp" alt="cartImage" loading="lazy"
+                                id="openMobileCartDrawer" />
+                            <span
+                                class="position-absolute translate-middle cart-badge border border-light wishlist_badge"
+                                id="mobileCartBadge">
+                                0
+                            </span>
+                        </h1>
+                    </div>
+
+
+
+                </div>
+                <!-- {{-- ****************Mobile View Profile and Cart******************** --}} -->
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll ul_nav" style="--bs-scroll-height: 100px">
+                    <li class="nav-item search_button">
+                        <form class="d-flex" onsubmit="event.preventDefault();">
+                            <div class="input-group searchButtonCate">
+                                <select name="" id="" wire:model.live="search_category"
+                                    class="SerachwithCategoriesLists">
+                                    <option value="All Categories">All Categories</option>
+                                    <option value="{{ $item['id'] }}">Fruits</option>
+                                </select>
+                                <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="" />
+                                <input type="text" wire:model.live.debounce.300ms="search_query"
+                                    class="shadow-md border-0 search_inp" maxlength="20"
+                                    placeholder="Search for items..." aria-label="Search" autocomplete="off" />
+                                <button class="btn rounded-0 shadow-md search_btn" type="submit">
+                                    <img src="Assets/Images/SmallIcons/search.webp" alt="searchIcon" loading="lazy" />
+
+                                </button>
+                            </div>
+                        </form>
+                    </li>
+
+                    <li class="nav-item d-flex whishlist_button">
+                        <h1 class="wishlist_heading position-relative">
+                            <img src="Assets/Images/SmallIcons/WishlistHeart.webp" alt="wishlistIcon" loading="lazy" />
+                            <span class="position-absolute translate-middle wishlist_badge_counter border border-light">
+                                0
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                        </h1>
+                        <a class="nav-link wislistHeading" href="/wishlist.html" wire:navigate>Wishlist</a>
+                    </li>
+
+                    <!-- Drawer Structure -->
+
+                    <div class="cart-drawer-overlay"></div>
+                    <div class="cart-drawer" id="cartDrawer">
+                        <div class="cart-drawer-header">
+                            <span class="cart-drawer-title">Your Cart</span>
+                            <span class="cart-drawer-close" id="cartDrawerClose">&times;</span>
+                        </div>
+                        <div class="cart-drawer-body">
+                            <!-- Dynamic cart items will be rendered here -->
+                        </div>
+                        <div class="cart-drawer-footer">
+                            <!-- Footer with total price and buttons -->
+                        </div>
+                    </div>
+
+                    <!-- Replace Mini Cart Button in Navigation -->
+                    <li class="nav-item d-flex cart_button">
+                        <h1 class="cart_heading position-relative">
+                            <img src="Assets/Images/SmallIcons/ShopCart.webp" alt="cartButton" loading="lazy" />
+                            <span class="position-absolute translate-middle wishlist_badge border border-light"
+                                id="cartBadge">
+                                0
+                            </span>
+                        </h1>
+                        <a href="#" class="mycartCustom" id="openCartDrawer">
+                            <div>
+                                <h3 class="mycartCustomHeading1">My Cart</h3>
+                                <h3 class="mycartCustomHeading2">$0.00</h3>
+                            </div>
+                            <div>
+                                <img src="Assets/Images/SmallIcons/ArrowDown.svg" alt="ArrowDown" loading="lazy" />
+                            </div>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item dropdown d-flex profile_image">
+                        <img src="Assets/Images/Banner/user4.webp" class="user_profile_image user_profile_image_nav"
+                            alt="UserImage" loading="lazy" />
+
+                        <div class="dropdown">
+                            <a class="nav-link loginheadingNav" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Acount
+                                <!-- <img src="Assets/Images/SmallIcons/ArrowDown.svg" alt="" /> -->
+                            </a>
+                            <ul class="dropdown-menu custom-dropdown-menu">
+                                <li><a class="dropdown-item" href="/history.html">Order History</a></li>
+                                <li><a class="dropdown-item" href="/setting.html">Settings</a></li>
+                                <li><a class="dropdown-item" href="/orders.html">Orders</a></li>
+                                <hr class="dropdown-divider">
+                                <li><a class="dropdown-item" href="/authentication/login.html">Login</a></li>
+                                <li><a class="dropdown-item" href="/authentication/register.html">Register</a></li>
+                            </ul>
+                        </div>
+                    </li>
+            </div>
+
+        </nav>
+        <!-- search.html (Mobile View) -->
+        <div class="search_component">
+            <form class="d-flex">
+                <div class="input-group searchButtonCate">
+                    <select name="" id="mobile_search_category" wire:model.live="search_category"
+                        class="SerachwithCategoriesLists">
+                        <option value="All Categories">All Categories</option>
+                        <option value="Fruits">Fruits</option>
+                    </select>
+                    <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="divider" />
+                    <input type="text" id="mobile_search_input" class="form-control shadow-md border-0 search_inp"
+                        maxlength="20" placeholder="Search for items..." aria-label="Search" autocomplete="off" />
+                    <button class="btn rounded-0 shadow-md search_btn">
+                        <img src="Assets/Images/SmallIcons/search.webp" alt="searchIcon" loading="lazy" />
+                    </button>
+                </div>
+            </form>
+            <!-- Suggestions Container -->
+            <div id="mobile_search_suggestions" class="search-suggestions" style="display:none;"></div>
+        </div>
+
+
+        <!--********** NAVIGATION **********-->
+
+
+
+
+
+        <!-- Sidebar Navigation -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <div class="sidebar-nav" id="sidebarNav">
+            <div class="sidebar-header">
+                <!-- {{-- MVSideBarOpenIcon --}} -->
+                <img src="/Assets/Images/Icons/GrocerLogo.webp" onerror="this.src='/Assets/IMAGES/ErrorImage.webp'"
+                    wire:navigate href="/index.html" alt="Grocer__Logo" class="mainlogo" loading="lazy" />
+                <button id="closeSidebar" class="close-sidebar-btn">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav class="navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+                    <hr>
+                    <li class="nav-item"><a href="/about-us.html" class="nav-link">About Us</a></li>
+                    <hr>
+                    <li class="nav-item"><a href="/wishlist.html" class="nav-link">Wishlist</a></li>
+                    <hr>
+                    <li class="nav-item"><a href="/history.html" class="nav-link">History</a></li>
+                    <hr>
+                    <li class="nav-item"><a href="/faq.html" class="nav-link">Q&A</a></li>
+                    <hr>
+                    <li class="nav-item"><a href="/orders.html" class="nav-link">Order</a></li>
+                    <hr>
+                    <li class="nav-item"><a href="/setting.html" class="nav-link">Settings</a></li>
+                    <hr>
+                    <li class="nav-item"><a href="/hot-deals.html" class="nav-link">Hot Deals</a></li>
+                    <hr>
+                    <li class="nav-item"><a href="/promotions.html" class="nav-link">Promotions</a></li>
+                    <hr>
+                    <li class="nav-item"><a href="/new-products.html" class="nav-link">New Products</a></li>
+                    <hr>
+                    <li class="nav-item"><a href="/category.html" class="nav-link">Browse Categories</a></li>
+                    <hr>
+                    <li class="nav-item"><a href="/contact-us.html" class="nav-link">Contact Us</a></li>
+
+                </ul>
+            </nav>
+        </div>
+
+
+
+
+
+
+        <!--********** HOME SUB NAV **********-->
+
+        <nav class="navbar navbar-expand-lg bg-white d-sm-none d-md-none d-lg-block home_page_nav_two"
+            style="border-top: 1px solid #f1f1f1;">
+            <div class="container homeSubNavBarLayout">
+
+                <!-- Browse All Categories Button -->
+                <div class="homeSubNavBarItem1">
+                    <button class="Explore_all_categories_Btn" onclick="toggleDropdown()">
+                        <i class="bi bi-grid"></i> &nbsp; Browse All Categories <i class="bi bi-chevron-down"></i>
+                    </button>
+                </div>
+
+                <!-- Dropdown Menu -->
+                <div class="category-dropdown container-fluid" id="categoryDropdown" style="display: none;">
+                    <!-- Left Side: Image Section with Text -->
+                    <div class="d-flex">
+
+
+                        <div class="category-image-container" style="background-color: #53B175;">
+                            <div class="category-image">
+                                <img src="Assets/Images/Banner/front-view-vegetable.jpg" alt="Category Image">
+                            </div>
+
+                            <div class="category-text">
+                                <h2>Organic Foods</h2>
+                                <p>Discover the freshest organic foods sourced directly from nature. Packed with flavor
+                                    and nutrition, perfect for a healthy lifestyle.</p>
+                                <div class="discount-offer">
+                                    <span>Save up to 20% off on Organic Foods</span>
+                                </div>
+                                <a href="/category.html">
+                                    <button class="order-now-btn">Order Now</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Right Side: Category Grid -->
+                        <div class="category-grid">
+                            <div class="category-item">
+                                <img src="Assets/Images/Icons/milk.png" alt="">
+                                <span>Fruits</span>
+                            </div>
+                            <div class="category-item">
+                                <img src="Assets/Images/Icons/wine.png" alt="">
+                                <span>Vegetables</span>
+                            </div>
+                            <div class="category-item">
+                                <img src="Assets/Images/Icons/clothing.png" alt="">
+                                <span>Dairy</span>
+                            </div>
+                            <div class="category-item">
+                                <img src="Assets/Images/Icons/seafood.png" alt="">
+                                <span>Beverages</span>
+                            </div>
+                            <div class="category-item">
+                                <img src="Assets/Images/Icons/pet.png" alt="">
+                                <span>Snacks</span>
+                            </div>
+                            <div class="category-item">
+                                <img src="Assets/Images/Icons/fastfood.png" alt="">
+                                <span>Fruits</span>
+                            </div>
+                            <div class="category-item">
+                                <img src="Assets/Images/Icons/baking.png" alt="">
+                                <span>Beverages</span>
+                            </div>
+                            <div class="category-item">
+                                <img src="Assets/Images/Icons/vegetables.png" alt="">
+                                <span>Vegetables</span>
+                            </div>
+                            <div class="category-item">
+                                <img src="Assets/Images/Icons/fruit.png" alt="">
+                                <span>Fresh Fruit</span>
+                            </div>
+                            <div class="category-item">
+                                <img src="Assets/Images/Icons/bread.png" alt="">
+                                <span>Bread and Juice</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Show More Link -->
+                    <div class="show-more">
+                        <a href="/category.html">
+                            <span style="color: #53B175;">+ Show more...</span>
+                        </a>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <!-- Navbar Links -->
+                <div class="homeSubNavBarItem2">
+                    <ul class="navbar-nav ullists_subhomenav">
+                        <li class="nav-item"><a href="/index.html" class="SubnavIconsAdjustment"><i
+                                    class="bi bi-house navbar-icon"></i> Home</a></li>
+
+                        <li class="nav-item"><a href="/hot-deals.html" class="SubnavIconsAdjustment"><i
+                                    class="bi bi-fire navbar-icon"></i> Hot Deals</a></li>
+                        <li class="nav-item"><a href="/promotions.html" class="SubnavIconsAdjustment"><i
+                                    class="bi bi-tags navbar-icon"></i> Promotions</a></li>
+                        <li class="nav-item"><a href="/new-products.html" class="SubnavIconsAdjustment"><i
+                                    class="bi bi-megaphone navbar-icon"></i> New Products</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support Center -->
+                <div class="homeSubNavBarItem3">
+                    <ul class="navbar-nav ullistsLast">
+                        <li class="nav-item support_li">
+                            <div class="SupportCenterMain">
+                                <a href="tel:9039829228282">
+                                    <h3 class="SupportcenterHeading1">
+                                        <i class="bi bi-telephone Number_Support"></i>
+                                        &nbsp;+92 398 29228282&nbsp;
+                                    </h3>
+                                </a>
+                                <span class="support-separator">|</span>
+                                <div>
+                                    <h3 class="SupportcenterHeading2">24/7 Support Center</h3>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+
+
+
+        <!--********** HOME SUB NAV **********-->
+
+        <!--********** Hero Section **********-->
+        <div class="container-fluid p-0">
+            <div id="carouselExampleIndicators" class="carousel slide WebViewCarosuel" data-bs-ride="carousel">
+                <div class="carousel-indicators pb-5">
+                    <button type="button" id="CustomHomeHeroNavigator" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" id="CustomHomeHeroNavigator" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container-fluid p-0 hero_main position-relative">
+                            <div class="container">
+                                <div class="hero_description_one">
+                                    <h1 class="h1 hero_main_heading">Don’t miss our daily amazing deals.</h1>
+                                    <p class="mt-4 hero_heading_description">Save up to 60% off on your first order</p>
+                                    <!-- {{-- *********Subscribe Email Component********* --}} -->
+                                    <div class="w-100">
+                                        <form wire:submit="Subscribe">
+                                            <div class="input-group mb-3 mt-5">
+                                                <div class="inp_Box">
+                                                    <input type="email" wire:model="email" class="subcriberEmailField"
+                                                        name="email" placeholder="Enter your email address"
+                                                        aria-label="Recipient's username"
+                                                        aria-describedby="button-addon2" maxlength="35" />
+                                                    <img src="Assets/Images/SmallIcons/SubscriberSendIcon.png"
+                                                        class="sendImageIcon" alt="">
+                                                </div>
+
+                                                <button
+                                                    class="d-flex justify-between align-items-center subcriberEmailButton text-white p-sm-0 pmd-0 p-lg-3"
+                                                    type="submit" id="button-addon2">Subscribe
+                                                    <!-- <div wire:loading class="subcriberLoader">
+                                                    <div class="spinner-border" style="width: 1rem; height: 1rem;" role="status">
+                                                        <span class="visually-hidden">Loading...</span>
+                                                    </div>
+                                                </div> -->
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="position-absolute top-0 end-0">
+                                    <img src="/Assets/Images/Banner/HeroHomeImage.webp"
+                                        class="w-100 img-fluid hero_img_grocery" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container-fluid p-0 hero_main position-relative">
+                            <div class="container">
+                                <div class="hero_description_one">
+                                    <h1 class="h1 hero_main_heading">Don’t miss our daily amazing deals.</h1>
+                                    <p class="mt-4 hero_heading_description">Save up to 60% off on your first order</p>
+                                    <!-- {{-- *********Subscribe Email Component********* --}} -->
+                                    <div class="w-100">
+                                        <form wire:submit="Subscribe">
+                                            <div class="input-group mb-3 mt-5">
+                                                <div class="inp_Box">
+                                                    <input type="email" wire:model="email" class="subcriberEmailField"
+                                                        name="email" placeholder="Enter your email address"
+                                                        aria-label="Recipient's username"
+                                                        aria-describedby="button-addon2" maxlength="35" />
+                                                    <img src="Assets/Images/SmallIcons/SubscriberSendIcon.png"
+                                                        class="sendImageIcon" alt="">
+                                                </div>
+
+                                                <button
+                                                    class="d-flex justify-between align-items-center subcriberEmailButton text-white p-sm-0 pmd-0 p-lg-3"
+                                                    type="submit" id="button-addon2">Subscribe
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="position-absolute top-0 end-0">
+                                    <img src="/Assets/Images/Banner/HeroHomeImage.webp"
+                                        class="w-100 img-fluid hero_img_grocery" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- {{-- ******************Mobile View************************* --}} -->
+            <div id="carouselExampleIndicatorsMobileView" class="carousel slide MobileviewBannerContainer"
+                data-bs-ride="carousel">
+                <div class="carousel-indicators MobileViewCarouselIndicators">
+                    <button type="button" id="CustomHomeHeroNavigator"
+                        data-bs-target="#carouselExampleIndicatorsMobileView" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" id="CustomHomeHeroNavigator"
+                        data-bs-target="#carouselExampleIndicatorsMobileView" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="MobileviewBanner">
+                            <div class="banner_mobile_image">
+                                <img src="Assets/Images/Banner/MobileViewBanner.png" class="w-100 img-fluid" alt="">
+                                <div class="banner_mobile_content">
+                                    <h4>SUMMER SALE</h4>
+                                    <h1>75% OFF</h1>
+                                    <h3>ONLY FRUIT & Vegitables</h3>
+                                    <a href="">Shop Now <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="MobileviewBanner">
+                            <div class="banner_mobile_image">
+                                <img src="Assets/Images/Banner/MobileViewBanner.png" class="w-100 img-fluid" alt="">
+                                <div class="banner_mobile_content">
+                                    <h4>SUMMER SALE</h4>
+                                    <h1>75% OFF</h1>
+                                    <h3>ONLY FRUIT & Vegitables</h3>
+                                    <a href="">Shop Now <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- {{-- ******************Mobile View************************* --}} -->
+        </div>
+        <!--********** Hero Section **********-->
+        <div class="container mt-5">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="">
+                    <h1 class="explorecategory_heading h5">Explore Categories</h1>
+                </div>
+            </div>
+
+            <div class="row mt-3 mb-5 bg-white position-relative">
+                <div id="category" class="webviewCarouselOne">
+                    <div class="homecategoryProductsMain flex-nowrap mb-sm-2 mb-md-2 mb-lg-0"></div>
+
+                    <button class="CategoryBtnLeft">
+                        <h2 class="m-0"><i class="bi bi-arrow-left-short"></i></h2>
+                    </button>
+                    <button class="CategoryBtnRight">
+                        <h2 class="m-0"><i class="bi bi-arrow-right-short"></i></h2>
+                    </button>
+                </div>
+
+                <div class="MobileViewCategoriesCardOne">
+                    <div class="MobileViewCategoriesCardOneMainDiv"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="container mt-5">
+
+
+            <!-- {{-- *****************Explore Categories****************** --}}
+        {{-- ***************************************************** --}}
+        {{-- ***************************************************** --}}
+        {{-- ***************************************************** --}} -->
+
+            <!-- {{-- ******************Featured Products***************** --}} -->
+            <div class="container p-0 mt-5" id="NewProductsSection">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="">
+                        <h1 class="explorecategory_heading h5">Featured Products</h1>
+                    </div>
+                    <div class="">
+                        <ul class="d-flex justify-content-between flex-nowrap category_listing2 gap-3 ">
+                            <li class="All ">
+                                <div class="d-flex">
+                                    <input type="radio" value="0" class="d-none"
+                                        wire:model.live="featuredProductCategory" />
+                                    <label for="" role="button" class="categoryLabel ">All</label>
+                                </div>
+                            </li>
+                            <!-- @foreach ($categoryLists as $item) -->
+                            <li class="Fruits">
+                                <div class="d-flex">
+                                    <input type="radio" wire:model.live="featuredProductCategory" value=""
+                                        class="d-none" />
+                                    <label for="" role="button" class="categoryLabel ">Fruits</label>
+                                </div>
+                            </li>
+                            <li class="">
+                                <div class="d-flex">
+                                    <input type="radio" wire:model.live="featuredProductCategory" value=""
+                                        class="d-none" />
+                                    <label for="" role="button" class="categoryLabel ">Vegitables</label>
+                                </div>
+                            </li>
+                            <li class="">
+                                <div class="d-flex">
+                                    <input type="radio" wire:model.live="featuredProductCategory" value=""
+                                        class="d-none" />
+                                    <label for="" role="button" class="categoryLabel ">Beverages</label>
+                                </div>
+                            </li>
+
+                            <li class="">
+                                <div class="d-flex">
+                                    <input type="radio" wire:model.live="featuredProductCategory" value=""
+                                        class="d-none" />
+                                    <label for="" role="button" class="categoryLabel ">Dairy</label>
+                                </div>
+                            </li>
+                            <!-- @endforeach -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-3 position-relative ">
+                    <div id="products" class="WebViewCarouselTwo">
+                        <div class="homefeaturedProductsMain flex-nowrap">
+
+                        </div>
+                        <button class="FeaturedBtnLeft">
+                            <h2 class="m-0"><i class="bi bi-arrow-left-short"></i></h2>
+                        </button>
+                        <button class="FeaturedBtnRight">
+                            <h2 class="m-0"><i class="bi bi-arrow-right-short"></i></h2>
+                        </button>
+                    </div>
+                    <!-- {{-- ************Mobile View Featured Card************ --}} -->
+                    <div class="MobileViewFeaturedCard">
+                        <div class="MobileViewFeaturedCardMain">
+                        </div>
+                    </div>
+                    <!-- {{-- ************Mobile View Featured Card************ --}} -->
+                </div>
+            </div>
+            <!-- {{-- ********************Featured Products****************** --}}
+        {{-- ******************************************************* --}}
+        {{-- ******************************************************* --}}
+        {{-- ******************************************************* --}}
+
+        {{-- **********************Offers*************************** --}} -->
+            <div class="container mt-5 p-0">
+                <!-- @if ($flashDeals) -->
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                    <div class="position-relative">
+                        <a href="/promotions.html">
+                            <img src="./Assets/Images/Banner/Yellow.png"
+                                onerror="this.src='Assets/Images/Banner/Yellow.png'" class="offersBanner" alt="">
+                            <img src="./Assets/Images/Banner/Offer1-img.webp" class="offersImage" alt="">
+                            <div class="offerContent">
+                                <span class="offerContentBadgeOne">Free Delivery</span>
+                                <h1>Free delivery over $50</h1>
+                                <p>Shop $50 product and get free delivery anywhre.</p>
+                                <a href="/promotions.html" class="offerSButton">Shop Now <i
+                                        class="bi bi-arrow-right-short"></i></a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="position-relative d-none d-md-block">
+                        <a href="/promotions.html" wire:navigate>
+                            <img src="./Assets/Images/Banner/Green.png"
+                                onerror="this.src='Assets/Images/Banner/Offer1.webp'" class="offersBanner" alt="">
+                            <img src="./Assets/Images/Banner/Offer2-img.webp"
+                                style="position: absolute; bottom: 0px; right: 0px;" alt="">
+                            <div class="offerContent">
+                                <span class="offerContentBadgeTwo">60% Off</span>
+                                <h1>Organic Food</h1>
+                                <p>Save up to 60% off on your first order</p>
+                                <a href="/promotions.html" class="offerSButton">Order Now <i
+                                        class="bi bi-arrow-right-short"></i></a>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- @endif -->
+            </div>
+            <!-- {{-- **********************Offers************************* --}}
+        {{-- ***************************************************** --}}
+        {{-- ***************************************************** --}}
+        {{-- ***************************************************** --}} -->
+
+            <!-- {{-- ****************Best Sells Products****************** --}} -->
+            <div class="container p-0 dailybestsellSectionContainer" id="DailBestSellSection">
+                <div class="d-flex justify-content-center  justify-content-md-between align-items-center">
+                    <div class="daily_best_sells_listing_one">
+                        <div class="">
+                            <h1 class="bestSell_heading h5">Daily Best Sells</h1>
+                        </div>
+                        <div class="align-self-center">
+                            <ul class="d-flex justify-content-between flex-nowrap category_listing2 p-0 gap-3">
+                                <li class="">
+                                    <div class="d-flex">
+                                        <input type="radio" value="/popular" class="d-none" id="popular"
+                                            wire:model.live="bestSellId" />
+                                        <label for="popular" role="button" class="categoryLabel ">Best
+                                            Sells</label>
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex">
+                                        <input type="radio" value="/trending" class="d-none" id="trending"
+                                            wire:model.live="bestSellId" />
+                                        <label for="trending" role="button" class="categoryLabel ">Trending</label>
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex">
+                                        <input type="radio" value="/latest" class="d-none" id="latest"
+                                            wire:model.live="bestSellId" />
+                                        <label for="latest" role="button" class="categoryLabel ">New</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <div class="expiry category_listing" id="timer-container" style="color: white;">
+                                Expires in:
+                                <span id="days">0</span> day<span id="days_plural">s</span> :
+                                <span id="hours">0</span> :
+                                <span id="minutes">0</span> :
+                                <span id="seconds">0</span>
+                            </div>
+
+
+
+                        </div>
+
+
+
+                        <!-- @endif -->
+                    </div>
+                    <!-- {{-- ******************************* --}} -->
+                    <div class="daily_best_sells_listing_one_arrowicons">
+                        <div class="category_listing2">
+                            <button class="BestSellProductarrowbtnLeft">
+                                <h2 class="m-0"><i class="bi bi-arrow-left-short"></i></h2>
+                            </button>
+                            <button class="BestSellProductarrowbtnRight">
+                                <h2 class="m-0"><i class="bi bi-arrow-right-short"></i></h2>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="buttonBox_mobileView">
+                    <div class="d-flex">
+                        <input type="radio" value="/popular" class="d-none" id="popular" wire:model.live="bestSellId" />
+                        <label for="popular" role="button"
+                            class="{{ $bestSellId == '/popular' ? 'new_button' : '' }} custom-button">Best Sells</label>
+                    </div>
+                    <div class="d-flex">
+                        <input type="radio" value="/trending" class="d-none" id="trending"
+                            wire:model.live="bestSellId" />
+                        <label for="trending" role="button"
+                            class="{{ $bestSellId == '/trending' ? 'new_button' : '' }} custom-button">Trending</label>
+                    </div>
+                    <div class="d-flex">
+                        <input type="radio" value="/latest" class="d-none" id="latest" wire:model.live="bestSellId" />
+                        <label for="latest" role="button"
+                            class="{{ $bestSellId == '/latest' ? 'new_button' : '' }} custom-button">New</label>
+                    </div>
+                </div>
+                <!-- {{-- *****************Mobile View************** --}} -->
+                <div class="d-flex justify-content-start align-items-center position-relative">
+                    <div class="d-flex justify-content-start BestsellProductsSection mt-5 customWidth_80">
+                    </div>
+                    <div class="mt-4">
+                        <div class="mt-3">
+                            <div class="OffCard">
+                                <h1 class="OffCardPercentHeading">10% OFF</h1>
+                                <p class="OffCardPercentDescription">For new member sign up at the first time</p>
+                                <div class="card-body">
+                                    <form class="mt-2">
+                                        <label for="email" class="offcardLabel">Email Address*</label>
+                                        <div class="input-group mb-3 mt-2">
+                                            <span class="input-group-text OffCardInputIconsBox">
+                                                <img src="Assets/Images/SmallIcons/MainInp.webp" alt="">
+                                            </span>
+                                            <input type="text" wire:model="email" class="form-control OffCardInput"
+                                                id="floatingInputGroup1" placeholder="johndoe@gmail.com">
+                                        </div>
+                                        <label for="password" class="offcardLabel">Password*</label>
+                                        <div class="input-group mb-3 mt-2">
+                                            <span class="input-group-text OffCardInputIconsBox">
+                                                <img src="Assets/Images/SmallIcons/PasswordKeyInp.webp" alt="">
+                                            </span>
+                                            <input type="password" wire:model="password"
+                                                class="form-control OffCardInput" id=""
+                                                placeholder="Maximum 8 characters">
+                                        </div>
+                                        <div class="col text-center align-self-center mt-3">
+                                            <button class="btn offcardbtn py-2 w-100" type="button"
+                                                wire:click="validateForm">Register
+                                                Now</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="BestsellProductsSectionMV">
+                </div>
+            </div>
+            <!-- {{-- *****************Best Sells Products**************** --}}
+        {{-- **************************************************** --}}
+        {{-- **************************************************** --}}
+        {{-- **************************************************** --}} -->
+
+
+            <!-- Deals of the Day  -->
+
+            <!-- Deals of the Day -->
+            <div class="deals-of-the-day mb-5">
+                <div class="header">
+                    <h2 class="deals-title">Deals of the Day</h2>
+                    <div class="timer-container">
+                        <div class="time-box_deal">
+                            <span id="days">00</span> Days
+                        </div>
+                        <span class="separator">:</span>
+                        <div class="time-box_deal">
+                            <span id="hours">00</span> Hours
+                        </div>
+                        <span class="separator">:</span>
+                        <div class="time-box_deal">
+                            <span id="minutes">00</span> Mins
+                        </div>
+                        <span class="separator">:</span>
+                        <div class="time-box_deal">
+                            <span id="seconds">00</span> Sec
+                        </div>
+                    </div>
+                </div>
+                <div class="deals-container" id="deals-container">
+                    <!-- Dynamic product cards will be inserted here -->
+                </div>
+            </div>
+
+
+
+            <!-- Deals of the Day End -->
+
+
+
+
+            <!-- Deals of the Day End -->
+
+
+            <div class="container LasthomecardsMainContainer">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
+                        <h1 class="topsellHeading">Top Sells</h1>
+                        <div class="progress HomeProgressmain">
+                            <div class="progress-bar HomeProgress" role="progressbar" aria-label="Example with label"
+                                style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="row homelastRender1">
+                        </div>
+                    </div>
+
+
+                    <!-- {{-- ************************************* --}} -->
+                    <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
+                        <h1 class="topsellHeading">Top Rated</h1>
+                        <div class="progress HomeProgressmain">
+                            <div class="progress-bar HomeProgress" role="progressbar" aria-label="Example with label"
+                                style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="row homelastRender2">
+                        </div>
+                    </div>
+                    <!-- {{-- ************************************* --}} -->
+                    <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
+                        <h1 class="topsellHeading">Trending Items</h1>
+                        <div class="progress HomeProgressmain">
+                            <div class="progress-bar HomeProgress" role="progressbar" aria-label="Example with label"
+                                style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="row homelastRender3">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
+                        <h1 class="topsellHeading">Recently Added</h1>
+                        <div class="progress HomeProgressmain">
+                            <div class="progress-bar HomeProgress" role="progressbar" aria-label="Example with label"
+                                style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="row homelastRender4">
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <!--********** UPPER FOOTER **********-->
+        <div class="container-fluid upperFooter">
+            <div class="container">
+
+                <div class="row banner_playstoreApp">
+                    <!-- {{-- ************************************** --}} -->
+                    <div class="col DownloadAppsDescription">
+                        <h1 class="mainheading_upperfooter">Shop Faster With GROCER App</h1>
+                        <p class="paragraph_upperfooter mt-sm-2 mt-md-2 mt-lg-5">Available on both IOS & Android</p>
+                        <div class="row mt-sm-2 mt-md-2 mt-lg-5">
+                            <div class="col Appstore_btn">
+                                <a href="https://www.apple.com/app-store/" target="_blank"> <img
+                                        src="Assets/Images/Icons/AppStoreIcon.webp" style="cursor: pointer;" alt=""></a>
+
+                            </div>
+                            <div class="col playstore_btn">
+                                <a href="https://play.google.com/store/games?hl=en&pli=1" target="_blank"><img
+                                        src="Assets/Images/Icons/playStoreIcon.webp" style="cursor: pointer;"
+                                        alt=""></a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- {{-- ************************************** --}} -->
+                    <div class="col Mobileview">
+                        <img src="Assets/Images/Icons/MobileApp.png" class="img-fluid w-100" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--********** UPPER FOOTER **********-->
+
+        <!--********* SERVICES *********-->
+        <div class="container mt-5">
+            <div class="row last_container">
+                <div class="col-sm-12 col-md-6 col-lg-3 services_Boxes mt-5 mt-md-0">
+                    <div class="row box_last">
+                        <div class="col-2 self-center">
+                            <img src="Assets/Images/Icons/delivery-truck.webp" alt="">
+                        </div>
+                        <div class="col-10">
+                            <h3 class="last_container_heading">Free Shipping</h3>
+                            <p class="last_container_para">Free shipping on all your order</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 services_Boxes">
+                    <div class="row box_last">
+                        <div class="col-2 self-center">
+                            <img src="Assets/Images/Icons/Vector.webp" alt="">
+                        </div>
+                        <div class="col-10">
+                            <h3 class="last_container_heading">Customer Support 24/7</h3>
+                            <p class="last_container_para">Instant access to Support</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 services_Boxes">
+                    <div class="row box_last">
+                        <div class="col-2 self-center">
+                            <img src="Assets/Images/Icons/securePaymentCart.webp" alt="">
+                        </div>
+                        <div class="col-10">
+                            <h3 class="last_container_heading">100% Secure Payment</h3>
+                            <p class="last_container_para">We ensure your money is save</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 services_Boxes">
+                    <div class="row box_last">
+                        <div class="col-2 self-center">
+                            <img src="Assets/Images/Icons/box.webp" alt="">
+                        </div>
+                        <div class="col-10">
+                            <h3 class="last_container_heading">Money-Back Guarantee</h3>
+                            <p class="last_container_para">30 Days Money-Back Guarantee</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-3 last_line">
+        </div>
+        <!--********* SERVICES *********-->
+
+        <!--********* FOOTER *********-->
+        <div class="container footermainWrapper">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-5">
+                    <ul class="p-0">
+                        <li class="mb-4">
+                            <img src="" onerror="this.src='Assets/Images/Icons/GrocerLogo.webp'" class="footer_logo"
+                                alt="grocer" loading="lazy">
+                        </li>
+                        <li class="footerFirstCol">
+                            <h3><img src="Assets/Images/SmallIcons/FooterLocationIcon.png" alt="Location"
+                                    loading="lazy">
+                            </h3>
+                            <a href="https://www.google.com/maps?q=31.458753041842215, 74.27577565831574">
+                                <h3><strong>Address:</strong>&nbsp;&nbsp; Lahore Pakistan</h3>
+                            </a>
+                        </li>
+                        <li class="footerFirstCol">
+                            <h3><img src="Assets/Images/SmallIcons/FooterMobileIcon.png" alt="Phone" loading="lazy">
+                            </h3>
+                            <a href="tel:{{ $phone }}">
+                                <h3><strong>Call Us:</strong>&nbsp; 0282828829282</h3>
+                            </a>
+                        </li>
+                        <li class="footerFirstCol">
+                            <h3><img src="Assets/Images/SmallIcons/FooterEmailIcon.png" alt="Mail" loading="lazy"></h3>
+                            <a href="mailto:{{ $email }}">
+                                <h3><strong>Email:</strong>&nbsp;GrocerSupport@gmail.com</h3>
+                            </a>
+                        </li>
+                        <li class="footerFirstCol">
+                            <h3><img src="Assets/Images/SmallIcons/FooterClockIcon.png" alt="Clock" loading="lazy"></h3>
+                            <h3><strong>Work hours:</strong>&nbsp; 8:00 - 20:00, Sunday - Thursday</h3>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-2">
+                    <ul class="p-0">
+                        <li class="mb-4">
+                            <h1 class="footerheadings">Account</h1>
+                        </li>
+                        <li class="mb-3">
+                            <a class="footerSubHeadings" href="/wishlist.html" wire:navigate>Wishlist</a>
+                        </li>
+                        <li class="mb-3">
+                            <a class="footerSubHeadings" href="/cart.html" wire:navigate>Cart</a>
+                        </li>
+                        <li class="mb-3">
+                            <a class="footerSubHeadings" href="/track.html" wire:navigate>Track Order</a>
+                        </li>
+                        <li class="mb-3">
+                            <a class="footerSubHeadings" href="/billing.html" wire:navigate>Shipping Details</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-2">
+                    <ul class="p-0">
+                        <li class="mb-4">
+                            <h1 class="footerheadings">Useful links</h1>
+                        </li>
+                        <li class="mb-3 footerSubHeadings"><a class="footerSubHeadings" href="/about-us.html"
+                                wire:navigate>About
+                                Us</a></li>
+                        <li class="mb-3 footerSubHeadings"><a class="footerSubHeadings" href="/hot-deals.html"
+                                wire:navigate>Hot
+                                deals</a></li>
+                        <li class="mb-3 footerSubHeadings"><a class="footerSubHeadings" href="/promotions.html"
+                                wire:navigate>Promotions</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-6 col-md-12 col-lg-2">
+                    <ul class="p-0">
+                        <li class="mb-4">
+                            <h1 class="footerheadings">Help Center</h1>
+                        </li>
+                        <li class="mb-3 footerSubHeadings"><a class="footerSubHeadings" href="/refund.html"
+                                wire:navigate>Refund</a>
+                        </li>
+                        <li class="mb-3 footerSubHeadings"><a class="footerSubHeadings" href="/contact-us.html"
+                                wire:navigate>Contact
+                                Us</a></li>
+                        <li class="mb-3 footerSubHeadings"><a class="footerSubHeadings" href="/faq.html"
+                                wire:navigate>Q&A</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="MobileViewFooterIconsMain col-6 col-sm-6 col-md-12 col-lg-2">
+                    <div class="MobileViewfootericons">
+                        <img src="Assets/Images/Icons/Payment1.webp" alt="paymentMethods" loading="lazy">
+                        <img src="Assets/Images/Icons/Payment2.webp" alt="paymentMethods" loading="lazy">
+                        <img src="Assets/Images/Icons/Payment3.webp" alt="paymentMethods" loading="lazy">
+                        <img src="Assets/Images/Icons/Payment4.webp" alt="paymentMethods" loading="lazy">
+                        <img src="Assets/Images/Icons/Payment5.webp" alt="paymentMethods" loading="lazy">
+                    </div>
+                    <div class="MobileViewFooterSocialIcons">
+                        <a href=""><img src="Assets/Images/SmallIcons/Footerfacebook.png" alt=""></a>
+                        <a href=""><img src="Assets/Images/SmallIcons/FooterTwitter.png" alt=""></a>
+                        <a href=""><img src="Assets/Images/SmallIcons/FooterPinterest.png" alt=""></a>
+                        <a href=""><img src="Assets/Images/SmallIcons/FooterInsta.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer_line mt-5">
+            <div class="rightReversedAndPaymentIconsMain mt-5 mb-0 mb-md-5">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <h6 class="footerAllRightReversed">All right reversed</h6>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-6 footericons">
+                    <img src="Assets/Images/Icons/Payment1.webp" alt="paymentMethods" loading="lazy">
+                    <img src="Assets/Images/Icons/Payment2.webp" alt="paymentMethods" loading="lazy">
+                    <img src="Assets/Images/Icons/Payment3.webp" alt="paymentMethods" loading="lazy">
+                    <img src="Assets/Images/Icons/Payment4.webp" alt="paymentMethods" loading="lazy">
+                    <img src="Assets/Images/Icons/Payment5.webp" alt="paymentMethods" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!--********* FOOTER *********-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".CategoryBtnLeft").click(function () {
+                $(".webviewCarouselOne").animate({
+                    scrollLeft: "-=250px" // Adjust the value as needed for the scroll distance
+                }, "slow");
+            });
+
+            $(".CategoryBtnRight").click(function () {
+                $(".webviewCarouselOne").animate({
+                    scrollLeft: "+=250px" // Adjust the value as needed for the scroll distance
+                }, "slow");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".FeaturedBtnLeft").click(function () {
+                $(".WebViewCarouselTwo").animate({
+                    scrollLeft: "-=250px" // Adjust the value as needed for the scroll distance
+                }, "slow");
+            });
+
+            $(".FeaturedBtnRight").click(function () {
+                $(".WebViewCarouselTwo").animate({
+                    scrollLeft: "+=250px" // Adjust the value as needed for the scroll distance
+                }, "slow");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".BestSellProductarrowbtnLeft").click(function () {
+                $(".BestsellProductsSection").animate({
+                    scrollLeft: "-=250px" // Adjust the value as needed for the scroll distance
+                }, "slow");
+            });
+
+            $(".BestSellProductarrowbtnRight").click(function () {
+                $(".BestsellProductsSection").animate({
+                    scrollLeft: "+=250px" // Adjust the value as needed for the scroll distance
+                }, "slow");
+            });
+        });
+    </script>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery (needed for Bootstrap modals) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <script src="/Assets/JS/index.js"></script>
+    <script src="/Assets/JS/featured.js"></script>
+    <script src="/Assets/JS/bestsell.js"></script>
+    <script src="/Assets/JS/homelasttopsell.js"></script>
+    <script src="/Assets/JS/homelasttrending.js"></script>
+    <script src="/Assets/JS/homelastpopular.js"></script>
+    <script src="/Assets/JS/homelastlatest.js"></script>
+    <script src="/Assets/JS/cart.js"></script>
+    <script src="/Assets/JS/product_details.js"></script>
+    <script src="/Assets/JS/cart_dropdown.js"></script>
+    <script src="/Assets/JS/search_product.js"></script>
+    <script src="/Assets/JS/mob_search.js"></script>
+    <script src="/Assets/JS/category_product.js"></script>
+    <script src="/Assets/JS/wishlist.js"></script>
+    <script src="/Assets/JS/sidebar_icons.js"></script>
+    <script src="/Assets/JS/Animations.js"></script>
+    <script src="/Assets/JS/promo-popup.js"></script>
+    <script src="/Assets/JS/browse_category_dropdown.js"></script>
+    <script src="/Assets/JS/navbar.js"></script>
+    <script src="/Assets/JS/deals.js"></script>
+    <script src="/Assets/JS/quick-view.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,506 @@
+.MainHistoryContainer {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5%;
+}
+
+.SettingHistorySideBar {
+    width: 18%;
+}
+
+.SettingHistoryOrderHistory {
+    width: 72%;
+}
+body {
+    min-width: 320px;
+    font-family: Quicksand;
+}
+.HistoryRatingMain{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+.HistoryNoOfstars{
+    font-size: 12px;
+}
+.HistoryUnChecked {
+    color: #D4D4D4;
+}
+.HistoryChecked {
+    color: orange;
+}
+.history_main_heading {
+    font-size: 35px;
+    color: #e2e1e1;
+    font-weight: 700;
+    font-family: inter;
+    margin-top: 90px;
+    margin-bottom: 35px;
+}
+
+.history_side_sub {
+    background-color: #F6F6F6;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    color: #667085;
+    gap: 10px;
+    padding: 7px;
+}
+
+.calendar_bar {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 20px 10px 100px 10px;
+    border-radius: 19px;
+    transition: all 0.3s ease-in-out;
+}
+
+.calendar_bar:hover {
+    background-color: #667085;
+    cursor: pointer;
+    color: white;
+}
+
+.HistoryOrderProductImageAndName {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+
+.HistoryOrderProductImage {
+    width: 20%;
+    margin-left: 20px;
+}
+.history_product_name_main {
+    align-self: center;
+    width: 40% !important;
+}
+
+.tablefirstHeadingHistory {
+    padding-left: 20px;
+}
+
+.history_product_img {
+    width: 100%;
+}
+
+.history_product_name {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: poppins;
+    margin: 0px;
+    color: #1A1A1A;
+}
+
+.history_product_price {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: poppins;
+    margin: 0px;
+}
+
+.history_product_quantity {
+    background-color: white;
+    padding: 5px;
+    width: 45%;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid rgb(228, 220, 220);
+    border-radius: 100px;
+    font-family: poppins;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.HistoryOrderPriceAndBTN {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+}
+
+.history_product_total {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: poppins;
+    margin: 0px;
+}
+
+.reorder_btn {
+    padding: 5px 20px;
+    background-color: var(--green);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: poppins;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.main_head_heading1 {
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: poppins;
+    width: 30%;
+}
+.main_head_heading2 {
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: poppins;
+    width: 20%;
+}
+.main_head_heading3 {
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: poppins;
+    width: 15%;
+}
+.main_head_heading4 {
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: poppins;
+    width: 20%;
+}
+.main_head_heading5 {
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: poppins;
+    width: 15%;
+}
+.OrderDateHeading{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: poppins;
+    margin: 0px;
+}
+
+/* .SideBarOpenIcon:Click .SettingHistorySideBar{
+    display: block;
+} */
+
+.history_last_legal {
+    color: #CCCCCC;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: end;
+    margin: 0px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.history_table {
+    border-left: 2px solid rgb(233, 229, 229);
+}
+
+.MobileViewOrderHistory,
+.MVBreadCrumbs {
+    display: none;
+}
+.reorderButtonDiv{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+@media screen and (max-width:991px) {
+    .HistoryOrderProductImageAndName {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 0px;
+        flex-direction: column;
+        width: 50%;
+    }
+    .HistoryOrderProductImage {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .OrderDateHeading {
+        font-size: 8px;
+        font-weight: 400;
+        font-family: poppins;
+        margin: 0px;
+    }
+    .main_head_heading1 {
+        color: #808080;
+        font-size: 10px;
+        font-weight: 500;
+        font-family: poppins;
+        width: 20%;
+        padding-left: 2px;
+    }
+    .main_head_heading1 {
+        color: #808080;
+        font-size: 10px;
+        font-weight: 500;
+        font-family: poppins;
+        width: 20%;
+        padding-left: 2px;
+    }
+    .main_head_heading2 {
+        color: #808080;
+        font-size: 10px;
+        font-weight: 500;
+        font-family: poppins;
+        width: 15%;
+    }
+    .main_head_heading3 {
+        color: #808080;
+        font-size: 10px;
+        font-weight: 500;
+        font-family: poppins;
+        width: 15%;
+    }
+    .main_head_heading4 {
+        color: #808080;
+        font-size: 10px;
+        font-weight: 500;
+        font-family: poppins;
+        width: 20%;
+    }
+    .main_head_heading5 {
+        color: #808080;
+        font-size: 10px;
+        font-weight: 500;
+        font-family: poppins;
+        width: 15%;
+    }
+    .HistoryRatingMain {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0px;
+    }
+
+
+    .MainHistoryContainer {
+        background-color: #F3F3F3;
+    }
+
+    .history_main_heading {
+        font-size: 35px;
+        font-weight: 700;
+        font-family: poppins;
+        color: #222222;
+        margin-top: 12px;
+        margin-bottom: 0px;
+    }
+
+    .SettingHistorySideBar {
+        display: none;
+    }
+
+    .SettingHistorySideBar.OPEN {
+        display: block;
+        position: absolute;
+        width: 70%;
+        z-index: 10;
+    }
+
+    .history_side_sub {
+        display: none;
+    }
+
+    .SettingHistoryOrderHistory {
+        width: 90%;
+        margin: auto;
+    }
+
+    /* .HistoryOrderPriceAndBTN {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 5px;
+    } */
+
+    .main_head_heading {
+        font-size: 10px;
+    }
+
+    .history_product_name {
+        font-size: 10px;
+    }
+
+    .history_product_name_main {
+        width: 60%;
+    }
+
+    .history_product_price {
+        font-size: 10px;
+    }
+
+    .history_product_quantity {
+        padding: 2px;
+        width: 58%;
+        font-size: 10px;
+    }
+
+    .reorder_btn {
+        padding: 3px 4px;
+        background-color: var(--green);
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-family: poppins;
+        font-size: 6px;
+        font-weight: 600;
+    }
+    .HistoryNoOfstars {
+        font-size: 8px;
+    }
+
+    .history_product_total {
+        font-size: 10px;
+    }
+
+    /* ****************MOBILE VIEW STYLING**************** */
+    .MobileViewOrderHistory {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .reorderBtnAndDate {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .reorderBtnAndDate h3 {
+        font-size: 14px;
+        font-weight: 500;
+        font-family: poppins;
+        margin: 0px;
+        border-bottom: 2px solid black;
+        width: 30%;
+        padding: 0px 0px 8px 0px;
+    }
+
+    .MVproductHistoryDetails {
+        display: flex;
+        margin-top: 10px;
+        align-items: center;
+    }
+
+    .MVreorder_btn {
+        padding: 3px 9px;
+        background-color: #00B207;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-family: poppins;
+        font-size: 7px;
+        font-weight: 600;
+    }
+
+    .MVProductNameAndImage {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        width: 50%;
+    }
+
+    .MVProductImage {
+        width: 45%;
+    }
+
+    .MVProductImage img {
+        width: 100%;
+    }
+
+    .MVProductName {
+        width: 80%;
+    }
+
+    .MVProductName h1 {
+        font-size: 10px;
+        font-weight: 400;
+        font-family: poppins;
+        margin: 0px;
+    }
+
+    /* *************** */
+    .MVPriceBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+        width: 35%;
+    }
+
+    .MVPriceBox h1 {
+        font-weight: 400;
+        font-family: poppins;
+        font-size: 10px;
+        color: black;
+        margin: 0px;
+    }
+
+    .MVPriceBox h2 {
+        font-weight: 400;
+        font-family: poppins;
+        font-size: 10px;
+        color: rgb(146, 146, 146);
+        margin: 0px;
+    }
+
+    /* ********************** */
+    .MVQTYAndPriceBox {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        width: 15%;
+    }
+
+    .MVhistory_product_quantity {
+        padding: 2px 25px;
+        width: 45%;
+        font-size: 16px;
+        font-weight: 400;
+        border: 1px solid rgb(228, 220, 220);
+        border-radius: 100px;
+        font-family: poppins;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .MVQTYAndPriceBox h1 {
+        font-size: 10px;
+        font-weight: 500;
+        font-family: poppins;
+    }
+
+    /* BreadCrums MOBILE VIEW  */
+
+    .MVBreadCrumbs {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+        font-weight: 700;
+    }
+
+    .MVBreadCrumbs a {
+        font-size: 12px;
+    }
+
+    .MVBreadCrumbs h1 {
+        margin: 0px;
+        font-size: 12px;
+    }
+}

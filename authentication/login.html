@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+
+    <meta
+      name="description"
+      content="Grocer offers a wide variety of groceries including fresh produce, dairy products, meats, and household essentials. Shop online and get everything you need delivered to your doorstep."
+    />
+    <meta
+      name="keywords"
+      content="grocery, online grocery, fresh produce, dairy products, meats, household essentials, Grocer"
+    />
+    <meta name="author" content="Software System" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Grocer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:title" content="Grocer - Your One-Stop Grocery Shop" />
+    <meta
+      property="og:description"
+      content="Grocer offers a wide variety of groceries including fresh produce, dairy products, meats, and household essentials. Shop online and get everything you need delivered to your doorstep."
+    />
+    <meta
+      property="og:image"
+      content="https://grocer.softwaresystems.us/storage/app/public/restaurant/2024-05-30-665896300dbbd.png"
+    />
+    <meta property="og:url" content="https://groceapp.softwaresystems.us/" />
+    <meta property="og:type" content="website" />
+    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="https://grocer.softwaresystems.us/storage/app/public/restaurant/{{ $favicon }}"
+      type="image/x-icon"
+    />
+    <title>Login</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/Assets/CSS/Animations.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="/Assets/CSS/login.css" />
+  </head>
+
+  <body>
+    <!-- Animated Logo Cover -->
+    <div
+      id="logo-cover"
+      class="logo-cover d-flex justify-content-center align-items-center"
+    >
+      <img
+        src="/Assets/Images/Login/Logo.webp"
+        alt="Grocer Logo"
+        class="animated-logo"
+      />
+    </div>
+
+    <div class="mainLoginContainer">
+      <div class="loginWhiteSection">
+        <img src="/Assets/Images/Login/Logo.webp" alt="" />
+        <h1>Welcome to Grocer</h1>
+        <h2>Don't have an account?</h2>
+        <a href="/authentication/register.html" class="btn login_signup_button"
+          >Sign Up</a
+        >
+      </div>
+      <div class="loginGreenSection">
+        <form>
+          <div class="login_form_container">
+            <h1 class="text-center text-white mb-4">Sign In</h1>
+            <label for="email" class="text-white">Email</label>
+            <input
+              type="email"
+              class="form-control mb-3"
+              placeholder="Enter your email"
+            />
+
+            <label for="password" class="text-white">Password</label>
+            <input
+              type="password"
+              class="form-control mb-3"
+              placeholder="Enter your password"
+            />
+
+            <button type="submit" class="login_signIn_button">Sign In</button>
+            <p class="text-center text-white mt-3">
+              Forgot Your Password?
+              <a href="/authentication/forgot-password.html" class="text-white"
+                >Click here</a
+              >
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="/Assets/JS/Animations.js"></script>
+  </body>
+</html>

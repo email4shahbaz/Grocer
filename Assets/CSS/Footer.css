@@ -1,0 +1,133 @@
+li{
+    list-style-type: none;
+}
+.ullists {
+    margin-left: 150px;
+}
+.footer_logo{
+    width: 230px;
+}
+.home_li {
+    margin-left: 30px;
+}
+.footermainWrapper{
+    margin-top: 90px;
+}
+.rightReversedAndPaymentIconsMain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer_line {
+    color: rgb(196, 196, 196);
+}
+
+.footerFirstCol {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.footerFirstCol h3 {
+    font-size: 16px;
+    font-family: Quicksand;
+    color: #253D4E;
+    margin: 0px;
+}
+
+.footerheadings {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: Quicksand;
+    color: #253D4E;
+    margin: 0px;
+}
+
+.footerSubHeadings {
+    font-size: 16px;
+    font-weight: 500;
+    color: #253D4E;
+    font-family: Quicksand;
+}
+.footerSubHeadings:hover {
+  
+   background-color: rgb(162, 247, 162);
+   color: black;
+   font-weight: 600;
+  padding: 5px;
+   border-radius: 5px;
+}
+
+.footerAllRightReversed {
+    font-size: 14px;
+    font-weight: 400;
+    color: #253D4E;
+    font-family: poppins;
+    margin: 0px;
+}
+
+.footericons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+}
+.MobileViewfootericons{
+    display: none;
+}
+.MobileViewFooterSocialIcons{
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    .footericons {
+        text-align: start;
+    }
+    .footer_line{
+        display: none;
+    }
+    .MobileViewfootericons{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .footericons{
+        display: none;
+    }
+    .MobileViewFooterSocialIcons{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+    }
+    .MobileViewFooterIconsMain{
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+        flex-direction: column;
+    }
+}
+@media screen and (min-width:769px) and (max-width:991px) {
+    .MobileViewFooterIconsMain{
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+        flex-direction: column;
+    }
+    .MobileViewfootericons {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .footericons{
+        display: none;
+    }
+}

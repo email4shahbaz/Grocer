@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+
+    <meta
+      name="description"
+      content="Grocer offers a wide variety of groceries including fresh produce, dairy products, meats, and household essentials. Shop online and get everything you need delivered to your doorstep."
+    />
+    <meta
+      name="keywords"
+      content="grocery, online grocery, fresh produce, dairy products, meats, household essentials, Grocer"
+    />
+    <meta name="author" content="Software System" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Grocer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:title" content="Grocer - Your One-Stop Grocery Shop" />
+    <meta
+      property="og:description"
+      content="Grocer offers a wide variety of groceries including fresh produce, dairy products, meats, and household essentials. Shop online and get everything you need delivered to your doorstep."
+    />
+    <meta
+      property="og:image"
+      content="https://grocer.softwaresystems.us/storage/app/public/restaurant/2024-05-30-665896300dbbd.png"
+    />
+    <meta property="og:url" content="https://groceapp.softwaresystems.us/" />
+    <meta property="og:type" content="website" />
+    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="https://grocer.softwaresystems.us/storage/app/public/restaurant/{{ $favicon }}"
+      type="image/x-icon"
+    />
+    <title>Verify Email</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/Assets/CSS/login.css" />
+    <link rel="stylesheet" href="/Assets/CSS/register.css" />
+    <link rel="stylesheet" href="/Assets/CSS/Forgotpassword.css" />
+    <link rel="stylesheet" href="/Assets/CSS/ResetPassword.css" />
+    <link rel="stylesheet" href="/Assets/CSS/VerifyEmail.css" />
+    <link rel="stylesheet" href="/Assets/CSS/Animations.css" />
+
+    <style>
+      body {
+        background-color: rgb(231, 231, 231);
+        min-width: 300px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Animated Logo Cover -->
+    <div
+      id="logo-cover"
+      class="logo-cover d-flex justify-content-center align-items-center"
+    >
+      <img
+        src="/Assets/Images/Login/Logo.webp"
+        alt="Grocer Logo"
+        class="animated-logo"
+      />
+    </div>
+
+    <div class="mainVerifyEmailContainer">
+      <div class="verifyWhiteSection">
+        <div class="verifyWhiteSectionSub">
+          <img src="/Assets/Images/Login/Logo.webp" alt="" />
+          <h1>Welcome to Grocer</h1>
+          <h2>
+            To keep connected with us please login with your personal info
+          </h2>
+          <a href="/authentication/login.html" class="verifyWhiteSectionButton"
+            >Sign In</a
+          >
+        </div>
+      </div>
+      <div class="verifyGreenSection">
+        <form id="otpVerificationForm" onsubmit="return verifyEmail(event);">
+          <div class="mx-auto verify_form_container mt-5 mb-5">
+            <h1 class="verify_form_main_heading">Verify Email</h1>
+            <h3 class="verify_form_sub_heading">
+              Use six-digit OTP to verify your email
+            </h3>
+            <input type="hidden" name="email" id="email" value="{{ $email }}" />
+            <label for="otp" class="verify_form_label">OTP</label><br />
+            <input
+              type="text"
+              name="token"
+              id="otp"
+              class="form-control"
+              maxlength="6"
+              required
+            /><br />
+            <button type="submit" class="btn btn-primary">Verify</button>
+          </div>
+        </form>
+        <div id="statusMessage" style="margin-top: 10px"></div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      function verifyEmail(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const email = document.getElementById("email").value;
+        const otp = document.getElementById("otp").value;
+
+        fetch("https://grocer.softwaresystems.us/api/v1/auth/verify-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            email: email,
+            token: otp,
+          }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            const statusMessage = document.getElementById("statusMessage");
+            if (data.status) {
+              // If successful, redirect to login or another page
+              statusMessage.innerHTML =
+                "Email verified successfully! Redirecting...";
+              setTimeout(() => {
+                window.location.href = "/login"; // Change to your desired URL
+              }, 2000);
+            } else {
+              // Handle error
+              statusMessage.innerHTML =
+                data.message || "OTP not matched. Please try again.";
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            document.getElementById("statusMessage").innerHTML =
+              "An error occurred. Please try again later.";
+          });
+      }
+    </script>
+    <script src="/Assets/JS/Animations.js"></script>
+  </body>
+</html>

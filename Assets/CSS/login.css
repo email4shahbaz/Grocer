@@ -1,0 +1,452 @@
+/* * {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #53B175;
+    --hovergreen: #3a975c;
+}
+body {
+    min-width: 320px;
+    font-family: Quicksand;
+}
+
+
+.mainLoginContainer {
+    width: 100%;
+    display: flex;
+}
+
+.loginWhiteSection {
+    text-align: center;
+    width: 40%;
+    background-color: white;
+    position: relative;
+}
+
+.loginWhiteSectionSub {
+    padding: 100px 0px 50px 0px;
+}
+
+.loginWhiteSectionSub img {
+    margin-bottom: 150px;
+}
+
+.loginWhiteSectionSub h1 {
+    color: var(--green);
+    font-size: 45px;
+    font-weight: 800;
+    font-family: poppins;
+    margin-bottom: 20px;
+}
+
+.loginWhiteSectionSub h2 {
+    font-size: 24px;
+    font-weight: 400;
+    font-family: poppins;
+    color: #808080;
+    margin-bottom: 50px;
+}
+
+.LoginWhiteSectionButton {
+    border: none;
+    color: white;
+    padding: 20px 0px;
+    text-decoration: none;
+    background-color: var(--green);
+    border-radius: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: Gilroy-medium;
+    width: 50%;
+    display: block;
+    margin: auto;
+    margin-bottom: 300px !important;
+}
+
+.grocer_coorporation {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.grocer_coorporation h2 {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: poppins;
+}
+
+
+.loginGreenSection {
+    width: 60%;
+    background-color: var(--green);
+}
+
+.login_form_container {
+    width: 55%;
+    margin: auto;
+}
+
+.login_form_main_heading {
+    color: white;
+    margin-top: 150px;
+    margin-bottom: 70px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 400;
+    font-family: Gilroy-bold;
+}
+
+.login_form_label {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Gilroy-medium;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.login_form_inp1 {
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    width: 100%;
+    font-family: poppins;
+    font-size: 18px;
+}
+
+.login_form_inp1:focus {
+    outline: none;
+}
+
+.emailFieldIcon {
+    position: relative;
+}
+
+.emailFieldIcon img {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(-50%, -50%);
+}
+
+.login_form_inp2 {
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    width: 100%;
+    font-family: poppins;
+    font-size: 18px;
+}
+
+.login_form_inp2:focus {
+    outline: none;
+}
+
+.passwordFieldIcon {
+    position: relative;
+}
+
+.passwordFieldIcon img {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(-50%, -50%);
+}
+
+.login_rememberMain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.rememberme {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.rememberCheck {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.rememberCheck:checked {
+    content: url('../Images/Login/CheckedCheck.webp');
+    width: 20px;
+    height: 20px;
+}
+
+.remember_me_label {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Gilroy-medium;
+}
+
+.login_form_forgot_password {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Gilroy-medium;
+    text-decoration: none;
+}
+
+.login_signIn_button {
+    width: 100%;
+    border: 3px solid white;
+    background-color: transparent;
+    padding: 15px 0px;
+    border-radius: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: Gilroy-medium;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.LoginMobileViewSignUp,
+.LoginMobileViewLogo,
+.MobileViewgrocer_coorporation {
+    display: none;
+}
+
+
+
+@media screen and (max-width:768px) {
+    .loginWhiteSection {
+        display: none;
+    }
+
+    .loginGreenSection {
+        width: 100%;
+        background-color: white;
+        position: relative;
+    }
+
+    .login_form_main_heading {
+        color: #696969;
+        margin-top: 50px;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: Gilroy-medium;
+    }
+
+    .login_form_label {
+        color: black;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: Gilroy-medium;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+    .login_form_container {
+        width: 80%;
+    }
+
+    .login_signIn_button {
+        width: 100%;
+        border: none;
+        background-color: var(--green);
+        padding: 15px 0px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: Gilroy-medium;
+        color: white;
+    }
+
+    .login_form_inp1 {
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+        font-size: 13px;
+        font-weight: 400;
+        color: #646464 !important;
+        font-family: poppins;
+        border: 1px solid #7D7D7D;
+    }
+
+    .login_form_inp2 {
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+        font-size: 13px;
+        font-weight: 400;
+        color: #646464 !important;
+        font-family: poppins;
+        border: 1px solid #7D7D7D;
+    }
+
+    .login_rememberMain {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .rememberme {
+        display: none;
+    }
+
+    .login_form_forgot_password {
+        color: black;
+        font-size: 14px;
+        text-align: -webkit-center;
+        font-weight: 400;
+        font-family: poppins;
+        text-decoration: none;
+    }
+
+    
+    .LoginMobileViewSignUp {
+        display: block !important;
+        text-align: end;
+        font-size: 16px;
+        font-weight: 400;
+        color: #808080;
+        margin-top: 10px;
+        font-family: poppins;
+        margin-bottom: 200px;
+    }
+
+    .LoginMobileViewSignUpLink {
+        color: rgb(202, 54, 202);
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .LoginMobileViewLogo {
+        text-align: center;
+        display: block;
+        margin-bottom: 125px;
+    }
+
+    .MobileViewgrocer_coorporation {
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .MobileViewgrocer_coorporation h1 {
+        font-size: 12px;
+        font-weight: 400;
+        color: #4A4A4A;
+    }
+
+   
+} */
+
+/* General Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #53B175;
+    --hovergreen: #3a975c;
+}
+
+body {
+    min-width: 320px;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+/* Container Styling */
+.mainLoginContainer {
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* White Section Styling */
+.loginWhiteSection {
+    text-align: center;
+    width: 40%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.loginWhiteSection h1,
+.loginWhiteSection h2 {
+    margin-bottom: 20px;
+}
+
+/* Green Section Styling */
+.loginGreenSection {
+    width: 60%;
+    background-color: var(--green);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+/* Form Container */
+.login_form_container {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Button Styling */
+.login_signIn_button, .login_signup_button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    color: var(--green);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.login_signIn_button:hover, .login_signup_button:hover {
+    background-color: var(--hovergreen);
+    color: white;
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .mainLoginContainer {
+        flex-direction: column;
+    }
+
+    .loginWhiteSection {
+        display: none;
+    }
+
+    .loginGreenSection {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .login_form_container {
+        width: 90%;
+    }
+}
