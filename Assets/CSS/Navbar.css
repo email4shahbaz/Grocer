@@ -27,12 +27,15 @@
 .cart_dropdownCustom {
     min-width: 400px;
     max-width: 450px;
-    background-color: #53B175; /* Parrot green background */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for a clean and modern look */
+    background-color: #53B175;
+    /* Parrot green background */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Add shadow for a clean and modern look */
     border-radius: 8px;
     padding: 15px;
     font-family: 'Quicksand', sans-serif;
-    color: white; /* Ensure text contrasts well with the parrot green background */
+    color: white;
+    /* Ensure text contrasts well with the parrot green background */
 }
 
 /* Cart heading styles */
@@ -43,13 +46,13 @@
 }
 
 .cart_heading img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     margin-right: 10px;
 }
-
-.wishlist_badge {
-    background-color: #FF3D3D; /* Bright red for notification badge */
+/* 
+.cart_badge {
+    background-color: #FF3D3D;
     color: white;
     font-size: 12px;
     font-weight: 700;
@@ -62,19 +65,21 @@
     top: -5px;
     right: -5px;
     border: 2px solid #ffffff;
-}
+} */
 
 /* Cart dropdown heading styles */
 .customCartDropdownHeading {
     font-size: 14px;
-    color: white; /* Matches the parrot green background */
+    color: white;
+    /* Matches the parrot green background */
     font-weight: 600;
     margin: 0;
 }
 
 /* Empty cart message */
 .cart_dropdownCustom h1.text-center {
-    color: #ffffff; /* White text for contrast */
+    color: #ffffff;
+    /* White text for contrast */
     font-size: 14px;
     font-weight: 500;
     margin-top: 20px;
@@ -95,14 +100,16 @@
 
 .customDropdownCartButton1:hover {
     background-color: white;
-    color: #76c043; /* Parrot green for hover effect */
+    color: #76c043;
+    /* Parrot green for hover effect */
 }
 
 .customDropdownCartButton2 {
     padding: 8px;
     background-color: white;
     border: 1px solid white;
-    color: #76c043; /* Parrot green text for the button */
+    color: #76c043;
+    /* Parrot green text for the button */
     font-size: 14px;
     font-weight: 600;
     border-radius: 4px;
@@ -111,7 +118,8 @@
 }
 
 .customDropdownCartButton2:hover {
-    background-color: #5ca338; /* Slightly darker parrot green for hover effect */
+    background-color: #5ca338;
+    /* Slightly darker parrot green for hover effect */
     color: white;
     border-color: #5ca338;
 }
@@ -248,7 +256,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 12px;
+    /* margin-left: 12px; */
 }
 
 .mycartCustomHeading1 {
@@ -348,7 +356,13 @@
 .wishlist_heading {
     font-size: 30px;
     margin: 0%;
-    font-family: 'Quicksand';
+    /* font-family: 'Quicksand'; */
+}
+
+.wishlist_heading img{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
 }
 
 .cart_heading {
@@ -367,7 +381,7 @@
 
 .search_button {
     align-self: center;
-    width: 50%;
+    /* width: 50%; */
 }
 
 .profile_image {
@@ -387,6 +401,7 @@
     border-radius: 50%;
     width: 40px;
     height: 40px;
+    margin-right: 10px;
 }
 
 .logout_button_drop {
@@ -450,13 +465,13 @@
     border-radius: 50%;
     padding: 7px;
 }
-
-.wishlist_badge {
+/* 
+.cart_badge {
     width: 5px;
     height: 5px;
     font-size: 9px;
     top: 13px;
-    right: -15px;
+    right: -5px;
     align-items: center;
     display: flex;
     color: white;
@@ -464,7 +479,7 @@
     background-color: var(--green);
     border-radius: 50%;
     padding: 7px;
-}
+} */
 
 .notification_badge {
     width: 5px;
@@ -639,11 +654,12 @@
     gap: 5px;
 } */
 
-.nav-item{
-    padding:0 20px
+.nav-item {
+    padding: 0 20px
 }
+
 .navbar-nav .nav-item a:hover {
-    color: #53B175;
+    color: #fff;
 }
 
 
@@ -654,12 +670,24 @@
 /* TOP HEADER */
 /* Top Header Styling */
 .top-header {
-    background-color: #f8f8f8;
+    background-color: var(--green);
     padding: 8px 0;
     font-size: 12px;
     font-weight: 600;
-    color: #333;
+    color: #fff;
 }
+
+.top-header a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.top-header a:hover {
+    color: #a5ffc6;
+}
+
+
 
 /* Layout */
 .top-header-container {
@@ -672,7 +700,7 @@
 .animated-icon-text {
     /* font-size: 14px; */
     font-weight: bold;
-    color: #333;
+    color: #f9d316;
     white-space: nowrap;
     overflow: hidden;
     display: flex;
@@ -687,11 +715,13 @@
 
 /* Typing Animation */
 #animatedText {
-    border-right: 3px solid #53B175; /* Blinking Cursor */
+    border-right: 3px solid #53B175;
+    /* Blinking Cursor */
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
 }
+
 .top-header-center {
     display: flex;
     gap: 15px;
@@ -702,40 +732,26 @@
     color: #000000;
     font-weight: bold;
 }
+
 .top-header-right {
     display: flex;
     gap: 12px;
 }
 
-.top-header-right a {
-    text-decoration: none;
-    color: #53B175;
-    font-weight: bold;
-}
-    .top-header-left {
-        display: flex;
-        gap: 10px;
-    }
-    
-    .top-header-left a {
-        text-decoration: none;
-        color: #000000;
-        /* font-size: 12px; */
-        font-weight: 600;
-        
+
+.top-header-left {
+    display: flex;
+    gap: 10px;
 }
 
-.top-header-left a:hover {
-    color:#53B175;
-    
-}
 
 @media (max-width: 768px) {
     .top-header-right {
         display: none;
-        
-    }   
-    .top-header-left{
+
+    }
+
+    .top-header-left {
         display: flex;
         justify-content: center;
     }
@@ -766,7 +782,7 @@
     color: white;
     font-size: 14px;
     /* padding: 10px 15px; */
-    padding:8px;
+    padding: 8px;
     border-radius: 6px;
     border: none;
     cursor: pointer;
@@ -798,7 +814,8 @@
 /* Mega Menu Container */
 .category-dropdown {
     display: flex;
-    flex-direction: row; /* Creates two sections side by side */
+    flex-direction: row;
+    /* Creates two sections side by side */
     width: 100%;
     padding: 20px;
     background-color: #fff;
@@ -812,7 +829,8 @@
 .category-image-container {
     display: flex;
     flex-direction: row;
-    width: 35%; /* Adjusted to leave space for the grid */
+    width: 35%;
+    /* Adjusted to leave space for the grid */
     background-image: url('Assets/Images/Icons/GrocerLogo.png');
     background-size: cover;
     background-position: center;
@@ -856,7 +874,7 @@
 }
 
 .order-now-btn {
-    background-color:white;
+    background-color: white;
     color: #53B175;
     padding: 10px 20px;
     font-size: 14px;
@@ -866,14 +884,15 @@
 }
 
 .order-now-btn:hover {
-    background-color:white;
+    background-color: white;
     color: black;
 }
 
 /* Right Category Grid Section */
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 items per row */
     gap: 10px;
     width: 65%;
 }
@@ -925,6 +944,7 @@
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
+
     /* Adjust the two columns on smaller screens */
     .category-dropdown {
         flex-direction: column;
@@ -936,7 +956,8 @@
         flex-direction: column;
         width: 100%;
         padding: 15px;
-        background-image: none; /* No background image on mobile */
+        background-image: none;
+        /* No background image on mobile */
     }
 
     .category-image {
@@ -949,7 +970,8 @@
     }
 
     .category-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 items per row */
     }
 }
 
@@ -970,14 +992,16 @@
     }
 
     .category-grid {
-        grid-template-columns: 1fr; /* 1 item per row */
+        grid-template-columns: 1fr;
+        /* 1 item per row */
     }
 }
 
 /* NAVBAR LINKS */
-.navbar-icon{
+.navbar-icon {
     padding: 5px;
 }
+
 .ullists_subhomenav {
     display: flex;
 
@@ -994,7 +1018,7 @@
 
 .ullists_subhomenav .nav-item a:hover {
     color: #53B175;
-      
+
 }
 
 /* SUPPORT CENTER */

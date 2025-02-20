@@ -245,25 +245,99 @@
         </div>
 
 
-
-
-
         <nav class="navbar navbar-expand-lg bg-white shadow-sm main_navbar">
             <div class="container d-flex">
-                <div class="logo_main_image">
-                    <!-- {{-- MVSideBarOpenIcon --}} -->
-                    <a href="" class="SideBarOpenIcon" id="sidebarToggle">
-                        <!-- <img src="Assets/Images/SmallIcons/SideBarOpenIcon.webp" alt="collapseIcon" loading="lazy" /> -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                            class="bi bi-justify sidebarIcon" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
-                        </svg>
-                    </a>
-                    <!-- {{-- MVSideBarOpenIcon --}} -->
-                    <a href="/index.html"> <img src="/Assets/Images/Icons/GrocerLogo.webp"
-                            onerror="this.src='/Assets/IMAGES/ErrorImage.webp'" wire:navigate href="/index.html"
-                            alt="Grocer__Logo" class="mainlogo" loading="lazy" /></a>
+                <div class="d-flex">
+                    <div class="logo_main_image">
+                        <!-- {{-- MVSideBarOpenIcon --}} -->
+                        <a href="" class="SideBarOpenIcon" id="sidebarToggle">
+                            <!-- <img src="Assets/Images/SmallIcons/SideBarOpenIcon.webp" alt="collapseIcon" loading="lazy" /> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-justify sidebarIcon" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
+                            </svg>
+                        </a>
+                        <!-- {{-- MVSideBarOpenIcon --}} -->
+                        <a href="/index.html"> <img src="/Assets/Images/Icons/GrocerLogo.webp"
+                                onerror="this.src='/Assets/IMAGES/ErrorImage.webp'" wire:navigate href="/index.html"
+                                alt="Grocer__Logo" class="mainlogo" loading="lazy" /></a>
+                    </div>
+                    <div class="nav-item search_button">
+                        <form class="d-flex" onsubmit="event.preventDefault();">
+                            <div class="input-group searchButtonCate">
+                                <select name="" id="" wire:model.live="search_category"
+                                    class="SerachwithCategoriesLists">
+                                    <option value="All Categories">All Categories</option>
+                                    <option value="{{ $item['id'] }}">Fruits</option>
+                                </select>
+                                <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="" />
+                                <input type="text" wire:model.live.debounce.300ms="search_query"
+                                    class="shadow-md border-0 search_inp" maxlength="20"
+                                    placeholder="Search for items..." aria-label="Search" autocomplete="off" />
+                                <button class="btn rounded-0 shadow-md search_btn" type="submit">
+                                    <img src="Assets/Images/SmallIcons/search.webp" alt="searchIcon" loading="lazy" />
+
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="d-flex gap-4">
+                    <div class="d-flex whishlist_button align-items-center">
+                        <h1 class="cart_heading position-relative">
+                            <img src="Assets/Images/SmallIcons/WishlistHeart.webp" alt="wishlistIcon" />
+                            <span class="position-absolute translate-middle wishlist_badge_counter border border-light">
+                                0
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                        </h1>
+                        <a class="wislistHeading" href="/wishlist.html" wire:navigate>Wishlist</a>
+                    </div>
+
+
+                    <!-- Replace Mini Cart Button in Navigation -->
+                    <div class="d-flex cart_button align-items-center">
+                        <h1 class="cart_heading position-relative">
+                            <img src="Assets/Images/SmallIcons/ShopCart.webp" width="25" height="24" alt="cartButton" loading="lazy" />
+                            <span class="position-absolute translate-middle wishlist_badge_counter border border-light"
+                                id="cartBadge">
+                                0
+                            </span>
+                        </h1>
+                        <a href="#" class="mycartCustom" id="openCartDrawer">
+                            <div>
+                                <h3 class="mycartCustomHeading1">My Cart</h3>
+                                <h3 class="mycartCustomHeading2">$0.00</h3>
+                            </div>
+                            <div>
+                                <img src="Assets/Images/SmallIcons/ArrowDown.svg" alt="ArrowDown" loading="lazy" />
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="dropdown d-flex profile_image align-items-center">
+                        <img src="Assets/Images/Banner/user4.webp" class="user_profile_image user_profile_image_nav"
+                            alt="UserImage" loading="lazy" />
+
+                        <div class="dropdown">
+                            <a class="nav-link loginheadingNav" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Account
+                                <!-- <img src="Assets/Images/SmallIcons/ArrowDown.svg" alt="" /> -->
+                            </a>
+                            <ul class="dropdown-menu custom-dropdown-menu">
+                                <li><a class="dropdown-item" href="/history.html">Order History</a></li>
+                                <li><a class="dropdown-item" href="/setting.html">Settings</a></li>
+                                <li><a class="dropdown-item" href="/orders.html">Orders</a></li>
+                                <hr class="dropdown-divider">
+                                <li><a class="dropdown-item" href="/authentication/login.html">Login</a></li>
+                                <li><a class="dropdown-item" href="/authentication/register.html">Register</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -297,7 +371,7 @@
                             <img src="Assets/Images/SmallIcons/ShopCart.webp" alt="cartImage" loading="lazy"
                                 id="openMobileCartDrawer" />
                             <span
-                                class="position-absolute translate-middle cart-badge border border-light wishlist_badge"
+                                class="position-absolute translate-middle border border-light wishlist_badge"
                                 id="mobileCartBadge">
                                 0
                             </span>
@@ -307,96 +381,21 @@
 
 
                 </div>
-                <!-- {{-- ****************Mobile View Profile and Cart******************** --}} -->
-                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll ul_nav" style="--bs-scroll-height: 100px">
-                    <li class="nav-item search_button">
-                        <form class="d-flex" onsubmit="event.preventDefault();">
-                            <div class="input-group searchButtonCate">
-                                <select name="" id="" wire:model.live="search_category"
-                                    class="SerachwithCategoriesLists">
-                                    <option value="All Categories">All Categories</option>
-                                    <option value="{{ $item['id'] }}">Fruits</option>
-                                </select>
-                                <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="" />
-                                <input type="text" wire:model.live.debounce.300ms="search_query"
-                                    class="shadow-md border-0 search_inp" maxlength="20"
-                                    placeholder="Search for items..." aria-label="Search" autocomplete="off" />
-                                <button class="btn rounded-0 shadow-md search_btn" type="submit">
-                                    <img src="Assets/Images/SmallIcons/search.webp" alt="searchIcon" loading="lazy" />
-
-                                </button>
-                            </div>
-                        </form>
-                    </li>
-
-                    <li class="nav-item d-flex whishlist_button">
-                        <h1 class="wishlist_heading position-relative">
-                            <img src="Assets/Images/SmallIcons/WishlistHeart.webp" alt="wishlistIcon" loading="lazy" />
-                            <span class="position-absolute translate-middle wishlist_badge_counter border border-light">
-                                0
-                                <span class="visually-hidden">New alerts</span>
-                            </span>
-                        </h1>
-                        <a class="nav-link wislistHeading" href="/wishlist.html" wire:navigate>Wishlist</a>
-                    </li>
-
-                    <!-- Drawer Structure -->
-
-                    <div class="cart-drawer-overlay"></div>
-                    <div class="cart-drawer" id="cartDrawer">
-                        <div class="cart-drawer-header">
-                            <span class="cart-drawer-title">Your Cart</span>
-                            <span class="cart-drawer-close" id="cartDrawerClose">&times;</span>
-                        </div>
-                        <div class="cart-drawer-body">
-                            <!-- Dynamic cart items will be rendered here -->
-                        </div>
-                        <div class="cart-drawer-footer">
-                            <!-- Footer with total price and buttons -->
-                        </div>
-                    </div>
-
-                    <!-- Replace Mini Cart Button in Navigation -->
-                    <li class="nav-item d-flex cart_button">
-                        <h1 class="cart_heading position-relative">
-                            <img src="Assets/Images/SmallIcons/ShopCart.webp" alt="cartButton" loading="lazy" />
-                            <span class="position-absolute translate-middle wishlist_badge border border-light"
-                                id="cartBadge">
-                                0
-                            </span>
-                        </h1>
-                        <a href="#" class="mycartCustom" id="openCartDrawer">
-                            <div>
-                                <h3 class="mycartCustomHeading1">My Cart</h3>
-                                <h3 class="mycartCustomHeading2">$0.00</h3>
-                            </div>
-                            <div>
-                                <img src="Assets/Images/SmallIcons/ArrowDown.svg" alt="ArrowDown" loading="lazy" />
-                            </div>
-                        </a>
-                    </li>
-
-
-                    <li class="nav-item dropdown d-flex profile_image">
-                        <img src="Assets/Images/Banner/user4.webp" class="user_profile_image user_profile_image_nav"
-                            alt="UserImage" loading="lazy" />
-
-                        <div class="dropdown">
-                            <a class="nav-link loginheadingNav" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Acount
-                                <!-- <img src="Assets/Images/SmallIcons/ArrowDown.svg" alt="" /> -->
-                            </a>
-                            <ul class="dropdown-menu custom-dropdown-menu">
-                                <li><a class="dropdown-item" href="/history.html">Order History</a></li>
-                                <li><a class="dropdown-item" href="/setting.html">Settings</a></li>
-                                <li><a class="dropdown-item" href="/orders.html">Orders</a></li>
-                                <hr class="dropdown-divider">
-                                <li><a class="dropdown-item" href="/authentication/login.html">Login</a></li>
-                                <li><a class="dropdown-item" href="/authentication/register.html">Register</a></li>
-                            </ul>
-                        </div>
-                    </li>
+              
+                  <!-- Drawer Structure -->
+                  <div class="cart-drawer-overlay"></div>
+                  <div class="cart-drawer" id="cartDrawer">
+                      <div class="cart-drawer-header">
+                          <span class="cart-drawer-title">Your Cart</span>
+                          <span class="cart-drawer-close" id="cartDrawerClose">&times;</span>
+                      </div>
+                      <div class="cart-drawer-body">
+                          <!-- Dynamic cart items will be rendered here -->
+                      </div>
+                      <div class="cart-drawer-footer">
+                          <!-- Footer with total price and buttons -->
+                      </div>
+                  </div>
             </div>
 
         </nav>
@@ -420,12 +419,7 @@
             <!-- Suggestions Container -->
             <div id="mobile_search_suggestions" class="search-suggestions" style="display:none;"></div>
         </div>
-
-
         <!--********** NAVIGATION **********-->
-
-
-
 
 
         <!-- Sidebar Navigation -->
@@ -472,22 +466,35 @@
 
 
 
-
-
-
         <!--********** HOME SUB NAV **********-->
 
         <nav class="navbar navbar-expand-lg bg-white d-sm-none d-md-none d-lg-block home_page_nav_two"
             style="border-top: 1px solid #f1f1f1;">
             <div class="container homeSubNavBarLayout">
 
+                <!-- Navbar Links -->
+                <div class="homeSubNavBarItem2">
+                    <ul class="navbar-nav ullists_subhomenav">
+                        <li class="nav-item"><a href="/index.html" class="SubnavIconsAdjustment"><i
+                                    class="bi bi-house navbar-icon"></i> Home</a></li>
+
+                        <li class="nav-item"><a href="/hot-deals.html" class="SubnavIconsAdjustment"><i
+                                    class="bi bi-fire navbar-icon"></i> Hot Deals</a></li>
+                        <li class="nav-item"><a href="/promotions.html" class="SubnavIconsAdjustment"><i
+                                    class="bi bi-tags navbar-icon"></i> Promotions</a></li>
+                        <li class="nav-item"><a href="/new-products.html" class="SubnavIconsAdjustment"><i
+                                    class="bi bi-megaphone navbar-icon"></i> New Products</a></li>
+                    </ul>
+                </div>
+
                 <!-- Browse All Categories Button -->
                 <div class="homeSubNavBarItem1">
                     <button class="Explore_all_categories_Btn" onclick="toggleDropdown()">
-                        <i class="bi bi-grid"></i> &nbsp; Browse All Categories <i class="bi bi-chevron-down"></i>
+                        <!-- <i class="bi bi-grid"></i> &nbsp; Browse All Categories <i class="bi bi-chevron-down"></i> -->
+                        <i class="bi bi-grid"></i> &nbsp; Browse All Categories
                     </button>
                 </div>
-
+    
                 <!-- Dropdown Menu -->
                 <div class="category-dropdown container-fluid" id="categoryDropdown" style="display: none;">
                     <!-- Left Side: Image Section with Text -->
@@ -564,26 +571,6 @@
                     </div>
                 </div>
 
-
-
-
-
-
-                <!-- Navbar Links -->
-                <div class="homeSubNavBarItem2">
-                    <ul class="navbar-nav ullists_subhomenav">
-                        <li class="nav-item"><a href="/index.html" class="SubnavIconsAdjustment"><i
-                                    class="bi bi-house navbar-icon"></i> Home</a></li>
-
-                        <li class="nav-item"><a href="/hot-deals.html" class="SubnavIconsAdjustment"><i
-                                    class="bi bi-fire navbar-icon"></i> Hot Deals</a></li>
-                        <li class="nav-item"><a href="/promotions.html" class="SubnavIconsAdjustment"><i
-                                    class="bi bi-tags navbar-icon"></i> Promotions</a></li>
-                        <li class="nav-item"><a href="/new-products.html" class="SubnavIconsAdjustment"><i
-                                    class="bi bi-megaphone navbar-icon"></i> New Products</a></li>
-                    </ul>
-                </div>
-
                 <!-- Support Center -->
                 <div class="homeSubNavBarItem3">
                     <ul class="navbar-nav ullistsLast">
@@ -603,7 +590,6 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
         </nav>
 

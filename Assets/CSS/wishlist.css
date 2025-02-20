@@ -285,8 +285,8 @@ background-color: #00B207;
     width: 5px;
     height: 5px;
     font-size: 9px;
-    top: 13px;
-    right: -15px;
+    /* top: 13px; */
+    right: -5px;
     align-items: center;
     display: flex;
     color: white;

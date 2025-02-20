@@ -11,7 +11,7 @@
 }
 
 .homeSubNavBarItem1 {
-     width: 17%; 
+     /* width: 17%;  */
 }
 
 .homeSubNavBarItem2 {
@@ -65,7 +65,7 @@
     background-color: var(--green);
     color: white;
     border-radius: 12px;
-    /* padding: 12px; */
+    padding: 5px 20px;
     font-family: Quicksand;
     font-weight: 600;
     font-size: 14px;
@@ -81,7 +81,7 @@
 }
 
 .ullists_subhomenav {
-    margin-left: 40px;
+    /* margin-left: 40px; */
     display: flex;
     width: 100%;
     justify-content: center;
