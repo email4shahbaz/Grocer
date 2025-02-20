@@ -43,32 +43,36 @@ body {
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 16px;
+    
 }
 
 /* Dropdown Menu */
 .custom-dropdown-menu {
-    background-color: #53B175; /* Light Green Background */
-    border: 1px solid #a5d6a7; /* Border color */
+    background-color: #ffffff; 
+    border: 0px 0px 1px 0px solid #000000; /* Border color */
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+   
 }
 
 /* Dropdown Items */
 .custom-dropdown-menu .dropdown-item {
-    color: #e6e9e6; /* Dark Green Text */
+    color: #000000; /* Dark Green Text */
     padding: 10px 15px;
 }
 
 /* Hover Effect for Dropdown Items */
 .custom-dropdown-menu .dropdown-item:hover {
-    background-color: #c8e6c9; /* Hover Green */
+    background-color: #ffffff; /* Hover Green */
     color: #2e7d32; /* Darker Green */
-    font-weight: 600;
+    transition: 0.3s;
+    /* font-weight: 600; */
 }
 
 /* Divider */
 .dropdown-divider {
-    border-top: 1px solid #a5d6a7;
+    border-top: 0.5px solid #a5d6a7 ;
     margin: 0.5rem 0;
 }
 
@@ -107,7 +111,7 @@ body {
 
 .offerContent{
     position: absolute;
-    top: 30px;
+    bottom: 10px;
     left: 30px;
 }
 .offerContentBadgeOne{
@@ -139,6 +143,7 @@ body {
 .offerSButton{
     font-size: 16px;
     font-weight: 600;
+    border-radius: 5px;
     font-family: Quicksand;
     color: #ffffff;
     padding: 20px;
@@ -163,8 +168,12 @@ body {
     justify-content: flex-start;
     align-items: center;
     gap: 25px;
+
 }
 
+.homecategoryProductsMain .card3{
+
+}
 #CustomHomeHeroNavigator {
     width: 10px !important;
     height: 10px !important;
@@ -537,6 +546,7 @@ body {
     justify-content: flex-start;
     gap: 8%;
     align-items: center;
+    white-space: nowrap;
 }
 
 .daily_best_sells_listing_one_arrowicons {
@@ -555,7 +565,7 @@ body {
 }
 
 .expiry {
-    background-color: red;
+    background-color: ff5b5b;
     color: white;
     font-size: 13px;
 border-radius: 20px;

@@ -265,6 +265,7 @@
     font-family: Quicksand;
     color: #253D4E;
     margin: 0px;
+    white-space: nowrap;
 }
 
 .mycartCustomHeading2 {
@@ -280,12 +281,17 @@
     font-weight: 500;
     color: black;
 }
-
+.dropdown {
+    display:flex;
+    
+}
 .loginheadingNav {
     font-size: 16px;
     font-weight: 600;
     font-family: Quicksand;
     color: #253D4E;
+    white-space: nowrap;
+
 }
 
 .whishlist_button {
@@ -670,21 +676,21 @@
 /* TOP HEADER */
 /* Top Header Styling */
 .top-header {
-    background-color: var(--green);
+    background-color: #ffffff;
     padding: 8px 0;
     font-size: 12px;
     font-weight: 600;
-    color: #fff;
+    color: #000000;
 }
 
 .top-header a{
     text-decoration: none;
-    color: #fff;
-    font-weight: 600;
+    color: #000000;
+    font-weight: 500;
     transition: all 0.3s ease;
 }
 .top-header a:hover {
-    color: #a5ffc6;
+    color: #53B175;
 }
 
 
@@ -700,7 +706,7 @@
 .animated-icon-text {
     /* font-size: 14px; */
     font-weight: bold;
-    color: #f9d316;
+    color: #53B175;
     white-space: nowrap;
     overflow: hidden;
     display: flex;
@@ -809,6 +815,11 @@
     display: none;
     z-index: 1000;
 }
+.promotion1{
+    margin-right:20px;
+    border-radius: 5px;
+    
+}
 
 /* GRID LAYOUT FOR CATEGORIES */
 /* Mega Menu Container */
@@ -895,6 +906,7 @@
     /* 3 items per row */
     gap: 10px;
     width: 65%;
+
 }
 
 /* CATEGORY ITEM STYLING */
@@ -904,23 +916,30 @@
     gap: 8px;
     padding: 10px;
     border: 1px solid #e5e5e5;
-    border-radius: 6px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: 0.3s ease;
+    border-radius: 5px;
 }
 
+
 .category-item img {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
 }
 
 .category-item span {
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: medium;
     color: #333;
+    white-space: nowrap;
 }
-
 .category-item:hover {
-    background-color: #f7f7f7;
+    background-color: #eefde6;
+}
+.category-item span:hover {
+    color:#5ca338;
+    transition: 0.5s;
+    ;
 }
 
 /* SHOW MORE LINK */

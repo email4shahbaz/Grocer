@@ -110,7 +110,7 @@
 
     .cart-drawer.open {
         right: 0; /* Slide in when open */
-        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2); /* Keep shadow consistent */
+        /* box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2); Keep shadow consistent */
     }
 
     .cart-drawer-header {
@@ -201,7 +201,7 @@
 
     .cart-drawer.open {
         right: 0; /* Slide into view */
-        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2); /* Stronger shadow when open */
+        /* box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2); Stronger shadow when open */
     }
 
     .cart-drawer-overlay {
@@ -392,7 +392,7 @@
     height: 100%;
     background-color: white;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.3s ease-in-out;
+    transition:0.5s ease-in-out;
     z-index: 1000;
     display: flex;
     flex-direction: column;
@@ -401,7 +401,7 @@
 
 .cart-drawer.open {
     transform: translateX(0);
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    /* box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3); */
 }
 
 .cart-drawer-overlay {
