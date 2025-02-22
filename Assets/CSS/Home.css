@@ -46,41 +46,12 @@ body {
     
 }
 
-/* Dropdown Menu */
-.custom-dropdown-menu {
-    background-color: #ffffff; 
-    border: 0px 0px 1px 0px solid #000000; /* Border color */
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
-   
-}
-
-/* Dropdown Items */
-.custom-dropdown-menu .dropdown-item {
-    color: #000000; /* Dark Green Text */
-    padding: 10px 15px;
-}
-
-/* Hover Effect for Dropdown Items */
-.custom-dropdown-menu .dropdown-item:hover {
-    background-color: #ffffff; /* Hover Green */
-    color: #2e7d32; /* Darker Green */
-    transition: 0.3s;
-    /* font-weight: 600; */
-}
-
 /* Divider */
 .dropdown-divider {
     border-top: 0.5px solid #a5d6a7 ;
     margin: 0.5rem 0;
 }
 
-/* Hover Dropdown */
-.dropdown:hover .custom-dropdown-menu {
-    display: block;
-    margin-top: 0; /* Adjust position */
-}
 
 
 .webviewCarouselOne,

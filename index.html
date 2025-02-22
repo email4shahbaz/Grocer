@@ -267,10 +267,9 @@
                     <div class="nav-item search_button">
                         <form class="d-flex" onsubmit="event.preventDefault();">
                             <div class="input-group searchButtonCate">
-                                <select name="" id="" wire:model.live="search_category"
+                                <select name="" id="search_select_category" wire:model.live="search_category"
                                     class="SerachwithCategoriesLists">
                                     <option value="All Categories">All Categories</option>
-                                    <option value="{{ $item['id'] }}">Fruits</option>
                                 </select>
                                 <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="" />
                                 <input type="text" wire:model.live.debounce.300ms="search_query"
@@ -318,34 +317,26 @@
                         </a>
                     </div>
 
-
-                    <div class="dropdown d-flex profile_image align-items-center">
+                    <div class="nav-item d-flex profile_image">
                         <img src="Assets/Images/Banner/user4.webp" class="user_profile_image user_profile_image_nav"
                             alt="UserImage" loading="lazy" />
-
+                     
                         <div class="dropdown">
-                            <a class="nav-link loginheadingNav" href="#" role="button" data-bs-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle loginheadingNav" href="#" role="button" data-toggle="dropdown"
                                 aria-expanded="false">
                                 Ramzi Sherif
                                 <!-- <img src="Assets/Images/SmallIcons/ArrowDown.svg" alt="" /> -->
                             </a>
-                            <div>
-                                <img src="Assets/Images/SmallIcons/ArrowDown.svg" alt="ArrowDown" loading="lazy" />
-                            </div>
-
                             <ul class="dropdown-menu custom-dropdown-menu">
                                 <li><a class="dropdown-item" href="/history.html">Order History</a></li>
-                                
                                 <li><a class="dropdown-item" href="/setting.html">Settings</a></li>
-                           
                                 <li><a class="dropdown-item" href="/orders.html">Orders</a></li>
-                                
+                                <hr class="dropdown-divider">
                                 <li><a class="dropdown-item" href="/authentication/login.html">Login</a></li>
-                                
                                 <li><a class="dropdown-item" href="/authentication/register.html">Register</a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div>     
                 </div>
 
 
@@ -411,10 +402,9 @@
         <div class="search_component">
             <form class="d-flex">
                 <div class="input-group searchButtonCate">
-                    <select name="" id="mobile_search_category" wire:model.live="search_category"
+                    <select name="" id="search_select_category-mobile" wire:model.live="search_category"
                         class="SerachwithCategoriesLists">
-                        <option value="All Categories">All Categories</option>
-                        <option value="Fruits">Fruits</option>
+                        <option value="All Categories">All Categories</option>                      
                     </select>
                     <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="divider" />
                     <input type="text" id="mobile_search_input" class="form-control shadow-md border-0 search_inp"
@@ -553,12 +543,7 @@
                             </div>
                         </div>
                     </div>
-                   <!-- Show More Link -->
-                   <div class="show-more">
-                    <a href="/category.html">
-                        <span style="color: #53B175;">+ Show more...</span>
-                        </a>
-                </div>
+                  
                 </div>
                 <!-- Navbar Links -->
                 <div class="homeSubNavBarItem2">

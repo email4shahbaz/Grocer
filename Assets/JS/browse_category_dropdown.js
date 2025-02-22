@@ -37,6 +37,14 @@ function populateCategoryDropdown(categories) {
 
         categoryGrid.appendChild(categoryItem);
     });
+
+    const moreItem = document.createElement("div");
+    moreItem.classList.add("category-item");
+    moreItem.innerHTML = `
+        <a href="/category.html">
+            <span style="color: #53B175;">+ Show more...</span>
+        </a>`;
+    categoryGrid.appendChild( moreItem );
 }
 
 // Function to toggle the category dropdown menu

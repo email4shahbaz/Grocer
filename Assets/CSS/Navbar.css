@@ -117,6 +117,40 @@
     text-transform: uppercase;
 }
 
+.loginheadingNav:hover {
+    color: #53B175;
+}
+
+.loginBtn.open .custom-dropdown-menu{
+    display: block;
+}
+
+
+/* Dropdown Menu */
+.custom-dropdown-menu {
+    margin-top: 28px;
+    background-color: #ffffff; 
+    border: 0px 0px 1px 0px solid #000000; /* Border color */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown Items */
+.custom-dropdown-menu .dropdown-item {
+    color: #000000; /* Dark Green Text */
+    padding: 10px 15px;
+}
+
+/* Hover Effect for Dropdown Items */
+.custom-dropdown-menu .dropdown-item:hover {
+    background-color: #ffffff; /* Hover Green */
+    color: #2e7d32; /* Darker Green */
+    transition: 0.3s;
+    /* font-weight: 600; */
+}
+
+
+
 .customDropdownCartButton2:hover {
     background-color: #5ca338;
     /* Slightly darker parrot green for hover effect */
@@ -383,6 +417,10 @@
 .searchButtonCate {
     margin-left: 50px;
     flex-wrap: nowrap !important;
+}
+
+.searchButtonCate input{
+    min-width: 250px;
 }
 
 .search_button {
