@@ -172,7 +172,7 @@ body {
 }
 
 .homecategoryProductsMain .card3{
-
+    color: white;
 }
 #CustomHomeHeroNavigator {
     width: 10px !important;
@@ -463,6 +463,12 @@ body {
 
 .category_listing2 {
     margin-bottom: 0px;
+    color: #000000;
+}
+
+.category_listing2 :Hover {
+    color: #1ca14d;
+    transition: 0.5s;;
 }
 
 .offers_description {

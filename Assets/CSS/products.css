@@ -211,14 +211,14 @@
 
 .ProductsCard_Animations {
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .ProductsCard_Animations:hover {
     
-    transform: translateY(-2px);
+    /* transform: translateY(-2px); */
     transition:0.5s;
-    /* box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); */
-    border: 1px solid rgba(173, 173, 173, 0.5);
+    /* border: 1px solid rgba(173, 173, 173, 0.5); */
     
 }
 
@@ -227,7 +227,7 @@
 }
 
 .ProductsCard_Animations:hover .ProductCardImage {
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
 }
 
 .addbutton {

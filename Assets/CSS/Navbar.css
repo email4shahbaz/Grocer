@@ -685,7 +685,7 @@
 
 .top-header a{
     text-decoration: none;
-    color: #000000;
+    color: #585858;
     font-weight: 500;
     transition: all 0.3s ease;
 }
@@ -939,20 +939,22 @@
 .category-item span:hover {
     color:#5ca338;
     transition: 0.5s;
-    ;
+    cursor: pointer;
 }
 
 /* SHOW MORE LINK */
 .show-more {
+    width: 100%;
     text-align: center;
     margin-top: 10px;
     font-size: 14px;
-    color: #53B175;
+    color: #000000;
     cursor: pointer;
 }
 
 .show-more:hover {
     text-decoration: underline;
+    color: #53B175;
 }
 
 @media (max-width: 1075px) {
