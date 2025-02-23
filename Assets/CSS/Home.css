@@ -126,8 +126,9 @@ body {
 }
 .offersImage{
     position: absolute;
-     top: 10px;
-      right: 10px;
+    bottom: 0px;
+    right: 10px;
+    height: 260px;
 }
 
 
@@ -766,9 +767,9 @@ li {
 
     .offersImage{
         position: absolute;
-        top: 10px;
+        bottom: 0px;
         right: 10px;
-        width: 123px;
+        height: 260px;
     }
     .offerContent h1 {
         font-size: 20px;

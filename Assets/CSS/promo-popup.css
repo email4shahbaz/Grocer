@@ -106,33 +106,36 @@
     text-align: left;
     padding:20px;
     /* padding-right: 20px; */
-    /* margin-left: 25px; */
+    margin-left: 25px;
 }
 
 .offer-heading {
+    font-family: Helvetica;
     font-size: 48px;
-    font-weight: 900;
-    color: #53B175;
+    font-weight: 1000;
+    color: #000000;
     margin-bottom: 10px;
     /* margin-top: 30px; */
 }
 
 .offer-description {
+    font-family: Helvetica;
     font-size: 20px;
     color: black;
     margin-bottom: 20;
-    font-weight: bolder;
+    font-weight: 400;
 }
 
 .offer-badge {
-    background-color:  #53B175;
-    color: white;
-    font-size: 18px;
+    /* background-color:  #53B175; */
+    color: #FD6020;
+    font-size: 14px;
+    font-weight: 600;
     padding: 8px 15px;
-    border-radius: 5px;
-    display: inline-block;
+    /* border-radius: 5px; */
+    /* display: inline-block; */
     margin-bottom: 17px;
-    margin-top: 40px;
+    /* margin-top: 40px; */
 }
 
 .timer {
@@ -161,9 +164,14 @@
 }
 
 .offer-expiry {
-    color: red;
+    color: #FD6020;
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 14px;
+}
+
+.hour{
+    background-color: var(--green);
+    font-size: 12px;
 }
 
 .shop-now-btn {
