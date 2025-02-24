@@ -27,12 +27,11 @@
 
 .popup-box {
     background-color: #ffffff;
-    /* padding: 20px 20px 20px 20px; */
+    padding: 20px 20px 0px 20px;
     border-radius: 12px;
     width: 100%;
-    max-width: 800px;
+    max-width: 820px;
     text-align: center;
-    
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
@@ -100,21 +99,41 @@
     align-items: center;
     width: 800px;
 }
+.delivery{
+    display:flex;
+    gap:10px;
+    align-items: center;
+}
+.delivery-fee{
+    font-size: 50px;
+    font-weight: bolder;
+    color: #53B175;
+    margin-bottom: 0;
+    margin-top: 0px;
+}
+.delivery-off{
+text-decoration: line-through;
+font-size: 28px;
+color:#7b7c7c;
+font-weight: 600;
+}
+
 
 .popup-text {
     width: 60%;
     text-align: left;
-    padding:20px;
+    /* padding:20px; */
+
     /* padding-right: 20px; */
     margin-left: 25px;
 }
 
 .offer-heading {
     font-family: Helvetica;
-    font-size: 48px;
-    font-weight: 1000;
-    color: #000000;
-    margin-bottom: 10px;
+    font-size: 42px;
+    font-weight: 550;
+    color: #253D4E;
+    margin-bottom: 20px;
     /* margin-top: 30px; */
 }
 
@@ -122,7 +141,7 @@
     font-family: Helvetica;
     font-size: 20px;
     color: black;
-    margin-bottom: 20;
+    /* margin-bottom: 20; */
     font-weight: 400;
 }
 
@@ -131,10 +150,11 @@
     color: #FD6020;
     font-size: 14px;
     font-weight: 600;
-    padding: 8px 15px;
+    /* padding: 8px 15px; */
     /* border-radius: 5px; */
     /* display: inline-block; */
-    margin-bottom: 17px;
+    margin-bottom: 10px;
+    margin-top:20px
     /* margin-top: 40px; */
 }
 
@@ -165,8 +185,9 @@
 
 .offer-expiry {
     color: #FD6020;
-    font-weight: bolder;
+    font-weight: 600;
     font-size: 14px;
+    margin-bottom: 40px;
 }
 
 .hour{
@@ -181,7 +202,7 @@
     margin: 0 ;
     padding: 12px 20px;
     font-size: 20px;
-    border-radius: 15px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -193,9 +214,12 @@
 .popup-image img {
     /* width: 250px;
     max-width: 600px;
-    height: 500px;
     object-fit: contain; */
     margin-right: 20px;
+    height: 550px;
+    width:335px;
+    margin-right: 20px;
+
     
 }
 
