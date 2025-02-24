@@ -74,7 +74,9 @@
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border:1px solid rgba(173, 173, 173, 0.25);
+
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
     padding: 10px;
     transition: transform 0.3s ease-in-out;
     display: flex;
@@ -131,15 +133,16 @@
 }
 
 .deal-card .discount-badge {
-    background-color: #ff5b5b;
+    background-color: #F61B40;
     color: white;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: 500;
     padding: 5px;
     position: absolute;
     top: 10px;
     left: 10px;
-    border-radius: 5px;
+    border-radius: 3px 1px;
 }
 
 .deal-card .add-to-cart-btn {

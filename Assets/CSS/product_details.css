@@ -168,6 +168,7 @@ li {
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
+    margin-bottom: 5px;
 }
 
 .badge_stock {
@@ -219,7 +220,7 @@ li {
 }
 
 .nutrition-info{
-    color:  #53B175;
+    color:  #373D49;
     margin-top: 10px;
     font-size: 14px;
     font-weight: 400;
@@ -352,17 +353,21 @@ li {
 
 .ntFact {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 350;
     color: #9797A6;
     cursor: pointer;
+    margin-top:20px;
+    margin-bottom: 20px;
     font-family: Mulish;
 }
 
 .active {
     color: #53B175;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 500;
     font-family: Mulish;
+    margin-top:0px;
+    margin-bottom: 20px;
 }
 
 .productPropertiesMain {
@@ -772,16 +777,18 @@ li {
     position: absolute;
     top: 10px; /* Align to the top */
     left: 10px; /* Align to the left */
-    background-color:red; /* Red for discounts */
+    background-color: #F61B40; /* Red for discounts */
     color: white;
+    width:80px;
     padding: 5px 10px;
-    font-size: 12px;
-    font-weight: bolder;
-    border-radius: 3px;
+    font-size: 13px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
     z-index: 10;
     text-transform: uppercase;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    animation: bounceIn 2.5s ease-out infinite; /* Add animation */
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: bounceIn 2.5s ease-out infinite; Add animation */
    
 }
 
@@ -834,6 +841,7 @@ li {
 /* FOMO Section */
 .fomo-message {
     margin-top: 20px;
+    margin-bottom: 20px;
     padding: 10px 15px;
     background-color: #53B175;
     border-radius: 5px;
@@ -843,7 +851,7 @@ li {
     display: flex;
     align-items: center;
     gap: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
    
 }
 .fomo-message:hover {

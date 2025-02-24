@@ -728,6 +728,7 @@
     padding: 8px 0;
     font-size: 12px;
     font-weight: 600;
+    border-bottom: 1px solid rgb(236, 236, 236);
     color: #000000;
 }
 
@@ -752,9 +753,9 @@
 
 /* Animated Text & Icon */
 .animated-icon-text {
-    /* font-size: 14px; */
+    font-size: 12px;
     font-weight: bold;
-    color: #53B175;
+    color: #a1a1a1;
     white-space: nowrap;
     overflow: hidden;
     display: flex;
@@ -764,12 +765,13 @@
 
 .animated-icon-text i {
     /* font-size: 16px; */
-    color: #53B175;
+    color: #585858;
 }
 
 /* Typing Animation */
+
 #animatedText {
-    border-right: 3px solid #53B175;
+    border-right: 3px solid #585858;
     /* Blinking Cursor */
     display: inline-block;
     white-space: nowrap;

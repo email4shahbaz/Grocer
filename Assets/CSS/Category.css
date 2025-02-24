@@ -45,15 +45,6 @@ body {
     width: 25%;
 }
 
-
-
-
-
-
-
-
-
-
 .department_heading {
     font-size: 31px;
     font-weight: 700;
@@ -77,6 +68,15 @@ body {
     font-weight: 400;
     font-family: poppins;
     color: #808080;
+}
+
+.filter-rating{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: poppins;
+    margin-bottom: 10px;
+    color: #000000;
+    /* text-align: center; */
 }
 
 .search_component {
