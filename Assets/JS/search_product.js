@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-	const searchInput = document.querySelector(".search_inp");
+	const searchInput = window.screen.width > 992 ? document.querySelector(".search_inp") : document.querySelector(".search_inp_mobile");
 
 	const searchSuggestionsContainer = document.createElement("div");
 	searchSuggestionsContainer.classList.add("search-suggestions");
@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Function to populate category dropdown
 	function populateCategoryDropdown(categories) {
-		const categoryDropdown = document.getElementById("search_select_category");
+		let categoryDropdown = window.screen.width > 992 ? document.getElementById("search_select_category") : document.getElementById("search_select_category_mobile");
 		categoryDropdown.innerHTML = ""; // Clear existing categories
 		const firstOption = document.createElement("option");
 		firstOption.value = "All Categories";

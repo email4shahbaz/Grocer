@@ -81,9 +81,10 @@
     padding: 0;
 }
 
-.sidebar-nav .nav-item {
-    margin-bottom: 15px;
+.sidebar-nav .navbar-nav hr {
+    margin: 0;
 }
+
 
 .sidebar-nav .nav-link {
     color: black;
@@ -96,10 +97,10 @@
 }
 
 .sidebar-nav .nav-link:hover {
-    background-color: var(--hovergreen);
-    color: #fff;
-    transform: scale(1.05);
-    box-shadow: 0 5px 10px rgba(58, 151, 92, 0.5);
+    /* color: #3a975c; */
+    /* color: #fff; */
+    /* transform: scale(1.05); */
+    /* box-shadow: 0 5px 10px rgba(58, 151, 92, 0.5); */
 }
 
 /* Sidebar Overlay */

@@ -552,7 +552,7 @@ border-radius: 20px;
     padding: 9px;
 }
 
-@media screen and (max-width: 1010px) {
+@media screen and (max-width: 1024px) {
    .expiry{
     font-size: 13px;
     border-radius: 20px;

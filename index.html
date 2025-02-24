@@ -263,7 +263,7 @@
 
 
         <nav class="navbar navbar-expand-lg bg-white shadow-sm main_navbar">
-            <div class="container d-flex">
+            <div class="container d-flex flex-nowrap">
                 <div class="d-flex">
                     <div class="logo_main_image">
                         <!-- {{-- MVSideBarOpenIcon --}} -->
@@ -386,7 +386,7 @@
                             <img src="Assets/Images/SmallIcons/ShopCart.webp" alt="cartImage" loading="lazy"
                                 id="openMobileCartDrawer" />
                             <span
-                                class="position-absolute translate-middle border border-light wishlist_badge"
+                                class="position-absolute translate-middle border border-light wishlist_badge_mobile"
                                 id="mobileCartBadge">
                                 0
                             </span>
@@ -418,12 +418,12 @@
         <div class="search_component">
             <form class="d-flex">
                 <div class="input-group searchButtonCate">
-                    <select name="" id="search_select_category-mobile" wire:model.live="search_category"
+                    <select name="" id="search_select_category_mobile" wire:model.live="search_category"
                         class="SerachwithCategoriesLists">
                         <option value="All Categories">All Categories</option>                      
                     </select>
                     <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="divider" />
-                    <input type="text" id="mobile_search_input" class="form-control shadow-md border-0 search_inp"
+                    <input type="text"  class="form-control shadow-md border-0 search_inp_mobile"
                         maxlength="20" placeholder="Search for items..." aria-label="Search" autocomplete="off" />
                     <button class="btn rounded-0 shadow-md search_btn">
                         <img src="Assets/Images/SmallIcons/search.webp" alt="searchIcon" loading="lazy" />
@@ -1379,7 +1379,7 @@
     <script src="/Assets/JS/product_details.js"></script>
     <script src="/Assets/JS/cart_dropdown.js"></script>
     <script src="/Assets/JS/search_product.js"></script>
-    <script src="/Assets/JS/mob_search.js"></script>
+    <!-- <script src="/Assets/JS/mob_search.js"></script> -->
     <script src="/Assets/JS/category_product.js"></script>
     <script src="/Assets/JS/wishlist.js"></script>
     <script src="/Assets/JS/sidebar_icons.js"></script>

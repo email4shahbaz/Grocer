@@ -175,6 +175,7 @@
         min-width: 300px;
     }
 
+
     .customDropdownCartButton1,
     .customDropdownCartButton2 {
         font-size: 12px;
@@ -182,6 +183,13 @@
 
     .customCartDropdownHeading {
         font-size: 12px;
+    }
+
+    .top-header-container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 10px;
     }
 }
 
@@ -628,6 +636,10 @@
 }
 
 @media screen and (min-width:769px) and (max-width:991px) {
+    .search_button {
+        display: none;
+    }
+
     .search_component {
         display: block;
     }
@@ -636,9 +648,7 @@
         display: none;
     }
 
-    .search_button {
-        display: none;
-    }
+   
 
     .mobile_cart_profile {
         display: flex;
@@ -999,6 +1009,11 @@
     .category-dropdown {
         margin-top: 40px;
     }
+}
+
+@media (max-width: 1024px) {
+    .searchButtonCate{margin-left: 0;}
+    .searchButtonCate input{min-width: 200px;}
 }
 
 /* Mobile Adjustments */

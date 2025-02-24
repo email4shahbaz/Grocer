@@ -281,12 +281,12 @@ background-color: #00B207;
 }
 
 
-.wishlist_badge_counter{
+.wishlist_badge_counter, .wishlist_badge_mobile{
     width: 5px;
     height: 5px;
     font-size: 9px;
-    /* top: 13px; */
-    right: -5px;
+    top: 8px;
+    right: -20px;
     align-items: center;
     display: flex;
     color: white;

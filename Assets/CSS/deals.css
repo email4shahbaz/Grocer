@@ -190,9 +190,9 @@
     }
 
     .timer-container {
-        display: flex;
+        /* display: flex;
         justify-content: center;
-        gap: 10px;
+        gap: 10px; */
     }
 
     .time-box_deal {
