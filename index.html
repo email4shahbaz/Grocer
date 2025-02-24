@@ -287,10 +287,12 @@
                                     class="SerachwithCategoriesLists">
                                     <option value="All Categories">All Categories</option>
                                 </select>
-                                <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="" />
-                                <input type="text" wire:model.live.debounce.300ms="search_query"
-                                    class="shadow-md border-0 search_inp" maxlength="20"
-                                    placeholder="Search for items..." aria-label="Search" autocomplete="off" />
+                                <!-- <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="" /> -->
+                                 <div class="input-cont">
+                                    <input type="text" wire:model.live.debounce.300ms="search_query"
+                                        class="shadow-md border-0 search_inp" maxlength="20"
+                                        placeholder="Search for items..." aria-label="Search" autocomplete="off" />
+                                 </div>
                                 <button class="btn rounded-0 shadow-md search_btn" type="submit">
                                     <img src="Assets/Images/SmallIcons/search.webp" alt="searchIcon" loading="lazy" />
                                 </button>
@@ -474,9 +476,11 @@
                         class="SerachwithCategoriesLists">
                         <option value="All Categories">All Categories</option>                      
                     </select>
-                    <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="divider" />
-                    <input type="text"  class="form-control shadow-md border-0 search_inp_mobile"
-                        maxlength="20" placeholder="Search for items..." aria-label="Search" autocomplete="off" />
+                    <!-- <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="divider" /> -->
+                     <div class="input-cont">
+                        <input type="text"  class="form-control shadow-md border-0 search_inp_mobile"
+                            maxlength="20" placeholder="Search for items..." aria-label="Search" autocomplete="off" />
+                        </div>
                     <button class="btn rounded-0 shadow-md search_btn">
                         <img src="Assets/Images/SmallIcons/search.webp" alt="searchIcon" loading="lazy" />
                     </button>

@@ -251,6 +251,7 @@
     color: #253D4E;
     background-color: #F3F3F3;
     border-radius: 3px 0px 0px 3px;
+    margin-right: 10px;
 }
 
 .searchDividerIcon {
@@ -424,6 +425,7 @@
 
 .searchButtonCate {
     margin-left: 50px;
+    background-color: #F3F3F3;
     flex-wrap: nowrap !important;
 }
 
@@ -462,14 +464,22 @@
     margin-left: 15px;
 }
 
-.search_inp {
+.search_inp, .search_inp_mobile {
     background-color: #F3F3F3;
     font-size: 14px;
     font-weight: 500;
     font-family: 'Quicksand';
     color: #ADADAD;
-    width: 65%;
+    width: 100%;
     padding-left: 15px;
+    height: 100%;
+   
+}
+.input-cont{
+    width: 100%;
+    /* padding-left: 10px; */
+    border-left: 1px solid rgb(190, 190, 190);
+    
 }
 
 .search_inp:focus {
@@ -576,6 +586,7 @@
     }
 
     .searchButtonCate {
+        background-color: #F3F3F3;
         margin-left: 0px;
     }
 
