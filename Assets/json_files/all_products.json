@@ -28,7 +28,7 @@
       "description": "Fresh and Organic Cheese.",
       "detailedDescription": "Rich and creamy cheese, perfect for sandwiches, burgers, or as a topping. High in calcium and protein.",
       "rating": 3,
-      "categoryName": "Snacks",
+      "categoryName": "Dairy",
       "tags": ["Creamy", "Organic", "Rich"],
       "nutrition": {
           "calories": 402,
@@ -38,7 +38,7 @@
       }
   },
   {
-      "id": "3",
+      "id": "2",
       "name": "Butter",
       "price": 15,
       "discountedPrice": 13.5,
@@ -57,7 +57,7 @@
       }
   },
   {
-      "id": "4",
+      "id": "3",
       "name": "Almonds",
       "price": 5,
       "discountedPrice": 4.25,
@@ -66,7 +66,7 @@
       "description": "Fresh, Organic, Sweet Almonds.",
       "detailedDescription": "Crunchy and nutritious almonds, perfect for snacking, baking, or adding to desserts. High in protein and vitamins.",
       "rating": 3,
-      "categoryName": "Beverages",
+      "categoryName": "Snacks",
       "tags": ["Crunchy", "Healthy", "Organic"],
       "nutrition": {
           "calories": 576,
@@ -76,7 +76,7 @@
       }
   },
   {
-      "id": "5",
+      "id": "4",
       "name": "Orange",
       "price": 3,
       "discountedPrice": 2.85,
@@ -96,7 +96,7 @@
       }
   },
   {
-      "id": "6",
+      "id": "5",
       "name": "Strawberry",
       "price": 15,
       "discountedPrice": 13.5,
@@ -115,7 +115,7 @@
       }
   },
   {
-      "id": "7",
+      "id": "4",
       "name": "Red Capsicum",
       "price": 4,
       "discountedPrice": 3.4,
@@ -135,7 +135,7 @@
       }
   },
   {
-      "id": "8",
+      "id": "1",
       "name": "Potato",
       "price": 4,
       "discountedPrice": 3.4,
