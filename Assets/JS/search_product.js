@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	let allProducts = [];
 	const jsonFiles = [
 		"/Assets/json_files/all_products.json",
-		"/Assets/json_files/latest_product.json",
-		"/Assets/json_files/featured_product.json",
+		//"/Assets/json_files/latest_product.json",
+		//"/Assets/json_files/featured_product.json",
 	];
 
 	// Fetch JSON data and merge all products into a single array
@@ -81,8 +81,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Redirect to the searched product page with query parameter
 	function redirectToSearchedProductPage(product) {
-		const url = new URL(window.location.origin + "/search.html");
-		url.searchParams.set("id", product.id);
+		// const url = new URL(window.location.origin + "/search.html");
+		// url.searchParams.set("id", product.id);
+		// window.location.href = url;
+		const url = new URL(window.location.origin + "/product-details.html");
+		url.searchParams.set("product-id", product.id);
+		url.searchParams.set("category-file", product.categoryName+".json");
 		window.location.href = url;
 	}
 
