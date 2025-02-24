@@ -293,7 +293,6 @@
                                     placeholder="Search for items..." aria-label="Search" autocomplete="off" />
                                 <button class="btn rounded-0 shadow-md search_btn" type="submit">
                                     <img src="Assets/Images/SmallIcons/search.webp" alt="searchIcon" loading="lazy" />
-
                                 </button>
                             </div>
                         </form>
@@ -401,6 +400,59 @@
                   <div class="cart-drawer-overlay"></div>
                   <div class="cart-drawer" id="cartDrawer">
                       <div class="cart-drawer-header">
+                        <div class="cart-drawer open" id="cartDrawer">
+                      <div class="cart-drawer-header">
+                          <span class="cart-drawer-title">Your Cart</span>
+                          <span class="cart-drawer-close" id="cartDrawerClose">×</span>
+                      </div>
+                      <div class="cart-drawer-body">
+                <div class="cart-item d-flex justify-content-between align-items-center mb-3">
+                    <div class="d-flex align-items-center">
+                        <img src="/Assets/Images/Products/Apple.png" alt="Buy 1 get 1 Free on Fresh Fruits" style="width: 50px; height: 50px; margin-right: 10px;">
+                        <span>Buy 1 get 1 Free on Fresh Fruits </span>
+                    </div>
+                     <div class="d-flex align-items-center ">
+                <button class="btn btn-sm quantity-button decrement" data-name="Buy 1 get 1 Free on Fresh Fruits">
+                    <span class="arrow down"></span>
+                </button>
+               <span class="">1</span>
+                <button class="btn btn-sm quantity-button increment mx-2" data-name="Buy 1 get 1 Free on Fresh Fruits">
+                    <span class="arrow up"></span>
+                </button>
+                <strong>$2.99</strong>
+                <button class="btn btn-danger-green btn-sm remove-cart-item" data-name="Buy 1 get 1 Free on Fresh Fruits">X</button>
+            </div>
+                </div>
+            
+                <div class="cart-item d-flex justify-content-between align-items-center mb-3">
+                    <div class="d-flex align-items-center">
+                        <img src="/Assets/Images/Products/almonds.jpg" alt="40% OFF on Snaks &amp; Beverages" style="width: 50px; height: 50px; margin-right: 10px;">
+                        <span>40% OFF on Snaks &amp; Beverages </span>
+                    </div>
+                     <div class="d-flex align-items-center ">
+                <button class="btn btn-sm quantity-button decrement" data-name="40% OFF on Snaks &amp; Beverages">
+                    <span class="arrow down"></span>
+                </button>
+               <span class="">1</span>
+                <button class="btn btn-sm quantity-button increment mx-2" data-name="40% OFF on Snaks &amp; Beverages">
+                    <span class="arrow up"></span>
+                </button>
+                <strong>$1.99</strong>
+                <button class="btn btn-danger-green btn-sm remove-cart-item" data-name="40% OFF on Snaks &amp; Beverages">X</button>
+            </div>
+                </div>
+            </div>
+                      <div class="cart-drawer-footer">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="fw-bold">Total:</span>
+                    <span class="fw-bold">$4.98</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <a href="/cart.html" class="btn btn-primary">My Cart</a>
+                    <a href="/billing.html" class="drawercart-checkout btn btn-success">Checkout</a>
+                </div>
+            </div>
+                  </div>
                           <span class="cart-drawer-title">Your Cart</span>
                           <span class="cart-drawer-close" id="cartDrawerClose">&times;</span>
                       </div>
