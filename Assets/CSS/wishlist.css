@@ -285,8 +285,8 @@ background-color: #00B207;
     width: 5px;
     height: 5px;
     font-size: 9px;
-    top: 8px;
-    right: -20px;
+    top: 0px;
+    right: -5px;
     align-items: center;
     display: flex;
     color: white;
@@ -294,4 +294,9 @@ background-color: #00B207;
     background-color: var(--green);
     border-radius: 50%;
     padding: 7px;  
+}
+
+.wishlist_badge_mobile{
+    top: 15px;
+    right: -15px;
 }
