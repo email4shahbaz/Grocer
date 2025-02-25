@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const orderDetails = orders.find((order) => order.orderId === lastOrderId);
 
     if (!orderDetails) {
-        document.body.innerHTML = "<h1>Order not found!</h1>";
+        
+        document.querySelector('.thank-you-container').innerHTML = "<h1>Order not found!</h1>";
         return;
     }
 
