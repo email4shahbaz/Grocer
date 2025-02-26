@@ -80,57 +80,6 @@ body {
     gap: 20px;
 }
 
-.offerContent{
-    position: absolute;
-    bottom: 10px;
-    left: 30px;
-}
-.offerContentBadgeOne{
-    background-color: #FDC040;
-    color: white;
-    border-radius: 3px;
-    padding: 7px;
-}
-.offerContentBadgeTwo{
-    background-color: #53B175;
-    color: white;
-    border-radius: 3px;
-    padding: 7px 15px;
-}
-.offerContent h1{
-    font-size: 28px;
-    font-weight: 600;
-    font-family: Quicksand;
-    color: #253D4E;
-    margin-top: 20px;
-}
-.offerContent p{
-    font-size: 18px;
-    font-weight: 500;
-    font-family: Quicksand;
-    color: #838383;
-    width: 70%;
-}
-.offerSButton{
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 5px;
-    font-family: Quicksand;
-    color: #ffffff;
-    padding: 20px;
-    background-color: #53B175;
-    width: 52%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.offersImage{
-    position: absolute;
-    bottom: 0px;
-    right: 10px;
-    height: 260px;
-}
-
 
 
 
@@ -553,6 +502,7 @@ border-radius: 20px;
 }
 
 @media screen and (max-width: 1024px) {
+   
    .expiry{
     font-size: 13px;
     border-radius: 20px;
@@ -560,6 +510,7 @@ border-radius: 20px;
         padding: 7px;
    }
 }
+
 
 
 .BestSellProductarrowbtnLeft,
@@ -765,12 +716,12 @@ li {
 
 @media screen and (max-width:500px) {
 
-    .offersImage{
+    /* .offersImage{
         position: absolute;
         bottom: 0px;
         right: 10px;
         height: 260px;
-    }
+    } */
     .offerContent h1 {
         font-size: 20px;
         font-weight: 600;
@@ -797,11 +748,11 @@ li {
         justify-content: center;
         align-items: center;
     }
-    .offerContent {
+    /* .offerContent {
         position: absolute;
         top: 8px;
         left: 10px;
-    }
+    } */
     .offers_shopNow_btn {
         border: none;
         text-align: center;
@@ -1536,5 +1487,119 @@ li {
 }
 
 
+.delivery-card-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.free-delivery-card, .organic-food-card{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: url('../Images/Banner/Yellow.png');
+}
+
+.organic-food-card{
+    background: url('../Images/Banner/Green.png');
+}
+
+.free-delivery-card .img-cont{
+    width: 160px;
+}
+
+.organic-food-card .img-cont{
+    width: 245px;
+}
+
+.free-delivery-card .offersImage{
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    width: 160px;
+}
+
+.organic-food-card .offersImage{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 245px;
+}
 
 
+.offerContent{
+    /* position: absolute; */
+    padding: 20px;
+}
+
+
+
+.offerContentBadgeOne{
+    background-color: #FDC040;
+    color: white;
+    border-radius: 3px;
+    padding: 7px;
+}
+.offerContentBadgeTwo{
+    background-color: #53B175;
+    color: white;
+    border-radius: 3px;
+    padding: 7px 15px;
+}
+.offerContent h1{
+    font-size: 28px;
+    font-weight: 600;
+    font-family: Quicksand;
+    color: #253D4E;
+    margin-top: 20px;
+    white-space: normal;
+}
+.offerContent p{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Quicksand;
+    color: #838383;
+    width: 70%;
+}
+.offerSButton{
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    font-family: Quicksand;
+    color: #ffffff;
+    padding: 20px;
+    background-color: #53B175;
+    width: 52%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+@media (max-width: 992px) {
+    .free-delivery-card .offersImage{
+        width: 140px;
+    }
+    .organic-food-card .offersImage{
+        width: 200px;
+    }
+
+    
+    .free-delivery-card .img-cont{
+        width: 140px;
+    }
+
+    .organic-food-card .img-cont{
+        width: 200px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .delivery-card-container{
+        grid-template-columns: 1fr;
+    }
+}
