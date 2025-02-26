@@ -27,6 +27,10 @@
     background-color: #ffffff;
     display:flex;
     justify-content: flex-end;
+    position: absolute;
+    z-index: 100;
+    top:0px;
+    right:10px;
 }
 #quick-view-modal .close:hover {
    
@@ -44,9 +48,10 @@
 
 /* Discount Badge Styling */
 #quick-view-modal .badge {
-    font-size: 18px;
-    padding: 5px 10px;
-    border-radius: 20px;
+    font-size: 14px;
+    padding: 6px 10px;
+    font-weight: 400;
+    border-radius: 15px;
 }
 
 #quick-view-modal .badge-danger {

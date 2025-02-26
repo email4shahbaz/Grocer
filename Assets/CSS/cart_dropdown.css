@@ -80,9 +80,9 @@
     font-weight: bolder;
 }
 .btn-success{
-    background-color: darkgreen;
+    background-color: var(--green);
     color: white;
-    border: 2px solid green;
+    border: 2px solid rgb(49, 180, 49);
     font-weight: bolder;
 }
 .btn-primary:hover {

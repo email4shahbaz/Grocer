@@ -879,9 +879,14 @@
 .promotion1{
     margin-right:20px;
     border-radius: 5px;
+    top:0;
     
 }
-
+.promotion2{
+    margin-right:20px;
+    border-radius: 5px;
+    top:0;
+}
 /* GRID LAYOUT FOR CATEGORIES */
 /* Mega Menu Container */
 .category-dropdown {
