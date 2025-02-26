@@ -876,12 +876,10 @@
         {{-- **********************Offers*************************** --}} -->
             <div class="container mt-5 p-0">
                 <!-- @if ($flashDeals) -->
-                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-                    <div class="position-relative">
-                        <a href="/promotions.html">
-                            <img src="./Assets/Images/Banner/Yellow.png"
-                                onerror="this.src='Assets/Images/Banner/Yellow.png'" class="offersBanner" alt="">
-                            <img src="./Assets/Images/Banner/Offer1-img.webp" class="offersImage" alt="">
+                <div class="delivery-card-container">
+                    <div class="free-delivery-card">
+                            <!-- <img src="./Assets/Images/Banner/Yellow.png"
+                                onerror="this.src='Assets/Images/Banner/Yellow.png'" class="offersBanner" alt=""> -->
                             <div class="offerContent">
                                 <span class="offerContentBadgeOne">Free Delivery</span>
                                 <h1>Free delivery over $50</h1>
@@ -889,22 +887,23 @@
                                 <a href="/promotions.html" class="offerSButton">Shop Now <i
                                         class="bi bi-arrow-right-short"></i></a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="position-relative d-none d-md-block">
-                        <a href="/promotions.html" wire:navigate>
-                            <img src="./Assets/Images/Banner/Green.png"
-                                onerror="this.src='Assets/Images/Banner/Offer1.webp'" class="offersBanner" alt="">
-                            <img src="./Assets/Images/Banner/Offer2-img.webp"
-                                style="position: absolute; bottom: 0px; right: 0px;" alt="">
-                            <div class="offerContent">
-                                <span class="offerContentBadgeTwo">60% Off</span>
-                                <h1>Organic Food</h1>
-                                <p>Save up to 60% off on your first order</p>
-                                <a href="/promotions.html" class="offerSButton">Order Now <i
-                                        class="bi bi-arrow-right-short"></i></a>
+                            <div class="img-cont">
+                                <img src="./Assets/Images/Banner/Offer1-img.webp" class="offersImage" alt="">
                             </div>
-                        </a>
+                        
+                    </div>
+                 
+                    <div class="organic-food-card">
+                        <div class="offerContent">
+                            <span class="offerContentBadgeTwo">60% Off</span>
+                            <h1>Organic Food</h1>
+                            <p>Save up to 60% off on your first order</p>
+                            <a href="/promotions.html" class="offerSButton">Order Now <i
+                                    class="bi bi-arrow-right-short"></i></a>
+                        </div>
+                        <div class="img-cont">
+                            <img src="./Assets/Images/Banner/Offer2-img.webp" class="offersImage" alt="" />
+                        </div>
                     </div>
                 </div>
                 <!-- @endif -->
