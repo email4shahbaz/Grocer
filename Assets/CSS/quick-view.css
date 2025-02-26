@@ -1,14 +1,15 @@
 /* Modal Styling */
 #quick-view-modal .modal-content {
     border-radius: 10px;
+    padding: 10px;
 }
 
 #quick-view-modal .modal-header {
-    background-color: #f8f9fa;
-    border-bottom: 2px solid  #53B175;
- 
-    border-radius: 40px;
-    margin-bottom: 10px;
+    /* background-color: #f8f9fa; */
+    /* border-bottom: 2px solid  #53B175; */
+
+    /* border-radius: 40px; */
+    /* margin-bottom: 10px; */
 }
 
 #quick-view-modal .modal-title {
@@ -22,11 +23,14 @@
 
 #quick-view-modal .close {
     font-size: 30px;
-    color: #999;
+    /* color: #999; */
+    background-color: #ffffff;
+    display:flex;
+    justify-content: flex-end;
 }
 #quick-view-modal .close:hover {
    
-    color: green;
+    color: var(--green);
 }
 
 #quick-view-modal img {
@@ -35,7 +39,7 @@
 }
 
 #quick-view-modal button {
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 /* Discount Badge Styling */
