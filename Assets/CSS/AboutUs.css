@@ -29,9 +29,8 @@ a{
     position: relative;
 }
 .aboutus_hero_description{
-    width: 55%;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    width: 100%;
+    padding: 40px 0;
 }
 .aboutus_hero_description h1{
     text-align: center;
@@ -48,10 +47,21 @@ a{
     text-align: justify;
     color: #4E4E4E;
 }
+
+.hero_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
 .aboutus_hero_fruit_image{
+   width: 100%;
+}
+.aboutus_hero_fruit_image img{
     position: absolute;
     top: 0px;
     right: 0px;
+    width: 600px;
 }
 /* Our Values */
 .aboutus_our_values_main_heading{
@@ -102,7 +112,17 @@ a{
     font-family: Quicksand;
     color: #4E4E4E;
 }
-@media screen and (max-width:768px) {
+
+@media (max-width: 1024px) {
+    .aboutus_hero_fruit_image img {
+        width: 450px;
+    }
+    
+}
+@media (max-width:768px) {
+    .hero_container{
+        grid-template-columns: 1fr;
+    }
     .aboutus_hero_description p {
         font-family: Quicksand;
         font-weight: 500;
@@ -149,15 +169,13 @@ a{
         color: #4E4E4E;
     }
     .aboutus_hero_fruit_image {
-        position: absolute;
-        top: 0px;
-        right: 0px;
+    
         display: none;
     }
+    
     .aboutus_hero_description {
-        width: 80%;
-        padding-top: 60px;
-        padding-bottom: 60px;
+        width: 100%;
+        padding: 40px;
         margin: auto;
     }
     .aboutus_hero_description h1 {
