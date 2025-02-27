@@ -772,6 +772,8 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    transition: all 0.5s ease;
+
 }
 
 .animated-icon-text i {

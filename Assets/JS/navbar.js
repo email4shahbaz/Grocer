@@ -29,35 +29,51 @@ document.addEventListener("DOMContentLoaded", function () {
     let charIndex = 0;
     let isErasing = false;
     
+    const animatedCont = document.getElementsByClassName("animated-icon-text")[0];
     const animatedText = document.getElementById("animatedText");
     const animatedIcon = document.getElementById("animatedIcon");
 
     function typeEffect() {
+       
         const currentMessage = messages[messageIndex].text;
-        
-        if (!isErasing) {
-            if (charIndex < currentMessage.length) {
-                animatedText.innerHTML += currentMessage.charAt(charIndex);
-                charIndex++;
-                setTimeout(typeEffect, 100); // Typing speed
-            } else {
-                setTimeout(() => {
-                    isErasing = true;
-                    typeEffect();
-                }, 2000); // Pause before erasing
-            }
-        } else {
-            if (charIndex > 0) {
-                animatedText.innerHTML = currentMessage.substring(0, charIndex - 1);
-                charIndex--;
-                setTimeout(typeEffect, 50); // Erasing speed
-            } else {
-                isErasing = false;
-                messageIndex = (messageIndex + 1) % messages.length; // Next message
-                animatedIcon.className = `bi ${messages[messageIndex].icon}`; // Change icon
-                setTimeout(typeEffect, 500);
-            }
-        }
+        animatedText.innerHTML = currentMessage;
+        //animatedCont.style.transformOrigin = 'bottom';
+        animatedCont.style.opacity = 1;
+
+
+        setTimeout(()=>{
+           // animatedCont.style.transformOrigin = 'top';
+           animatedCont.style.opacity = 0;
+            messageIndex = (messageIndex + 1) % messages.length; // Next message
+            animatedIcon.className = `bi ${messages[messageIndex].icon}`; // Change icon
+            setTimeout(()=>{
+                typeEffect()
+            }, 750)
+        },5000); // Typing speed
+       
+        // if (!isErasing) {
+        //     if (charIndex < currentMessage.length) {
+        //         animatedText.innerHTML += currentMessage.charAt(charIndex);
+        //         charIndex++;
+        //         setTimeout(typeEffect, 100); // Typing speed
+        //     } else {
+        //         setTimeout(() => {
+        //             isErasing = true;
+        //             typeEffect();
+        //         }, 2000); // Pause before erasing
+        //     }
+        // } else {
+        //     if (charIndex > 0) {
+        //         animatedText.innerHTML = currentMessage.substring(0, charIndex - 1);
+        //         charIndex--;
+        //         setTimeout(typeEffect, 50); // Erasing speed
+        //     } else {
+        //         isErasing = false;
+        //         messageIndex = (messageIndex + 1) % messages.length; // Next message
+        //         animatedIcon.className = `bi ${messages[messageIndex].icon}`; // Change icon
+        //         setTimeout(typeEffect, 500);
+        //     }
+        // }
     }
 
     typeEffect(); // Start the animation
