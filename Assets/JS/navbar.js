@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(()=>{
                 typeEffect()
             }, 750)
-        },5000); // Typing speed
+        },3000); // Typing speed
        
         // if (!isErasing) {
         //     if (charIndex < currentMessage.length) {
