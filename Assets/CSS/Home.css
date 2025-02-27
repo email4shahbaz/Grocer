@@ -1535,7 +1535,25 @@ li {
 .offerContent2{
     position: absolute;
     padding: 20px;
-    top:30px;
+    top:0px;
+    bottom: 0px;
+}
+
+.offerContent2 h1{
+    font-size: 28px;
+    font-weight: 600;
+    font-family: Quicksand;
+    color: #253D4E;
+    margin-top: 20px;
+    white-space: normal;
+}
+
+.offerContent2 p{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Quicksand;
+    color: #838383;
+    width: 70%;
 }
 
 
@@ -1572,12 +1590,13 @@ li {
     border-radius: 5px;
     font-family: Quicksand;
     color: #ffffff;
-    padding: 20px;
+    padding: 15px;
     background-color: #53B175;
     width: 52%;
     display: flex;
     justify-content: center;
     align-items: center;
+    white-space: nowrap;
 }
 
 

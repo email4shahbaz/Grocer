@@ -70,7 +70,7 @@
     width: 23%;
     position: relative;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
     border:1px solid rgba(173, 173, 173, 0.25);
 
@@ -92,9 +92,10 @@
 
 .deal-card img {
     width: 90%;
-    height: 200px;
+    /* height: 200px; */
     object-fit: cover;
     border-radius: 8px;
+    align-items: cen;
 }
 
 .deal-card .details {

@@ -131,6 +131,8 @@
     font-size: 12px;
     font-weight: 500;
     font-family: Quicksand;
+    top:10px;
+    left:10px;
 }
 
 .BestSellCardOffTag h6 {

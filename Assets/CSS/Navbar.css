@@ -891,7 +891,7 @@
     margin-right:20px;
     border-radius: 5px;
     top:0;
-    
+    margin-bottom: 20px;
 }
 .promotion2{
     margin-right:20px;
@@ -983,6 +983,7 @@
     /* 3 items per row */
     gap: 10px;
     width: 65%;
+    margin-bottom: 20px;
 
 }
 
