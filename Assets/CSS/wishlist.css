@@ -65,8 +65,8 @@ li {
 
 .main_table_heading {
     font-size: 18px;
-    color: #808080 !important;
-    font-weight: bolder;
+    color: #9797A6 !important;
+    font-weight: 500;
     font-family: poppins;
 }
 
@@ -118,6 +118,7 @@ li {
 .add_to_cart_badge {
     padding: 11px 30px;
     border-radius: 12px;
+    border:1px;
     color: white;
     background-color: var(--green);
     font-size: 14px;
@@ -141,13 +142,14 @@ li {
     text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center;
     cursor: pointer;
+    transition: 0.3s;
 
    
 }
 .cross_button_wishlist:hover {
-background-color: #00B207;
+background-color: #53B175;
+color:white;
 }
 
 .stock_status_box {

@@ -168,19 +168,18 @@
         aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="product-name">Product Name</h5>
-                    <!-- Close button (Bootstrap provides 'data-dismiss' functionality) -->
-                    <button type="button" class="close" style="border: none;" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
                 <div class="modal-body">
+                      <!-- Close button (Bootstrap provides 'data-dismiss' functionality) -->
+                             <button class="close" style="border: none;" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>       
                     <div class="row">
                         <div class="col-md-6">
+                           
                             <img id="product-image" class="img-fluid w-100" alt="Product Image" loading="lazy">
                         </div>
                         <div class="col-md-6">
+                            <h5 class="modal-title" id="product-name">Product Name</h5>
                             <p><strong>Price:</strong> <span id="product-price">$0</span></p>
                             <p id="discount-badge" class="badge"></p> <!-- Discount badge will appear here -->
                             <p><strong>Description:</strong> <span id="product-description">No description
@@ -218,16 +217,21 @@
                     
                         
                     </div>
-                    <div class="top-header-center">
+                    <!-- <div class="top-header-center">
                         <span class="animated-icon-text">
                             <i id="animatedIcon" class="bi bi-truck"></i>
                             <span id="animatedText"></span>
                         </span>
+                    </div> -->
+
+                     <div class="top-header-center">
+
+                            <span>Free shipping on orders over $50 </span>
                     </div>
                     <div class="top-header-right">
                         <a href="faq.html">Help & FAQs</a>
                         <span>|</span>
-                        <a href="authentication/register.html">Sign In / Register</a>
+                        <a href="authentication/register.html"><span class="top-a">Sign In / Register</span></span></a>
                     </div>
                 </div>
             </div>
@@ -1051,19 +1055,20 @@
                     <h2 class="deals-title">Deals of the Day</h2>
                     <div class="timer-container">
                         <div class="time-box_deal">
-                            <span id="days">00</span> Days
+                            <span id="days">0</span> <span class="timer-day">Days</span>
                         </div>
                         <span class="separator">:</span>
                         <div class="time-box_deal">
-                            <span id="hours">00</span> Hours
+                            <span id="hours">23</span> <span class="timer-day">Hours</span>
                         </div>
                         <span class="separator">:</span>
                         <div class="time-box_deal">
-                            <span id="minutes">00</span> Mins
+                            <span id="minutes">59</span> <span class="timer-day">Mins</span>
                         </div>
                         <span class="separator">:</span>
                         <div class="time-box_deal">
-                            <span id="seconds">00</span> Sec
+                            <span id="seconds">46</span> 
+                            <span class="timer-day">Secs</span>
                         </div>
                     </div>
                 </div>
@@ -1117,7 +1122,7 @@
                     </div>
 
                     <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
-                        <h1 class="topsellHeading">Recently Added</h1>
+                        <h1 class="topsellHeading">Recently A dded</h1>
                         <div class="progress HomeProgressmain">
                             <div class="progress-bar HomeProgress" role="progressbar" aria-label="Example with label"
                                 style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>

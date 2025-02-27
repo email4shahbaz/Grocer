@@ -79,6 +79,11 @@ body {
     /* text-align: center; */
 }
 
+.price-filter{
+    display:block;
+    margin-top: 20px;
+}
+
 .search_component {
     padding: 10px;
     display: none;

@@ -736,7 +736,7 @@
 /* Top Header Styling */
 .top-header {
     background-color: #ffffff;
-    padding: 8px 0;
+    padding: 10px 0;
     font-size: 12px;
     font-weight: 600;
     border-bottom: 1px solid rgb(236, 236, 236);
@@ -794,17 +794,26 @@
 .top-header-center {
     display: flex;
     gap: 15px;
+    color:#585858;
+    transition:0.3s;
 }
 
-.top-header-center a {
-    text-decoration: none;
-    color: #000000;
-    font-weight: bold;
+.top-header-center :hover {
+   color:#5ca338;
+
 }
 
 .top-header-right {
     display: flex;
     gap: 12px;
+}
+
+.top-a{
+
+    text-decoration: none;
+    color: var(--green);
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 
@@ -881,9 +890,14 @@
 .promotion1{
     margin-right:20px;
     border-radius: 5px;
+    top:0;
     
 }
-
+.promotion2{
+    margin-right:20px;
+    border-radius: 5px;
+    top:0;
+}
 /* GRID LAYOUT FOR CATEGORIES */
 /* Mega Menu Container */
 .category-dropdown {

@@ -1529,10 +1529,14 @@ li {
 
 
 .offerContent{
-    /* position: absolute; */
     padding: 20px;
 }
 
+.offerContent2{
+    position: absolute;
+    padding: 20px;
+    top:30px;
+}
 
 
 .offerContentBadgeOne{
