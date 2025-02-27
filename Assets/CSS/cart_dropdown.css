@@ -292,17 +292,8 @@
     width: 150px;
 
 }
-.btn-danger-green {
-    background-color:#3A975C;
-    border: 2px solid green;
-    margin-left: 10px;
-}
 
-.btn-danger-green:hover {
-    background-color:green;
-    color: white;
-   
-}
+
 .btn-primary {
     background-color: white;
     color: black;
@@ -449,20 +440,26 @@
 
 /* Style the buttons to be vertically aligned */
 .quantity-button {
-    display: flex;
-    flex-direction: column; /* Make the arrows stack vertically */
+    padding: 0!important;
+    margin: 0!important;
+    /* display: flex;
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
     padding: 3px 3px;
     background-color: #f1f1f1;
     border: 1px solid #3A975C;
     cursor: pointer;
-    height: 20px; /* Set a fixed height */
+    height: 20px; Set a fixed height */
     /* margin: 5px; */
 }
 
+.quantity-button .increment{
+    margin-right: 15px;
+}
+
 .quantity-button:hover {
-    background-color: #ddd;
+    color: var(--green);
 }
 
 .quantity-button:focus {
@@ -522,15 +519,15 @@
 
 
 .btn-danger-green {
-    background-color:#3A975C;
-    border: 2px solid green;
+    /* background-color:#3A975C; */
+    /* border: 2px solid green; */
     transition: transform 0.3s ease, background-color 0.3s ease;
-    color: white;
+    color: rgb(240, 4, 4);
 }
 
 .btn-danger-green:hover {
-    background-color:green;
-    transform: scale(1.1);
+    background-color:rgb(240, 4, 4);
+    /* transform: scale(1.1); */
     color: white;
 }
 

@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Fetch the JSON data for the deals
     const response = await fetch("/Assets/json_files/deals_of_the_day.json");
     const deals = await response.json();
+    // Load wishlist from localStorage
+    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
     // Function to update and display the countdown timer
     function updateTimer() {
@@ -48,6 +50,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         dealCard.innerHTML = `
             <img src="${deal.product_image}" alt="${deal.product_name}">
+            <div class="product-overlay-icons">
+                <button class="wishlist-icon ${wishlist.some(item => item.id === deal.id) ? 'in-wishlist' : ''}" data-id="${deal.id}" data-name="${deal.product_name}" data-price="${deal.discounted_price}" data-image="${deal.product_image}" data-category="${deal.categoryName}.json">
+                    <i class="bi bi-heart"></i>
+                </button>
+                <button class="eye-icon" data-id="${deal.id}" data-category="${deal.categoryName}.json">
+                    <i class="bi bi-eye"></i>
+                </button>
+            </div>
             <div class="details">
                 <h3>${deal.product_name}</h3>
                 <div class="star-rating">${stars}${emptyStars}</div>

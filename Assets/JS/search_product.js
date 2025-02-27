@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const searchSuggestionsContainer = document.createElement("div");
 	searchSuggestionsContainer.classList.add("search-suggestions");
+	searchSuggestionsContainer.style.display = "none";
 	searchSuggestionsContainer.style.position = "absolute";
     searchSuggestionsContainer.style.top = "40px";
 	searchSuggestionsContainer.style.background = "#fff";

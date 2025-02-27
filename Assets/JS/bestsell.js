@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     const categoryButtons = document.querySelectorAll('input[type="radio"]');
     const labels = document.querySelectorAll('label[role="button"]');
 
+     // Load wishlist from localStorage
+     let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
   
     // Function to fetch and render products
     async function fetchAndRenderProducts(category, retries = 3) {
@@ -110,8 +113,13 @@ desktopCard.innerHTML = `
                     alt="${productName}">
             </a>
         </div>
-        <div class="wishlist-icon" data-id="${productId}" data-name="${productName}" data-price="${productPrice}" data-image="${productImage}" data-category="${category}">
-            <i class="bi bi-heart"></i>
+         <div class="product-overlay-icons">
+            <button class="wishlist-icon ${wishlist.some(item => item.id === product.id) ? 'in-wishlist' : ''}" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}" data-category="${category}_product.json">
+                <i class="bi bi-heart"></i>
+            </button>
+            <button class="eye-icon" data-id="${product.id}" data-category="${category}_product.json">
+            <i class="bi bi-eye"></i>
+            </button>
         </div>
        
         <div class="card-body">

@@ -7,37 +7,41 @@
         "vendor": "By Grocer",
         "discounted_price": "2.99",
         "original_price": "3.99",
+        "categoryName": "Snacks",
         "discount_percentage": 25
     },
     {
-        "id": 2,
+        "id": 3,
         "product_name": "40% OFF on Snaks & Beverages",
         "product_image":  "/Assets/Images/Products/almonds.jpg",
         "rating": 4,
         "vendor": "By Grocer",
         "discounted_price": "1.99",
         "original_price": "3.99",
+        "categoryName": "Snacks",
         "discount_percentage": 50
       
     },
     {
-        "id": 3,
+        "id": 1,
         "product_name": "Buy 1 get 1 Free on Fresh Fruits",
         "product_image":  "/Assets/Images/Products/Apple.png",
         "rating": 5,
         "vendor": "By Grocer",
         "discounted_price": "2.99",
         "original_price": "3.99",
+        "categoryName": "Fruits",
         "discount_percentage": 25
     },
     {
-        "id": 4,
+        "id": 2,
         "product_name": "Buy 1 get 1 Free on Fresh Vegetables",
         "product_image":  "/Assets/Images/Products/carrot.png",
         "rating": 3,
         "vendor": "By Grocer",
         "discounted_price": "1.99",
         "original_price": "3.99",
+        "categoryName": "Vegetables",
         "discount_percentage": 50
     }
 ]

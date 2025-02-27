@@ -5,6 +5,14 @@
     max-width: 250px;
     min-width: 200px;
 }
+
+
+/* Show icons on hover */
+.BestSellCard:hover .product-overlay-icons {
+    display: flex;
+}
+
+
 .bestSellCardNameAndUnitHeadingMain{
     display: flex;
     justify-content: flex-start;

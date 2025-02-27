@@ -86,8 +86,12 @@
     transform: scale(1.05);
 }
 
+.deal-card:hover .product-overlay-icons{
+    display: flex;
+}
+
 .deal-card img {
-    width: 100%;
+    width: 90%;
     height: 200px;
     object-fit: cover;
     border-radius: 8px;

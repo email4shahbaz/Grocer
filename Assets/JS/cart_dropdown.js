@@ -31,17 +31,17 @@ document.addEventListener("DOMContentLoaded", () => {
                         <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; margin-right: 10px;">
                         <span>${item.name} </span>
                     </div>
-                     <div class="d-flex align-items-center ">
-                <button class="btn btn-sm quantity-button decrement" data-name="${item.name}">
-                    <span  class="arrow down"></span>
-                </button>
-               <span class="">${item.quantity}</span>
-                <button class="btn btn-sm quantity-button increment mx-2" data-name="${item.name}">
-                    <span class="arrow up"></span>
-                </button>
-                <strong>$${(item.price * item.quantity).toFixed(2)}</strong>
-                <button class="btn btn-danger-green btn-sm remove-cart-item" data-name="${item.name}">X</button>
-            </div>
+                    <div class="d-flex align-items-center ">
+                        <button class="btn btn-sm quantity-button decrement">
+                            <i class="bi bi-dash-square" data-name="${item.name}"></i>
+                        </button>
+                        <span class="">${item.quantity}</span>
+                        <button class="btn btn-sm quantity-button increment mx-2">
+                            <i class="bi bi-plus-square" data-name="${item.name}"></i>
+                        </button>
+                        <strong style="margin-left: 15px">$${(item.price * item.quantity).toFixed(2)}</strong>
+                        <div class="btn btn remove-cart-item"><i class="bi bi-trash"  data-name="${item.name}"></i></div>
+                    </div>
                 </div>
             `;
             cartDrawerBody.insertAdjacentHTML("beforeend", cartItem);
@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll("#cartDrawer .remove-cart-item").forEach((button) => {
             button.addEventListener("click", (e) => {
                 const productName = e.target.getAttribute("data-name");
+                alert(productName);
                 cart = cart.filter((item) => item.name !== productName);
                 localStorage.setItem("cart", JSON.stringify(cart));
                 renderWebCartItems();
@@ -100,22 +101,25 @@ document.addEventListener("DOMContentLoaded", () => {
             totalPrice += item.price * item.quantity;
             const cartItem = `
                 <div class="cart-item d-flex justify-content-between align-items-center mb-3">
-                        <div class="d-flex align-items-center">
-                            <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; margin-right: 10px;">
-                            <span>${item.name}</span>
-                        </div>
-                       <div class="d-flex align-items-center">
-                <button class="btn btn-sm quantity-button decrement" data-name="${item.name}">
-                    <span  class="arrow down"></span>
-                </button>
-               <span class="mx-2">${item.quantity}</span>
-                <button class="btn btn-sm quantity-button increment" data-name="${item.name}">
-                    <span class="arrow up"></span>
-                </button>
-                <strong>$${(item.price * item.quantity).toFixed(2)}</strong>
-                <button class="btn btn-danger-green btn-sm remove-cart-item" data-name="${item.name}">X</button>
-            </div>
+                    <div class="d-flex align-items-center">
+                        <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; margin-right: 10px;">
+                        <span>${item.name}</span>
                     </div>
+                    <div class="d-flex align-items-center">
+                        <button class="btn btn-sm quantity-button decrement">
+                            <i class="bi bi-dash-square" data-name="${item.name}"></i>
+                        </button>
+                    <span class="mx-2">${item.quantity}</span>
+                        <button class="btn btn-sm quantity-button increment" data-name="${item.name}">
+                            <span class="arrow up"></span>
+                        </button>
+                        <strong>$${(item.price * item.quantity).toFixed(2)}</strong>
+                        <button class="btn btn-sm quantity-button increment mx-2">
+                            <i class="bi bi-plus-square" data-name="${item.name}"></i>
+                        </button>
+                        <div class="btn btn remove-cart-item"><i class="bi bi-trash"  data-name="${item.name}"></i></div>
+                    </div>
+                </div>
             `;
             cartBody.insertAdjacentHTML("beforeend", cartItem);
         });
@@ -253,7 +257,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.body.addEventListener("click", (e) => {
         // Decrease quantity
-        if (e.target.classList.contains("decrement")) {
+        if (e.target.classList.contains("bi-dash-square")) {
             const productName = e.target.getAttribute("data-name");
             const product = cart.find((item) => item.name === productName);
             if (product && product.quantity > 1) {
@@ -268,7 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     
         // Increase quantity
-        if (e.target.classList.contains("increment")) {
+        if (e.target.classList.contains("bi-plus-square")) {
             const productName = e.target.getAttribute("data-name");
             const product = cart.find((item) => item.name === productName);
             if (product) {
