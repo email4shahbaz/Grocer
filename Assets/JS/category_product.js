@@ -42,8 +42,16 @@ function renderProducts(products, categoryFile) {
                     </div>
                     <div class="card-body">
                         <h1 class="h2 searchcard_heading">${product.name}</h1>
-                        <h1 class="searchpricetag">${product.price}$</h1>
+                        <h1 class="searchpricetag">${product.price}$ <button class="searchaddbutton">
+                                        <img src="/Assets/Images/SmallIcons/Bag.png" alt="">
+                                    </button></h1>
                     </div>
+                    <div class="d-flex justify-between items-center gap-1 RatingStars">
+                            <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star unChecked"></span>
+                            <div class="col text-center align-self-center">
+                                </div>
+                                
+                        </div>
                 </div>
             </div>
         `;

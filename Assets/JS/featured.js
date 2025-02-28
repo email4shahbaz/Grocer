@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                             <div class="progress mt-3" style="height: 5px;">
                                 <div class="progress-bar" role="progressbar" style="width: ${(product.nutrition.calories / maxCalories) * 100}%" aria-valuenow="${product.nutrition.calories}" aria-valuemin="0" aria-valuemax="${maxCalories}"></div>
                             </div>
-                            <p class="mt-2">Calories: ${product.nutrition.calories}</p>
+                            <p class="mt-2">Calories: ${product.nutrition.calories}%</p>
                             <div class="PriceDivFeaturedProduct mt-2">
                                 <div class="d-flex">
                                     <h1 class="pricetag align-self-center">${product.price}$</h1>

@@ -207,7 +207,7 @@ li {
 .ProductSummarymain {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .differentAddressFieldMain {
@@ -270,6 +270,7 @@ li {
     text-align: end;
     font-size: 14px;
     font-family: poppins;
+    white-space: nowrap;
     font-weight: 500;
 }
 

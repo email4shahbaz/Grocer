@@ -125,6 +125,7 @@ li {
     justify-content: flex-start;
     align-items: center;
     width: fit-content;
+    gap:5px;
     margin-top: 18px;
 }
 
@@ -133,6 +134,9 @@ li {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+counter_cart h2{
+    margin-bottom: 0px;
 }
 
 .incrementbtn_cart,
@@ -275,6 +279,7 @@ li {
     text-align: center;
     background-color: var(--green);
     padding: 16px 40px;
+    white-space: nowrap;
     font-weight: 600;
     cursor: pointer;
 }
