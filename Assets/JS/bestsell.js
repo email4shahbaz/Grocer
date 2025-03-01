@@ -182,56 +182,11 @@ desktopContainer.appendChild(desktopCard);
     const defaultLabel = document.querySelector(`label[for="popular"]`);
     updateActiveButton(defaultLabel);
     fetchAndRenderProducts(defaultCategory);
-
-    startTimer(timerElement, new Date().getTime() + 24 * 60 * 60 * 1000);
    
 });
 
 
 
-
-const timerElement = document.getElementById('timer-container');
-const endTime = new Date().getTime() +  24 * 60 * 60 * 1000; // 24 hours from now
-
-function startTimer(element, endTime) {
-    const interval = setInterval(() => {
-        const now = new Date().getTime();
-        const distance = endTime - now;
-
-        if (distance <= 0) {
-            clearInterval(interval);
-            element.innerHTML = "Expired";
-            return;
-        }
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Ensure each of these elements exists in the HTML
-        const daysElem = document.getElementById('days');
-        const hoursElem = document.getElementById('hours');
-        const minutesElem = document.getElementById('minutes');
-        const secondsElem = document.getElementById('seconds');
-        const daysPluralElem = document.getElementById('days_plural');
-
-        // Update the timer elements individually
-        if (daysElem) daysElem.textContent = days;
-        if (hoursElem) hoursElem.textContent = hours;
-        if (minutesElem) minutesElem.textContent = minutes;
-        if (secondsElem) secondsElem.textContent = seconds;
-
-        // Handle plural form for days
-        if (daysPluralElem) {
-            daysPluralElem.textContent = days !== 1 ? "s" : "";
-        }
-    }, 1000);
-}
-
-
-
-startTimer(timerElement, endTime);
 
 
 

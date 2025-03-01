@@ -91,11 +91,32 @@
 }
 
 .deal-card img {
-    width: 90%;
+    width: 100%;
     /* height: 200px; */
     object-fit: cover;
     border-radius: 8px;
     align-items: cen;
+}
+
+.deal-card .product-image{
+    position: relative;
+    cursor: pointer;
+}
+
+.deal-card .timer-holder{
+    width: 100%;
+    position: absolute ;
+    bottom: 0px;
+    padding: 0 10px;
+}
+
+.deal-card .timer-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+.deal-card .time-box_deal{
+    width: auto;
 }
 
 .deal-card .details {
