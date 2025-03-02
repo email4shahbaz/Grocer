@@ -390,9 +390,25 @@ body {
     padding: 20px;
 }
 
-.loginWhiteSection h1,
+.loginWhiteSection img{
+    padding-bottom:100px;
+    width: 50%;
+    margin-left: 25%;
+
+}
+
+.loginWhiteSection h1{
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--green)
+}
+
 .loginWhiteSection h2 {
     margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 300;
+    color:#808080;
 }
 
 /* Green Section Styling */
@@ -403,8 +419,8 @@ body {
     flex-direction: column;
     justify-content: center;
     padding: 20px;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
+    /* border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px; */
 }
 
 /* Form Container */
@@ -414,21 +430,92 @@ body {
     margin: auto;
 }
 
-/* Button Styling */
-.login_signIn_button, .login_signup_button {
-    width: 100%;
+.login_form_container h1{
+    font-size: 28px;
+}
+
+.login_form_container label{
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.login_form_container input{
     padding: 15px;
+    
+}
+
+/* Button Styling */
+.login_signIn_button{
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid white; 
+    color: white;
+    font-weight: 600;
+    width: 100%;
+    height: 60px;    
+    background-color: transparent; 
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    }
+
+    .login_signup_button{
+    margin-left: 25%;    
+    padding: 20px 0 0 0;
     border: none;
     border-radius: 10px;
-    background-color: white;
-    color: var(--green);
+    color: white;
     font-weight: 600;
-    transition: 0.3s;
-}
+    width: 50%;
+    height: 60px;    
+    background-color: var(--green); 
+    color: white; 
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    }
+
+    
+
 
 .login_signIn_button:hover, .login_signup_button:hover {
     background-color: var(--hovergreen);
     color: white;
+}
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+/* Styling for Remember me */
+.remember-me {
+    color: white;
+    font-size: 14px;
+}
+
+/* Styling for Forgot Password */
+.forgot-password {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Change background to green when checkbox is checked */
+#remember-checkbox:checked ~ .login-options {
+    background-color: #4CAF50;
 }
 
 /* Mobile View */

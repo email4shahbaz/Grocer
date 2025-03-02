@@ -21,6 +21,14 @@ body {
 .googlefacebookIcons{
     cursor: pointer;
 }
+
+.googlefacebookIcons a{
+    height: 32px;
+    width: 32px;
+
+}
+
+
 .mainRegisterContainer {
     width: 100%;
     display: flex;
@@ -38,24 +46,24 @@ body {
 }
 
 .RegisterWhiteSectionSub img {
-    margin-bottom: 60px;
-    width: 100%;
+    margin-bottom: 100px;
+    /* width: 100%; */
 }
 
 .RegisterWhiteSectionSub h1 {
     color: var(--green);
-    font-size: 45px;
+    font-size: 36px;
     font-weight: 800;
     font-family: poppins;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .RegisterWhiteSectionSub h2 {
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 20px;
+    font-weight: 300;
     font-family: poppins;
     color: #808080;
-    margin-bottom: 50px !important;
+    margin-bottom: 40px !important;
     width: 70%;
     margin: auto;
 }
@@ -63,17 +71,18 @@ body {
 .RegisterWhiteSectionButton {
     border: none;
     color: white;
-    padding: 20px 0px;
+    padding: 15px 0px;
     text-decoration: none;
     background-color: var(--green);
     border-radius: 20px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     font-family: Gilroy-medium;
     width: 50%;
+    height: 60px;
     display: block;
     margin: auto;
-    margin-bottom: 300px !important;
+    margin-bottom: 100px !important;
 }
 
 .grocer_coorporation {
@@ -93,8 +102,7 @@ body {
 .RegisterGreenSection {
     width: 60%;
     background-color: var(--green);
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
+   
 }
 
 .Register_form_container {
@@ -104,10 +112,10 @@ body {
 
 .register_form_main_heading {
     color: white;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-bottom: 10px;
     text-align: center;
-    font-size: 35px;
+    font-size: 28px;
     font-weight: 400;
     font-family: 'gilroy-bold';
 }
@@ -120,26 +128,26 @@ body {
 }
 
 .register_form_sub_heading {
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 300;
     font-family: Gilroy-medium;
     color: white;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .register_form_label {
     color: white;
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 300;
     font-family: 'gilroy-medium';
     margin-bottom: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .register_form_inp1 {
-    padding: 20px;
-    border-radius: 20px;
+    padding: 15px;
+    border-radius: 15px;
     border: none;
     width: 100%;
     font-size: 18px;
@@ -147,8 +155,8 @@ body {
 }
 
 .register_form_inp2 {
-    padding: 20px;
-    border-radius: 20px;
+    padding: 15px;
+    border-radius: 15px;
     border: none;
     width: 100%;
     font-size: 18px;
@@ -163,8 +171,8 @@ body {
 }
 
 .register_form_inp4 {
-    padding: 20px;
-    border-radius: 20px;
+    padding: 15px;
+    border-radius: 15px;
     border: none;
     width: 100%;
 }
@@ -223,12 +231,13 @@ body {
     border: 3px solid white;
     background-color: transparent;
     padding: 15px 0px;
-    border-radius: 20px;
-    font-size: 24px;
+    border-radius: 15px;
+    font-size: 20px;
     font-weight: 400;
+    height: 60px;
     font-family: Gilroy-medium;
     color: white;
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -47,7 +47,7 @@ body {
     font-weight: 400;
     font-family: poppins;
     color: #808080;
-    margin-bottom: 50px !important;
+    margin-bottom: 10px !important;
     width: 70%;
     margin: auto;
 }
@@ -78,7 +78,9 @@ body {
 .grocer_coorporation h2 {
     font-size: 20px;
     font-weight: 400;
+    /* margin-top: 100px; */
     font-family: Gilroy-medium;
+    white-space: nowrap;
 }
 
 /* Green Section Styling */
@@ -106,6 +108,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+}
+
+.linkedIcons a img{
+    height: 32px;
     gap: 10px;
 }
 

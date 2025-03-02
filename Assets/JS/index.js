@@ -58,3 +58,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         mobileViewContainer.innerHTML = "<p>Failed to load categories. Please try again later.</p>";
     }
 });
+
+document.getElementById("remember-checkbox").addEventListener("change", function() {
+    document.querySelector(".login-options").style.backgroundColor = this.checked ? "#ffffff" : "#000000";
+});
