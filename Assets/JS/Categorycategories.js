@@ -76,3 +76,34 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
 });
+function updatePrice() {
+    let minPrice = document.getElementById("minPrice");
+    let maxPrice = document.getElementById("maxPrice");
+    let sliderTrack = document.getElementById("sliderTrack");
+    let priceDisplay = document.getElementById("priceDisplay");
+    
+    let minVal = parseInt(minPrice.value);
+    let maxVal = parseInt(maxPrice.value);
+    
+    if (minVal > maxVal) {
+        let temp = minVal;
+        minVal = maxVal;
+        maxVal = temp;
+    }
+    
+    priceDisplay.textContent = `${minVal} - ${maxVal}`;
+    
+    let minPercent = ((minVal - 50) / (1500 - 50)) * 100;
+    let maxPercent = ((maxVal - 50) / (1500 - 50)) * 100;
+    
+    sliderTrack.style.left = minPercent + "%";
+    sliderTrack.style.right = (maxPercent - minPercent) + "%";
+}
+
+const tags = document.querySelectorAll('.tag');
+
+tags.forEach(tag => {
+    tag.addEventListener('click', () => {
+        tag.classList.toggle('active');
+    });
+});

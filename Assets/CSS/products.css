@@ -119,7 +119,8 @@
 }
 /* *********Rating Stars********* */
 .RatingStars {
-    gap: 5px;
+    /* gap: 5px; */
+    align-items: center;
 }
 
 .unChecked {
