@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "product_name": "Get a 500ml Soft Drink Free on Purchase of 2 Lays.",
+        "product_name": "Get a 500ml Soft Drink Free on Purchase of 2 Lays",
         "product_image": "/Assets/Images/Deals/deal1.jpg",
         "rating": 4,
         "vendor": "By Grocer",
@@ -12,7 +12,7 @@
     },
     {
         "id": 3,
-        "product_name": "Free Package of Fresh Dates on Purchase of 1kg of Almonds",
+        "product_name": "Buy 1kg Almonds and get Free Package of Fresh Dates",
         "product_image":  "/Assets/Images/Deals/deal2.jpg",
         "rating": 4,
         "vendor": "By Grocer",
@@ -35,7 +35,7 @@
     },
     {
         "id": 2,
-        "product_name": "Free Wheatable Buscuit on Purchase of 2 Everyday Packs.",
+        "product_name": "Free Wheatable Buscuit on Purchase of 2 Milk Pack",
         "product_image":  "/Assets/Images/Deals/deal4.jpg",
         "rating": 3,
         "vendor": "By Grocer",

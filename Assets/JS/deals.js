@@ -50,20 +50,20 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <h3>${deal.product_name}</h3>
                 <div class="star-rating">${stars}${emptyStars}</div>
                 <p class="vendor"> ${deal.vendor}</p>
-             <div class="d-flex ">
-              <p class="price ">$${deal.discounted_price}</p>
-                <p class="original-price ">$${deal.original_price}</p> </div>
-               
-            </div>
-            <div class="discount-badge">Save ${deal.discount_percentage}%</div>
-            <button class="btn addbutton py-2" 
+                <div class="PriceDivFeaturedProduct">
+                <div class="d-flex ">
+                    <p class="price ">$${deal.discounted_price}</p>
+                    <p class="original-price ">$${deal.original_price}</p> </div>
+                    <button class="btn addbutton py-2" 
                     data-id="${deal.id}" 
                     data-name="${deal.product_name}" 
                     data-price="${deal.discounted_price}" 
                     data-image="${deal.product_image}" 
                     data-quantity="1">
                     <i class="bi bi-cart"></i>&nbsp;Add
-            </button>
+                     </button></div>
+                </div>
+            <div class="discount-badge">Save ${deal.discount_percentage}%</div>
         `;
 
         dealsContainer.appendChild(dealCard);

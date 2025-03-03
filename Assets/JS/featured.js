@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <div class="FeaturedProductsCard position-relative ProductsCard_Animations ProductCardImage mt-3">
                         <div class="productcardImage text-center">
                             <!-- Discount Badge -->
-                            ${discountPercentage ? `<span class="discount-badge">${discountPercentage}% OFF</span>` : ''}
+                            ${discountPercentage ? `<span class="discount-badge">${discountPercentage} OFF</span>` : ''}
 
                             <a href="product-details.html?product-id=${product.id}&category-file=${categoryFile}">
                                 <img src="${product.image}" 
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                             <p class="product-description">${product.description || "No description available."}</p>
                             <!-- Progress Bar for Calories -->
                             <div class="progress mt-3" style="height: 5px;">
-                                <div class="progress-bar" role="progressbar" style="width: ${(product.nutrition.calories / maxCalories) * 100}%" aria-valuenow="${product.nutrition.calories}" aria-valuemin="0" aria-valuemax="${maxCalories}"></div>
+                                <div class="progress-bar" role="progressbar" style="width: ${(product.nutrition.calories / maxCalories) * 100}" aria-valuenow="${product.nutrition.calories}" aria-valuemin="0" aria-valuemax="${maxCalories}"></div>
                             </div>
                             <p class="mt-2">Calories: ${product.nutrition.calories}%</p>
                             <div class="PriceDivFeaturedProduct mt-2">
