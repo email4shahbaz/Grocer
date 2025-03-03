@@ -11,18 +11,19 @@
     padding-top: 30px;
 }
 .User_profile_image img{
-    width: 100px;
+    width: 150px;
     border-radius: 50%;
-    height: 100px;
+    height: 150px;
 }
 .User_profile_image h1{
     font-size: 18px;
     font-weight: 500;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 .User_profile_image p{
     font-size: 14px;
     font-weight: 400;
+    margin-top: 5px;
 }
 .Setting_items{
     width: 100%;
@@ -34,7 +35,7 @@
     margin: 0px;
 }
 .Setting_items ul li{
-    padding: 10px;
+    padding: 20px;
 }
 .Setting_items ul li a{
     color: #7B7B7B;

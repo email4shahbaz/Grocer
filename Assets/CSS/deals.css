@@ -20,6 +20,18 @@
     color: #333;
     margin: 0;
 }
+.deals-all {
+    font-size: 16px;
+    font-weight: 300;
+    color: #000000;
+    margin: 0;
+    transition: 0.3s ease;
+}
+
+.deals-all :hover{
+    font-weight: 400;
+    color: var(--green);
+}
 
 .timer-container {
     display: flex;
@@ -217,16 +229,16 @@
     }
 
     .timer-container {
-        /* display: flex;
-        justify-content: center;
-        gap: 10px; */
+        margin-top: 10px;
+        margin-bottom: 0px;
     }
 
     .time-box_deal {
         margin: 5px;
-        width: 40px;
-        height: 40px;
-        font-size: 10px;
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+        padding: 5px;
     }
 
     .separator {
@@ -256,6 +268,7 @@
         font-size: 14px;
         padding: 8px 16px;
     }
+
 }
 
 /* Tablet View */
