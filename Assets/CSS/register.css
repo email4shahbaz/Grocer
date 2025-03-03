@@ -88,6 +88,7 @@ body {
 .grocer_coorporation {
     position: absolute;
     bottom: 10px;
+    text-align: center;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -95,12 +96,14 @@ body {
 .grocer_coorporation h2 {
     font-size: 20px;
     font-weight: 400;
+    text-align: center;
     font-family: poppins;
 }
 
 
 .RegisterGreenSection {
     width: 60%;
+    height: 100vh;
     background-color: var(--green);
    
 }

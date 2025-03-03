@@ -496,6 +496,12 @@ body {
     margin-bottom: 20px;
 }
 
+
+.login-options input{
+    height: 18px;
+    width: 18px;
+}
+
 /* Styling for Remember me */
 .remember-me {
     color: white;
