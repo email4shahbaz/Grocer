@@ -130,7 +130,8 @@ font-weight: bolder;
 }
 
 .setting_form_container {
-    width: 70%;
+    /* width: 70%; */
+    
 }
 
 .info_settings {

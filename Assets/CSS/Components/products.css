@@ -44,12 +44,10 @@
 
 .discount-badge {
     position: absolute;
-    top: 0px;
-    left: 0px;
     background-color: #F61B40;
     color: white;
     font-size: 12px;
-    padding: 5px 10px;
+    padding: px 10px;
     font-weight: 500;
     border-radius: 0px 5px;
 
