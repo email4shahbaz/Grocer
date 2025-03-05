@@ -141,7 +141,7 @@ body {
 
 .register_form_label {
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
     font-family: 'gilroy-medium';
     margin-bottom: 10px;
@@ -509,6 +509,10 @@ body {
     right: 17px;
 }
 
+.mobileViewText{
+    display: none;
+}
+
 @media screen and (max-width:500px) {
     .MobileViewRegisterTrial {
         display: block;
@@ -522,5 +526,13 @@ body {
     .login_main_heading {
         margin-bottom: 3px;
     }
-}
 
+    .mobileViewText{
+        display: block;
+        margin-top: 20px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-size: 16px;
+        font-family: Quicksand;
+}
+}

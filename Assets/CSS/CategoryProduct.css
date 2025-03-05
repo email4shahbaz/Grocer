@@ -21,7 +21,7 @@ a {
     font-size: 31px;
     font-weight: 700;
     color: #29292E;
-    margin-top: 50px;
+    margin-bottom: 50px;
     text-decoration: underline;
 }
 .categoryProducts_no_foundHeading{
@@ -31,6 +31,18 @@ a {
     font-family: Quicksand;
 }
 
+.filters{
+    display:flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.filters h4{
+    font-size: 16px;
+}
+
+.GridsTargetContent{
+    width: 33.3%;
+}
 
 
 

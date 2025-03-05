@@ -131,5 +131,28 @@
             "fats": "0.3g",
             "carbohydrates": "12g"
         }
+    },
+
+    {
+        "id": "8",
+        "name": "Cherrie",
+        "price": 15,
+        "discountedPrice": 13.5,
+        "sku": "FRU008",
+        "image": "Assets/Images/Products/cherries.png",
+        "description": "Fresh and good quality cherries.",
+        "detailedDescription": "Juicy and sweet cherries, perfect for snacking, baking, or desserts. Packed with antioxidants.",
+        "rating": 5,
+        "tags": ["Juicy", "Sweet", "Antioxidants"],
+        "categoryName": "Fruits",
+        "nutrition": {
+            "calories": 50,
+            "protein": "1g",
+            "fats": "0.3g",
+            "carbohydrates": "12g"
+        }
+
     }
+
+    
 ]
