@@ -2,14 +2,47 @@ function includeHTML(file, elementTag) {
     fetch(file)
         .then(response => response.text())
         .then(data => {
-            document.querySelector(elementTag).outerHTML = data;
+            const container = document.querySelector(elementTag);
+            if (!container) return;
+
+            // Create a temporary container to parse the HTML
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = data;
+
+            // Move content to the target container
+            container.outerHTML = tempDiv.innerHTML;
+
+              // Extract and execute scripts
+            executeScripts(tempDiv);
         })
         .catch(error => console.error(`Error loading ${file}:`, error));
-};
+}
+
+
+function executeScripts(container) {
+    container.querySelectorAll('script').forEach(oldScript => {
+        const newScript = document.createElement('script');
+        if (oldScript.src) {
+            // External script
+            newScript.src = oldScript.src;
+            newScript.async = true;
+        } else {
+            // Inline script
+            newScript.textContent = oldScript.textContent;
+        }
+        document.body.appendChild(newScript);
+        oldScript.remove(); // Remove the old script
+    });
+}
 
 document.addEventListener("DOMContentLoaded", async () => {
     includeHTML("header.html", "header");
     includeHTML("footer.html", "footer");
+
+    
+
+
+
     const categoryContainer = document.querySelector('.homecategoryProductsMain');
     const mobileViewContainer = document.querySelector('.MobileViewCategoriesCardOneMainDiv');
 
@@ -68,8 +101,29 @@ document.addEventListener("DOMContentLoaded", async () => {
         categoryContainer.innerHTML = "<p>Failed to load categories. Please try again later.</p>";
         mobileViewContainer.innerHTML = "<p>Failed to load categories. Please try again later.</p>";
     }
+
+
+    var loginBtn = document.querySelector('.Login_btn');
+    var profileImage = document.querySelector('.profile_image');
+    if(localStorage.getItem('email') != null){
+        //alert('User is logged in');
+        loginBtn.classList.add('d-none');
+        profileImage.classList.remove('d-none');
+    }
+    else{
+       // alert('User is not logged in');
+        loginBtn.classList.remove = 'd-none';
+        profileImage.classList.add = 'd-none';
+    }
+
 });
 
 document.getElementById("remember-checkbox").addEventListener("change", function () {
     document.querySelector(".login-options").style.backgroundColor = this.checked ? "#ffffff" : "#000000";
 });
+
+
+function logout(){
+    localStorage.removeItem('email');
+    location.reload();
+}

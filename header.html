@@ -104,27 +104,34 @@
                     </a>
                 </div>
 
-                <div class="nav-item d-flex profile_image">
-                    <img src="Assets/Images/Banner/user4.webp" class="user_profile_image user_profile_image_nav"
-                        alt="UserImage" loading="lazy" />
+                <div class="user-info">
+                    <a href="/authentication/login.html" class="Login_btn">
+                        <i class="bi bi-person-circle"></i> &nbsp; Login
+                    </a>
+                    <div class="nav-item d-flex profile_image d-none">
+                        <img src="Assets/Images/Banner/user4.webp" class="user_profile_image user_profile_image_nav"
+                            alt="UserImage" loading="lazy" />
+                         
+                            <span class="top-a">Saniya Shahbaz</span></span>
+                            <div class="dropdown">
+                                <a class="nav-link dropdown-toggle loginheadingNav" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">
+                                    
+                                    <!-- <img src="Assets/Images/SmallIcons/ArrowDown.svg" alt="" /> -->
+                                </a>
+                                <ul class="dropdown-menu custom-dropdown-menu">
+                                    <li><a class="dropdown-item" href="/history.html">Order History</a></li>
+                                    <li><a class="dropdown-item" href="/setting.html">Settings</a></li>
+                                    <li><a class="dropdown-item" href="/orders.html">Orders</a></li>
+                                    <hr class="dropdown-divider">
+                                    <li><div class="dropdown-item logout" onclick="logout()">Logout</div></li>
+                                    <!-- <li><a class="dropdown-item" href="/authentication/register.html">Register</a></li> -->
+                                </ul>
+                            </div>
+                    </div>     
+                </div>
 
-                    <div class="dropdown">
-                        <a href="authentication/register.html"><span class="top-a">Login Account</span></span></a>
-                        <a class="nav-link dropdown-toggle loginheadingNav" href="#" role="button" data-toggle="dropdown"
-                            aria-expanded="false">
-                            
-                            <!-- <img src="Assets/Images/SmallIcons/ArrowDown.svg" alt="" /> -->
-                        </a>
-                        <ul class="dropdown-menu custom-dropdown-menu">
-                            <li><a class="dropdown-item" href="/history.html">Order History</a></li>
-                            <li><a class="dropdown-item" href="/setting.html">Settings</a></li>
-                            <li><a class="dropdown-item" href="/orders.html">Orders</a></li>
-                            <hr class="dropdown-divider">
-                            <li><a class="dropdown-item" href="/authentication/login.html">Login</a></li>
-                            <li><a class="dropdown-item" href="/authentication/register.html">Register</a></li>
-                        </ul>
-                    </div>
-                </div>     
+              
             </div>
 
 
@@ -426,4 +433,6 @@
             </div>
         </div>
     </nav>
+   
 </div>
+

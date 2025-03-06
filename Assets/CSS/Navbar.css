@@ -936,6 +936,30 @@
     gap: 5px;
 }
 
+.Login_btn {
+    background-color: var(--green);
+    color: white;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-family: Quicksand;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    border: none;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    white-space:nowrap;
+}
+
+.logout{
+    cursor: pointer;
+}
+
+.Login_btn:hover {
+    background-color: var(--hovergreen);
+}
+
 .Explore_all_categories_Btn i {
     font-size: 18px;
     padding: 3px;

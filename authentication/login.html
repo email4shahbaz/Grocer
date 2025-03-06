@@ -81,7 +81,7 @@
         >
       </div>
       <div class="loginGreenSection">
-        <form>
+        <form onsubmit="return login()">
           <div class="login_form_container">
             <div class="LoginMobileViewLogo">
               <img
@@ -120,5 +120,23 @@
     </div>
 
     <script src="/Assets/JS/Animations.js"></script>
+    <script>
+      function login() {
+        var email = document.querySelector("input[type=email]").value;
+        var password = document.querySelector("input[type=password]").value; 
+
+        if (email == "" || password == "") {
+          alert("Please fill in all fields");
+          return false;
+        }
+        else if (email != " " && password != " ") {
+          localStorage.setItem("email", email);
+          //localStorage.setItem("password", password);
+          window.location.replace('/index.html');
+          return false;
+        }
+        return false;
+      }
+    </script>
   </body>
 </html>
