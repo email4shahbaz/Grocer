@@ -145,7 +145,7 @@
 /* Dropdown Items */
 .custom-dropdown-menu .dropdown-item {
     color: #000000; /* Dark Green Text */
-    padding: 10px 15px;
+    padding: 10px 20px;
 }
 
 /* Hover Effect for Dropdown Items */
@@ -836,8 +836,17 @@
 }
 
 .top-header-center :hover {
-   color:#5ca338;
+   color: var(--green);
 
+}
+
+
+.custom-dropdown-menu {
+    left: 100% !important;
+    right: -100 !important;
+    transform: translateX(-50%) !important;
+    min-width: 100px !important;
+    align-items: center;
 }
 
 .top-header-right {
@@ -937,18 +946,19 @@
 }
 
 .Login_btn {
-    background-color: var(--green);
+    background-color: var(--hovergreen);
     color: white;
-    border-radius: 12px;
-    padding: 10px 20px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 10px 30px;
     font-family: Quicksand;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
     display: flex;
-    border: none;
+    /* border: none; */
     justify-content: space-between;
     align-items: center;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.6s ease-in-out;
     white-space:nowrap;
 }
 
@@ -957,7 +967,9 @@
 }
 
 .Login_btn:hover {
-    background-color: var(--hovergreen);
+    background-color: White;
+    color: var(--green);
+    border: 1px solid var(--green);
 }
 
 .Explore_all_categories_Btn i {
