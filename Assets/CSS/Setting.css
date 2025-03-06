@@ -112,12 +112,12 @@ font-weight: bolder;
 }
 
 .setting_inp_label {
-    font-size: 14px;
+    font-size: 16px;
     color: black;
     font-weight: bolder;
     margin-bottom: 5px;
     margin-top: 20px;
-    font-family: 'Inter';
+    font-family: 'Quicksand';
 }
 
 .setting_inp {
@@ -137,17 +137,18 @@ font-weight: bolder;
 .info_settings {
     background-color: white;
     border-radius: 20px;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .info_email_inp {
     border: none;
     width: 100%;
     padding: 10px;
-    font-size: 18px;
-    outline: none;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 5px;
     font-weight: 300;
-    font-family: 'Inter';
+    font-family: 'Quicksand';
     color: #000000;
 }
 
@@ -157,24 +158,26 @@ font-weight: bolder;
     align-items: center;
 }
 
+
 .downloadinfo_button {
     border: none;
     color: var(--green);
     background-color: white;
     margin: auto;
     display: block;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
-    padding: 20px;
-    font-family: 'Inter';
+    /* padding: 20px; */
+    font-family: 'Helvetica Neue';
 }
 
 .info_email_setting {
     font-size: 18px;
     margin: 0px;
-    padding: 20px;
-    font-weight: 400;
-    font-family: 'Inter';
+    padding: 10px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-family: 'Helvetiva Neue';
     color: #333333;
 }
 
@@ -243,7 +246,19 @@ font-weight: bolder;
 
     .MainContaineruserInfo {
         width: 100%;
-        background-color: #f3f3f3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       
+        width: 100%;
+        justify-content: center;
+        /* background-color: #f3f3f3; */
+    }
+
+
+    .MainContaineruserInfo br{
+            display: none;
     }
 
     .setting_main_heading {
@@ -254,4 +269,10 @@ font-weight: bolder;
     .setting_form_container {
         width: 100%;
     }
+
+    .container-fluid {
+        padding: 0px;
+        width: 90%;
+}
+
 }
