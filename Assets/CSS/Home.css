@@ -194,6 +194,7 @@ body {
 }
 
 .BestsellProductsSection {
+    margin-top: 30px;
     overflow-y: auto;
     gap: 20px;
 }
@@ -381,12 +382,13 @@ body {
 .offersBanner {
     width: 100%;
 }
-
 .category_listing2 {
     margin-bottom: 0px;
-    color: #000000;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
 }
-
 .category_listing2 :Hover {
     color: #1ca14d;
     transition: 0.5s;;
@@ -466,7 +468,6 @@ body {
 .dailybestsellSectionContainer {
     margin-top: 90px;
 }
-
 .daily_best_sells_listing_one {
     width: 80%;
     display: flex;
@@ -535,6 +536,7 @@ border-radius: 20px;
 }
 
 .LasthomecardsMainContainer {
+    padding: 0 !important;
     margin-top: 90px;
 }
 
@@ -1053,14 +1055,9 @@ li {
     }
 
     .BestsellProductsSectionMV {
-        /* display: block; */
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
-    }
-
-    .BestsellProductsSection {
-        display: none !important;
     }
 }
 
@@ -1240,14 +1237,6 @@ li {
     .timeRemainingClock {
         display: block;
         text-align: center;
-    }
-
-    .BestsellProductsSectionMV {
-        display: block;
-    }
-
-    .BestsellProductsSection {
-        display: none !important;
     }
 }
 
@@ -1434,14 +1423,6 @@ li {
         display: block;
         text-align: center;
     }
-
-    .BestsellProductsSectionMV {
-        display: block;
-    }
-
-    .BestsellProductsSection {
-        display: none !important;
-    }
 }
 
 @media screen and (min-width:992px) and (max-width: 1500px) {
@@ -1611,6 +1592,9 @@ li {
 
 
 @media (max-width: 992px) {
+    .daily_best_sells_listing_one {
+        margin-bottom: 20px;
+    }
     .free-delivery-card .offersImage{
         width: 140px;
     }

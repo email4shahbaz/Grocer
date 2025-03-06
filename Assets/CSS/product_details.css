@@ -74,7 +74,7 @@ body {
 .FeaturedBtnRight {
     position: absolute;
     top: 40%;
-    right: -80px;
+    right: -55px;
     background-color: #F2F3F4;
     width: 40px;
     height: 40px;
@@ -92,7 +92,7 @@ body {
 .FeaturedBtnLeft {
     position: absolute;
     top: 40%;
-    left: -80px;
+    left: -55px;
     background-color: #F2F3F4;
     width: 40px;
     height: 40px;

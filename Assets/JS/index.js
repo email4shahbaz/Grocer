@@ -1,6 +1,17 @@
+function includeHTML(file, elementTag) {
+    fetch(file)
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector(elementTag).outerHTML = data;
+        })
+        .catch(error => console.error(`Error loading ${file}:`, error));
+};
+
 document.addEventListener("DOMContentLoaded", async () => {
+    includeHTML("header.html", "header");
+    includeHTML("footer.html", "footer");
     const categoryContainer = document.querySelector('.homecategoryProductsMain');
-    const mobileViewContainer = document.querySelector('.MobileViewCategoriesCardOneMainDiv'); 
+    const mobileViewContainer = document.querySelector('.MobileViewCategoriesCardOneMainDiv');
 
     try {
         // Fetch the category data
@@ -49,7 +60,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             // Append the category card to both containers
             categoryContainer.appendChild(categoryCard);
-            mobileViewContainer.appendChild(categoryCard.cloneNode(true)); 
+            mobileViewContainer.appendChild(categoryCard.cloneNode(true));
         });
 
     } catch (error) {
@@ -59,6 +70,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 });
 
-document.getElementById("remember-checkbox").addEventListener("change", function() {
+document.getElementById("remember-checkbox").addEventListener("change", function () {
     document.querySelector(".login-options").style.backgroundColor = this.checked ? "#ffffff" : "#000000";
 });
