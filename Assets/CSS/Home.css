@@ -75,9 +75,10 @@ body {
 
 .homefeaturedProductsMain {
     display: flex;
+    overflow: hidden;
     justify-content: flex-start;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
 }
 
 

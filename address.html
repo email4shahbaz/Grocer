@@ -176,15 +176,15 @@
                             <img src="/Assets/Images/SmallIcons/BreadcrumsCenter.webp" alt="">
                             <a href="" wire:navigate>Address</a>
                         </div>
-                        <!-- {{-- Mobile View Component --}} -->
+                    </div>
+                    <div class="container-fluid mt-2 tablemainAddress table_container_order">
+                         <!-- {{-- Mobile View Component --}} -->
                         <!-- {{-- ****************Main Heading**************** --}} -->
                         <div class="AddressHeadingandBTNMain">
                             <h1 class="Address_main_heading">Address</h1>
                             <button class="addressEditBTN" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">Add</button>
                         </div>
-                    </div>
-                    <div class="container-fluid mt-2 tablemainAddress table_container_order">
                         <table class="w-100 address_table_">
                             <thead>
                                 <tr>
@@ -215,6 +215,8 @@
                                     <td>
                                         <button class="addressDeleteBTN"
                                             wire:click="deleteAddress({{ $address['id'] }})">Delete</button>
+                                            <button class="addressEdit"
+                                            wire:click="deleteAddress({{ $address['id'] }})">Edit</button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -334,6 +336,8 @@
         <script src="/Assets/JS/Animations.js"></script>
         <script src="/Assets/JS/browse_category_dropdown.js"></script>
         <script src="/Assets/JS/navbar.js"></script>
+        <script src="/Assets/JS/index.js"></script>
+        <script src="/Assets/JS/index.js"></script>
 </body>
 
 </html>

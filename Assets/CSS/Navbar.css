@@ -16,6 +16,12 @@
 
 }
 
+
+.logo_main_image img{
+    height: 40px;
+    
+}
+
 #searchDropdown {
     display: block;
 }
@@ -312,7 +318,7 @@
 }
 
 .mycartCustomHeading1 {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     font-family: Quicksand;
     color: #253D4E;
@@ -421,6 +427,10 @@
     /* font-family: 'Quicksand'; */
 }
 
+.wislistHeading{
+    font-size: 14px;
+}
+
 .wishlist_heading img{
     width: 25px;
     height: 25px;
@@ -436,11 +446,19 @@
     align-self: center;
 }
 
+.navbar-right{
+    gap: 50px !important;
+}
+
 .searchButtonCate {
-    margin-left: 50px;
+    /* margin-left: 50px; */
     /* background-color: #F3F3F3; */
     flex-wrap: nowrap !important;
-    border: 1px solid rgb(236, 236, 236);
+    align-items: center;
+    padding: 8px;
+    width: 600px;
+    border: 1px solid #BCE3C9;
+    border-radius: 5px;
 }
 
 .searchButtonCate input{
@@ -449,11 +467,13 @@
 
 .search_button {
     align-self: center;
+    align-items: center;
     /* width: 50%; */
 }
 
 .profile_image {
     align-items: center;
+    padding: 0px !important;
     /* margin-right: -50px; */
 }
 
@@ -481,7 +501,7 @@
 .search_inp, .search_inp_mobile {
     /* background-color: #F3F3F3; */
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     font-family: 'Quicksand';
     color: #ADADAD;
     width: 100%;
@@ -521,7 +541,6 @@
 }
 
 .search_btn {
-    background-color: var(--green);
     border-radius: 0px 3px 3px 0px !important;
     display: flex;
     width: 90px;
@@ -946,9 +965,9 @@
 }
 
 .Login_btn {
-    background-color: var(--hovergreen);
+    background-color: var(--green);
     color: white;
-    border: 1px solid gray;
+    border: 1px solid var(--green);
     border-radius: 8px;
     padding: 10px 30px;
     font-family: Quicksand;
@@ -967,14 +986,12 @@
 }
 
 .Login_btn:hover {
-    background-color: White;
-    color: var(--green);
+    background-color: var(--hovergreen);
     border: 1px solid var(--green);
 }
 
 .Explore_all_categories_Btn i {
     font-size: 18px;
-    padding: 3px;
 }
 
 /* CATEGORY DROPDOWN MENU */
@@ -1214,7 +1231,7 @@
 }
 /* NAVBAR LINKS */
 .navbar-icon {
-    padding: 5px;
+    padding: 10px;
 }
 
 .ullists_subhomenav {
@@ -1223,7 +1240,7 @@
 }
 
 .ullists_subhomenav .nav-item a {
-    font-size: 14px;
+    font-size: 16px;
     color: #000000;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -1232,7 +1249,7 @@
 }
 
 .ullists_subhomenav .nav-item a:hover {
-    color: #53B175;
+    color: var(--hovergreen);
 
 }
 

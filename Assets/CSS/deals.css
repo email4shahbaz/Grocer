@@ -51,7 +51,7 @@
     background-color: white;
     color:  #3a975c;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 22px;
     width: 55px;
     height: 65px;
     display: flex;
@@ -60,7 +60,7 @@
     justify-content: center;
     border-radius: 5px;
     text-align: center;
-    border: 1px solid  #DBDBDB;
+    border: 1px solid var(--green);
 }
 
 .separator {

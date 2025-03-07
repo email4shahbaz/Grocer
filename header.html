@@ -34,7 +34,7 @@
 
     <nav class="navbar navbar-expand-lg bg-white shadow-sm main_navbar">
         <div class="container d-flex flex-nowrap">
-            <div class="d-flex">
+            <div class=" logo_main_image d-flex">
                 <div class="logo_main_image">
                     <!-- {{-- MVSideBarOpenIcon --}} -->
                     <a href="" class="SideBarOpenIcon" id="sidebarToggle">
@@ -50,28 +50,28 @@
                             onerror="this.src='/Assets/IMAGES/ErrorImage.webp'" wire:navigate href="/index.html"
                             alt="Grocer__Logo" class="mainlogo" loading="lazy" /></a>
                 </div>
-                <div class="nav-item search_button">
-                    <form class="d-flex" onsubmit="event.preventDefault();">
-                        <div class="input-group searchButtonCate">
-                            <select name="" id="search_select_category" wire:model.live="search_category"
-                                class="SearchwithCategoriesLists">
-                                <option value="All Categories">All Categories</option>
-                            </select>
-                            <!-- <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="" /> -->
-                            <div class="input-cont">
-                                <input type="text" wire:model.live.debounce.300ms="search_query"
-                                    class="shadow-md border-0 search_inp" maxlength="20"
-                                    placeholder="Search for items..." aria-label="Search" autocomplete="off" />
-                            </div>
-                            <button class="btn rounded-0 shadow-md search_btn" type="submit">
-                                <img src="Assets/Images/SmallIcons/search.webp" alt="searchIcon" loading="lazy" />
-                            </button>
+            </div>
+            <div class="nav-item search_button">
+                <form class="d-flex" onsubmit="event.preventDefault();">
+                    <div class="input-group searchButtonCate">
+                        <select name="" id="search_select_category" wire:model.live="search_category"
+                            class="SearchwithCategoriesLists">
+                            <option value="All Categories">All Categories</option>
+                        </select>
+                        <!-- <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="" /> -->
+                        <div class="input-cont">
+                            <input type="text" wire:model.live.debounce.300ms="search_query"
+                                class="shadow-md border-0 search_inp" maxlength="20"
+                                placeholder="Search for items..." aria-label="Search" autocomplete="off" />
                         </div>
-                    </form>
-                </div>
+                        <button class="btn rounded-0 shadow-md search_btn" type="submit">
+                            <img src="Assets/Images/SmallIcons/search.png" alt="searchIcon" loading="lazy" />
+                        </button>
+                    </div>
+                </form>
             </div>
 
-            <div class="d-flex gap-4">
+            <div class="navbar-right d-flex gap-4">
                 <div class="d-flex whishlist_button align-items-center">
                     <h1 class="cart_heading position-relative">
                         <img src="Assets/Images/SmallIcons/WishlistHeart.webp" alt="wishlistIcon" />
@@ -407,6 +407,8 @@
                                 class="bi bi-tags navbar-icon"></i> Promotions</a></li>
                     <li class="nav-item"><a href="/new-products.html" class="SubnavIconsAdjustment"><i
                                 class="bi bi-megaphone navbar-icon"></i> New Products</a></li>
+                    <!-- <li class="nav-item"><a href="/new-products.html" class="SubnavIconsAdjustment"><i
+                                    class="bi bi-fire navbar-icon"></i> Blog</a></li> -->
                     
                 </ul>
             </div>
@@ -435,4 +437,6 @@
     </nav>
    
 </div>
+
+<script src="/Assets/JS/cart_dropdown.js"></script>
 

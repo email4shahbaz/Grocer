@@ -338,6 +338,49 @@ li {
     justify-content: space-between;
 }
 
+    .product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border: 2px solid #28a745;;
+}
+
+.product-card-header img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-card-body {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.product-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    font-size: 1rem;
+    color: #28a745;
+}
+
+.product-unit, .product-discount {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+
 @media screen and (max-width:500px) {
     .search_component {
         display: block;

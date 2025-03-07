@@ -10,10 +10,6 @@
     align-items: center;
 }
 
-.homeSubNavBarItem1 {
-     /* width: 17%;  */
-}
-
 .homeSubNavBarItem2 {
     display: flex;
     justify-content: space-between;
@@ -38,7 +34,7 @@
 }
 
 .SupportcenterHeading1 {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     color: #53B175;
     margin: 0px;
@@ -47,7 +43,7 @@
 }
 
 .SupportcenterHeading2 {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     color: #253D4E;
     margin: 0px;
@@ -88,7 +84,8 @@
 }
 
 .support_li {
-    margin-left: 30px;
+    margin-left: 0px;
+    padding: 0px;
 }
 
 .Number_Support {
