@@ -66,7 +66,7 @@ body {
 }
 .WebViewCarouselTwo {
     padding: 0 12px;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
 
 
@@ -555,7 +555,7 @@ body {
 }
 
 .LasthomecardsMainContainer {
-    padding: 30px 0 47px 0 !important;
+    padding: 0 0 0 0 !important;
 }
 
 .bestSell_heading {
@@ -1599,7 +1599,7 @@ li {
     white-space: nowrap;
 }
 .bestSellingProducts {
-    padding: 60px 0 40px 0;
+    padding: 60px 0 0 0;
 }
 
 

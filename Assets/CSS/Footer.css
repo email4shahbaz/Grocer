@@ -12,13 +12,13 @@ li{
     margin-left: 30px;
 }
 .footermainWrapper {
-    margin-top: 90px;
+    margin-top: 20px;
     padding-top: 20px;
 }
 .footermainWrapper .footer-content {
     width: 100%;
     padding: 0 12px;
-    padding-bottom: 70px;
+    padding-bottom: 50px;
 }
 .footermainWrapper .footer-content .icon-holder {
     max-width: 50px;
@@ -43,7 +43,7 @@ li{
     margin-top: -30px;
     max-width: 409px;
     margin: auto;
-    margin-top: -35px;
+    /* margin-top: -35px; */
     padding: 0 18px !important;
 }
 .footermainWrapper .centered p {
@@ -53,7 +53,7 @@ li{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 53px 35px 24px 35px;
+    padding: 30px 35px 30px 35px;
 }
     
 .footer_line {
