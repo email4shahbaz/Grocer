@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotions - Grocery Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .promo-header {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff5722;
+            color: white;
+            font-size: 24px;
+        }
+        .promo-section {
+            padding: 20px;
+        }
+        .promo-item {
+            background: #fff3e0;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 5px solid #ff5722;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #ff5722;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="promo-header">🔥 Exclusive Grocery Promotions & Deals 🔥</div>
+    <div class="container">
+        <div class="promo-section">
+            <h2>Featured Discounts</h2>
+            <div class="promo-item">
+                <strong>Buy One Get One Free</strong> - On all dairy products this week!<br>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+            <div class="promo-item">
+                <strong>Flat 20% Off</strong> - Use code <b>FRESH20</b> at checkout.<br>
+                <a href="#" class="btn">Get Code</a>
+            </div>
+        </div>
+        <div class="promo-section">
+            <h2>Flash Sale</h2>
+            <div class="promo-item">
+                <strong>Hurry! Sale ends in: <span id="countdown">02:30:15</span></strong><br>
+                Get up to <b>50% OFF</b> on fresh vegetables.<br>
+                <a href="#" class="btn">Shop Sale</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Countdown Timer Example
+        let time = 2 * 60 * 60 + 30 * 60 + 15;
+        function updateCountdown() {
+            const hours = String(Math.floor(time / 3600)).padStart(2, '0');
+            const minutes = String(Math.floor((time % 3600) / 60)).padStart(2, '0');
+            const seconds = String(time % 60).padStart(2, '0');
+            document.getElementById("countdown").textContent = `${hours}:${minutes}:${seconds}`;
+            if (time > 0) time--;
+        }
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>

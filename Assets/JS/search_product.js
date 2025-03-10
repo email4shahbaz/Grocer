@@ -1,19 +1,18 @@
-document.addEventListener("DOMContentLoaded", () => {
-	const searchInput = window.screen.width > 992 ? document.querySelector(".search_inp") : document.querySelector(".search_inp_mobile");
+const searchInput = window.screen.width > 992 ? document.querySelector(".search_inp") : document.querySelector(".search_inp_mobile");
 
-	const searchSuggestionsContainer = document.createElement("div");
-	searchSuggestionsContainer.classList.add("search-suggestions");
-	searchSuggestionsContainer.style.display = "none";
-	searchSuggestionsContainer.style.position = "absolute";
-    searchSuggestionsContainer.style.top = "40px";
-	searchSuggestionsContainer.style.background = "#fff";
-	searchSuggestionsContainer.style.border = "1px solid #ddd";
-	searchSuggestionsContainer.style.zIndex = "1000";
-	searchSuggestionsContainer.style.width = "100%";
-	searchSuggestionsContainer.style.maxHeight = "200px";
-	searchSuggestionsContainer.style.overflowY = "auto";
-	searchSuggestionsContainer.style.boxShadow = "0px 2px 5px rgba(0, 0, 0, 0.1)";
-	searchInput.parentNode.appendChild(searchSuggestionsContainer);
+	// const searchSuggestionsContainer = document.createElement("div");
+	// searchSuggestionsContainer.classList.add("search-suggestions");
+	// searchSuggestionsContainer.style.display = "none";
+	// searchSuggestionsContainer.style.position = "absolute";
+    // searchSuggestionsContainer.style.top = "40px";
+	// searchSuggestionsContainer.style.background = "#fff";
+	// searchSuggestionsContainer.style.border = "1px solid #ddd";
+	// searchSuggestionsContainer.style.zIndex = "1000";
+	// searchSuggestionsContainer.style.width = "100%";
+	// searchSuggestionsContainer.style.maxHeight = "200px";
+	// searchSuggestionsContainer.style.overflowY = "auto";
+	// searchSuggestionsContainer.style.boxShadow = "0px 2px 5px rgba(0, 0, 0, 0.1)";
+	// searchInput.parentNode.appendChild(searchSuggestionsContainer);
 
 	getCategories();
 	// Load products from JSON files
@@ -92,26 +91,26 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	// Handle search input
-	searchInput.addEventListener("input", (e) => {
-		const query = e.target.value.trim();
-		if (query.length > 0) {
-			const filteredProducts = filterProducts(query);
-			renderSuggestions(filteredProducts);
-			searchSuggestionsContainer.style.display = "block";
-		} else {
-			searchSuggestionsContainer.style.display = "none";
-		}
-	});
+	// searchInput.addEventListener("input", (e) => {
+	// 	const query = e.target.value.trim();
+	// 	if (query.length > 0) {
+	// 		const filteredProducts = filterProducts(query);
+	// 		//renderSuggestions(filteredProducts);
+	// 		searchSuggestionsContainer.style.display = "block";
+	// 	} else {
+	// 		searchSuggestionsContainer.style.display = "none";
+	// 	}
+	// });
 
-	// Hide suggestions on clicking outside
-	document.addEventListener("click", (e) => {
-		if (
-			!searchInput.contains(e.target) &&
-			!searchSuggestionsContainer.contains(e.target)
-		) {
-			searchSuggestionsContainer.style.display = "none";
-		}
-	});
+	// // Hide suggestions on clicking outside
+	// document.addEventListener("click", (e) => {
+	// 	if (
+	// 		!searchInput.contains(e.target) &&
+	// 		!searchSuggestionsContainer.contains(e.target)
+	// 	) {
+	// 		searchSuggestionsContainer.style.display = "none";
+	// 	}
+	// });
 
 	// Render the selected product on the search page
 	const productContainer = document.getElementById("product-grid");
@@ -192,4 +191,3 @@ document.addEventListener("DOMContentLoaded", () => {
 			categoryDropdown.appendChild(categoryItem);
 		});
 	}
-});
