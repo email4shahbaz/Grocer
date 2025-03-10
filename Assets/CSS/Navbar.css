@@ -318,7 +318,7 @@
 }
 
 .mycartCustomHeading1 {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     font-family: Quicksand;
     color: #253D4E;
@@ -446,10 +446,6 @@
 
 .cart_button {
     align-self: center;
-}
-
-.navbar-right{
-    gap: 50px !important;
 }
 
 .navbar-right{
@@ -992,7 +988,6 @@
 
 .Login_btn:hover {
     background-color: var(--hovergreen);
-    border: 1px solid var(--green);
     border: 1px solid var(--green);
 }
 

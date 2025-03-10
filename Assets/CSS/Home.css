@@ -87,7 +87,6 @@ body {
 .homefeaturedProductsMain {
     display: flex;
     overflow: hidden;
-    overflow: hidden;
     justify-content: flex-start;
     align-items: center;
     gap: 17px;
