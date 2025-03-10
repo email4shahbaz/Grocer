@@ -1,0 +1,94 @@
+/* Root  */
+:root {
+    --green: #53B175;
+    --hovergreen: #3a975c;
+}
+
+body {
+    min-width: 320px;
+    font-family: Quicksand;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Main Heading */
+.paypal_payment_main_heading {
+    font-size: 32px;
+    font-weight: 500;
+    font-family: 'Poppins';
+    color: #4E4E4E;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.paypal_payment_form {
+    width: 65%;
+    margin: auto;
+    margin-bottom: 100px !important;
+}
+
+.paypal_payment_labels {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: poppins;
+    margin: 15px 0px 5px 0px;
+}
+
+.paypal_payment_inp_1 {
+    width: 100%;
+    border: 1px solid #A0A0A0;
+    padding: 10px;
+}
+
+.paypal_payment_totalPayment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 73%;
+}
+
+.paypal_payment_total_headings {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: poppins;
+    color: #1A1A1A;
+    margin-top: 25px;
+}
+
+.paypal_payment_pay_button {
+    border: none;
+    border-radius: 12px;
+    background-color: var(--green);
+    color: white;
+    width: 73%;
+    padding: 7px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: poppins;
+    margin-top: 25px;
+}
+
+@media screen and (max-width:768px) {
+    .paypal_payment_form {
+        width: 90%;
+    }
+
+    .paypal_payment_totalPayment {
+        width: 100%;
+    }
+
+    .paypal_payment_pay_button {
+        width: 100%;
+    }
+
+    .paypal_payment_main_heading {
+        font-size: 24px;
+    }
+
+    .paypal_payment_labels {
+        font-size: 16px;
+    }
+}

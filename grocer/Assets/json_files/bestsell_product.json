@@ -1,0 +1,80 @@
+{
+    "products": [
+        {
+            "id": 4,
+            "name": "Milk",
+            "price": 2.0,
+            "discountedPrice": 1.9,
+            "unit": "1L",
+            "sku": "DAIRY001",
+            "image": ["/Assets/Images/Products/Milk.png"],
+            "discount": 5,
+            "description": "Fresh and creamy milk.",
+            "detailedDescription": "Rich and creamy milk, perfect for drinking, cooking, or baking. Naturally sourced for freshness.",
+            "tags": ["Fresh", "Creamy", "Healthy"],
+            "nutrition": {
+                "calories": 42,
+                "protein": "3.4g",
+                "fats": "1g",
+                "carbohydrates": "5g"
+            }
+        },
+        {
+            "id": 5,
+            "name": "Chips",
+            "price": 4.5,
+            "discountedPrice": 4.05,
+            "unit": "250g",
+            "sku": "SNACKS001",
+            "image": ["/Assets/Images/Products/chips.jpg"],
+            "discount": 10,
+            "description": "Crispy and tasty chips.",
+            "detailedDescription": "Light and crispy chips, perfect for snacking or parties. Available in a variety of flavors.",
+            "tags": ["Crispy", "Tasty", "Snack"],
+            "nutrition": {
+                "calories": 152,
+                "protein": "2g",
+                "fats": "10g",
+                "carbohydrates": "15g"
+            }
+        },
+        {
+            "id": 6,
+            "name": "Butter",
+            "price": 3.0,
+            "discountedPrice": 2.76,
+            "unit": "2kg",
+            "sku": "DAIRY002",
+            "image": ["/Assets/Images/Products/butter.png"],
+            "discount": 8,
+            "description": "Smooth and creamy butter.",
+            "detailedDescription": "Fresh and healthy butter, perfect for spreading, cooking, and baking. Made from high-quality ingredients.",
+            "tags": ["Smooth", "Creamy", "Healthy"],
+            "nutrition": {
+                "calories": 717,
+                "protein": "0.9g",
+                "fats": "81g",
+                "carbohydrates": "0.1g"
+            }
+        },
+        {
+            "id": 24,
+            "name": "Almonds",
+            "price": 3.0,
+            "discountedPrice": 2.76,
+            "unit": "1kg",
+            "sku": "NUTS001",
+            "image": ["/Assets/Images/Products/almonds.jpg"],
+            "discount": 8,
+            "description": "Crunchy and healthy almonds.",
+            "detailedDescription": "Crunchy and nutritious almonds, perfect for snacking, baking, or adding to desserts. High in protein and vitamins.",
+            "tags": ["Crunchy", "Healthy", "Organic"],
+            "nutrition": {
+                "calories": 576,
+                "protein": "21g",
+                "fats": "49g",
+                "carbohydrates": "22g"
+            }
+        }
+    ]
+}

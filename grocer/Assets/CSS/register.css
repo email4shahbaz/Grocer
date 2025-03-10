@@ -1,0 +1,538 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.authSpinner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    z-index: 10;
+}
+:root {
+    --green: #53B175;
+    --hovergreen: #3a975c;
+}
+body {
+    min-width: 320px;
+    font-family: Quicksand;
+}
+.googlefacebookIcons{
+    cursor: pointer;
+}
+
+.googlefacebookIcons a{
+    height: 32px;
+    width: 32px;
+
+}
+
+
+.mainRegisterContainer {
+    width: 100%;
+    display: flex;
+}
+
+.registerWhiteSection {
+    text-align: center;
+    width: 40%;
+    background-color: white;
+    position: relative;
+}
+
+.RegisterWhiteSectionSub {
+    padding: 100px 0px 50px 0px;
+}
+
+.RegisterWhiteSectionSub img {
+    margin-bottom: 100px;
+    /* width: 100%; */
+}
+
+.RegisterWhiteSectionSub h1 {
+    color: var(--green);
+    font-size: 36px;
+    font-weight: 800;
+    font-family: poppins;
+    margin-bottom: 10px;
+}
+
+.RegisterWhiteSectionSub h2 {
+    font-size: 20px;
+    font-weight: 300;
+    font-family: poppins;
+    color: #808080;
+    margin-bottom: 40px !important;
+    width: 70%;
+    margin: auto;
+}
+
+.RegisterWhiteSectionButton {
+    border: none;
+    color: white;
+    padding: 15px 0px;
+    text-decoration: none;
+    background-color: var(--green);
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Gilroy-medium;
+    width: 50%;
+    height: 60px;
+    display: block;
+    margin: auto;
+    margin-bottom: 100px !important;
+}
+
+.grocer_coorporation {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.grocer_coorporation h2 {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    font-family: poppins;
+}
+
+
+.RegisterGreenSection {
+    width: 60%;
+    height: 100vh;
+    background-color: var(--green);
+   
+}
+
+.Register_form_container {
+    width: 55%;
+    margin: auto;
+}
+
+.register_form_main_heading {
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 400;
+    font-family: 'gilroy-bold';
+}
+
+.linkedIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.register_form_sub_heading {
+    font-size: 16px;
+    font-weight: 300;
+    font-family: Gilroy-medium;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.register_form_label {
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'gilroy-medium';
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.register_form_inp1 {
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    width: 100%;
+    font-size: 18px;
+    font-family: poppins;
+}
+
+.register_form_inp2 {
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    width: 100%;
+    font-size: 18px;
+    font-family: poppins;
+}
+
+.register_form_inp3 {
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    width: 100%;
+}
+
+.register_form_inp4 {
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    width: 100%;
+}
+
+.register_form_inp1:focus {
+    outline: none;
+}
+
+.register_form_inp2:focus {
+    outline: none;
+}
+
+.register_form_inp3:focus {
+    outline: none;
+}
+
+.register_form_inp4:focus {
+    outline: none;
+}
+
+.nameFieldIcon {
+    position: relative;
+}
+
+.nameFieldIcon img {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(-50%, -50%);
+}
+
+.emailFieldIcon {
+    position: relative;
+}
+
+.emailFieldIcon img {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(-50%, -50%);
+}
+
+.passwordFieldIcon {
+    position: relative;
+}
+
+.passwordFieldIcon img {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(-50%, -50%);
+}
+
+.register_signUp_button {
+    width: 100%;
+    border: 3px solid white;
+    background-color: transparent;
+    padding: 15px 0px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 400;
+    height: 60px;
+    font-family: Gilroy-medium;
+    color: white;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.RegisterWhiteSectionButton:hover, .register_signUp_button:hover {
+    background-color: var(--hovergreen);
+    color: white;
+}
+
+
+.MobileViewForgotPassword {
+    display: none;
+}
+
+.MobileViewRegisterDontHaveAccount {
+    display: none;
+}
+
+.RegisterMobileViewLogo {
+    display: none;
+}
+
+.MobileViewlinkedIcons {
+    display: none;
+}
+
+
+
+@media screen and (max-width:768px) {
+    .RegisterMobileViewLogo {
+        text-align: center;
+        display: block;
+    }
+
+    .registerWhiteSection {
+        display: none;
+    }
+
+    .RegisterGreenSection {
+        width: 100%;
+        background-color: white;
+        position: relative;
+    }
+
+    .register_form_main_heading {
+        color: #696969;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: Gilroy-medium;
+    }
+
+    .register_form_label {
+        color: black;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: 'gilroy-medium';
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+    .Register_form_container {
+        width: 80%;
+    }
+
+    .register_signUp_button {
+        width: 100%;
+        border: none;
+        background-color: var(--green);
+        padding: 15px 0px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: Gilroy-medium;
+        color: white;
+        margin-top: 10px;
+    }
+
+    .register_form_inp1 {
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+        font-size: 13px;
+        font-weight: 400;
+        color: #646464 !important;
+        font-family: poppins;
+        border: 1px solid #7D7D7D;
+    }
+
+    .register_form_inp2 {
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+        font-size: 13px;
+        font-weight: 400;
+        color: #646464 !important;
+        font-family: poppins;
+        border: 1px solid #7D7D7D;
+    }
+
+    .register_form_inp3 {
+        padding: 20px;
+        border-radius: 20px;
+        width: 100%;
+        font-size: 13px;
+        font-weight: 400;
+        color: #646464 !important;
+        font-family: poppins;
+        border: 1px solid #7D7D7D;
+    }
+
+    .register_form_inp4 {
+        padding: 20px;
+        border-radius: 20px;
+        width: 100%;
+        font-size: 13px;
+        font-weight: 400;
+        color: #646464 !important;
+        font-family: poppins;
+        border: 1px solid #7D7D7D;
+    }
+
+    .linkedIcons {
+        display: none;
+    }
+
+    .MobileViewForgotPassword {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .MobileViewForgotPassword a {
+        color: black;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: poppins;
+        text-decoration: none;
+        margin-top: 10px;
+    }
+
+    .login_form_forgot_password {
+        color: black;
+        font-size: 14px;
+        text-align: -webkit-center;
+        font-weight: 400;
+        font-family: poppins;
+        text-decoration: none;
+    }
+
+    .register_form_sub_heading {
+        font-size: 15px;
+        font-weight: 400;
+        color: #414141;
+        font-family: 'gilroy-medium';
+    }
+    .MobileViewlinkedIcons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .LoginMobileViewSignUp {
+        display: block;
+        text-align: end;
+        font-size: 16px;
+        font-weight: 400;
+        color: #808080;
+        margin-top: 10px;
+        font-family: poppins;
+    }
+
+    .LoginMobileViewSignUpLink {
+        color: rgb(202, 54, 202);
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .MobileViewRegisterDontHaveAccount {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: poppins;
+        margin-top: 10px;
+        color: #808080;
+        margin-bottom: 200px;
+    }
+
+    .MobileViewRegisterDontHaveAccount a {
+        color: rgb(202, 54, 202);
+    }
+}
+
+
+.btn_Google_facebook {
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 8px;
+    padding: 12px;
+    background-color: white;
+    width: 100%;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: Outfit;
+}
+
+.MobileViewRegisterTrial {
+    display: none;
+}
+
+.RegisterImageBox {
+    width: 5%;
+}
+
+.RegisterTextBox {
+    width: 95%;
+}
+
+.ORDivider {
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+}
+
+.right_reversedRegister {
+    position: relative;
+    top: 730px;
+    margin-top: 35px;
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: Outfit;
+}
+
+.btn_Google_facebook h1 {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    font-family: Outfit;
+    margin: 0px;
+}
+
+.errors_msg_font {
+    font-family: Outfit;
+    font-size: 12px;
+}
+
+.password-eye-icon {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.password-eye-icon img {
+    position: absolute;
+    top: 16px;
+    right: 17px;
+}
+
+.mobileViewText{
+    display: none;
+}
+
+@media screen and (max-width:500px) {
+    .MobileViewRegisterTrial {
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: Outfit;
+        text-align: center;
+        color: #ada8a8;
+    }
+
+    .login_main_heading {
+        margin-bottom: 3px;
+    }
+
+    .mobileViewText{
+        display: block;
+        margin-top: 20px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-size: 16px;
+        font-family: Quicksand;
+}
+}

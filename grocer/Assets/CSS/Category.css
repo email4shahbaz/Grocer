@@ -1,0 +1,368 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #53B175;
+}
+body {
+    min-width: 320px;
+    font-family: Quicksand;
+}
+
+.CategoryPageWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.CategoryPageSidder{
+    width: 30%;
+}
+.CategoryPageContent{
+    width: 65%;
+}
+/* .mainProductCardWishlistAlert{
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    font-size: 10px;
+    font-family: 'Quicksand';
+    font-weight: 900;
+    z-index: 10;
+} */
+.CategoryPageShopByCategoryMain{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.CategoryPageCategoryCard{
+    width: 25%;
+}
+
+.department_heading {
+    font-size: 31px;
+    font-weight: 700;
+    font-family: Mulish;
+    color: #29292E;
+}
+.filtersOption{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: poppins;
+    margin: 0px;
+    color: #1A1A1A;
+}
+.sortingBoxMain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.filtersOptionCount{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: poppins;
+    color: #808080;
+}
+
+.filter-rating{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: poppins;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #000000;
+    /* text-align: center; */
+}
+
+.price-filter {
+    display:block;
+    margin-top: 20px;
+    width: 100%;
+}
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    display: flex;
+    background: #ddd;
+    border-radius: 5px;
+    align-items: center;
+}
+.slider {
+    position: absolute;
+    height: 100%;
+    background: var(--green);
+    border-radius: 5px;
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    /* position: absolute; */
+    width: 100%;
+    background: transparent;
+    pointer-events: auto;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    background-color: white;
+    border: 4px solid var(--green);
+    border-radius: 100%;
+    cursor: pointer;
+    position: relative;
+}
+.range-values {
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.tag-container {
+    justify-content: center;
+    width: 100%;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+}
+.tag-container h3 {
+    margin: 0;
+    font-size: 18px;
+}
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+.tag {
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition:  0.3s ease;
+}
+.tag.active {
+    padding: 8px 12px;
+    margin: 0px;
+    background-color: var(--green);
+    color: white;
+    font-size: 14px;
+}
+
+.search_component {
+    padding: 10px;
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style-type: none;
+}
+
+.MobileViewYellowbannerOffer {
+    display: none;
+}
+
+.department_heading2 {
+    display: none;
+}
+
+.OneByOneGrid,
+.TwoByTwoGrid,
+.ThreeByThreeGrid {
+    border: none;
+    background: none;
+}
+
+.CategoryGrid_icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.toggle_divCategory {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle_divCategory h1 {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: poppins;
+    margin-top: 35px;
+}
+
+.CategoryRadioCustom {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    margin: 0px;
+}
+
+.CategoryRadioCustom:checked {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #4CAF50;
+    background-color: #4CAF50;
+    margin-right: 5px;
+}
+
+.YellowbannerOffer {
+    position: relative;
+    text-align: center;
+}
+
+.YellowbannerOfferContent {
+    position: absolute;
+    top: 30px;
+}
+
+.YellowbannerOfferContent h4 {
+    font-size: 12px;
+    font-weight: 500;
+    font-family: poppins;
+}
+
+.YellowbannerOfferContent h1 {
+    font-size: 32px;
+    font-family: poppins;
+    font-weight: 400;
+    width: 75%;
+    margin: auto;
+    margin-bottom: 20px !important;
+}
+
+.YellowbannerOfferContent a {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 50%;
+    border-radius: 30px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    justify-content: center;
+    margin: auto;
+    color: #4CAF50;
+}
+
+@media screen and (max-width:500px) {
+    .CategoryPageWrapper{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .CategoryPageSidder{
+        width: 0%;
+    }
+    .CategoryPageContent{
+        width: 100%;
+    }
+    .CategoryPageCategoryCard {
+        width: 50%;
+    }
+
+    .search_component {
+        display: block;
+    }
+
+    .YellowbannerOffer {
+        display: none;
+    }
+
+    .MobileViewYellowbannerOffer {
+        display: block;
+        position: relative;
+        text-align: center;
+    }
+
+    .department_heading {
+        display: none;
+    }
+
+    .department_heading2 {
+        display: block;
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .CategoryGrid_icons {
+        display: none;
+    }
+}
+
+@media screen and (min-width:501px) and (max-width:991px) {
+    .CategoryPageWrapper{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .CategoryPageSidder{
+        width: 0%;
+    }
+    .CategoryPageContent{
+        width: 100%;
+    }
+    .CategoryPageCategoryCard {
+        width: 50%;
+    }
+    .search_component {
+        display: block;
+    }
+
+    .YellowbannerOffer {
+        display: none;
+    }
+
+    .MobileViewYellowbannerOffer {
+        display: block;
+        position: relative;
+        text-align: center;
+    }
+
+    .department_heading {
+        display: none;
+    }
+
+    .department_heading2 {
+        display: block;
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .CategoryGrid_icons {
+        display: none;
+    }
+
+    .Filter_section {
+        display: none;
+    }
+
+    .last_filter_card {
+        display: none;
+    }
+
+    .CategoryGrid_icons {
+        display: none;
+    }
+}

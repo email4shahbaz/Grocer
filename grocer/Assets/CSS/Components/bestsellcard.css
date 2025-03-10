@@ -1,0 +1,164 @@
+.BestSellCard {
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid rgba(173, 173, 173, 0.25);
+    max-width: 250px;
+    min-width: 200px;
+}
+
+
+/* Show icons on hover */
+.BestSellCard:hover .product-overlay-icons {
+    display: flex;
+}
+
+
+.bestSellCardNameAndUnitHeadingMain {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+.bestSellCardNameAndUnitHeadingMain h4{
+    font-size: 16px;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-family: 'Quicksand';
+}
+.BestSellCardImage {
+    width: 200px;
+    justify-content: center;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.BestSellCardImage img {
+    width: 70%;
+}
+
+.BestSellCardName {
+    color: #ADADAD;
+    font-size: 12px;
+    font-family: Quicksand;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.BestSellCardHeading {
+    color: #253D4E;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Quicksand;
+    margin-bottom: 0;
+}
+
+.BestSellCardProductby1 {
+    font-size: 12px;
+    color: #ADADAD;
+    font-weight: 400;
+    font-family: Quicksand;
+}
+
+.BestSellCardProductby2 {
+    font-size: 12px;
+    color: #10B64C;
+    font-weight: 400;
+    font-family: Quicksand;
+}
+
+.BestSellCard-oldPrice {
+    font-size: 14px;
+    margin-left: 10px;
+    color: #ADADAD;
+    font-weight: 500;
+}
+.BestSellCardPriceTag {
+    font-size: 18px;
+    color: #10B64C;
+    font-family: Quicksand;
+    font-weight: 600;
+    margin: 0px;
+}
+
+.BestSellCardCrossPriceTag {
+    font-size: 14px;
+    color: #ADADAD;
+    font-weight: 500;
+    margin: 0px;
+    font-family: Quicksand;
+}
+
+.BestSellCardProgressMain {
+    height: 5px;
+    margin-top: 8px;
+}
+
+.BestSellCardProgress {
+    background-color: #53B175;
+}
+.progressstatus{
+    font-size: 13px;
+    font-weight: 500;
+    font-family: Quicksand;
+    margin-top: 10px;
+}
+.BestSellCardAddButton {
+    background-color: var(--green);
+    color: white;
+    border-radius: 12px;
+    margin-top: 15px;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Quicksand;
+}
+
+.BestSellCardAddButton:Hover {
+    color: white;
+    background-color: var(--hovergreen);
+}
+
+.hdwwiu {
+    font-size: 14px;
+    color: #253D4E;
+    font-weight: 500;
+}
+
+.BestSellCardOffTag {
+    top: 0px;
+    left: 0px;
+    background-color: #FFD480;
+    color: white;
+    border-radius: 0px 3px;
+    padding: 7px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: Quicksand;
+}
+
+.BestSellCardOffTag h6 {
+    margin: 0px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+@media screen and (max-width:991px) {
+    .BestSellCardImage {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .BestSellCard {
+        max-width: 300px;
+        padding: 5px;
+    }
+}
+
+
+
+
+

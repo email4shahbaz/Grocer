@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- {{-- Quicksand --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
+    <!-- {{-- Poppins --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Mulish --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Roboto --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Inter --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Bootstrap 5 --}} -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <!-- {{-- Bootstrap 5 Icons --}} -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- {{-- Font Awesome Icons CDN --}} -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- {{-- Track Order Page Css Custom Style --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/TrackOrder.css">
+    <!-- {{-- NavBar Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Navbar.css">
+    <!-- {{-- Setting Sidebar Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Components/Setting-Sidebar.css">
+    <!-- {{-- Footer Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Footer.css">
+    <link rel="stylesheet" href="/Assets/CSS/product_details.css">
+    <link rel="stylesheet" href="/Assets/CSS/Search.css">
+    <link rel="stylesheet" href="/Assets/CSS/cart_dropdown.css">
+    <!-- {{-- Home Page custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Home.css" />
+    <link rel="stylesheet" href="/Assets/CSS/cart.css">
+    <!-- {{-- Bread Crumbs Style  --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Components/breadCrumbs.css">
+    <link rel="stylesheet" href="/Assets/CSS/navbar_side_icons.css">
+    <link rel="stylesheet" href="/Assets/CSS/Animations.css">
+    <!-- {{-- Wishlist Page Css Custom Style --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/wishlist.css">
+    <!-- {{-- SubNav Home Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/subnav_home.css">
+    <link rel="stylesheet" href="/Assets/CSS/Navbar.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="Assets/Images/Banner/Favicon.png" type="image/x-icon">
+
+
+    <title>Track</title>
+</head>
+
+<body>
+    <div>
+        <!-- Animated Logo Cover -->
+        <div id="logo-cover" class="logo-cover d-flex justify-content-center align-items-center">
+            <img src="Assets/Images/Icons/GrocerLogo.png" alt="Grocer Logo" class="animated-logo" />
+        </div>
+
+        <!-- Animated Logo End -->
+
+        <!--********** NAVIGATION **********-->
+        <div class="web-container">
+
+            <!-- Header dynamically added from index.js file -->
+            <header></header>
+
+            <!--********* BREADCRUMBS *********-->
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul class="breadcrumb">
+                        <li> <a class="breadcrumb-item" href="/">Home</a></li>
+                        <li> <a class="breadcrumb-item" href="/orders.html">Orders</a></li>
+                        <li> <span class="breadcrumb-item " id="orderId"></span></li>
+
+                    </ul>
+                </div>
+            </div>
+            <!--********* BREADCRUMBS *********-->
+            <div class="container mt-4">
+
+
+                <div id="orderDetails" class="border p-4 rounded">
+                    <!-- Order details will be populated here -->
+
+
+                </div>
+                <div id="downloadButtonContainer"></div>
+            </div>
+
+        </div>
+
+        <!--********* SERVICES *********-->
+        <div class="container mt-5">
+            <div class="row last_container">
+                <div class="col-sm-12 col-md-6 col-lg-3 services_Boxes mt-5 mt-md-0">
+                    <div class="row box_last">
+                        <div class="col-2 self-center">
+                            <img src="Assets/Images/Icons/delivery-truck.webp" alt="">
+                        </div>
+                        <div class="col-10">
+                            <h3 class="last_container_heading">Free Shipping</h3>
+                            <p class="last_container_para">Free shipping on all your order</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 services_Boxes">
+                    <div class="row box_last">
+                        <div class="col-2 self-center">
+                            <img src="Assets/Images/Icons/Vector.webp" alt="">
+                        </div>
+                        <div class="col-10">
+                            <h3 class="last_container_heading">Customer Support 24/7</h3>
+                            <p class="last_container_para">Instant access to Support</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 services_Boxes">
+                    <div class="row box_last">
+                        <div class="col-2 self-center">
+                            <img src="Assets/Images/Icons/securePaymentCart.webp" alt="">
+                        </div>
+                        <div class="col-10">
+                            <h3 class="last_container_heading">100% Secure Payment</h3>
+                            <p class="last_container_para">We ensure your money is save</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 services_Boxes">
+                    <div class="row box_last">
+                        <div class="col-2 self-center">
+                            <img src="Assets/Images/Icons/box.webp" alt="">
+                        </div>
+                        <div class="col-10">
+                            <h3 class="last_container_heading">Money-Back Guarantee</h3>
+                            <p class="last_container_para">30 Days Money-Back Guarantee</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-3 last_line">
+        </div>
+        <!--********* SERVICES *********-->
+
+        <!--********* FOOTER *********-->
+
+        <!-- Footer dynamically added from index.js file -->
+        <footer></footer>
+        <!--********* FOOTER *********-->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $(".CategoryBtnLeft").click(function () {
+                    $(".webviewCarouselOne").animate({
+                        scrollLeft: "-=250px" // Adjust the value as needed for the scroll distance
+                    }, "slow");
+                });
+
+                $(".CategoryBtnRight").click(function () {
+                    $(".webviewCarouselOne").animate({
+                        scrollLeft: "+=250px" // Adjust the value as needed for the scroll distance
+                    }, "slow");
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $(".FeaturedBtnLeft").click(function () {
+                    $(".WebViewCarouselTwo").animate({
+                        scrollLeft: "-=250px" // Adjust the value as needed for the scroll distance
+                    }, "slow");
+                });
+
+                $(".FeaturedBtnRight").click(function () {
+                    $(".WebViewCarouselTwo").animate({
+                        scrollLeft: "+=250px" // Adjust the value as needed for the scroll distance
+                    }, "slow");
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $(".BestSellProductarrowbtnLeft").click(function () {
+                    $(".BestsellProductsSection").animate({
+                        scrollLeft: "-=250px" // Adjust the value as needed for the scroll distance
+                    }, "slow");
+                });
+
+                $(".BestSellProductarrowbtnRight").click(function () {
+                    $(".BestsellProductsSection").animate({
+                        scrollLeft: "+=250px" // Adjust the value as needed for the scroll distance
+                    }, "slow");
+                });
+            });
+
+
+
+        </script>
+        <script src="/Assets/JS/index.js"></script>
+        <script src="/Assets/JS/featured.js"></script>
+        <script src="/Assets/JS/bestsell.js"></script>
+        <script src="/Assets/JS/homelasttopsell.js"></script>
+        <script src="/Assets/JS/homelasttrending.js"></script>
+        <script src="/Assets/JS/homelastpopular.js"></script>
+        <script src="/Assets/JS/homelastlatest.js"></script>
+        <script src="/Assets/JS/top_sell_products.js"></script>
+        <script src="/Assets/JS/cart.js"></script>
+        <script src="/Assets/JS/product_details.js"></script>
+        <script src="/Assets/JS/cart_dropdown.js"></script>
+        <script src="/Assets/JS/search_product.js"></script>
+        <script src="/Assets/JS/category_product.js"></script>
+        <script src="/Assets/JS/wishlist.js"></script>
+        <script src="/Assets/JS/track.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+        <script src="/Assets/JS/cart_dropdown.js"></script>
+        <script src="/Assets/JS/mob_search.js"></script>
+        <script src="/Assets/JS/sidebar_icons.js"></script>
+        <script src="/Assets/JS/Animations.js"></script>
+        <script src="/Assets/JS/navbar.js"></script>
+        <script src="/Assets/JS/browse_category_dropdown.js"></script>
+        <script src="/Assets/JS/index.js"></script>
+
+</body>
+
+</html>

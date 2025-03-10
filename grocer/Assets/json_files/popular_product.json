@@ -1,0 +1,117 @@
+[
+    {
+        "id": "1",
+        "name": "Milk",
+        "price": 2.0,
+        "discountedPrice": 1.9,
+        "unit": "1Liter",
+        "sku": "DAIRY001",
+        "image": ["/Assets/Images/Products/Milk.png"],
+        "discount": 5,
+        "description": "Fresh and sweet milk.",
+        "detailedDescription": "Rich and creamy milk, perfect for drinking, cooking, or baking. Naturally sourced for freshness.",
+        "rating": 5,
+        "tags": ["Fresh", "Creamy", "Healthy"],
+        "sold_quantity": 20,
+        "total_quantity": 50,
+        "categoryName": "Dairy",
+        "nutrition": {
+            "calories": 42,
+            "protein": "3.4g",
+            "fats": "1g",
+            "carbohydrates": "5g"
+        }
+    },
+    {
+        "id": "2",
+        "name": "Chips",
+        "price": 4.5,
+        "discountedPrice": 4.05,
+        "unit": "200g",
+        "sku": "SNACKS001",
+        "image": ["/Assets/Images/Products/chips.png"],
+        "discount": 10,
+        "description": "Crispy chips.",
+        "detailedDescription": "Light and crispy chips, perfect for snacking or parties. Available in a variety of flavors.",
+        "rating": 4,
+        "tags": ["Crispy", "Tasty", "Convenient"],
+        "sold_quantity": 15,
+        "total_quantity": 40,
+        "categoryName": "Snacks",
+        "nutrition": {
+            "calories": 152,
+            "protein": "2g",
+            "fats": "10g",
+            "carbohydrates": "15g"
+        }
+    },
+    {
+        "id": "3",
+        "name": "Butter",
+        "price": 3.0,
+        "discountedPrice": 2.76,
+        "unit": "1kg",
+        "sku": "DAIRY002",
+        "image": ["/Assets/Images/Products/butter.png"],
+        "discount": 8,
+        "description": "Fresh and healthy butter.",
+        "detailedDescription": "Smooth and creamy butter, ideal for spreading, cooking, and baking. Made from high-quality ingredients.",
+        "rating": 4,
+        "tags": ["Smooth", "Creamy", "Healthy"],
+        "sold_quantity": 25,
+        "total_quantity": 50,
+        "categoryName": "Dairy",
+        "nutrition": {
+            "calories": 717,
+            "protein": "0.9g",
+            "fats": "81g",
+            "carbohydrates": "0.1g"
+        }
+    },
+    {
+        "id": "4",
+        "name": "Almonds",
+        "price": 3.0,
+        "discountedPrice": 2.76,
+        "unit": "1kg",
+        "sku": "NUTS001",
+        "image": ["/Assets/Images/Products/almonds.jpg"],
+        "discount": 8,
+        "description": "Fresh and organic almonds.",
+        "detailedDescription": "Crunchy and nutritious almonds, perfect for snacking, baking, or adding to desserts. High in protein and vitamins.",
+        "rating": 5,
+        "tags": ["Crunchy", "Organic", "Healthy"],
+        "sold_quantity": 40,
+        "total_quantity": 50,
+        "categoryName": "Nuts",
+        "nutrition": {
+            "calories": 576,
+            "protein": "21g",
+            "fats": "49g",
+            "carbohydrates": "22g"
+        }
+    },
+    {
+        "id": "5",
+        "name": "Juices",
+        "price": 10,
+        "discountedPrice": 9.2,
+        "unit": "2Liter",
+        "sku": "BEVERAGE001",
+        "image": ["Assets/Images/Products/beverages.webp"],
+        "discount": 8,
+        "description": "Fresh juices.",
+        "detailedDescription": "Refreshing and natural fruit juices, perfect for hydration and packed with vitamins. Available in multiple flavors.",
+        "rating": 4,
+        "tags": ["Refreshing", "Hydrating", "Natural"],
+        "sold_quantity": 5,
+        "total_quantity": 50,
+        "categoryName": "Beverages",
+        "nutrition": {
+            "calories": 54,
+            "protein": "0.7g",
+            "fats": "0.1g",
+            "carbohydrates": "13g"
+        }
+    }
+]

@@ -1,0 +1,157 @@
+[
+  {
+      "id": "1",
+      "name": "Milk",
+      "price": 10,
+      "discountedPrice": 9,
+      "sku": "DAIRY001",
+      "image": ["Assets/Images/Products/Milk.png"],
+      "description": "Fresh and Sweet Milk.",
+      "detailedDescription": "Rich and creamy milk, perfect for drinking, cooking, or baking. Naturally sourced for freshness.",
+      "rating": 5,
+      "categoryName": "Dairy",
+      "tags": ["Fresh", "Creamy", "Healthy"],
+      "nutrition": {
+          "calories": 42,
+          "protein": "3.4g",
+          "fats": "1g",
+          "carbohydrates": "5g"
+      }
+  },
+  {
+      "id": "2",
+      "name": "Cheese",
+      "price": 5,
+      "discountedPrice": 4.5,
+      "sku": "DAIRY002",
+      "image": ["Assets/Images/Products/cheese.png"],
+      "description": "Fresh and Organic Cheese.",
+      "detailedDescription": "Rich and creamy cheese, perfect for sandwiches, burgers, or as a topping. High in calcium and protein.",
+      "rating": 3,
+      "categoryName": "Dairy",
+      "tags": ["Creamy", "Organic", "Rich"],
+      "nutrition": {
+          "calories": 402,
+          "protein": "25g",
+          "fats": "33g",
+          "carbohydrates": "1.3g"
+      }
+  },
+  {
+      "id": "2",
+      "name": "Butter",
+      "price": 15,
+      "discountedPrice": 13.5,
+      "sku": "DAIRY003",
+      "image": ["Assets/Images/Products/butter.png"],
+      "description": "Fresh and Healthy Butter.",
+      "detailedDescription": "Smooth and creamy butter, ideal for spreading, cooking, and baking. Made from high-quality ingredients.",
+      "rating": 4,
+      "categoryName": "Dairy",
+      "tags": ["Smooth", "Creamy", "Healthy"],
+      "nutrition": {
+          "calories": 717,
+          "protein": "0.9g",
+          "fats": "81g",
+          "carbohydrates": "0.1g"
+      }
+  },
+  {
+      "id": "3",
+      "name": "Almonds",
+      "price": 5,
+      "discountedPrice": 4.25,
+      "sku": "NUT001",
+      "image": ["Assets/Images/Products/almonds.jpg"],
+      "description": "Fresh, Organic, Sweet Almonds.",
+      "detailedDescription": "Crunchy and nutritious almonds, perfect for snacking, baking, or adding to desserts. High in protein and vitamins.",
+      "rating": 3,
+      "categoryName": "Snacks",
+      "tags": ["Crunchy", "Healthy", "Organic"],
+      "nutrition": {
+          "calories": 576,
+          "protein": "21g",
+          "fats": "49g",
+          "carbohydrates": "22g"
+      }
+  },
+  {
+      "id": "4",
+      "name": "Orange",
+      "price": 3,
+      "discountedPrice": 2.85,
+      "sku": "FRU001",
+      "unit": "kg",
+      "image": ["Assets/Images/Products/Orange.png"],
+      "description": "Fresh Oranges.",
+      "detailedDescription": "Tangy and refreshing oranges, ideal for fresh juice or healthy snacks. High in vitamin C.",
+      "rating": 5,
+      "categoryName": "Fruits",
+      "tags": ["Tangy", "Juicy", "Vitamin C"],
+      "nutrition": {
+          "calories": 47,
+          "protein": "0.9g",
+          "fats": "0.1g",
+          "carbohydrates": "12g"
+      }
+  },
+  {
+      "id": "5",
+      "name": "Strawberry",
+      "price": 15,
+      "discountedPrice": 13.5,
+      "sku": "FRU002",
+      "image": ["Assets/Images/Products/Strawbery.png"],
+      "description": "Fresh and Sweet Strawberries.",
+      "detailedDescription": "Juicy and sweet strawberries, packed with antioxidants. Perfect for desserts, smoothies, or snacking.",
+      "rating": 3,
+      "categoryName": "Fruits",
+      "tags": ["Juicy", "Sweet", "Antioxidants"],
+      "nutrition": {
+          "calories": 33,
+          "protein": "0.7g",
+          "fats": "0.3g",
+          "carbohydrates": "8g"
+      }
+  },
+  {
+      "id": "4",
+      "name": "Red Capsicum",
+      "price": 4,
+      "discountedPrice": 3.4,
+      "sku": "VEG001",
+      "unit": "kg",
+      "image": ["/Assets/Images/Products/RedCapscium.webp"],
+      "description": "Bright and fresh red capsicum.",
+      "detailedDescription": "Crisp and flavorful, perfect for grilling, salads, or stir-fries. High in antioxidants.",
+      "rating": 5,
+      "categoryName": "Vegetables",
+      "tags": ["Juicy", "Colorful", "Healthy"],
+      "nutrition": {
+          "calories": 31,
+          "protein": "1g",
+          "fats": "0.3g",
+          "carbohydrates": "6g"
+      }
+  },
+  {
+      "id": "1",
+      "name": "Potato",
+      "price": 4,
+      "discountedPrice": 3.4,
+      "sku": "VEG002",
+      "unit": "kg",
+      "image": ["/Assets/Images/Products/Potatto.webp"],
+      "description": "Fresh potatoes.",
+      "detailedDescription": "Rich in nutrients, perfect for a variety of dishes such as fries, curries, or baked snacks.",
+      "rating": 5,
+      "categoryName": "Vegetables",
+      "tags": ["Nutritious", "Versatile", "Fresh"],
+      "nutrition": {
+          "calories": 77,
+          "protein": "2g",
+          "fats": "0.1g",
+          "carbohydrates": "17g"
+      }
+  }
+]

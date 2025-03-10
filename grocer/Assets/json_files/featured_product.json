@@ -1,0 +1,143 @@
+[
+    {
+        "id": "1",
+        "name": "Orange",
+        "price": 3,
+        "discountedPrice": 2.85,
+        "unit": "500g",
+        "unit": "500g",
+        "sku": "FRU001",
+        "image": ["Assets/Images/Products/Orange.png"],
+        "description": "Fresh Oranges.",
+        "detailedDescription": "Tangy and refreshing oranges, ideal for fresh juice or healthy snacks. High in vitamin C.",
+        "rating": 5,
+        "categoryName": "Fruits",
+        "tags": ["Tangy", "Juicy", "Vitamin C"],
+        "nutrition": {
+            "calories": 47,
+            "protein": "0.9g",
+            "fats": "0.1g",
+            "carbohydrates": "12g"
+        }
+    },
+    {
+        "id": "2",
+        "name": "Strawberry",
+        "price": 15,
+        "discountedPrice": 13.5,
+        "unit": "1kg",
+        "sku": "FRU002",
+        "image": ["Assets/Images/Products/Strawbery.png"],
+        "description": "Fresh Strawberry.",
+        "detailedDescription": "Sweet and juicy strawberries, great for desserts, smoothies, or snacking. High in antioxidants.",
+        "rating": 3,
+        "categoryName": "Fruits",
+        "tags": ["Juicy", "Sweet", "Antioxidants"],
+        "nutrition": {
+            "calories": 33,
+            "protein": "0.7g",
+            "fats": "0.3g",
+            "carbohydrates": "8g"
+        }
+    },
+    {
+        "id": "3",
+        "name": "Red Capsicum",
+        "price": 4,
+        "discountedPrice": 3.6,
+        "unit": "200g",
+        "sku": "VEG001",
+        "image": ["Assets/Images/Products/Red Capsicum.png"],
+        "description": "Fresh.",
+        "detailedDescription": "This vibrant red capsicum is full of flavor and ideal for salads, grilling, and stuffing. High in antioxidants.",
+        "rating": 5,
+        "categoryName": "Vegetables",
+        "tags": ["Juicy", "Antioxidant", "Colorful"],
+        "nutrition": {
+            "calories": 31,
+            "protein": "1g",
+            "fats": "0.3g",
+            "carbohydrates": "6g"
+        }
+    },
+    {
+        "id": "4",
+        "name": "Potato",
+        "price": 2,
+        "discountedPrice": 1.8,
+        "unit": "1kg",
+        "sku": "VEG002",
+        "image": ["Assets/Images/Products/Potatto.png"],
+        "description": "Fresh.",
+        "detailedDescription": "These potatoes are sourced from local farms and are rich in nutrients, making them ideal for a variety of dishes.",
+        "rating": 5,
+        "categoryName": "Vegetables",
+        "tags": ["Fresh", "Healthy", "Organic"],
+        "nutrition": {
+            "calories": 77,
+            "protein": "2g",
+            "fats": "0.1g",
+            "carbohydrates": "17g"
+        }
+    },
+    {
+        "id": "5",
+        "name": "Peach",
+        "price": 5,
+        "discountedPrice": 4.5,
+        "unit": "250g",
+        "sku": "FRU003",
+        "image": ["Assets/Images/Products/Peach.png"],
+        "description": "Fresh and juicy.",
+        "detailedDescription": "These peaches are fresh, sweet, and juicy, making them perfect for healthy snacks or desserts.",
+        "rating": 3,
+        "categoryName": "Fruits",
+        "tags": ["Juicy", "Sweet", "Healthy"],
+        "nutrition": {
+            "calories": 39,
+            "protein": "0.9g",
+            "fats": "0.3g",
+            "carbohydrates": "10g"
+        }
+    },
+    {
+        "id": "6",
+        "name": "Cauliflower",
+        "price": 2,
+        "discountedPrice": 1.8,
+        "unit": "350g",
+        "sku": "VEG003",
+        "image": ["Assets/Images/Products/Cauliflower.jpg"],
+        "description": "Fresh.",
+        "detailedDescription": "This cauliflower is locally sourced and ideal for stir-fries, soups, or as a side dish. Crisp and full of flavor.",
+        "rating": 3,
+        "categoryName": "Vegetables",
+        "tags": ["Nutritious", "Versatile", "Fresh"],
+        "nutrition": {
+            "calories": 25,
+            "protein": "1.9g",
+            "fats": "0.3g",
+            "carbohydrates": "5g"
+        }
+    },
+    {
+        "id": "7",
+        "name": "Chips",
+        "price": 10,
+        "discountedPrice": 9,
+        "unit": "130g",
+        "sku": "SNK001",
+        "image": ["Assets/Images/Products/chips.png"],
+        "description": "Crispy Chips.",
+        "detailedDescription": "Light and crispy chips, perfect for snacking or parties. Available in a variety of flavors.",
+        "rating": 4,
+        "categoryName": "Snacks",
+        "tags": ["Crispy", "Tasty", "Snack"],
+        "nutrition": {
+            "calories": 152,
+            "protein": "2g",
+            "fats": "10g",
+            "carbohydrates": "15g"
+        }
+    }
+]
