@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <meta name="description"
+        content="Grocer offers a wide variety of groceries including fresh produce, dairy products, meats, and household essentials. Shop online and get everything you need delivered to your doorstep." />
+    <meta name="keywords"
+        content="grocery, online grocery, fresh produce, dairy products, meats, household essentials, Grocer" />
+    <meta name="author" content="Software System" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Grocer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:title" content="Grocer - Your One-Stop Grocery Shop" />
+    <meta property="og:description"
+        content="Grocer offers a wide variety of groceries including fresh produce, dairy products, meats, and household essentials. Shop online and get everything you need delivered to your doorstep." />
+    <meta property="og:image"
+        content="https://grocer.softwaresystems.us/storage/app/public/restaurant/2024-05-30-665896300dbbd.png" />
+    <meta property="og:url" content="https://groceapp.softwaresystems.us/" />
+    <meta property="og:type" content="website" />
+    <link rel="shortcut icon" href="https://grocer.softwaresystems.us/storage/app/public/restaurant/{{ $favicon }}"
+        type="image/x-icon" />
+    <title>About Us</title>
+    <!-- {{-- Quicksand --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
+    <!-- {{-- Poppins --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Mulish --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Roboto --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Inter --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Bootstrap 5 --}} -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <!-- {{-- Bootstrap 5 Icons --}} -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- {{-- Font Awesome Icons CDN --}} -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- {{-- NavBar Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Navbar.css" />
+    <!-- {{-- Footer Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Footer.css">
+    <!-- {{-- Bread Crumbs Style  --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Components/breadCrumbs.css">
+    <!-- {{-- About Us Page Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/AboutUs.css">
+
+    <!-- {{-- Our Values Card Style  --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Components/OurValuesCard.css">
+    <link rel="stylesheet" href="Assets/CSS/cart_dropdown.css">
+    <link rel="stylesheet" href="Assets/CSS/cart.css">
+    <link rel="stylesheet" href="Assets/CSS/Home.css">
+    <link rel="stylesheet" href="/Assets/CSS/navbar_side_icons.css">
+    <link rel="stylesheet" href="/Assets/CSS/Animations.css">
+    <!-- {{-- Wishlist Page Css Custom Style --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/wishlist.css">
+    <!-- {{-- SubNav Home Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/subnav_home.css">
+    <link rel="stylesheet" href="/Assets/CSS/quick-view.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="Assets/Images/Banner/Favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- Header dynamically added from index.js file -->
+    <header></header>
+
+    <!--********* BREADCRUMBS *********-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="/" wire:navigate>Home</a></li>
+                <li><a href="" wire:navigate>About Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--********* BREADCRUMBS *********-->
+    <!-- {{-- **************Main Heading**************** --}} -->
+    <div class="container">
+        <h1 class="aboutus_main_heading">Explore Our Range of Fresh and Flavorful Goods</h1>
+    </div>
+    <!-- {{-- **************Hero**************** --}} -->
+    <div class="aboutus_hero_container">
+        <div class="container hero_container">
+            <div class="aboutus_hero_description">
+                <h1>About Grocer</h1>
+                <p>Welcome to Grocer where freshness meets convenience
+                    As passionate purveyors of quality groceries, we are
+                    dedicated to providing you with an unparalleled shopping
+                    experience. From farm-fresh produce to artisanal bakery
+                    items, we meticulously curate our selection to ensure that
+                    every item meets our high standards of quality and taste.
+                    With a commitment to supporting local growers producers
+                    we strive to bring you the best of what our community offer.</p>
+            </div>
+            <div class="aboutus_hero_fruit_image">
+                <img src="/Assets/Images/Banner/HeroHomeImage.webp" alt="Fruits&Vegitables">
+            </div>
+        </div>
+    </div>
+    <!-- {{-- **************Our values**************** --}} -->
+    <div class="container">
+        <h1 class="aboutus_our_values_main_heading">Our values</h1>
+        <div class="aboutus_our_values_card_main_container">
+            <div class="our_values_main_box" style="background-color: #ffffff;">
+                <h1 class="{{ $background_color == '#53B175' ? 'text-light' : '' }}">Our Mission</h1>
+                <p>At Fresh Harvest our mission is to nourish communities with quality produce & outstanding service
+                    fostering sustainable growth and well-being.</p>
+            </div>
+            <div class="our_values_main_box border-0 text-light" style="background-color: #53B175;">
+                <h1 class="text-light">Our Mission</h1>
+                <p>At Fresh Harvest our mission is to nourish communities with quality produce & outstanding service
+                    fostering sustainable growth and well-being.</p>
+            </div>
+            <div class="our_values_main_box" style="background-color: #ffffff;">
+                <h1 class="{{ $background_color == '#53B175' ? 'text-light' : '' }}">Our Mission</h1>
+                <p>At Fresh Harvest our mission is to nourish communities with quality produce & outstanding service
+                    fostering sustainable growth and well-being.</p>
+            </div>
+        </div>
+    </div>
+    <!-- {{-- **************Why Choose Grocer?**************** --}} -->
+    <div class="container">
+        <h1 class="aboutus_why_choose_grocer_main_heading">Why Choose Grocer?</h1>
+        <div class="choosemain_imageand_description">
+            <div class="choosemain_image">
+                <img src="/Assets/Images/Icons/WhyChooseGrocer.webp" loading="lazy" alt="Why_Choose_Grocer">
+            </div>
+            <div class="choosemain_description">
+                <p>"Choose Fresh Fare for a seamless fusion of quality,
+                    convenience, and customer satisfaction. With an
+                    extensive array of fresh produce and essential
+                    groceries, we provide a one-stop shop for all your
+                    kitchen needs. Our dedicated team brings years of
+                    industry expertise and a customer-centric approach
+                    to every interaction, ensuring we cater to your unique
+                    preferences and exceed expectations. By leveraging
+                    innovative sourcing methods and efficient logistics,
+                    we optimize your shopping experience, streamline
+                    operations, and foster culinary delight. With a proven
+                    track record of satisfied customers, Fresh Fare is your
+                    trusted partner for elevating your culinary journey.
+                    Join us and taste the difference in every bite."</p>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <!--********* FOOTER *********-->
+    
+    <!-- Footer dynamically added from index.js file -->
+    <footer></footer>
+
+    <!--********* FOOTER *********-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script>
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Hide all content
+                document.querySelectorAll('.content > div').forEach(content => {
+                    content.style.display = 'none';
+                });
+
+                // Show the selected content
+                const contentId = `content-${item.id}`;
+                const contentToShow = document.getElementById(contentId);
+                if (contentToShow) {
+                    contentToShow.style.display = 'block';
+                }
+
+                // Update menu item color
+                menuItems.forEach(menuItem => {
+                    menuItem.classList.remove('active');
+                });
+                item.classList.add('active');
+            });
+        });
+
+        // Set initial state
+        const initialMenuItem = document.getElementById('item1'); // Assuming the first menu item has id 'item1'
+        if (initialMenuItem) {
+            initialMenuItem.click(); // Simulate click on the first menu item to show its content
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".FeaturedBtnLeft").click(function () {
+                $(".WebViewCarouselOneProductDetails").animate({
+                    scrollLeft: "-=250px" // Adjust the value as needed for the scroll distance
+                }, "slow");
+            });
+
+            $(".FeaturedBtnRight").click(function () {
+                $(".WebViewCarouselOneProductDetails").animate({
+                    scrollLeft: "+=250px" // Adjust the value as needed for the scroll distance
+                }, "slow");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".CategoryBtnLeft").click(function () {
+                $(".WebViewCategoriesCardOneProductDetails").animate({
+                    scrollLeft: "-=250px" // Adjust the value as needed for the scroll distance
+                }, "slow");
+            });
+
+            $(".CategoryBtnRight").click(function () {
+                $(".WebViewCategoriesCardOneProductDetails").animate({
+                    scrollLeft: "+=250px" // Adjust the value as needed for the scroll distance
+                }, "slow");
+            });
+        });
+    </script>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="/Assets/JS/index.js"></script>
+    <script src="/Assets/JS/featured.js"></script>
+    <script src="/Assets/JS/bestsell.js"></script>
+    <script src="/Assets/JS/homelasttopsell.js"></script>
+    <script src="/Assets/JS/homelasttrending.js"></script>
+    <script src="/Assets/JS/homelastpopular.js"></script>
+    <script src="/Assets/JS/homelastlatest.js"></script>
+    <script src="/Assets/JS/top_sell_products.js"></script>
+    <script src="/Assets/JS/cart.js"></script>
+    <script src="/Assets/JS/product_details.js"></script>
+    <script src="/Assets/JS/cart_dropdown.js"></script>
+    <script src="/Assets/JS/search_product.js"></script>
+    <script src="/Assets/JS/category_product.js"></script>
+    <script src="/Assets/JS/wishlist.js"></script>
+    <script src="/Assets/JS/mob_search.js"></script>
+    <script src="/Assets/JS/sidebar_icons.js"></script>
+    <script src="/Assets/JS/Animations.js"></script>
+    <script src="/Assets/JS/browse_category_dropdown.js"></script>
+    <script src="/Assets/JS/navbar.js"></script>
+    <script src="/Assets/JS/index.js"></script>
+</body>
+
+</html>

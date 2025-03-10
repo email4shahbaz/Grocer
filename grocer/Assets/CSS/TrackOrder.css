@@ -1,0 +1,259 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #53B175;
+}
+
+body {
+    min-width: 320px;
+    font-family: Quicksand;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style-type: none;
+}
+.crum {
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.TracKOrderBreadCrumItem{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: inter;
+    color: #667085;
+}
+.crum h1 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #667085;
+}
+
+.OrderNumberAndBtns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order_id_heading {
+    font-size: 30px;
+    font-weight: 600;
+    color: #344054;
+    font-family: inter;
+}
+.OrderStatusHeading{
+    text-align: center;
+    font-size: 55px;
+    font-weight: 700;
+    font-family: inter;
+    color: var(--green);
+}
+.InvoiceBtn {
+    border: none;
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    padding: 10px 20px;
+    background-color: white;
+}
+
+.trackingBtn {
+    border: none;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    background-color: #00B207;
+}
+
+.order_time_date {
+    font-size: 16px;
+    color: #667085;
+    font-weight: 400;
+    margin: 0px;
+    font-family: inter;
+}
+
+.estimated_deleivery {
+    color: #12B76A;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0px;
+    font-family: inter;
+}
+
+.track_time_container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.Item_name {
+    font-size: 24px;
+    font-weight: 400;
+    color: #344054;
+    font-family: inter;
+    margin: 0px;
+}
+
+.tags_Div {
+    display: flex;
+}
+
+.track_product_item {
+    margin-top: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Item_tags {
+    font-size: 16px;
+    font-weight: 400;
+    color: #667085;
+    font-family: inter;
+    margin: 0px;
+}
+
+.track_product_img_box {
+    border: 1px solid #D0D5DD;
+    border-radius: 17px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 110px;
+    background-color: #F9FAFB;
+}
+
+.ProductNameQTYOthersTrack {
+    width: 80%;
+}
+
+.ProductPriceTrack {
+    width: 10%;
+}
+
+.track_product_price {
+    text-align: end;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1D2939;
+    font-family: inter;
+    margin: 0px;
+}
+
+.track_product_QTY {
+    font-size: 16px;
+    font-weight: 400;
+    color: #667085;
+    text-align: end;
+}
+
+.tracking_payment_heading {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: inter;
+    color: #000000;
+}
+
+.visa_1 {
+    color: #667085;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+.visa_2 {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: inter;
+    color: #667085;
+}
+
+.Tracking_address {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    font-family: inter;
+}
+
+@media screen and (max-width:500px) {
+    .crum {
+        margin-top: 0px;
+        font-size: 14px;
+    }
+
+    .order_id_heading {
+        font-size: 20px;
+    }
+
+    .order_time_date {
+        font-size: 10px;
+    }
+
+    .estimated_deleivery {
+        font-size: 10px;
+    }
+
+    .slashinOrderTime {
+        font-size: 10px;
+    }
+
+    .InvoiceBtn,
+    .trackingBtn {
+        display: none;
+    }
+
+    .track_product_img_box {
+        border: 1px solid rgb(223, 220, 220);
+        border-radius: 10px;
+        padding: 5px;
+        width: 25%;
+    }
+
+    .Item_name {
+        font-size: 20px;
+    }
+
+    .Item_tags {
+        font-size: 10px;
+    }
+
+    .ProductNameQTYOthersTrack {
+        width: 50%;
+    }
+
+    .track_product_price {
+        font-size: 16px;
+    }
+
+    .track_product_QTY {
+        font-size: 10px;
+    }
+
+    .ProductPriceTrack {
+        width: 20%;
+    }
+    .tracking_payment_heading {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .Tracking_address {
+        font-size: 15px;
+        font-weight: 500;
+        color: #667085;
+    }
+}

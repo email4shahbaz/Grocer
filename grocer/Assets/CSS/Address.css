@@ -1,0 +1,136 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #53B175;
+    --hovergreen: #3a975c;
+}
+.AddressHeadingandBTNMain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0px;
+}
+.Address_main_heading {
+    font-size: 35px;
+    color: black;
+    font-weight: 400;
+    font-family: 'Roboto';
+}
+
+.addressEditBTN {
+    border: none;
+    background-color: var(--green);
+    color: white;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 5px 20px;
+}
+.tablemainAddress{
+    overflow-x: hidden;
+}
+.addressDeleteBTN {
+    border: none;
+    background-color: #DF4A4A;
+    color: white;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 5px 15px;
+}
+
+.addressEdit {
+    border: none;
+    background-color: var(--green);
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 5px 20px;
+}
+.tableheadingAddress{
+    font-size: 12px;
+    font-weight: 600;
+    font-family: Roboto;
+    margin: 0px;
+    color: #35465B;
+}
+.TableContentHeadingAddress{
+    font-size: 10px;
+    font-family: Roboto;
+    font-weight: 400;
+    color: #333333;
+}
+.address_last_legal {
+    color: #CCCCCC;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: end;
+    margin: 0px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.address_table_ {
+    border-collapse: collapse;
+    padding: 20px;
+}
+
+.address_table_ td {
+    border-bottom: 1px solid #ddd;
+    /* Border on every row */
+    padding: 20px 60px;
+    white-space: nowrap;
+}
+.Addressinp{
+    width: 100%;
+    border: none;
+    border: 1px solid #A0A0A0;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.Addressinp:focus{
+    outline: none;
+}
+.AddressLabel{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Quicksand;
+}
+.AddressModalHeading{
+    font-size: 26px;
+    font-weight: 600;
+    color: #4E4E4E;
+    text-align: center;
+    margin-top: 15px;
+}
+.AddressModalForm{
+    /* width: 70%; */
+    margin: auto;
+}
+.AddresssubmitBTN{
+    border: none;
+    background-color: #D9D9D9;
+    padding: 5px 20px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.addressCustomAlert{
+    position: fixed;
+    top: 77px;
+    right: 10px;
+    width: 30%;
+    font-size: 12px;
+    font-family: 'Quicksand';
+    font-weight: 900;
+    z-index: 10;
+    text-align: justify;
+}

@@ -1,0 +1,357 @@
+[
+    {
+        "id": "1",
+        "name": "Apple",
+        "price": 10,
+        "discountedPrice": 9,
+        "sku": "FRU001",
+        "image": "Assets/Images/Products/Apple.png",
+        "description": "Fresh and juicy apples.",
+        "detailedDescription": "Crisp and sweet apples, perfect for snacking, baking, or juicing. Packed with nutrients.",
+        "rating": 4,
+        "tags": ["Fresh", "Juicy", "Healthy"],
+        "categoryName": "Fruits",
+        "nutrition": {
+            "calories": 52,
+            "protein": "0.3g",
+            "fats": "0.2g",
+            "carbohydrates": "14g"
+        }
+    },
+    {
+        "id": "2",
+        "name": "Banana",
+        "price": 5,
+        "discountedPrice": 4.75,
+        "sku": "FRU002",
+        "image": "Assets/Images/Products/banana.png",
+        "description": "Fresh Bananas.",
+        "detailedDescription": "Naturally sweet bananas, ideal for smoothies, snacking, or baking. Rich in potassium.",
+        "rating": 3,
+        "tags": ["Sweet", "Smoothies", "Potassium"],
+        "categoryName": "Fruits",
+        "nutrition": {
+            "calories": 96,
+            "protein": "1.3g",
+            "fats": "0.3g",
+            "carbohydrates": "27g"
+        }
+    },
+    {
+        "id": "3",
+        "name": "Peach",
+        "price": 5,
+        "discountedPrice": 4.6,
+        "sku": "FRU003",
+        "image": "Assets/Images/Products/Peach.png",
+        "description": "Fresh and juicy.",
+        "detailedDescription": "Juicy and sweet peaches, perfect for healthy snacks, desserts, or smoothies.",
+        "rating": 3,
+        "tags": ["Juicy", "Sweet", "Healthy"],
+        "categoryName": "Fruits",
+        "nutrition": {
+            "calories": 39,
+            "protein": "0.9g",
+            "fats": "0.3g",
+            "carbohydrates": "10g"
+        }
+    },
+    {
+        "id": "4",
+        "name": "Orange",
+        "price": 3,
+        "discountedPrice": 2.7,
+        "sku": "FRU004",
+        "image": "Assets/Images/Products/Orange.png",
+        "description": "Fresh Oranges.",
+        "detailedDescription": "Tangy and refreshing oranges, ideal for fresh juice or healthy snacks. High in vitamin C.",
+        "rating": 5,
+        "tags": ["Tangy", "Juicy", "Vitamin C"],
+        "categoryName": "Fruits",
+        "nutrition": {
+            "calories": 47,
+            "protein": "0.9g",
+            "fats": "0.1g",
+            "carbohydrates": "12g"
+        }
+    },
+    {
+        "id": "5",
+        "name": "Strawberry",
+        "price": 15,
+        "discountedPrice": 13.5,
+        "sku": "FRU005",
+        "image": "Assets/Images/Products/Strawbery.png",
+        "description": "Fresh Strawberry.",
+        "detailedDescription": "Sweet and juicy strawberries, great for desserts, smoothies, or snacking. High in antioxidants.",
+        "rating": 3,
+        "tags": ["Juicy", "Sweet", "Antioxidants"],
+        "categoryName": "Fruits",
+        "nutrition": {
+            "calories": 33,
+            "protein": "0.7g",
+            "fats": "0.3g",
+            "carbohydrates": "8g"
+        }
+    },
+    {
+        "id": "6",
+        "name": "Guava",
+        "price": 6,
+        "discountedPrice": 5.7,
+        "sku": "FRU006",
+        "image": "Assets/Images/Products/gava.png",
+        "description": "Fresh and good.",
+        "detailedDescription": "Rich in vitamin C, these guavas are perfect for a refreshing snack or healthy addition to meals.",
+        "rating": 2,
+        "tags": ["Vitamin C", "Healthy", "Fresh"],
+        "categoryName": "Fruits",
+        "nutrition": {
+            "calories": 68,
+            "protein": "2.6g",
+            "fats": "1g",
+            "carbohydrates": "14g"
+        }
+    },
+    {
+        "id": "7",
+        "name": "Cherries",
+        "price": 15,
+        "discountedPrice": 13.5,
+        "sku": "FRU007",
+        "image": "Assets/Images/Products/cherries.png",
+        "description": "Fresh and good quality cherries.",
+        "detailedDescription": "Juicy and sweet cherries, perfect for snacking, baking, or desserts. Packed with antioxidants.",
+        "rating": 5,
+        "tags": ["Juicy", "Sweet", "Antioxidants"],
+        "categoryName": "Fruits",
+        "nutrition": {
+            "calories": 50,
+            "protein": "1g",
+            "fats": "0.3g",
+            "carbohydrates": "12g"
+        }
+    },
+
+    {
+        "id": "8",
+        "name": "Avocado",
+        "price": 15,
+        "discountedPrice": 13.5,
+        "sku": "FRU008",
+        "image": "Assets/Images/Products/Avocado.png",
+        "description": "Fresh and good quality avocado.",
+        "detailedDescription": "Juicy and sweet cherries, perfect for snacking, baking, or desserts. Packed with antioxidants.",
+        "rating": 5,
+        "tags": ["Juicy", "Sweet", "Antioxidants"],
+        "categoryName": "Fruits",
+        "nutrition": {
+            "calories": 50,
+            "protein": "1g",
+            "fats": "0.3g",
+            "carbohydrates": "12g"
+        }
+
+    },
+
+    {
+        "id": "9",
+        "name": "Figs",
+        "price": 15,
+        "discountedPrice": 13.5,
+        "sku": "FRU009",
+        "image": "Assets/Images/Products/Figs.png",
+        "description": "Fresh and good quality figs.",
+        "detailedDescription": "Juicy and sweet cherries, perfect for snacking, baking, or desserts. Packed with antioxidants.",
+        "rating": 5,
+        "tags": ["Juicy", "Sweet", "Antioxidants"],
+        "categoryName": "Fruits",
+        "nutrition": {
+            "calories": 50,
+            "protein": "1g",
+            "fats": "0.3g",
+            "carbohydrates": "12g"
+        }
+
+    },
+
+    {
+        "id": "10",
+        "name": "Apple",
+        "price": 10,
+        "discountedPrice": 9,
+        "sku": "FRU010",
+        "image": "Assets/Images/Products/Apple.png",
+        "description": "Fresh and juicy apples.",
+        "detailedDescription": "Crisp and sweet apples, perfect for snacking, baking, or juicing. Packed with nutrients.",
+        "rating": 4,
+        "tags": ["Fresh", "Juicy", "Healthy"],
+        "categoryName": "Fruits",
+        "nutrition": {
+            "calories": 52,
+            "protein": "0.3g",
+            "fats": "0.2g",
+            "carbohydrates": "14g"
+        }
+    },
+    {
+        "id": "11",
+        "name": "Banana",
+        "price": 5,
+        "discountedPrice": 4.75,
+        "sku": "FRU011",
+        "image": "Assets/Images/Products/banana.png",
+        "description": "Fresh Bananas.",
+        "detailedDescription": "Naturally sweet bananas, ideal for smoothies, snacking, or baking. Rich in potassium.",
+        "rating": 3,
+        "tags": ["Sweet", "Smoothies", "Potassium"],
+        "categoryName": "Fruits",
+        "nutrition": {
+            "calories": 96,
+            "protein": "1.3g",
+            "fats": "0.3g",
+            "carbohydrates": "27g"
+        }
+    },
+    {
+        "id": "12",
+        "name": "Peach",
+        "price": 5,
+        "discountedPrice": 4.6,
+        "sku": "FRU012",
+        "image": "Assets/Images/Products/Peach.png",
+        "description": "Fresh and juicy.",
+        "detailedDescription": "Juicy and sweet peaches, perfect for healthy snacks, desserts, or smoothies.",
+        "rating": 3,
+        "tags": ["Juicy", "Sweet", "Healthy"],
+        "categoryName": "Fruits",
+        "nutrition": {
+            "calories": 39,
+            "protein": "0.9g",
+            "fats": "0.3g",
+            "carbohydrates": "10g"
+        }
+    },
+
+    {
+        "id": "13",
+        "name": "Orange",
+        "price": 3,
+        "discountedPrice": 2.7,
+        "sku": "FRU013",
+        "image": "Assets/Images/Products/Orange.png",
+        "description": "Fresh Oranges.",
+        "detailedDescription": "Tangy and refreshing oranges, ideal for fresh juice or healthy snacks. High in vitamin C.",
+        "rating": 5,
+        "tags": ["Tangy", "Juicy", "Vitamin C"],
+        "categoryName": "Fruits",
+        "nutrition": {
+            "calories": 47,
+            "protein": "0.9g",
+            "fats": "0.1g",
+            "carbohydrates": "12g"
+        }
+    },
+    {
+        "id": "14",
+        "name": "Strawberry",
+        "price": 15,
+        "discountedPrice": 13.5,
+        "sku": "FRU014",
+        "image": "Assets/Images/Products/Strawbery.png",
+        "description": "Fresh Strawberry.",
+        "detailedDescription": "Sweet and juicy strawberries, great for desserts, smoothies, or snacking. High in antioxidants.",
+        "rating": 3,
+        "tags": ["Juicy", "Sweet", "Antioxidants"],
+        "categoryName": "Fruits",
+        "nutrition": {
+            "calories": 33,
+            "protein": "0.7g",
+            "fats": "0.3g",
+            "carbohydrates": "8g"
+        }
+    },
+    {
+        "id": "15",
+        "name": "Guava",
+        "price": 6,
+        "discountedPrice": 5.7,
+        "sku": "FRU015",
+        "image": "Assets/Images/Products/gava.png",
+        "description": "Fresh and good.",
+        "detailedDescription": "Rich in vitamin C, these guavas are perfect for a refreshing snack or healthy addition to meals.",
+        "rating": 2,
+        "tags": ["Vitamin C", "Healthy", "Fresh"],
+        "categoryName": "Fruits",
+        "nutrition": {
+            "calories": 68,
+            "protein": "2.6g",
+            "fats": "1g",
+            "carbohydrates": "14g"
+        }
+    },
+
+    {
+        "id": "16",
+        "name": "Cherries",
+        "price": 15,
+        "discountedPrice": 13.5,
+        "sku": "FRU016",
+        "image": "Assets/Images/Products/cherries.png",
+        "description": "Fresh and good quality cherries.",
+        "detailedDescription": "Juicy and sweet cherries, perfect for snacking, baking, or desserts. Packed with antioxidants.",
+        "rating": 5,
+        "tags": ["Juicy", "Sweet", "Antioxidants"],
+        "categoryName": "Fruits",
+        "nutrition": {
+            "calories": 50,
+            "protein": "1g",
+            "fats": "0.3g",
+            "carbohydrates": "12g"
+        }
+    },
+
+    {
+        "id": "17",
+        "name": "Avocado",
+        "price": 15,
+        "discountedPrice": 13.5,
+        "sku": "FRU0017",
+        "image": "Assets/Images/Products/Avocado.png",
+        "description": "Fresh and good quality avocado.",
+        "detailedDescription": "Juicy and sweet cherries, perfect for snacking, baking, or desserts. Packed with antioxidants.",
+        "rating": 5,
+        "tags": ["Juicy", "Sweet", "Antioxidants"],
+        "categoryName": "Fruits",
+        "nutrition": {
+            "calories": 50,
+            "protein": "1g",
+            "fats": "0.3g",
+            "carbohydrates": "12g"
+        }
+
+    },
+
+    {
+        "id": "18",
+        "name": "Figs",
+        "price": 18,
+        "discountedPrice": 13.5,
+        "sku": "FRU0018",
+        "image": "Assets/Images/Products/Figs.png",
+        "description": "Fresh and good quality figs.",
+        "detailedDescription": "Juicy and sweet cherries, perfect for snacking, baking, or desserts. Packed with antioxidants.",
+        "rating": 5,
+        "tags": ["Juicy", "Sweet", "Antioxidants"],
+        "categoryName": "Fruits",
+        "nutrition": {
+            "calories": 50,
+            "protein": "1g",
+            "fats": "0.3g",
+            "carbohydrates": "12g"
+        }
+
+    }
+
+    
+]

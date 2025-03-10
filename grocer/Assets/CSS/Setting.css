@@ -1,0 +1,326 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #53B175;
+}
+
+body {
+    min-width: 320px;
+    font-family: Quicksand;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style-type: none;
+}
+
+.MainSettingContainer {
+    display: flex;
+    gap: 20px;
+    margin: 0px;
+    padding: 0px;
+}
+.error{
+    color: red;
+    font-size: 12px;
+}
+.UpdateBTN{
+    border: none;
+    color: white;
+    padding: 10px 50px;
+    border-radius: 10px;
+    margin-top: 25px;
+    background-color: var(--green);
+font-weight: bolder;
+}
+
+.UpdateBTN:hover{
+    
+    background-color: #62b681;
+
+}
+.SettingAlert{
+    position: fixed;
+    top: 77px;
+    right: 10px;
+    width: 30%;
+    font-size: 12px;
+    font-family: 'Quicksand';
+    font-weight: 900;
+    z-index: 10;
+    text-align: justify;
+}
+.MainContaineruserInfo {
+    width: 82%;
+    
+}
+
+.user_Img_name {
+    text-align: center;
+}
+.NameAndEmailAlert{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30%;
+}
+.image_uploadBTN{
+    background-color: #53B175;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    border-radius: 3px;
+    color: white;
+    margin-top: 10px;
+    border: none;
+}
+
+/* .user_Img_name img {
+    border: 2px solid gray;
+    border-radius: 50%;
+} */
+
+.user_Img_name h2 {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Inter';
+    color: #333333;
+}
+
+.user_Img_name p {
+    font-size: 18px;
+    color: var(--green);
+    font-weight: 300;
+    font-family: 'Inter';
+}
+
+
+
+.setting_main_heading {
+    font-size: 53px;
+    color: #e2e1e1;
+    font-weight: 700;
+    font-family: 'Inter';
+}
+
+.setting_inp_label {
+    font-size: 16px;
+    color: black;
+    font-weight: bolder;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    font-family: 'Quicksand';
+}
+
+.setting_inp {
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+    outline: none;
+}
+
+.setting_form_container {
+    /* width: 70%; */
+    
+}
+
+.info_settings {
+    background-color: white;
+    border-radius: 20px;
+    /* padding: 20px; */
+}
+
+.info_email_inp {
+    border: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-weight: 300;
+    font-family: 'Quicksand';
+    color: #000000;
+}
+
+.InfoEmailAndX {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.downloadinfo_button {
+    border: none;
+    color: var(--green);
+    background-color: white;
+    margin: auto;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    /* padding: 20px; */
+    font-family: 'Helvetica Neue';
+}
+
+.info_email_setting {
+    font-size: 18px;
+    margin: 0px;
+    padding: 10px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-family: 'Helvetiva Neue';
+    color: #333333;
+}
+
+.SettingDebitBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.BoxPartitionHR {
+    color: rgb(189, 184, 184);
+}
+
+.balance_setting {
+    color: var(--green);
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0px;
+    padding: 20px;
+    font-family: 'Inter';
+}
+
+.SettingBalanceMainBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.file-label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+#file-input {
+    display: none;
+}
+
+#preview-image {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    outline: 3px solid #ccc;
+    outline-offset: 2px;
+    transition: all 0.2s ease-in-out;
+    margin: auto;
+}
+
+#file-input:hover+#preview-image {
+    outline-color: #999;
+    /* Change border color on hover */
+}
+
+#file-input:focus+#preview-image {
+    border-color: #00B207;
+    /* Change border color on focus */
+}
+
+
+
+@media screen and (max-width:991px) {
+    .ImageNameEmailMainTop {
+        display: none;
+    }
+
+    .MainContaineruserInfo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       
+        width: 100%;
+        justify-content: center;
+        /* background-color: #f3f3f3; */
+    }
+
+    .info_settings{
+        margin-bottom: 0px;
+    }
+
+
+    .MainContaineruserInfo br{
+            display: none;
+    }
+
+    .setting_main_heading {
+        font-size: 40px;
+        color: #000000;
+        margin-left: 40px;
+    }
+
+    .setting_form_container {
+        width: 100%;
+    }
+
+    .container-fluid {
+        padding: 0px;
+        width: 90%;
+}
+
+}
+
+@media screen and (max-width:470px) {
+    .ImageNameEmailMainTop {
+        display: none;
+    }
+
+    .MainContaineruserInfo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       
+        width: 100%;
+        justify-content: center;
+        /* background-color: #f3f3f3; */
+    }
+
+    .info_settings{
+        margin-bottom: 0px;
+    }
+
+
+    .MainContaineruserInfo br{
+            display: none;
+    }
+
+    .setting_main_heading {
+        font-size: 40px;
+        color: #000000;
+        margin-left: 25px;
+    }
+
+    .setting_form_container {
+        width: 100%;
+    }
+
+    .container-fluid {
+        padding: 0px;
+        width: 90%;
+}
+
+}
