@@ -20,7 +20,7 @@
 .logo_main_image img {
     width: 134px;
     /* height: 38px; */
-    margin-left: 12px;
+ /* margin-left: 12px; */
 }
 
 #searchDropdown {
@@ -933,8 +933,8 @@
 
 
 .main_navbar>.container {
-    justify-content: flex-start !important;
-    gap: 54px;
+    justify-content: space-between !important;
+    gap: 80px;
 }
 .home_page_nav_two {
     padding: 10.5px 0;
@@ -944,7 +944,7 @@
 .homeSubNavBarLayout {
     display: flex;
     align-items: center;
-    justify-content: flex-start !important;
+    /* justify-content: flex-start !important; */
     gap: 90px;
     /* justify-content: space-between; */
     padding: 10px inherit;
