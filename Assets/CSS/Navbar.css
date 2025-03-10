@@ -641,6 +641,7 @@
 
     .profile_image {
         margin-left: 0px;
+        display: none !important;
     }
 
     .mobile_cart_profile {
@@ -680,6 +681,20 @@
 
     .main_navbar {
         padding-bottom: 0px !important;
+    }
+
+    .main_navbar>.container{
+        gap: 500px;
+    }
+
+
+    .logo_main_image{
+        display:flex !important;
+        gap:10px;
+    }
+
+    .logo_main_image img{
+        width:100px;
     }
 
     .searchButtonCate {
