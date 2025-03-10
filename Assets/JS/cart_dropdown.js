@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const cartDrawerFooter = document.querySelector("#cartDrawer .cart-drawer-footer");
         const cartTotalElement = document.querySelector(".mycartCustomHeading2");
 
-        cartDrawerBody.innerHTML = "";
+       // cartDrawerBody.innerHTML = "";
         if (cart.length === 0) {
-            cartDrawerBody.innerHTML = `<p class="text-center mt-3">Your cart is empty.</p>`;
+           // cartDrawerBody.innerHTML = `<p class="text-center mt-3">Your cart is empty.</p>`;
             if (cartDrawerFooter) cartDrawerFooter.innerHTML = "";
             return;
         }
@@ -90,9 +90,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const cartBody = document.querySelector("#mobileCartDrawer .cart-drawer-body");
         const cartFooter = document.querySelector("#mobileCartDrawer .cart-drawer-footer");
 
-        cartBody.innerHTML = "";
+        //cartBody.innerHTML = "";
         if (cart.length === 0) {
-            cartBody.innerHTML = "<p>Your cart is empty.</p>";
+           // cartBody.innerHTML = "<p>Your cart is empty.</p>";
             if (cartFooter) cartFooter.innerHTML = "";
             return;
         }
@@ -336,7 +336,7 @@ if (closeMobileCartDrawer) {
 }
 
 // Close overlay when clicked
-cartOverlay.addEventListener("click", closeDrawer);
+//cartOverlay.addEventListener("click", closeDrawer);
 
 // Sync Cart on Updates
 document.body.addEventListener("cart-updated", () => {
@@ -350,8 +350,8 @@ document.body.addEventListener("cart-updated", () => {
     // Initialize both views
     updateWebCartBadge();
     renderWebCartItems();
-    updateMobileCartBadge();
-    renderMobileCartItems();
+ //   updateMobileCartBadge();
+  //  renderMobileCartItems();
 });
 
 
@@ -471,10 +471,10 @@ document.body.addEventListener("cart-updated", () => {
         const closeMobileCartDrawer = document.getElementById("mobileCartDrawerClose");
     
         // Open Drawer
-        openMobileCartDrawer.addEventListener("click", () => {
-            mobileCartDrawer.classList.add("open");
-            mobileCartOverlay.classList.add("active");
-        });
+        // openMobileCartDrawer.addEventListener("click", () => {
+        //     mobileCartDrawer.classList.add("open");
+        //     mobileCartOverlay.classList.add("active");
+        // });
     
         // Close Drawer
         const closeDrawer = () => {
@@ -482,8 +482,8 @@ document.body.addEventListener("cart-updated", () => {
             mobileCartOverlay.classList.remove("active");
         };
     
-        closeMobileCartDrawer.addEventListener("click", closeDrawer);
-        mobileCartOverlay.addEventListener("click", closeDrawer);
+        // closeMobileCartDrawer.addEventListener("click", closeDrawer);
+        // mobileCartOverlay.addEventListener("click", closeDrawer);
     });
     
 

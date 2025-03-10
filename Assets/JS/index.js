@@ -25,7 +25,8 @@ function executeScripts(container) {
         if (oldScript.src) {
             // External script
             newScript.src = oldScript.src;
-            newScript.async = true;
+            newScript.defer = true;
+            //newScript.async = true;
         } else {
             // Inline script
             newScript.textContent = oldScript.textContent;
@@ -117,9 +118,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 });
 
-document.getElementById("remember-checkbox").addEventListener("change", function () {
-    document.querySelector(".login-options").style.backgroundColor = this.checked ? "#ffffff" : "#000000";
-});
+// document.getElementById("remember-checkbox").addEventListener("change", function () {
+//     document.querySelector(".login-options").style.backgroundColor = this.checked ? "#ffffff" : "#000000";
+// });
 
 
 function logout(){

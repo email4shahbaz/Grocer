@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     // Function to update the drawer cart UI
@@ -148,9 +148,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
      // Update Cart Badge
 function updateCartBadge() {
-const cartBadge = document.getElementById("cartBadge");
-const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-cartBadge.textContent = totalItems;
+    const cartBadge = document.getElementById("cartBadge");
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartBadge.textContent = totalItems;
 }
 
 
@@ -164,19 +164,19 @@ cartBadge.textContent = totalItems;
     });
 
     updateDrawerCart();
-    updateNavbarCart();
+    //updateNavbarCart();
     updateCartBadge();
 
     // Listen for cart-updated events
     document.body.addEventListener("cart-updated", (e) => {
         updateDrawerCart();
-        updateNavbarCart();
+        //updateNavbarCart();
         updateCartBadge();
     });
 
     
 
-});
+
 
 document.addEventListener("DOMContentLoaded", async () => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -319,8 +319,6 @@ function renderStars(rating) {
 }
 
 
-// Render Product Details
-renderProductDetails(productData);
 
 
 function setupQuantityControls() {

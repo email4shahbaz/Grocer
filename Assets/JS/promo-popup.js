@@ -64,7 +64,7 @@ function handleSubscribe() {
 }
 
 // Attach the subscription handler to the Subscribe button
-document.querySelector('.subscribe-btn').addEventListener('click', handleSubscribe);
+//document.querySelector('.subscribe-btn').addEventListener('click', handleSubscribe);
 
 
 
