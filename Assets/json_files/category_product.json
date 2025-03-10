@@ -2,6 +2,7 @@
     {
         "id": 1,
         "name": "Fruits",
+        "description": "Delight in the natural sweetness and vibrant flavour.....",
         "image": "Assets/Images/Products/Apple.png",
         "file": "fruits.json",
         "products": [
@@ -15,6 +16,7 @@
     {
         "id": 2,
         "name": "Vegetables",
+        "description": "Delight in the natural sweetness and vibrant flavour.....",
         "image": "Assets/Images/Products/Vegitables.png",
         "file": "vegetables.json",
        "products": [
@@ -28,6 +30,7 @@
     {
         "id": 3,
         "name": "Dairy",
+        "description": "Delight in the natural sweetness and vibrant flavour.....",
         "image": "Assets/Images/Products/butter.png",
         "file": "dairy.json",
         "products": [
@@ -39,6 +42,8 @@
     {
         "id": 4,
         "name": "Beverages",
+        "description": "Delight in the natural sweetness and vibrant flavour.....",
+        "description": "Delight in the natural sweetness and vibrant flavour.....",
         "image": "Assets/Images/Products/beverages.png",
         "file": "beverages.json",
         "products": [
@@ -50,6 +55,7 @@
     {
         "id": 5,
         "name": "Snacks",
+        "description": "Delight in the natural sweetness and vibrant flavour.....",
         "image": "Assets/Images/Products/Milk.png",
         "file": "snacks.json",
         "products": [
@@ -59,6 +65,7 @@
     }, {
         "id": 1,
         "name": "Fresh Fruits",
+        "description": "Delight in the natural sweetness and vibrant flavour.....",
         "image": "Assets/Images/Products/Peach.png",
         "file": "fruits.json",
         "products": [
@@ -72,6 +79,7 @@
     {
         "id": 2,
         "name": "Fresh Vegetables",
+        "description": "Delight in the natural sweetness and vibrant flavour.....",
         "image": "Assets/Images/Products/Vegitables.png",
         "file": "vegetables.json",
         "products": [
@@ -85,6 +93,7 @@
     {
         "id": 3,
         "name": " Pure Dairy",
+        "description": "Delight in the natural sweetness and vibrant flavour.....",
         "image": "Assets/Images/Products/butter.png",
         "file": "dairy.json",
         "products": [

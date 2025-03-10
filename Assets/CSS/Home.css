@@ -2,7 +2,8 @@
     --green: #53B175;
     --hovergreen: #3a975c;
 }
-a{
+
+a {
     text-decoration: none;
     color: black;
 }
@@ -13,23 +14,26 @@ body {
     min-width: 320px;
     font-family: Quicksand;
 }
-.web-container{
-   overflow-x: hidden;
-  overflow-y: hidden;
+
+.web-container {
+    overflow-x: hidden;
+    overflow-y: hidden;
 
 
 }
-.playstore_btn{
+
+.playstore_btn {
     margin-right: 151px;
     width: 100px;
-    
+
 }
-.Appstore_btn{
+
+.Appstore_btn {
     margin-top: 5px;
     width: 100px;
 }
 
- 
+
 
 
 
@@ -37,18 +41,19 @@ body {
 /* Drop Down login*/
 /* Dropdown Button */
 .custom-dropdown-btn {
-    background-color: #81c784; /* Light Green */
+    background-color: #81c784;
+    /* Light Green */
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 16px;
-    
+
 }
 
 /* Divider */
 .dropdown-divider {
-    border-top: 0.5px solid #a5d6a7 ;
+    border-top: 0.5px solid #a5d6a7;
     margin: 0.5rem 0;
 }
 
@@ -57,12 +62,18 @@ body {
 .webviewCarouselOne,
 .WebViewCarouselTwo {
     overflow-y: auto;
+    padding: 0 4px;
 }
+.WebViewCarouselTwo {
+    padding: 0 12px;
+    margin-bottom: 50px;
+}
+
 
 .Active_category {
     color: var(--green) !important;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 
 .NoProductsFoundHeading {
@@ -75,9 +86,10 @@ body {
 
 .homefeaturedProductsMain {
     display: flex;
+    overflow: hidden;
     justify-content: flex-start;
     align-items: center;
-    gap: 20px;
+    gap: 17px;
 }
 
 
@@ -88,13 +100,14 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 25px;
+    gap: 32px;
 
 }
 
-.homecategoryProductsMain .card3{
+.homecategoryProductsMain .card3 {
     color: white;
 }
+
 #CustomHomeHeroNavigator {
     width: 10px !important;
     height: 10px !important;
@@ -194,9 +207,8 @@ body {
 }
 
 .BestsellProductsSection {
-    margin-top: 30px;
     overflow-y: auto;
-    gap: 20px;
+    gap: 10px;
 }
 
 .customWidth_80 {
@@ -237,12 +249,11 @@ body {
 } */
 
 .hero_main {
-    background-image: url('../Images/Banner/HeroHome.webp');
+    background-image: url('../Images/Banner/HeroBanner-Home.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 500px;
-    /* max-width: 1485px; */
+    height: 72vh;
 }
 
 .hero_main_sub_div {
@@ -251,20 +262,24 @@ body {
 }
 
 .hero_description_one {
-    width: 40%;
-    padding-top: 75px;
+    max-width: 532px;
+    width: 100%;
+    padding-top: 88px;
 }
 
 .hero_main_heading {
     font-family: Quicksand;
     font-weight: 700;
     color: #253D4E;
-    font-size: 48px;
+    font-size: clamp(28px, 4vw, 55px);
+    letter-spacing: -1px;
+    line-height: 69px;
+    margin: 0;
 }
 
 .inp_Box {
     position: relative;
-    width: 55%;
+    width: 62%;
 }
 
 .sendImageIcon {
@@ -273,17 +288,18 @@ body {
     top: 50%;
     transform: translateY(-50%);
 }
-.categoryLabel{
+
+.categoryLabel {
     font-family: 'Quicksand';
     font-size: 16px;
     font-weight: 500;
 }
+
 .subcriberEmailField {
     background-color: #DEF9EC;
-    padding: 17px;
-    padding-left: 50px;
+    padding: 15px 17px 15px 40px;
     width: 100%;
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 2px 0px 0px 2px;
     border: none;
     font-size: 14px;
     font-weight: 500;
@@ -294,15 +310,19 @@ body {
 .subcriberEmailField:focus {
     outline: none;
 }
+.subcriberEmailField::placeholder {
+    color: #253D4E;
+}
 
 .subcriberEmailButton {
     background-color: var(--green);
     transition: all .3s ease-in-out;
     border: none;
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 0px 2px 2px 0px;
     font-size: 16px;
     font-weight: 600;
     font-family: 'Quicksand';
+    padding: 13px 16px !important;
 }
 
 .subcriberEmailButton:Hover {
@@ -331,13 +351,6 @@ body {
     font-size: 16px;
     font-family: Quicksand;
     font-weight: 500;
-    color: #253D4E;
-}
-
-.explorecategory_heading {
-    font-family: QuickSand;
-    font-weight: 600;
-    font-size: 32px;
     color: #253D4E;
 }
 
@@ -382,6 +395,7 @@ body {
 .offersBanner {
     width: 100%;
 }
+
 .category_listing2 {
     margin-bottom: 0px;
     color: rgb(0, 0, 0);
@@ -389,9 +403,11 @@ body {
     flex-wrap: nowrap;
     gap: 8px;
 }
+
 .category_listing2 :Hover {
     color: #1ca14d;
-    transition: 0.5s;;
+    transition: 0.5s;
+    ;
 }
 
 .offers_description {
@@ -466,13 +482,14 @@ body {
 }
 
 .dailybestsellSectionContainer {
-    margin-top: 90px;
+    /* margin: 55px 0; */
 }
+
 .daily_best_sells_listing_one {
     width: 80%;
     display: flex;
     justify-content: flex-start;
-    gap: 8%;
+    gap: 47px;
     align-items: center;
     white-space: nowrap;
 }
@@ -493,23 +510,25 @@ body {
 }
 
 .expiry {
-    background-color: ff5b5b;
+    background-color: #FDC040;
     color: white;
     font-size: 13px;
-border-radius: 20px;
+    border-radius: 3px;
     font-weight: 500;
+    font-size: 18px;
     font-family: Quicksand;
-    padding: 9px;
+    padding: 7px 17px;
+    margin-left: 34px;
 }
 
 @media screen and (max-width: 1024px) {
-   
-   .expiry{
-    font-size: 13px;
-    border-radius: 20px;
+
+    .expiry {
+        font-size: 13px;
+        border-radius: 20px;
         font-weight: 500;
         padding: 7px;
-   }
+    }
 }
 
 
@@ -536,8 +555,7 @@ border-radius: 20px;
 }
 
 .LasthomecardsMainContainer {
-    padding: 0 !important;
-    margin-top: 90px;
+    padding: 30px 0 47px 0 !important;
 }
 
 .bestSell_heading {
@@ -559,11 +577,11 @@ border-radius: 20px;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    /* height: 370px; */
     margin: 10px;
     padding: 0px;
     margin: 0px;
-    margin-top: 90px;
+    margin-top: 50px;
+    margin-bottom: 90px;
 }
 
 .mainheading_upperfooter {
@@ -720,19 +738,15 @@ li {
 
 @media screen and (max-width:500px) {
 
-    /* .offersImage{
-        position: absolute;
-        bottom: 0px;
-        right: 10px;
-        height: 260px;
-    } */
     .offerContent h1 {
         font-size: 20px;
         font-weight: 600;
         font-family: Quicksand;
         color: #253D4E;
         margin-top: 20px;
+        margin-bottom: 15px;
     }
+
     .offerContentBadgeOne {
         background-color: #FDC040;
         color: white;
@@ -740,6 +754,7 @@ li {
         padding: 5px;
         font-size: 10px;
     }
+
     .offerSButton {
         font-size: 12px;
         font-weight: 600;
@@ -752,11 +767,6 @@ li {
         justify-content: center;
         align-items: center;
     }
-    /* .offerContent {
-        position: absolute;
-        top: 8px;
-        left: 10px;
-    } */
     .offers_shopNow_btn {
         border: none;
         text-align: center;
@@ -799,6 +809,7 @@ li {
         background-color: var(--green);
         border-radius: 10px;
     }
+
     .MobileViewFeaturedCardMain::-webkit-scrollbar {
         height: 8px;
     }
@@ -846,13 +857,8 @@ li {
     .hero_heading_description {
         font-size: 11px;
     }
-
-    .explorecategory_heading {
-        font-size: 25px;
-    }
-
     .bestSell_heading {
-        
+
         font-size: 25px;
         margin-top: 20px;
     }
@@ -1375,10 +1381,10 @@ li {
         filter: drop-shadow(0px 0px 0px white);
     }
 
-    
-.mt-5{
-    margin-top:0px;
-}
+
+    .mt-5 {
+        margin-top: 0px;
+    }
 
     .services_Boxes {
         padding-bottom: 30px;
@@ -1475,14 +1481,16 @@ li {
     }
 }
 
-
-.delivery-card-container{
+.offers {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    padding-top: 40px !important;
+    padding-bottom: 50px !important;
 }
 
-.free-delivery-card, .organic-food-card{
+.free-delivery-card,
+.organic-food-card {
     position: relative;
     display: flex;
     width: 100%;
@@ -1490,26 +1498,26 @@ li {
     background: url('../Images/Banner/Yellow.png');
 }
 
-.organic-food-card{
+.organic-food-card {
     background: url('../Images/Banner/Green.png');
 }
 
-.free-delivery-card .img-cont{
+.free-delivery-card .img-cont {
     width: 160px;
 }
 
-.organic-food-card .img-cont{
+.organic-food-card .img-cont {
     width: 245px;
 }
 
-.free-delivery-card .offersImage{
+.free-delivery-card .offersImage {
     position: absolute;
     bottom: 0px;
     right: 10px;
     width: 160px;
 }
 
-.organic-food-card .offersImage{
+.organic-food-card .offersImage {
     position: absolute;
     bottom: 0px;
     right: 0px;
@@ -1517,18 +1525,18 @@ li {
 }
 
 
-.offerContent{
-    padding: 20px;
+.offerContent {
+    padding: 34px 48px;
 }
 
-.offerContent2{
+.offerContent2 {
     position: absolute;
     padding: 20px;
-    top:0px;
+    top: 0px;
     bottom: 0px;
 }
 
-.offerContent2 h1{
+.offerContent2 h1 {
     font-size: 28px;
     font-weight: 600;
     font-family: Quicksand;
@@ -1537,7 +1545,7 @@ li {
     white-space: normal;
 }
 
-.offerContent2 p{
+.offerContent2 p {
     font-size: 18px;
     font-weight: 500;
     font-family: Quicksand;
@@ -1546,19 +1554,19 @@ li {
 }
 
 
-.offerContentBadgeOne{
+.offerContentBadgeOne, .offerContentBadgeTwo {
     background-color: #FDC040;
     color: white;
     border-radius: 3px;
-    padding: 7px;
+    padding: 5px 7px;
+    font-size: 12px;
 }
-.offerContentBadgeTwo{
+
+.offerContentBadgeTwo {
     background-color: #53B175;
-    color: white;
-    border-radius: 3px;
-    padding: 7px 15px;
 }
-.offerContent h1{
+
+.offerContent h1 {
     font-size: 28px;
     font-weight: 600;
     font-family: Quicksand;
@@ -1566,55 +1574,61 @@ li {
     margin-top: 20px;
     white-space: normal;
 }
-.offerContent p{
+
+.offerContent p {
     font-size: 18px;
     font-weight: 500;
     font-family: Quicksand;
     color: #838383;
     width: 70%;
+    margin-bottom: 42px;
 }
-.offerSButton{
+
+.offerSButton {
     font-size: 16px;
     font-weight: 600;
-    border-radius: 5px;
+    border-radius: 0px 3px 3px 0px;
     font-family: Quicksand;
     color: #ffffff;
-    padding: 15px;
+    padding: 16px 18px;
     background-color: #53B175;
-    width: 52%;
+    width: 143px;
     display: flex;
     justify-content: center;
     align-items: center;
     white-space: nowrap;
 }
-
-
+.bestSellingProducts {
+    padding: 60px 0 40px 0;
+}
 
 
 @media (max-width: 992px) {
     .daily_best_sells_listing_one {
         margin-bottom: 20px;
     }
-    .free-delivery-card .offersImage{
+
+    .free-delivery-card .offersImage {
         width: 140px;
     }
-    .organic-food-card .offersImage{
+
+    .organic-food-card .offersImage {
         width: 200px;
     }
 
-    
-    .free-delivery-card .img-cont{
+
+    .free-delivery-card .img-cont {
         width: 140px;
     }
 
-    .organic-food-card .img-cont{
+    .organic-food-card .img-cont {
         width: 200px;
     }
 
 }
 
 @media (max-width: 768px) {
-    .delivery-card-container{
+    .offers {
         grid-template-columns: 1fr;
     }
 }

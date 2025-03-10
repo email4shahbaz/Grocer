@@ -1,5 +1,5 @@
 .BestSellCard {
-    padding: 20px;
+    padding: 10px;
     border-radius: 3px;
     border: 1px solid rgba(173, 173, 173, 0.25);
     max-width: 250px;
@@ -13,7 +13,7 @@
 }
 
 
-.bestSellCardNameAndUnitHeadingMain{
+.bestSellCardNameAndUnitHeadingMain {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -21,7 +21,7 @@
 }
 .bestSellCardNameAndUnitHeadingMain h4{
     font-size: 16px;
-    margin-bottom: 5px;
+    margin-bottom: 0;
     font-weight: 600;
     font-family: 'Quicksand';
 }
@@ -51,7 +51,7 @@
     font-size: 16px;
     font-weight: 600;
     font-family: Quicksand;
-    margin-bottom: 5px;
+    margin-bottom: 0;
 }
 
 .BestSellCardProductby1 {
@@ -68,6 +68,12 @@
     font-family: Quicksand;
 }
 
+.BestSellCard-oldPrice {
+    font-size: 14px;
+    margin-left: 10px;
+    color: #ADADAD;
+    font-weight: 500;
+}
 .BestSellCardPriceTag {
     font-size: 18px;
     color: #10B64C;
@@ -123,10 +129,9 @@
 .BestSellCardOffTag {
     top: 0px;
     left: 0px;
-    /* background-color: #FFD480; */
-    background-color: #F61B40;
+    background-color: #FFD480;
     color: white;
-    border-radius: 0px 10px;
+    border-radius: 0px 3px;
     padding: 7px;
     font-size: 12px;
     font-weight: 500;
@@ -148,8 +153,6 @@
     }
 
     .BestSellCard {
-        /* max-width: 100%; */
-        min-width: 150px;
         max-width: 300px;
         padding: 5px;
     }

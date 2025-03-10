@@ -10,14 +10,11 @@
     align-items: center;
 }
 
-.homeSubNavBarItem1 {
-     /* width: 17%;  */
-}
-
 .homeSubNavBarItem2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 10px;
 }
 
 .homeSubNavBarItem3 {
@@ -38,7 +35,7 @@
 }
 
 .SupportcenterHeading1 {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600;
     color: #53B175;
     margin: 0px;
@@ -48,7 +45,6 @@
 
 .SupportcenterHeading2 {
     font-size: 14px;
-    font-weight: 600;
     color: #253D4E;
     margin: 0px;
     font-family: 'Quicksand';
@@ -65,15 +61,16 @@
     background-color: var(--green);
     color: white;
     border-radius: 12px;
-    padding: 10px 20px;
+    padding: 10px 14px;
     font-family: Quicksand;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all 0.3s ease-in-out;
     white-space:nowrap;
+    gap: 0;
 }
 
 .Explore_all_categories_Btn:Hover {
@@ -88,7 +85,8 @@
 }
 
 .support_li {
-    margin-left: 30px;
+    margin-left: 0px;
+    padding: 0px;
 }
 
 .Number_Support {

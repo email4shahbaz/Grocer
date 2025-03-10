@@ -39,9 +39,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     includeHTML("header.html", "header");
     includeHTML("footer.html", "footer");
 
-    
-
-
 
     const categoryContainer = document.querySelector('.homecategoryProductsMain');
     const mobileViewContainer = document.querySelector('.MobileViewCategoriesCardOneMainDiv');
@@ -62,6 +59,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         categories.forEach((category, index) => {
             const categoryId = category.id;
             const categoryName = category.name;
+            const categoryDescription = category.description;
             const categoryImage = category.image;
             const products = category.products || []; // Get the products array or fallback to empty array
 
@@ -85,7 +83,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                         </div>
                         <div class="card-body">
                             <h1 class="h2 card_heading">${categoryName}</h1>
-                            <p class="card-text card_descri">${productCount} items</p>
+                            <span class="card-text count">${productCount} items</span>
+                            <p class="card-text card_descri">${categoryDescription}</p>
                         </div>
                     </div>
                 </a>

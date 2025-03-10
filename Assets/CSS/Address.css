@@ -26,12 +26,12 @@
     background-color: var(--green);
     color: white;
     border-radius: 15px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
-    padding: 5px 15px;
+    padding: 5px 20px;
 }
 .tablemainAddress{
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 .addressDeleteBTN {
     border: none;
@@ -40,8 +40,18 @@
     border-radius: 15px;
     font-size: 12px;
     font-weight: 400;
-    font-family: Roboto;
     padding: 5px 15px;
+}
+
+.addressEdit {
+    border: none;
+    background-color: var(--green);
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 5px 20px;
 }
 .tableheadingAddress{
     font-size: 12px;
@@ -75,7 +85,8 @@
 .address_table_ td {
     border-bottom: 1px solid #ddd;
     /* Border on every row */
-    padding: 20px;
+    padding: 20px 60px;
+    white-space: nowrap;
 }
 .Addressinp{
     width: 100%;
@@ -100,7 +111,7 @@
     margin-top: 15px;
 }
 .AddressModalForm{
-    width: 70%;
+    /* width: 70%; */
     margin: auto;
 }
 .AddresssubmitBTN{

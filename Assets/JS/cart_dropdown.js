@@ -1,3 +1,4 @@
+const newLocal = ".cart-drawer-overlay";
 document.addEventListener("DOMContentLoaded", () => {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -196,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const isMobile = window.innerWidth <= 768;
             if (isMobile) {
                 document.getElementById("mobileCartDrawer").classList.add("open");
-                document.querySelector(".cart-drawer-overlay").style.display = "block";
+                document.querySelector(newLocal).style.display = "block";
             } else {
                 document.getElementById("cartDrawer").classList.add("open");
                 document.querySelector(".cart-drawer-overlay").style.display = "block";

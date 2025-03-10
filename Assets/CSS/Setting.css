@@ -256,6 +256,10 @@ font-weight: bolder;
         /* background-color: #f3f3f3; */
     }
 
+    .info_settings{
+        margin-bottom: 0px;
+    }
+
 
     .MainContaineruserInfo br{
             display: none;
@@ -264,6 +268,50 @@ font-weight: bolder;
     .setting_main_heading {
         font-size: 40px;
         color: #000000;
+        margin-left: 40px;
+    }
+
+    .setting_form_container {
+        width: 100%;
+    }
+
+    .container-fluid {
+        padding: 0px;
+        width: 90%;
+}
+
+}
+
+@media screen and (max-width:470px) {
+    .ImageNameEmailMainTop {
+        display: none;
+    }
+
+    .MainContaineruserInfo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       
+        width: 100%;
+        justify-content: center;
+        /* background-color: #f3f3f3; */
+    }
+
+    .info_settings{
+        margin-bottom: 0px;
+    }
+
+
+    .MainContaineruserInfo br{
+            display: none;
+    }
+
+    .setting_main_heading {
+        font-size: 40px;
+        color: #000000;
+        margin-left: 25px;
     }
 
     .setting_form_container {

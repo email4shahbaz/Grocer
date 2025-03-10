@@ -5,32 +5,69 @@ li{
     margin-left: 150px;
 }
 .footer_logo{
-    width: 230px;
+    max-width: 230px;
+    width: 100%;
 }
 .home_li {
     margin-left: 30px;
 }
 .footermainWrapper {
     margin-top: 90px;
+    padding-top: 20px;
 }
-.rightReversedAndPaymentIconsMain{
+.footermainWrapper .footer-content {
+    width: 100%;
+    padding: 0 12px;
+    padding-bottom: 70px;
+}
+.footermainWrapper .footer-content .icon-holder {
+    max-width: 50px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #979797;
+    border-radius: 50px;
+    padding: 9px
+}
+.footer-content .footer-nav:not(:first-child):not(:last-child) {
+    margin-right: 27px;
+}
+.footer-content .footer-nav:nth-child(1) .footerheadings {
+    margin-bottom: 38px;
+}
+.footer-content .footer-nav .nav-item {
+    margin-bottom: 10px;
+}
+.footermainWrapper .footer-content .centered {
+    text-align: center;
+    font-weight: 500;
+    margin-top: -30px;
+    max-width: 409px;
+    margin: auto;
+    margin-top: -35px;
+    padding: 0 18px !important;
+}
+.footermainWrapper .centered p {
+    line-height: 30px;
+}
+.rightReversedAndPaymentIconsMain {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 35px;
+    padding: 53px 35px 24px 35px;
 }
+    
 .footer_line {
     color: rgb(196, 196, 196);
     max-width: 95%;
-    margin: auto;
+    margin: auto !important;
 }
 
 .footerFirstCol {
     display: flex;
     justify-content: start;
     align-items: center;
-    margin-bottom: 30px;
-    gap: 10px;
+    margin-bottom: 14px;
+    gap: 4px;
 }
 
 .footerFirstCol h3 {
@@ -38,6 +75,14 @@ li{
     font-family: Quicksand;
     color: #253D4E;
     margin: 0px;
+}
+.footerFirstCol h3 strong {
+    font-weight: 600;
+}
+    
+.footerFirstCol h3 span {
+    font-size: 14px;
+    color: #53616c !important;
 }
 
 .footerheadings {

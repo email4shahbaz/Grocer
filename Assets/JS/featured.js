@@ -52,7 +52,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             button.classList.toggle('in-wishlist', isInWishlist);
         });
     }
-
     // Function to fetch and render products
     async function fetchAndRenderProducts(categoryFile, categoryName) {
         try {
@@ -74,13 +73,13 @@ document.addEventListener("DOMContentLoaded", async () => {
             products.forEach(product => {
                 // Calculate discount percentage if discountedPrice exists
                 const discountPercentage = product.discountedPrice ? Math.round(((product.price - product.discountedPrice) / product.price) * 100) : null;
-
                 const featuredCard = document.createElement('div');
+
                 featuredCard.innerHTML = `
-                    <div class="FeaturedProductsCard position-relative ProductsCard_Animations ProductCardImage mt-3">
+                    <div class="position-relative ProductsCard_Animations ProductCardImage FeaturedProductsCard">
                         <div class="productcardImage text-center">
                             <!-- Discount Badge -->
-                            ${discountPercentage ? `<span class="discount-badge">${discountPercentage} OFF</span>` : ''}
+                            ${discountPercentage ? `<span class="discount-badge">Save ${discountPercentage}%</span>` : ''}
 
                             <a href="product-details.html?product-id=${product.id}&category-file=${categoryFile}">
                                 <img src="${product.image}" 
@@ -97,16 +96,23 @@ document.addEventListener("DOMContentLoaded", async () => {
                             </div>
                         </div>
                         <div class="card-body">
-                            <p class="categoryname">${categoryName}</p>
-                            <div class="nameAndUnitHeading">
-                                <h1 class="h2 card_heading">${product.name}</h1>
+                            <p class="BestSellCardName">${product.categoryName}</p>
+                            <div class="bestSellCardNameAndUnitHeadingMain">
+                                <h1 class="h2 BestSellCardHeading">${product.name}</h1>
+                                <h4>${product.unit}</h4>
                             </div>
-                            <p class="product-description">${product.description || "No description available."}</p>
-                            <!-- Progress Bar for Calories -->
-                            <div class="progress mt-3" style="height: 5px;">
-                                <div class="progress-bar" role="progressbar" style="width: ${(product.nutrition.calories / maxCalories) * 100}" aria-valuenow="${product.nutrition.calories}" aria-valuemin="0" aria-valuemax="${maxCalories}"></div>
+
+                            <div class="d-flex align-items-center rating">
+                                <div class="stars">
+                                    <img src="Assets/Images/Icons/rating-star-checked.png" alt="star-checked" />
+                                    <img src="Assets/Images/Icons/rating-star-checked.png" alt="star-checked" />
+                                    <img src="Assets/Images/Icons/rating-star-checked.png" alt="star-checked" />
+                                    <img src="Assets/Images/Icons/rating-star-checked.png" alt="star-checked" />
+                                    <img src="Assets/Images/Icons/rating-star-unchecked.png" alt="star-unchecked" />
+                                </div>
+                                <span class="NoOfstars">(${product.rating})</span>
                             </div>
-                            <p class="mt-2">Calories: ${product.nutrition.calories}%</p>
+                            <p class="offer">Limited time offer</p>
                             <div class="PriceDivFeaturedProduct mt-2">
                                 <div class="d-flex">
                                     <h1 class="pricetag align-self-center">${product.price}$</h1>

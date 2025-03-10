@@ -377,11 +377,13 @@ li {
 .relatedProductsSection_ProductDetails {
     margin-top: 90px;
 }
-
+.head {
+    margin-bottom: 37px;
+}
 .explorecategory_heading {
-    font-size: 31px;
-    font-weight: 700;
-    font-family: Mulish;
+    font-size: 32px;
+    font-weight: 600;
+    font-family: Quicksand;
     color: #29292E;
 }
 

@@ -24,16 +24,15 @@
     color: red;
 }
 .OffCardPercentHeading {
-    font-size: 32px;
+    font-size: 30px;
     text-align: center;
     font-family: Quicksand;
-    margin-top: 5px;
     font-weight: 700;
     color: #253D4E;
 }
 
 .OffCardPercentDescription {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     font-family: Quicksand;
     color: #253D4E;
@@ -59,7 +58,6 @@
     color: white;
     border-radius: 12px;
     margin-top: 25px;
-    margin-bottom: 10px;
     transition: all 0.3s ease-in-out;
 }
 .offcardbtn:Hover {

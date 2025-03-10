@@ -1,7 +1,8 @@
 <div>
     <!-- Top Small Header -->
-    <div class="top-header">
-        <div class="container top-header-container">
+
+    <!-- <div class="top-header"> -->
+        <!-- <div class="container top-header-container">
             <div class="top-header-left">
                 <a href="about-us.html">About Us</a>
                 <span>|</span>
@@ -11,7 +12,7 @@
 
             
                 
-            </div>
+            </div> -->
             <!-- <div class="top-header-center">
                 <span class="animated-icon-text">
                     <i id="animatedIcon" class="bi bi-truck"></i>
@@ -19,7 +20,7 @@
                 </span>
             </div> -->
 
-             <div class="top-header-center">
+             <!-- <div class="top-header-center">
                     <i class="bi bi-truck" style></i>
                     <span>Free shipping on orders over $50 </span>
             </div>
@@ -27,14 +28,14 @@
                 <a href="faq.html">Help & FAQs</a>
                 <span>|</span>
                <a href="track.html">Track Order</a>
-            </div>
-        </div>
-    </div>
+            </div> -->
+        <!-- </div> -->
+    <!-- </div> -->
 
 
     <nav class="navbar navbar-expand-lg bg-white shadow-sm main_navbar">
         <div class="container d-flex flex-nowrap">
-            <div class="d-flex">
+            <div class=" logo_main_image d-flex">
                 <div class="logo_main_image">
                     <!-- {{-- MVSideBarOpenIcon --}} -->
                     <a href="" class="SideBarOpenIcon" id="sidebarToggle">
@@ -50,28 +51,28 @@
                             onerror="this.src='/Assets/IMAGES/ErrorImage.webp'" wire:navigate href="/index.html"
                             alt="Grocer__Logo" class="mainlogo" loading="lazy" /></a>
                 </div>
-                <div class="nav-item search_button">
-                    <form class="d-flex" onsubmit="event.preventDefault();">
-                        <div class="input-group searchButtonCate">
-                            <select name="" id="search_select_category" wire:model.live="search_category"
-                                class="SearchwithCategoriesLists">
-                                <option value="All Categories">All Categories</option>
-                            </select>
-                            <!-- <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="" /> -->
-                            <div class="input-cont">
-                                <input type="text" wire:model.live.debounce.300ms="search_query"
-                                    class="shadow-md border-0 search_inp" maxlength="20"
-                                    placeholder="Search for items..." aria-label="Search" autocomplete="off" />
-                            </div>
-                            <button class="btn rounded-0 shadow-md search_btn" type="submit">
-                                <img src="Assets/Images/SmallIcons/search.webp" alt="searchIcon" loading="lazy" />
-                            </button>
+            </div>
+            <div class="nav-item search_button">
+                <form class="d-flex" onsubmit="event.preventDefault();">
+                    <div class="input-group searchButtonCate">
+                        <select name="" id="search_select_category" wire:model.live="search_category"
+                            class="SearchwithCategoriesLists">
+                            <option value="All Categories">All Categories</option>
+                        </select>
+                        <!-- <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="" /> -->
+                        <div class="input-cont">
+                            <input type="text" wire:model.live.debounce.300ms="search_query"
+                                class="shadow-md border-0 search_inp" maxlength="20"
+                                placeholder="Search for items..." aria-label="Search" autocomplete="off" />
                         </div>
-                    </form>
-                </div>
+                        <button class="btn rounded-0 shadow-md search_btn" type="submit">
+                            <img src="Assets/Images/SmallIcons/search.webp" alt="searchIcon" loading="lazy" />
+                        </button>
+                    </div>
+                </form>
             </div>
 
-            <div class="d-flex gap-4">
+            <div class="navbar-right d-flex gap-4">
                 <div class="d-flex whishlist_button align-items-center">
                     <h1 class="cart_heading position-relative">
                         <img src="Assets/Images/SmallIcons/WishlistHeart.webp" alt="wishlistIcon" />
@@ -95,7 +96,7 @@
                     </h1>
                     <a href="#" class="mycartCustom" id="openCartDrawer">
                         <div>
-                            <h3 class="mycartCustomHeading1">My Cart</h3>
+                            <h3 class="mycartCustomHeading1">My cart</h3>
                             <h3 class="mycartCustomHeading2">$0.00</h3>
                         </div>
                         <div>
@@ -106,18 +107,17 @@
 
                 <div class="user-info">
                     <a href="/authentication/login.html" class="Login_btn">
-                        <i class="bi bi-person-circle"></i> &nbsp; Login
+                        Login
                     </a>
                     <div class="nav-item d-flex profile_image d-none">
                         <img src="Assets/Images/Banner/user4.webp" class="user_profile_image user_profile_image_nav"
                             alt="UserImage" loading="lazy" />
                          
-                            <span class="top-a">Saniya Shahbaz</span></span>
+                            <span class="top-a">Johannes</span></span>
                             <div class="dropdown">
                                 <a class="nav-link dropdown-toggle loginheadingNav" href="#" role="button" data-toggle="dropdown"
                                     aria-expanded="false">
-                                    
-                                    <!-- <img src="Assets/Images/SmallIcons/ArrowDown.svg" alt="" /> -->
+                                    <img src="Assets/Images/SmallIcons/ArrowDown.svg" alt="" />
                                 </a>
                                 <ul class="dropdown-menu custom-dropdown-menu">
                                     <li><a class="dropdown-item" href="/history.html">Order History</a></li>
@@ -145,7 +145,7 @@
                 </div>
 
                 <!-- Mobile Drawer Cart -->
-                <div class="cart-drawer-overlay"></div> / 
+                <div class="cart-drawer-overlay"></div> 
                 <div class="cart-drawer" id="mobileCartDrawer">
                     <div class="cart-drawer-header">
                         <span class="cart-drawer-title">Your Cart</span>
@@ -282,7 +282,7 @@
                 <span></span>
             </button>
         </div>
-        <nav class="navbar">
+        <nav class="navbar ">
             <ul class="navbar-nav">
                 <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
                 <hr>
@@ -326,7 +326,7 @@
             <div class="homeSubNavBarItem1">
                 <button class="Explore_all_categories_Btn" onclick="toggleDropdown()">
                     <!-- <i class="bi bi-grid"></i> &nbsp; Browse All Categories <i class="bi bi-chevron-down"></i> -->
-                    <i class="bi bi-grid"></i> &nbsp; Browse All Categories
+                    <i class="bi bi-grid"></i> &nbsp; Brows All Categories
                 </button>
             </div>
 
@@ -407,6 +407,8 @@
                                 class="bi bi-tags navbar-icon"></i> Promotions</a></li>
                     <li class="nav-item"><a href="/new-products.html" class="SubnavIconsAdjustment"><i
                                 class="bi bi-megaphone navbar-icon"></i> New Products</a></li>
+                    <!-- <li class="nav-item"><a href="/new-products.html" class="SubnavIconsAdjustment"><i
+                                    class="bi bi-fire navbar-icon"></i> Blog</a></li> -->
                     
                 </ul>
             </div>
@@ -420,12 +422,12 @@
                             <a href="tel:9039829228282">
                                 <h3 class="SupportcenterHeading1">
                                     <i class="bi bi-telephone Number_Support"></i>
-                                    &nbsp;+92 398 29228282&nbsp;
+                                    &nbsp;1233-7777&nbsp;
+                                    <!-- &nbsp;+92 398 29228282&nbsp; -->
                                 </h3>
                             </a>
-                            <span class="support-separator">|</span>
                             <div>
-                                <h3 class="SupportcenterHeading2">24/7 Support Center</h3>
+                                <h3 class="SupportcenterHeading2">24/7 support center</h3>
                             </div>
                         </div>
                     </li>
@@ -435,4 +437,6 @@
     </nav>
    
 </div>
+
+<script src="/Assets/JS/cart_dropdown.js"></script>
 
