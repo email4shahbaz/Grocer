@@ -1,0 +1,4 @@
+@media (max-width: 1170px) {
+    .navbar-right { gap: 30px!important; }
+    .searchButtonCate input{min-width: 250px;}
+}
