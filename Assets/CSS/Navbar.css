@@ -183,29 +183,7 @@
     color: white;
 }
 
-/* Responsive adjustments */
-@media (max-width: 576px) {
-    .cart_dropdownCustom {
-        min-width: 300px;
-    }
 
-
-    .customDropdownCartButton1,
-    .customDropdownCartButton2 {
-        font-size: 12px;
-    }
-
-    .customCartDropdownHeading {
-        font-size: 12px;
-    }
-
-    .top-header-container {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        gap: 10px;
-    }
-}
 
 .registerProfileDropdown {
     background-color: #F3F3F3;
@@ -608,112 +586,8 @@
     display: none;
 }
 
-@media screen and (max-width:768px) {
-    .search_component {
-        display: block;
-    }
-
-    .dropdownSearch {
-        margin-left: 0px;
-    }
-
-    .dropdownSearch ul {
-        width: 100%;
-    }
-
-    .NotificationIcon {
-        display: none;
-    }
-
-    .user_profile_image_nav {
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-    }
-
-    .searchButtonCate {
-        margin-left: 0px;
-    }
-
-    .search_button {
-        display: none;
-    }
-
-    .profile_image {
-        margin-left: 0px;
-        display: none !important;
-    }
-
-    .mobile_cart_profile {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .mobile_image_profile {
-        text-align: end;
-    }
-
-    .wishlist_heading {
-        display: none;
-    }
-
-    .whishlist_button a {
-        display: none;
-    }
-
-    .cart_heading {
-        display: none;
-    }
-
-    .cart_button a {
-        display: none;
-    }
-
-    .profile_image img {
-        display: none;
-    }
-
-    .profile_image a {
-        display: none;
-    }
-
-    .main_navbar {
-        padding-bottom: 0px !important;
-    }
-
-    .main_navbar>.container{
-        gap: 500px;
-    }
 
 
-    .logo_main_image{
-        display:flex !important;
-        gap:10px;
-    }
-
-    .logo_main_image img{
-        width:100px;
-    }
-
-    .searchButtonCate {
-        margin-left: 0px;
-    }
-
-    .SideBarOpenIcon {
-        display: inline-block;
-    }
-}
-@media screen and (max-width:991px) {
-   
-    .searchButtonCate select:focus-visible {
-        border: none !important;
-    }
-    .input-cont::before {
-        left: 5px;
-    }
-}
 @media screen and (min-width:769px) and (max-width:991px) {
    
 
@@ -1156,14 +1030,6 @@
     color: #53B175;
 }
 
-@media (max-width: 1075px) {
-    .container {
-        padding: 0 30px;
-    }
-    .category-dropdown {
-        margin-top: 40px;
-    }
-}
 
 @media (max-width: 1024px) {
     .searchButtonCate {margin-left: 0;}

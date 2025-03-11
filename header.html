@@ -29,8 +29,8 @@
 
     <nav class="navbar navbar-expand-lg bg-white shadow-sm main_navbar">
         <div class="d-flex flex-nowrap justify-content-between w-100">
-            <div class=" logo_main_image d-flex">
-                <div class="logo_main_image">
+            <div class="logo_main_image d-flex gap-2 align-items-center">
+              
                     <!-- {{-- MVSideBarOpenIcon --}} -->
                     <a href="#" class="SideBarOpenIcon" id="sidebarToggle">
                         <!-- <img src="Assets/Images/SmallIcons/SideBarOpenIcon.webp" alt="collapseIcon" loading="lazy" /> -->
@@ -44,7 +44,7 @@
                     <a href="/index.html"> <img src="/Assets/Images/Icons/GrocerLogo.webp"
                             onerror="this.src='/Assets/IMAGES/ErrorImage.webp'" wire:navigate href="/index.html"
                             alt="Grocer__Logo" class="mainlogo" loading="lazy" /></a>
-                </div>
+               
             </div>
             <div class="nav-item search_button">
                 <form class="d-flex" onsubmit="event.preventDefault();">
@@ -242,25 +242,25 @@
     </nav>
     <!-- search.html (Mobile View) -->
     <div class="search_component">
-        <form class="d-flex">
+        <form class="d-flex" onsubmit="event.preventDefault();">
             <div class="input-group searchButtonCate">
-                <select name="" id="search_select_category_mobile" wire:model.live="search_category"
-                    class="SearchithCategoriesLists">
-                    <option value="All Categories">All Categories</option>                      
+                <select name="" id="search_select_category" wire:model.live="search_category"
+                    class="SearchwithCategoriesLists">
+                    <option value="All Categories">All Categories</option>
                 </select>
-                <!-- <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="divider" /> -->
+                <!-- <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="" /> -->
                 <div class="input-cont">
-                    <input type="text"  class="form-control shadow-md border-0 search_inp_mobile"
-                        maxlength="20" placeholder="Search for items..." aria-label="Search" autocomplete="off" />
-                    </div>
-                <button class="btn rounded-0 shadow-md search_btn">
+                    <input type="text" wire:model.live.debounce.300ms="search_query"
+                        class="shadow-md border-0 search_inp" maxlength="20"
+                        placeholder="Search for items..." aria-label="Search" autocomplete="off" />
+                </div>
+                <button class="btn rounded-0 shadow-md search_btn" type="submit">
                     <img src="Assets/Images/SmallIcons/search.webp" alt="searchIcon" loading="lazy" />
                 </button>
             </div>
         </form>
-        <!-- Suggestions Container -->
-        <div id="mobile_search_suggestions" class="search-suggestions" style="display:none;"></div>
     </div>
+    
     <!--********** NAVIGATION **********-->
 
 
@@ -345,46 +345,7 @@
 
                     <!-- Right Side: Category Grid -->
                     <div class="category-grid">
-                        <div class="category-item">
-                            <img src="Assets/Images/Icons/milk.png" alt="">
-                            <span>Fruits</span>
-                        </div>
-                        <div class="category-item">
-                            <img src="Assets/Images/Icons/wine.png" alt="">
-                            <span>Vegetables</span>
-                        </div>
-                        <div class="category-item">
-                            <img src="Assets/Images/Icons/clothing.png" alt="">
-                            <span>Dairy</span>
-                        </div>
-                        <div class="category-item">
-                            <img src="Assets/Images/Icons/seafood.png" alt="">
-                            <span>Beverages</span>
-                        </div>
-                        <div class="category-item">
-                            <img src="Assets/Images/Icons/pet.png" alt="">
-                            <span>Snacks</span>
-                        </div>
-                        <div class="category-item">
-                            <img src="Assets/Images/Icons/fastfood.png" alt="">
-                            <span>Fruits</span>
-                        </div>
-                        <div class="category-item">
-                            <img src="Assets/Images/Icons/baking.png" alt="">
-                            <span>Beverages</span>
-                        </div>
-                        <div class="category-item">
-                            <img src="Assets/Images/Icons/vegetables.png" alt="">
-                            <span>Vegetables</span>
-                        </div>
-                        <div class="category-item">
-                            <img src="Assets/Images/Icons/fruit.png" alt="">
-                            <span>Fresh Fruit</span>
-                        </div>
-                        <div class="category-item">
-                            <img src="Assets/Images/Icons/bread.png" alt="">
-                            <span>Bread and Juice</span>
-                        </div>
+                        
                     </div>
                 </div>
             

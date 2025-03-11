@@ -4,6 +4,9 @@ li{
 .ullists {
     margin-left: 150px;
 }
+.footer-logo-cont{
+    max-width: 400px;
+}
 .footer_logo{
     max-width: 230px;
     width: 100%;
@@ -15,9 +18,17 @@ li{
     margin-top: 20px;
     padding-top: 20px;
 }
+.footermainWrapper .footer-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+
 .footermainWrapper .footer-content {
-    width: 100%;
+    /* width: 100%; */
     /* padding: 0 12px; */
+    display: flex;
+    gap: 50px;
     padding-bottom: 50px;
 }
 .footermainWrapper .footer-content .icon-holder {
@@ -28,11 +39,14 @@ li{
     border-radius: 50px;
     padding: 9px
 }
-.footer-content .footer-nav:not(:first-child):not(:last-child) {
-    margin-left: 100px;
+
+.footer-links{
+    display: flex;
+    gap: 50px;
 }
+
 .footer-content .footer-nav:nth-child(1) .footerheadings {
-    margin-bottom: 38px;
+    /* margin-bottom: 38px; */
 }
 .footer-content .footer-nav .nav-item {
     margin-bottom: 10px;
@@ -52,9 +66,7 @@ li{
 
 }
 
-.footermainWrapper .centered p {
-    line-height: 30px;
-}
+
 .rightReversedAndPaymentIconsMain {
     display: flex;
     justify-content: space-between;
@@ -105,6 +117,7 @@ li{
     font-family: Quicksand;
     color: #253D4E;
     margin: 0px;
+    white-space: nowrap;
 }
 
 .footerSubHeadings {
@@ -137,9 +150,7 @@ li{
     align-items: center;
     gap: 5px;
 }
-.MobileViewfootericons{
-    display: none;
-}
+
 .MobileViewFooterSocialIcons{
     display: none;
 }
@@ -151,29 +162,8 @@ li{
     .footer_line{
         display: none;
     }
-    .MobileViewfootericons{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 30px;
-    }
-    .footericons{
-        display: none;
-    }
-    .MobileViewFooterSocialIcons{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 20px;
-    }
-    .MobileViewFooterIconsMain{
-        display: flex;
-        justify-content: space-between;
-        gap: 25px;
-        flex-direction: column;
-    }
+     
+    
     .last_container {
         box-shadow: none;
     }
@@ -182,30 +172,3 @@ li{
     }
 }
 
-@media screen and (max-width:1024px) {
-    .footermainWrapper {
-        margin-top: 50px;
-    }
-}
-@media screen and (min-width:769px) and (max-width:991px) {
-    .footermainWrapper {
-        margin-top: 35px;
-    }
-    .MobileViewFooterIconsMain{
-        display: flex;
-        justify-content: space-between;
-        gap: 25px;
-        flex-direction: column;
-    }
-    .MobileViewfootericons {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 30px;
-    }
-    .footericons{
-        display: none;
-    }
-}

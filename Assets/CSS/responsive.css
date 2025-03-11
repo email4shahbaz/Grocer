@@ -1,0 +1,71 @@
+@media (max-width: 1300px) {
+    .footer-logo-cont{max-width: 320px;}
+}
+
+@media (max-width: 1170px) {
+    .navbar-right { gap: 30px!important; }
+    .searchButtonCate input{min-width: 250px;}
+    .footermainWrapper .footer-content{gap: 30px!important;}
+}
+
+@media (max-width: 1024px) {
+    .container { padding: 0 30px; }
+    .ullists_subhomenav .nav-item a{font-size: 14px;}
+    .SupportcenterHeading1{font-size: 16px;}
+    .ullists_subhomenav{gap: 32px;}
+    .navbar-right { gap: 10px!important; }
+
+    .footermainWrapper .footer-wrapper{ flex-direction: column; gap: 20px; }
+    .footer-logo-cont{max-width: 100%;}
+    .footermainWrapper .footer-content{justify-content: space-between; flex-direction: row-reverse;}
+}
+
+
+
+@media (max-width: 992px) {
+    .searchButtonCate select:focus-visible {
+        border: none !important;
+    }
+    .input-cont::before {
+        left: 5px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .searchButtonCate{max-width: 100%;}
+    .searchButtonCate .input-cont{width: 100%;}
+    .top-header-container { display: flex; flex-direction: column-reverse; align-items: center; gap: 10px; }
+    .Login_btn{padding: 5px 20px;}
+
+    .searchButtonCate input{min-width: 0;}
+    .search_component { display: block; padding: 10px 0; }
+    .dropdownSearch { margin-left: 0px; }
+    .dropdownSearch ul { width: 100%; }
+    .NotificationIcon { display: none; }
+    .user_profile_image_nav { border-radius: 50%; width: 30px; height: 30px; }
+    .searchButtonCate { margin-left: 0px; }
+    .search_button { display: none; }
+    .profile_image { margin-left: 0px; display: none !important; }
+    .main_navbar { padding-bottom: 0px !important; }
+    .main_navbar>.container{ gap: 500px; }
+    .logo_main_image{ display:flex !important; gap:10px; }
+    .logo_main_image img{ width:100px; }
+    .searchButtonCate { margin-left: 0px; }
+    .SideBarOpenIcon { display: inline-block; }
+}
+
+@media (max-width: 680px) {
+    .whishlist_button{ display: none!important; }
+    .cart_button { display: none!important; }
+    .footermainWrapper .footer-content{flex-direction: column-reverse; gap: 20px; padding-bottom: 10px;}
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .cart_dropdownCustom { min-width: 300px; }
+    .customDropdownCartButton1, .customDropdownCartButton2 { font-size: 12px; }
+    .customCartDropdownHeading { font-size: 12px; }
+    .rightReversedAndPaymentIconsMain{flex-direction: column-reverse; gap: 20px; padding: 0; align-items: start; padding-bottom: 20px;}
+}
