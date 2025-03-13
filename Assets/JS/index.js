@@ -14,6 +14,7 @@ function includeHTML(file, elementTag) {
 
               // Extract and execute scripts
             executeScripts(tempDiv);
+            document.dispatchEvent(new Event("HeaderFooterScriptsLoaded"));
         })
         .catch(error => console.error(`Error loading ${file}:`, error));
 }
@@ -33,6 +34,8 @@ function executeScripts(container) {
         }
         document.body.appendChild(newScript);
         oldScript.remove(); // Remove the old script
+
+       
     });
 }
 

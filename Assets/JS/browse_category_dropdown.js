@@ -1,5 +1,9 @@
-document.addEventListener("DOMContentLoaded", async () => {
-    await loadCategories(); // Load categories when the page loads
+let categories=[];
+
+document.addEventListener("HeaderFooterScriptsLoaded", ()=> {
+    if(categories.length === 0){
+        loadCategories(); // Load categories when the page loads
+    }
 });
 
 // Function to load categories dynamically
@@ -8,15 +12,16 @@ async function loadCategories() {
         const response = await fetch("Assets/json_files/Browse_navbar_categories.json"); // Load categories list
         if (!response.ok) throw new Error("Failed to load categories.");
 
-        const categories = await response.json();
-        populateCategoryDropdown(categories);
+        const cats = await response.json();
+        categories = cats;
+        populateCategories();
     } catch (error) {
         console.error("Error loading categories:", error);
     }
 }
 
 // Function to populate category dropdown
-function populateCategoryDropdown(categories) {
+function populateCategories() {
     const dropdownContainer = document.getElementById("categoryDropdown");
     const categoryGrid = dropdownContainer.querySelector(".category-grid");
     

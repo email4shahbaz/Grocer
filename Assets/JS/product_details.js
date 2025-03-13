@@ -7,44 +7,46 @@
         const cartDrawerFooter = document.querySelector("#cartDrawer .cart-drawer-footer");
         const cartTotalElement = document.querySelector(".mycartCustomHeading2");
 
+        if(cartTotalElement!=null){
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+            //cartBadge.textContent = totalItems;
+            cartTotalElement.textContent = `$${totalPrice.toFixed(2)}`;
+            cartDrawerBody.innerHTML = ""; // Clear previous items
 
-        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-        const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-        cartBadge.textContent = totalItems;
-        cartTotalElement.textContent = `$${totalPrice.toFixed(2)}`;
-        cartDrawerBody.innerHTML = ""; // Clear previous items
+            if (cart.length === 0) {
+                cartDrawerBody.innerHTML = `<p class="text-center mt-3">Your cart is empty.</p>`;
+                cartDrawerFooter.innerHTML = ""; // No footer if cart is empty
+            } 
+            else {
+                let totalPrice = 0;
 
-        if (cart.length === 0) {
-            cartDrawerBody.innerHTML = `<p class="text-center mt-3">Your cart is empty.</p>`;
-            cartDrawerFooter.innerHTML = ""; // No footer if cart is empty
-        } else {
-            let totalPrice = 0;
+                cart.forEach((item) => {
+                    totalPrice += item.price * item.quantity;
 
-            cart.forEach((item) => {
-                totalPrice += item.price * item.quantity;
-
-                // Create a cart item element
-                const cartItem = `
-                      <div class="cart-item d-flex justify-content-between align-items-center mb-3">
-                    <div class="d-flex align-items-center">
-                        <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; margin-right: 10px;">
-                        <span>${item.name} </span>
-                    </div>
-                     <div class="d-flex align-items-center">
-                <button class="btn btn-sm quantity-button decrement" data-name="${item.name}">
-                    <span  class="arrow down"></span>
-                </button>
-               <span class="">${item.quantity}</span>
-                <button class="btn btn-sm quantity-button increment" data-name="${item.name}">
-                    <span class="arrow up"></span>
-                </button>
-                <strong>$${(item.price * item.quantity).toFixed(2)}</strong>
-                <button class="btn btn-danger-green btn-sm remove-cart-item" data-name="${item.name}">X</button>
-            </div>
+                    // Create a cart item element
+                    const cartItem = `
+                        <div class="cart-item d-flex justify-content-between align-items-center mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; margin-right: 10px;">
+                            <span>${item.name} </span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                    <button class="btn btn-sm quantity-button decrement" data-name="${item.name}">
+                        <span  class="arrow down"></span>
+                    </button>
+                <span class="">${item.quantity}</span>
+                    <button class="btn btn-sm quantity-button increment" data-name="${item.name}">
+                        <span class="arrow up"></span>
+                    </button>
+                    <strong>$${(item.price * item.quantity).toFixed(2)}</strong>
+                    <button class="btn btn-danger-green btn-sm remove-cart-item" data-name="${item.name}">X</button>
                 </div>
-            `;
-            cartDrawerBody.insertAdjacentHTML("beforeend", cartItem);
-        });
+                    </div>
+                `;
+                cartDrawerBody.insertAdjacentHTML("beforeend", cartItem);
+            });
+            
 
             // Update footer with total price and action buttons
             cartDrawerFooter.innerHTML = `
@@ -68,6 +70,7 @@
                 updateDrawerCart(); // Re-render the cart drawer
             });
         });
+        }
     }
 
     
@@ -107,41 +110,7 @@
         };
     }
 
-    // Handle Add to Cart button
-    const addToCartButton = document.querySelector("#add-to-cart-btn");
-    if (addToCartButton) {
-        addToCartButton.addEventListener("click", () => {
-            const product = getProductDetails();
-            addToCart(product);
-            // alert(`${product.name} has been added to the cart!`);
-              // Play sound when adding a product to the cart
-              const sound = new Audio("Sound/button-28.mp3"); // Replace with the actual path
-              sound.play();
-        });
-    }
-
-    // Open and close drawer functionality
-    const cartDrawer = document.getElementById("cartDrawer");
-    const cartDrawerOverlay = document.querySelector(".cart-drawer-overlay");
-    const openCartDrawer = document.getElementById("openCartDrawer");
-    const closeCartDrawer = document.getElementById("cartDrawerClose");
-
-    openCartDrawer.addEventListener("click", (e) => {
-        e.preventDefault();
-        cartDrawer.classList.add("open");
-        cartDrawerOverlay.style.display = "block";
-    });
-
-    const closeDrawer = () => {
-        cartDrawer.classList.remove("open");
-        cartDrawerOverlay.style.display = "none";
-    };
-
-    closeCartDrawer.addEventListener("click", closeDrawer);
-    cartDrawerOverlay.addEventListener("click", closeDrawer);
-
-    updateDrawerCart(); // Initialize the cart drawer on page load
-
+    
 
 
 
@@ -150,22 +119,18 @@
 function updateCartBadge() {
     const cartBadge = document.getElementById("cartBadge");
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-    cartBadge.textContent = totalItems;
+    if(cartBadge!=null) cartBadge.textContent = totalItems;
 }
 
 
     
-    const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-    updateCartBadge(cartItems.length);
-
+   
     
     document.body.addEventListener("cart-updated", (e) => {
         updateCartBadge(e.detail.count);
     });
 
-    updateDrawerCart();
-    //updateNavbarCart();
-    updateCartBadge();
+  
 
     // Listen for cart-updated events
     document.body.addEventListener("cart-updated", (e) => {
@@ -179,12 +144,58 @@ function updateCartBadge() {
 
 
 document.addEventListener("DOMContentLoaded", async () => {
+    // Handle Add to Cart button
+    const addToCartButton = document.querySelector("#add-to-cart-btn");
+    if (addToCartButton) {
+        addToCartButton.addEventListener("click", () => {
+            const product = getProductDetails();
+            addToCart(product);
+            // alert(`${product.name} has been added to the cart!`);
+            // Play sound when adding a product to the cart
+            const sound = new Audio("Sound/button-28.mp3"); // Replace with the actual path
+            sound.play();
+        });
+    }
+
+    // Open and close drawer functionality
+    const cartDrawer = document.getElementById("cartDrawer");
+    const cartDrawerOverlay = document.querySelector(".cart-drawer-overlay");
+    const openCartDrawer = document.getElementById("openCartDrawer");
+    const closeCartDrawer = document.getElementById("cartDrawerClose");
+
+    if(openCartDrawer!=null){
+        openCartDrawer.addEventListener("click", (e) => {
+            e.preventDefault();
+            cartDrawer.classList.add("open");
+            cartDrawerOverlay.style.display = "block";
+        });
+}
+
+    // const closeDrawer = () => {
+    //     cartDrawer.classList.remove("open");
+    //     cartDrawerOverlay.style.display = "none";
+    // };
+
+    // closeCartDrawer.addEventListener("click", closeDrawer);
+    if(cartDrawerOverlay!=null){
+        cartDrawerOverlay.addEventListener("click", closeDrawer);
+    }
+
+    updateDrawerCart(); // Initialize the cart drawer on page load
+
+    const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+    updateCartBadge(cartItems.length);
+
+
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get("product-id");
     const categoryFile = urlParams.get("category-file");
 
     if (!productId || !categoryFile) {
-        document.getElementById("product-details").innerHTML = "<p>Product details not found.</p>";
+        const productDetails = document.getElementById("product-details");
+        if(productDetails!=null){
+            documentDetails.innerHTML = "<p>Product details not found.</p>";
+        }
         return;
     }
 

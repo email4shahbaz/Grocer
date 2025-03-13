@@ -1,5 +1,5 @@
-const newLocal = ".cart-drawer-overlay";
-document.addEventListener("DOMContentLoaded", () => {
+//const newLocal = ".cart-drawer-overlay";
+document.addEventListener("HeaderFooterScriptsLoaded", () => {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     
@@ -477,10 +477,10 @@ document.body.addEventListener("cart-updated", () => {
         // });
     
         // Close Drawer
-        const closeDrawer = () => {
-            mobileCartDrawer.classList.remove("open");
-            mobileCartOverlay.classList.remove("active");
-        };
+        // const closeDrawer = () => {
+        //     mobileCartDrawer.classList.remove("open");
+        //     mobileCartOverlay.classList.remove("active");
+        // };
     
         // closeMobileCartDrawer.addEventListener("click", closeDrawer);
         // mobileCartOverlay.addEventListener("click", closeDrawer);
