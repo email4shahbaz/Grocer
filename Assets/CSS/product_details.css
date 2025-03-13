@@ -768,6 +768,8 @@ li {
         font-size: 14px;
         font-weight: 900;
     }
+    .head {
+        margin-bottom: 20px;
 }
 
 
@@ -865,4 +867,4 @@ background-color:  #3a975c;
     color: white;
 }
 
-
+}

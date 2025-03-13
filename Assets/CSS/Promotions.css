@@ -1,18 +1,37 @@
 /* Root  */
 :root {
-    --green: #53B175;
+    --light-green: #F2FCE4;
     --hovergreen: #3a975c;
+    --green: #53B175;
+
+    --light-orange: #FFF5E1D9;
+    --orange: #FD6020;
+
+    --light-gray: #F6F6F6;
+    --gray: #979797;
 }
 
 body {
     min-width: 320px;
     font-family: Quicksand;
 }
-a{
+
+hr {
+    margin: 0;
+}
+
+a {
     text-decoration: none;
 }
+.section-heading {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: Quicksand;
+    color: #29292E;
+}
+
 /* Main Heading */
-.promotions_main_heading{
+.promotions_main_heading {
     font-family: 'Mulish';
     text-align: center;
     font-weight: 700;
@@ -21,33 +40,37 @@ a{
     margin-bottom: 30px;
     color: #4E4E4E;
 }
-.PromotionsDivProducts{
+
+.PromotionsDivProducts {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
 }
-.ProtomotionsProducts{
+
+.ProtomotionsProducts {
     width: 32%;
 }
-/* Hero */
-.promotions_hero_container{
+.promotions_hero_container {
     background-image: url(../Images/Banner/HeroHome.webp);
     background-size: cover;
     background-repeat: no-repeat;
 }
-.promotions_hero_main{
+
+.promotions_hero_main {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.promotions_hero_description{
+
+.promotions_hero_description {
     width: 40%;
     padding-top: 100px;
     padding-bottom: 100px;
 }
-.promotions_hero_description h1{
+
+.promotions_hero_description h1 {
     text-align: center;
     font-size: 64px;
     font-weight: 700;
@@ -55,15 +78,17 @@ a{
     color: #53B175;
     margin-bottom: 25px;
 }
-.promotions_hero_description h2{
+
+.promotions_hero_description h2 {
     text-align: center;
     font-size: 48px;
     font-weight: 600;
     font-family: poppins;
-    color: #4E4E4E;
+    color: #4E4E4E !important;
     margin-bottom: 25px;
 }
-.promotions_hero_description h3{
+
+.promotions_hero_description h3 {
     text-align: center;
     font-size: 64px;
     font-weight: 700;
@@ -71,17 +96,20 @@ a{
     color: #53B175;
     margin-bottom: 25px;
 }
-.promotions_hero_description p{
+
+.promotions_hero_description p {
     font-family: Quicksand;
     font-weight: 500;
     font-size: 24px;
     text-align: justify;
 }
-.promotions_hero_fruit_image{
+
+.promotions_hero_fruit_image {
     width: 45%;
 }
+
 /* Products Section */
-.promotions_products_main_heading{
+.promotions_products_main_heading {
     font-family: 'Mulish';
     text-align: center;
     font-weight: 700;
@@ -90,33 +118,251 @@ a{
     margin-bottom: 50px;
     color: #4E4E4E;
 }
-.promotions_products_banner_main{
+
+.promotions_products_banner_main {
     display: flex;
     justify-content: space-between;
     gap: 45px;
 }
+
 .promotions_banner_and_products {
     width: 30%;
 }
-.promotions_banner{
+
+.promotions_banner {
     /* background-image: url('../Images/Banner/SearchOffer.webp');
     background-repeat: no-repeat;
     background-size: cover; */
     width: 100%;
 }
-.promotions_banner img{
+
+.promotions_banner img {
     width: 100%;
 }
+
 .promotions_products_mainDiv {
     width: 70%;
 }
+
 a {
     text-decoration: none;
     color: black;
 }
+
+
+.promotions_2_hero_container {
+    background-image: url(../Images/Banner/promotions-page-banner.jpg) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 26px;
+}
+.promotions_2_hero_container .promotions_hero_main {
+    min-height: 378px;
+}
+.promotions_2_hero_container .promotions_hero_description {
+    width: 45%;
+    padding: 50px 0;
+}
+.promotions_2_hero_container .promotions_hero_description h1,
+.promotions_2_hero_container .promotions_hero_description h2,
+.promotions_2_hero_container .promotions_hero_description h3 {
+    text-align: left;
+    margin-bottom: 0;
+    line-height: 66px;
+}
+.promotions_2_hero_container .promotions_hero_description .offerSButton {
+    margin-top: 36px;
+}
+.promotions_2_hero_container .promotions_hero_fruit_image {
+    position: relative;
+    align-self: flex-end;
+}
+.promotions_2_hero_container .promotions_hero_fruit_image img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.promotions_2_hero_container .promotions_hero_fruit_image .image-1 {
+    left: 4px;
+    z-index: 2;
+    max-width: 390px;
+}
+.featured_categories .featured-categories {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+.featured-categories .category-card {
+    width: 16.66%;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.featured-categories .category-card .category-image {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.featured-categories .category-card .category-image .badge {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0 8px 0 8px;
+}
+
+.featured-categories .category-card .category-image .badge.orange {
+    background: var(--orange);
+}
+.featured-categories .category-card .category-image .badge.green {
+    background: var(--green);
+}
+.featured-categories .category-card .category-title {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Mulish;
+    color: #29292E;
+    margin-top: 15px;
+    text-align: center;
+}
+.shopping-vouchers {
+    padding-top: 20px;
+}
+
+.shopping-vouchers .vouchers-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 14px;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px; */
+    padding: 36px 0 25px 0;
+}
+.shopping-vouchers .vouchers-wrapper .voucher-card {
+    border-radius: 20px;
+    position: relative;
+    padding: 10px 11px 16px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Mulish;
+}
+.shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(odd) {
+    background-color: var(--light-green);
+}
+.shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(odd) .card-section-2 {
+    border-left: 2px dashed var(--green);
+}
+.shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(odd) h3, h2, p {
+    color: var(--green) !important;
+}
+.shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(2) {
+    background-color: var(--light-orange);
+}
+.shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(2) span {
+    color: var(--orange);
+}
+.shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(2) h3, h2, p {
+    color: var(--orange);
+}
+.shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(2) .card-section-2 {
+    border-left: 2px dashed var(--orange);
+}
+.shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(4) {
+    background-color: var(--light-gray);
+}
+.shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(4) h3, h2, p, span {
+    color: var(--gray) !important;
+}
+.shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(4) .card-section-2 {
+    border-left: 2px dashed var(--gray);
+}
+
+.shopping-vouchers .vouchers-wrapper .voucher-card::before,
+.shopping-vouchers .vouchers-wrapper .voucher-card::after {
+    content: "";
+    position: absolute;
+    background: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    left: 36%;
+}
+.shopping-vouchers .vouchers-wrapper .voucher-card::before {
+    top: -10px;
+}
+.shopping-vouchers .vouchers-wrapper .voucher-card::after {
+    bottom: -10px;
+}
+.vouchers-wrapper .voucher-card .card-section-1 {
+    padding-right: 30px;
+    text-align: center;
+}
+.vouchers-wrapper .voucher-card .card-section-1 {
+    width: 44%;
+}
+.vouchers-wrapper .voucher-card .card-section-2 {
+    width: 100%;
+    padding-left: 10px;
+}
+.voucher-card span {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--orange)
+}
+.voucher-card h3 {
+    font-weight: 700;
+    font-size: 18px;
+    margin: 10px 0;
+}
+.voucher-card h2 {
+    font-weight: 1000;
+    font-size: 28px;
+    letter-spacing: 0.5%;
+}
+.voucher-card .card-section-1 p {
+    font-weight: 500;
+    font-size: 14px;
+}
+.voucher-card .time-period {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    font-size: 12px;
+}
+.voucher-card .time-period {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+.voucher-button-1 {
+    opacity: 40%;
+    background: #53B175;
+}
+
+
+@media screen and (max-width:991px) {
+    .featured_categories .featured-categories {
+        justify-content: space-around;
+    }
+}
 @media screen and (max-width:768px) {
     .ProtomotionsProducts {
         width: 48%;
+    }
+    .featured-categories .category-card {
+        width: 50%;
+        margin-bottom: 30px;
     }
     .CategoryMainCardImage {
         width: auto !important;
@@ -126,6 +372,7 @@ a {
         justify-content: center;
         align-items: center;
     }
+
     .promotions_main_heading {
         font-family: 'Poppins';
         text-align: center;
@@ -134,12 +381,15 @@ a {
         margin-top: 30px;
         margin-bottom: 30px;
     }
+
     .promotions_hero_fruit_image {
         display: none;
     }
+
     .promotions_hero_description h1 {
         font-size: 36px;
     }
+
     .promotions_hero_description h2 {
         text-align: center;
         font-size: 32px;
@@ -148,31 +398,38 @@ a {
         color: #4E4E4E;
         margin-bottom: 25px;
     }
+
     .promotions_hero_description h3 {
         font-size: 36px;
         font-weight: 600;
     }
+
     .promotions_hero_description {
         width: 80%;
         margin: auto;
         padding-top: 50px;
         padding-bottom: 50px;
     }
+
     .promotions_products_main_heading {
         display: none;
     }
+
     .promotions_products_banner_main {
         flex-direction: column;
     }
+
     .promotions_banner_and_products {
         width: 100%;
         margin-top: 10px !important;
         margin: auto;
     }
+
     .promotions_products_mainDiv {
         width: 100%;
     }
-    .promotions_side_products{
+
+    .promotions_side_products {
         display: none;
     }
 }

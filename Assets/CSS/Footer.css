@@ -18,6 +18,15 @@ li{
     margin-top: 20px;
     padding-top: 20px;
 }
+.footermainWrapper .hr{
+    margin: 1rem;
+    padding: 10px;
+    color: inherit;
+    border: 0;
+    border-top: var(--bs-border-width) solid;
+    opacity: .25;
+}
+
 .footermainWrapper .footer-wrapper{
     display: flex;
     justify-content: space-between;

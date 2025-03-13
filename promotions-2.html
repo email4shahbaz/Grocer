@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <meta name="description"
+        content="Grocer offers a wide variety of groceries including fresh produce, dairy products, meats, and household essentials. Shop online and get everything you need delivered to your doorstep." />
+    <meta name="keywords"
+        content="grocery, online grocery, fresh produce, dairy products, meats, household essentials, Grocer" />
+    <meta name="author" content="Software System" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Grocer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:title" content="Grocer - Your One-Stop Grocery Shop" />
+    <meta property="og:description"
+        content="Grocer offers a wide variety of groceries including fresh produce, dairy products, meats, and household essentials. Shop online and get everything you need delivered to your doorstep." />
+    <meta property="og:image"
+        content="https://grocer.softwaresystems.us/storage/app/public/restaurant/2024-05-30-665896300dbbd.png" />
+    <meta property="og:url" content="https://groceapp.softwaresystems.us/" />
+    <meta property="og:type" content="website" />
+    <link rel="shortcut icon" href="https://grocer.softwaresystems.us/storage/app/public/restaurant/{{ $favicon }}"
+        type="image/x-icon" />
+    <title>Promotions</title>
+    <!-- {{-- Quicksand --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
+    <!-- {{-- Poppins --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Mulish --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Roboto --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Inter --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet" />
+    <!-- {{-- Bootstrap 5 --}} -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <!-- {{-- Bootstrap 5 Icons --}} -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- {{-- Font Awesome Icons CDN --}} -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- {{-- NavBar Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Navbar.css" />
+    <!-- {{-- Footer Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Footer.css">
+    <!-- {{-- Bread Crumbs Style  --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Components/breadCrumbs.css">
+    <!-- {{-- About Us Page Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Promotions.css">
+    <!-- {{-- Search Card Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Components/search_product.css">
+    <!-- {{-- Search Page Css Custom Style --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/search.css">
+    <!-- {{-- Rating Stars Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Components/ratingStars.css">
+    <!-- {{-- Pagination Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/pagination.css">
+    <!-- {{-- Nav Home Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/Home.css">
+    <link rel="stylesheet" href="Assets/CSS/cart.css">
+    <link rel="stylesheet" href="Assets/CSS/cart_dropdown.css">
+    <link rel="stylesheet" href="/Assets/CSS/navbar_side_icons.css">
+    <link rel="stylesheet" href="/Assets/CSS/Animations.css">
+    <link rel="stylesheet" href="/Assets/CSS/Components/products.css">
+    <!-- {{-- Wishlist Page Css Custom Style --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/wishlist.css">
+    <!-- {{-- SubNav Home Custom Stylesheet --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/subnav_home.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="Assets/Images/Banner/Favicon.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <!-- Animated Logo Cover -->
+    <div id="logo-cover" class="logo-cover d-flex justify-content-center align-items-center">
+        <img src="Assets/Images/Icons/GrocerLogo.png" alt="Grocer Logo" class="animated-logo" />
+    </div>
+
+    <!-- Animated Logo End -->
+
+    <!-- Header dynamically added from index.js file -->
+    <header></header>
+
+
+    <!-- {{-- **************Hero-Banner**************** --}} -->
+    <div class="promotions_2_hero_container">
+        <div class="container promotions_hero_main">
+            <div class="promotions_hero_description">
+                <h1>Exclusive Grocer</h1>
+                <h2>and Promotion Deals</h2>
+                <h3>Up to 50% off</h3>
+                <a href="" class="offerSButton">
+                    Order Now
+                    <i class="bi bi-arrow-right-short"></i></a>
+                </a>
+            </div>
+            <div class="promotions_hero_fruit_image">
+                <img class="image-1" src="/Assets/Images/Banner/promotions-banner-image-1.png" alt="" loading="lazy">
+                <img class="image-2" src="/Assets/Images/Banner/promotions-banner-image-2.png" alt="" loading="lazy">
+            </div>
+        </div>
+    </div>
+    <!-- {{-- **************Hero-Banner**************** --}} -->
+
+    <div class="container featured_categories">
+        <h1 class="section-heading">Featured Categories</h1>
+        <div class="featured-categories">
+            <a href="#" class="category-card">
+                <div class="category-image">
+                    <div class="badge orange">Upto 60% off</div>
+                    <img src="/Assets/Images/Categories/fruits.png" alt="" loading="lazy" />
+                </div>
+                <div class="category-title">Fruits</div>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-image">
+                    <div class="badge"></div>
+                    <img src="/Assets/Images/Categories/vegitables.png" alt="" loading="lazy" />
+                </div>
+                <div class="category-title">Vegitables</div>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-image">
+                    <div class="badge"></div>
+                    <img src="/Assets/Images/Categories/meat.png" alt="" loading="lazy" />
+                </div>
+                <div class="category-title">Meat</div>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-image">
+                    <div class="badge"></div>
+                    <img src="/Assets/Images/Categories/fish.png" alt="" loading="lazy" />
+                </div>
+                <div class="category-title">Fish</div>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-image">
+                    <div class="badge"></div>
+                    <img src="/Assets/Images/Categories/dairy-and-milk.png" alt="" loading="lazy" />
+                </div>
+                <div class="category-title">Dairy & Milk</div>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-image">
+                    <div class="badge"></div>
+                    <img src="/Assets/Images/Categories/wheat.png" alt="" loading="lazy" />
+                </div>
+                <div class="category-title">Wheat</div>
+            </a>
+        </div>
+        <hr>
+    </div>
+
+    <div class="container shopping-vouchers">
+        <h1 class="section-heading">Shopping Vouchers</h1>
+        <div class="vouchers-wrapper">
+            <div class="voucher-card">
+                <div class="card-section-1">
+                    <span>Mega Eid Sale</span>
+                    <h3>Voucher MAX</h3>
+                    <p>Voucher Upto $20Off</p>
+                </div>
+                <div class="card-section-2">
+                    <h2>10% Off</h2>
+                    <h3>Min. spend $100</h3>
+                    <div class="time-period">
+                        <p>12/03/2025</p>
+                        -
+                        <p>12/03/2025</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="#" class="voucher-button-1">T & C</a>
+                        <a href="#" class="voucher-button-2">Collect</a>              
+                    </div>
+                </div>
+            </div>
+            <div class="voucher-card">
+                <div class="card-section-1">
+                    <span>Mega Eid Sale</span>
+                    <h3>Voucher MAX</h3>
+                    <p>Voucher Upto $20Off</p>
+                </div>
+                <div class="card-section-2">
+                    <h2>10% Off</h2>
+                    <h3>Min. spend $100</h3>
+                    <div class="time-period">
+                        <p>12/03/2025</p>
+                        -
+                        <p>12/03/2025</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="#" class="voucher-button-1">T & C</a>
+                        <a href="#" class="voucher-button-2">Collect</a>              
+                    </div>
+                </div>
+            </div>
+            <div class="voucher-card">
+                <div class="card-section-1">
+                    <span>Mega Eid Sale</span>
+                    <h3>Voucher MAX</h3>
+                    <p>Voucher Upto $20Off</p>
+                </div>
+                <div class="card-section-2">
+                    <h2>10% Off</h2>
+                    <h3>Min. spend $100</h3>
+                    <div class="time-period">
+                        <p>12/03/2025</p>
+                        -
+                        <p>12/03/2025</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="#" class="voucher-button-1">T & C</a>
+                        <a href="#" class="voucher-button-2">Collect</a>              
+                    </div>
+                </div>
+            </div>
+            <div class="voucher-card">
+                <div class="card-section-1">
+                    <span>Mega Eid Sale</span>
+                    <h3>Voucher MAX</h3>
+                    <p>Voucher Upto $20Off</p>
+                </div>
+                <div class="card-section-2">
+                    <h2>10% Off</h2>
+                    <h3>Min. spend $100</h3>
+                    <div class="time-period">
+                        <p>12/03/2025</p>
+                        -
+                        <p>12/03/2025</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="#" class="voucher-button-1">T & C</a>
+                        <a href="#" class="voucher-button-2">Collect</a>              
+                    </div>
+                </div>
+            </div>
+            <div class="voucher-card">
+                <div class="card-section-1">
+                    <span>Mega Eid Sale</span>
+                    <h3>Voucher MAX</h3>
+                    <p>Voucher Upto $20Off</p>
+                </div>
+                <div class="card-section-2">
+                    <h2>10% Off</h2>
+                    <h3>Min. spend $100</h3>
+                    <div class="time-period">
+                        <p>12/03/2025</p> <span>-</span> - <p>12/03/2025</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="#" class="voucher-button-1">T & C</a>
+                        <a href="#" class="voucher-button-2">Collect</a>              
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <div class="container offers-container">
+        <div class="offers">
+            <div class="free-delivery-card">
+                <div class="offerContent">
+                    <span class="offerContentBadgeOne">Free Delivery</span>
+                    <h1>Free delivery over $50</h1>
+                    <p>Shop $50 product and get free delivery anywhre.</p>
+                    <a href="/promotions.html" class="offerSButton">Shop Now <i class="bi bi-arrow-right-short"></i></a>
+                </div>
+                <div class="img-cont">
+                    <img src="./Assets/Images/Banner/Offer1-img.webp" class="offersImage" alt="">
+                </div>
+    
+            </div>
+            <div class="organic-food-card">
+                <div class="offerContent">
+                    <span class="offerContentBadgeTwo">60% Off</span>
+                    <h1>Organic Food</h1>
+                    <p>Save up to 60% off on your first order</p>
+                    <a href="/promotions.html" class="offerSButton">Order Now <i class="bi bi-arrow-right-short"></i></a>
+                </div>
+                <div class="img-cont">
+                    <img src="./Assets/Images/Banner/Offer2-img.webp" class="offersImage" alt="" />
+                </div>
+            </div>
+            <div class="delivery-card-container">
+    
+            </div>    
+        </div>
+        <hr>
+    </div>
+
+
+
+    <!--********* FOOTER *********-->
+
+    <!-- Footer dynamically added from index.js file -->
+    <footer></footer>
+    <!--********* FOOTER *********-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="/Assets/JS/promotionsMain.js"></script>
+    <script src="/Assets/JS/promotionsSub.js"></script>
+    <script src="/Assets/JS/cart_dropdown.js"></script>
+    <script src="/Assets/JS/wishlist.js"></script>
+    <script src="/Assets/JS/index.js"></script>
+    <script src="/Assets/JS/featured.js"></script>
+    <script src="/Assets/JS/bestsell.js"></script>
+    <script src="/Assets/JS/homelasttopsell.js"></script>
+    <script src="/Assets/JS/homelasttrending.js"></script>
+    <script src="/Assets/JS/homelastpopular.js"></script>
+    <script src="/Assets/JS/homelastlatest.js"></script>
+    <script src="/Assets/JS/top_sell_products.js"></script>
+    <script src="/Assets/JS/cart.js"></script>
+    <script src="/Assets/JS/product_details.js"></script>
+    <script src="/Assets/JS/cart_dropdown.js"></script>
+    <script src="/Assets/JS/search_product.js"></script>
+    <script src="/Assets/JS/category_product.js"></script>
+    <script src="/Assets/JS/wishlist.js"></script>
+    <script src="/Assets/JS/mob_search.js"></script>
+    <script src="/Assets/JS/sidebar_icons.js"></script>
+    <script src="/Assets/JS/Animations.js"></script>
+    <script src="/Assets/JS/browse_category_dropdown.js"></script>
+    <script src="/Assets/JS/navbar.js"></script>
+    <script src="/Assets/JS/index.js"></script>
+</body>
+
+</html>

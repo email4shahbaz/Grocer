@@ -18,7 +18,16 @@
     .footermainWrapper .footer-wrapper{ flex-direction: column; gap: 20px; }
     .footer-logo-cont{max-width: 100%;}
     .footermainWrapper .footer-content{justify-content: space-between; flex-direction: row-reverse;}
+
+
+
+    .homefeaturedProductsMain{
+        gap:17px; }
+    .homecategoryProductsMain {
+        gap:17px;}
+
 }
+
 
 
 
@@ -53,12 +62,19 @@
     .logo_main_image img{ width:100px; }
     .searchButtonCate { margin-left: 0px; }
     .SideBarOpenIcon { display: inline-block; }
+
+    .MobileViewCategoriesCardOneMainDiv { display: grid; grid-template-columns: repeat(10, 1fr); gap: 10px; overflow: scroll;}
+
+
 }
+
 
 @media (max-width: 680px) {
     .whishlist_button{ display: none!important; }
     .cart_button { display: none!important; }
     .footermainWrapper .footer-content{flex-direction: column-reverse; gap: 20px; padding-bottom: 10px;}
+    
+    .head { margin-bottom: 0px; }
 }
 
 
@@ -68,4 +84,6 @@
     .customDropdownCartButton1, .customDropdownCartButton2 { font-size: 12px; }
     .customCartDropdownHeading { font-size: 12px; }
     .rightReversedAndPaymentIconsMain{flex-direction: column-reverse; gap: 20px; padding: 0; align-items: start; padding-bottom: 20px;}
+    
+    .head { margin-bottom: 0px; }
 }

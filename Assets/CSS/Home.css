@@ -529,6 +529,9 @@ body {
         font-weight: 500;
         padding: 7px;
     }
+    .customWidth_80 {
+        width: 100%;
+    }
 }
 
 
@@ -754,6 +757,9 @@ li {
         border-radius: 3px;
         padding: 5px;
         font-size: 10px;
+    }
+    .customWidth_80 {
+        width: 100%;
     }
 
     .offerSButton {
@@ -1081,6 +1087,9 @@ li {
         gap: 10px;
     }
 
+    .customWidth_80 {
+        width: 100%;
+    }
     /* New button */
     .new_button {
         background-color: var(--green);
@@ -1250,14 +1259,15 @@ li {
 @media screen and (min-width:769px) and (max-width:991px) {
     .MobileViewCategoriesCardOneMainDiv {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 20px;
+        overflow: scroll;
     }
 
     .MobileViewFeaturedCardMain {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
+        gap: 20px;
     }
 
     /* New button */

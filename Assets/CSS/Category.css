@@ -290,9 +290,11 @@ li {
     }
 
     .MobileViewYellowbannerOffer {
-        display: block;
+        display: none !important;
         position: relative;
         text-align: center;
+        margin-top: 150px !important;
+        opacity: 100 !important;
     }
 
     .department_heading {
@@ -324,7 +326,8 @@ li {
         width: 100%;
     }
     .CategoryPageCategoryCard {
-        width: 50%;
+        /* width: 50%; */
+        display: block;
     }
     .search_component {
         display: block;
@@ -335,9 +338,12 @@ li {
     }
 
     .MobileViewYellowbannerOffer {
-        display: block;
+        display: none !important;
         position: relative;
         text-align: center;
+        margin-top: 100px !important;
+        opacity: 100px !important;
+
     }
 
     .department_heading {
