@@ -3,7 +3,7 @@
     border-radius: 3px;
     border: 1px solid rgba(173, 173, 173, 0.25);
     max-width: 250px;
-    min-width: 200px;
+    min-width: 246px;
 }
 
 
@@ -129,7 +129,7 @@
 .BestSellCardOffTag {
     top: 0px;
     left: 0px;
-    background-color: #FFD480;
+    background-color: #FD6020;
     color: white;
     border-radius: 0px 3px;
     padding: 7px;
