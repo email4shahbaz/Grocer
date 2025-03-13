@@ -65,6 +65,7 @@
 
     .MobileViewCategoriesCardOneMainDiv { display: grid; grid-template-columns: repeat(10, 1fr); gap: 10px; overflow: scroll;}
 
+    
 
 }
 
