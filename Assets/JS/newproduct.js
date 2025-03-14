@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             const productName = product.name;
             const productImage = product.image[0]; // Fetch the first image from the array
             const productPrice = product.price.toFixed(2); // Ensure price is formatted to 2 decimal places
-            const productUnit = product.unit ? `/${product.unit}` : '';
+            const productUnit = product.unit ? `/${product.unit}` : ''; 
             const averageRating = product.rating || 0; // Default to 0 if rating is undefined
 
             // Calculate stars
@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             productCard.innerHTML = `
                 <div class="ProductsCardSearchANDCategory ProductsCard_Animations ProductCardImage mt-3">
+                    <div class="badge">${'Save 50%'}</div>
                     <div class="heart">
                         <i class="bi bi-heart"></i>
                     </div>
@@ -63,15 +64,13 @@ document.addEventListener("DOMContentLoaded", async () => {
                             <div class="col align-self-center">
                                 <h1 class="searchpricetag align-self-center">$${productPrice}${productUnit}</h1>
                             </div>
-                            <div class="col text-center align-self-center">
-                                <button class="searchaddbutton" 
-                                            data-name="${productName}" 
-                                            data-price="${productPrice}" 
-                                            data-image="${productImage}" 
-                                            data-quantity="1">
-                                        <img src="/Assets/Images/SmallIcons/Bag.png" alt="Add to Cart">
-                                    </button>
-                            </div>
+                            <button class="searchaddbutton" 
+                                        data-name="${productName}" 
+                                        data-price="${productPrice}" 
+                                        data-image="${productImage}" 
+                                        data-quantity="1">
+                                    <img src="/Assets/Images/SmallIcons/Bag.png" alt="Add to Cart">
+                                </button>
                         </div>
                         <div class="d-flex justify-between items-center gap-1 RatingStars">
                             ${'<i class="bi bi-star-fill" style="color: gold; font-size: 1.2rem;"></i>'.repeat(filledStars)}

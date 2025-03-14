@@ -1,5 +1,6 @@
 /* Root  */
 :root {
+    --red: #ED0006;
     --light-green: #F2FCE4;
     --hovergreen: #3a975c;
     --green: #53B175;
@@ -23,12 +24,33 @@ hr {
 a {
     text-decoration: none;
 }
+
 .section-heading {
-    font-size: 32px;
+    font-size: clamp(22px, 5vw, 32px);
     font-weight: 700;
     font-family: Quicksand;
     color: #29292E;
 }
+.slider-controller {
+    background: white;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px 0px #00000040;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    position: absolute;
+}
+.slider-controller.prev {
+    left: -10px;
+}
+.slider-controller.next {
+    right: -10px;
+}
+
 
 /* Main Heading */
 .promotions_main_heading {
@@ -52,6 +74,7 @@ a {
 .ProtomotionsProducts {
     width: 32%;
 }
+
 .promotions_hero_container {
     background-image: url(../Images/Banner/HeroHome.webp);
     background-size: cover;
@@ -72,7 +95,7 @@ a {
 
 .promotions_hero_description h1 {
     text-align: center;
-    font-size: 64px;
+    font-size: clamp(28px, 5vw, 64px);
     font-weight: 700;
     font-family: poppins;
     color: #53B175;
@@ -81,7 +104,7 @@ a {
 
 .promotions_hero_description h2 {
     text-align: center;
-    font-size: 48px;
+    font-size: clamp(22px, 5vw, 48px);
     font-weight: 600;
     font-family: poppins;
     color: #4E4E4E !important;
@@ -90,7 +113,7 @@ a {
 
 .promotions_hero_description h3 {
     text-align: center;
-    font-size: 64px;
+    font-size: clamp(22px, 5vw, 64px);
     font-weight: 700;
     font-family: poppins;
     color: #53B175;
@@ -156,13 +179,16 @@ a {
     background-repeat: no-repeat;
     margin-bottom: 26px;
 }
+
 .promotions_2_hero_container .promotions_hero_main {
     min-height: 378px;
 }
+
 .promotions_2_hero_container .promotions_hero_description {
-    width: 45%;
+    width: 56%;
     padding: 50px 0;
 }
+
 .promotions_2_hero_container .promotions_hero_description h1,
 .promotions_2_hero_container .promotions_hero_description h2,
 .promotions_2_hero_container .promotions_hero_description h3 {
@@ -170,24 +196,31 @@ a {
     margin-bottom: 0;
     line-height: 66px;
 }
+
 .promotions_2_hero_container .promotions_hero_description .offerSButton {
     margin-top: 36px;
 }
+
 .promotions_2_hero_container .promotions_hero_fruit_image {
     position: relative;
     align-self: flex-end;
 }
+
 .promotions_2_hero_container .promotions_hero_fruit_image img {
     position: absolute;
     bottom: 0;
     right: 0;
 }
+
 .promotions_2_hero_container .promotions_hero_fruit_image .image-1 {
     left: 4px;
     z-index: 2;
     max-width: 390px;
+    width: 100%;
 }
+
 .featured_categories .featured-categories {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -195,11 +228,17 @@ a {
     flex-wrap: wrap;
     margin: 30px 0;
 }
+.featured-categories .slider-controller {
+    top: 29%;
+    transform: translateY(-50%);
+}
+
 .featured-categories .category-card {
     width: 16.66%;
     margin-bottom: 30px;
     cursor: pointer;
 }
+
 .featured-categories .category-card .category-image {
     position: relative;
     width: 100%;
@@ -210,20 +249,31 @@ a {
     justify-content: center;
     align-items: center;
 }
+
 .featured-categories .category-card .category-image .badge {
     position: absolute;
     top: 20px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 45%;
+    transform: translateX(-50%);
     border-radius: 0 8px 0 8px;
+    background: var(--orange);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 5px;
+}
+
+.featured-categories .category-card .category-image .badge.red {
+    background: var(--red);
 }
 
 .featured-categories .category-card .category-image .badge.orange {
     background: var(--orange);
 }
+
 .featured-categories .category-card .category-image .badge.green {
     background: var(--green);
 }
+
 .featured-categories .category-card .category-title {
     font-size: 24px;
     font-weight: 700;
@@ -231,57 +281,75 @@ a {
     color: #29292E;
     margin-top: 15px;
     text-align: center;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
 .shopping-vouchers {
-    padding-top: 20px;
+    padding-top: 20px !important;
 }
 
 .shopping-vouchers .vouchers-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 14px;
-    /* display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 14px; */
     padding: 36px 0 25px 0;
 }
+
 .shopping-vouchers .vouchers-wrapper .voucher-card {
     border-radius: 20px;
     position: relative;
-    padding: 10px 11px 16px 15px;
+    padding: 10px 11px 12px 15px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     font-family: Mulish;
 }
+
 .shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(odd) {
     background-color: var(--light-green);
 }
+
 .shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(odd) .card-section-2 {
     border-left: 2px dashed var(--green);
 }
-.shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(odd) h3, h2, p {
-    color: var(--green) !important;
+
+.shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(odd) h3,
+.shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(odd) h2,
+.shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(odd) p {
+    color: var(--green);
 }
+
 .shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(2) {
     background-color: var(--light-orange);
 }
+
 .shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(2) span {
     color: var(--orange);
 }
-.shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(2) h3, h2, p {
+
+.shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(2) h3,
+.shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(2) h2,
+.shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(2) p {
     color: var(--orange);
 }
+
 .shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(2) .card-section-2 {
     border-left: 2px dashed var(--orange);
 }
+
 .shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(4) {
     background-color: var(--light-gray);
 }
-.shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(4) h3, h2, p, span {
-    color: var(--gray) !important;
+
+.shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(4) h3,
+h2,
+p,
+span {
+    color: var(--gray);
 }
+
 .shopping-vouchers .vouchers-wrapper .voucher-card:nth-child(4) .card-section-2 {
     border-left: 2px dashed var(--gray);
 }
@@ -294,44 +362,50 @@ a {
     height: 20px;
     width: 20px;
     border-radius: 20px;
-    left: 36%;
+    left: 34%;
 }
+
 .shopping-vouchers .vouchers-wrapper .voucher-card::before {
     top: -10px;
 }
+
 .shopping-vouchers .vouchers-wrapper .voucher-card::after {
     bottom: -10px;
 }
+
 .vouchers-wrapper .voucher-card .card-section-1 {
-    padding-right: 30px;
+    padding-right: 10px;
     text-align: center;
+    width: 35%;
 }
-.vouchers-wrapper .voucher-card .card-section-1 {
-    width: 44%;
-}
+
 .vouchers-wrapper .voucher-card .card-section-2 {
-    width: 100%;
     padding-left: 10px;
 }
+
 .voucher-card span {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 12px;
     color: var(--orange)
 }
+
 .voucher-card h3 {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 17px;
     margin: 10px 0;
 }
+
 .voucher-card h2 {
     font-weight: 1000;
     font-size: 28px;
     letter-spacing: 0.5%;
 }
+
 .voucher-card .card-section-1 p {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
 }
+
 .voucher-card .time-period {
     display: flex;
     align-items: center;
@@ -339,15 +413,29 @@ a {
     justify-content: space-between;
     font-size: 12px;
 }
-.voucher-card .time-period {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: space-between;
-}
+
 .voucher-button-1 {
     opacity: 40%;
     background: #53B175;
+    padding: 0 7px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.voucher-button-2 {
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    background: #53B175;
+    color: white;
+}
+
+.offers-container .offers {
+    position: relative;
+}
+.offers .slider-controller {
+    top: 45%;
+    transform: translateY(-50%);
 }
 
 
@@ -355,15 +443,45 @@ a {
     .featured_categories .featured-categories {
         justify-content: space-around;
     }
+
+    .promotions_2_hero_container .promotions_hero_description h1,
+    .promotions_2_hero_container .promotions_hero_description h2,
+    .promotions_2_hero_container .promotions_hero_description h3 {
+        line-height: 54px;
+    }
+
+    .promotions_2_hero_container .promotions_hero_description .offerSButton {
+        margin-top: 28px;
+    }
 }
+
 @media screen and (max-width:768px) {
+
+    .promotions_2_hero_container .promotions_hero_description h1,
+    .promotions_2_hero_container .promotions_hero_description h2,
+    .promotions_2_hero_container .promotions_hero_description h3 {
+        line-height: 47px;
+    }
+
+    .promotions_2_hero_container .promotions_hero_main {
+        min-height: 280px;
+    }
+
+    .promotions_2_hero_container .promotions_hero_description {
+        margin: 0;
+        width: 100%;
+        padding: 30px 0;
+    }
+
     .ProtomotionsProducts {
         width: 48%;
     }
+
     .featured-categories .category-card {
         width: 50%;
         margin-bottom: 30px;
     }
+
     .CategoryMainCardImage {
         width: auto !important;
         height: 190px !important;
@@ -386,13 +504,8 @@ a {
         display: none;
     }
 
-    .promotions_hero_description h1 {
-        font-size: 36px;
-    }
-
     .promotions_hero_description h2 {
         text-align: center;
-        font-size: 32px;
         font-weight: 600;
         font-family: poppins;
         color: #4E4E4E;
@@ -400,7 +513,6 @@ a {
     }
 
     .promotions_hero_description h3 {
-        font-size: 36px;
         font-weight: 600;
     }
 

@@ -2,6 +2,8 @@
 :root {
     --green: #53B175;
     --hovergreen: #3a975c;
+    --yellow: #FDC040;
+    --red: #ED0006;
 }
 
 body {
@@ -11,6 +13,13 @@ body {
 
 a {
     text-decoration: none;
+}
+.section-heading {
+    font-size: clamp(22px, 5vw, 32px);
+    font-weight: 700;
+    font-family: Quicksand;
+    color: #29292E;
+    text-align: center;
 }
 
 .hot_deals_main_heading {
@@ -23,6 +32,217 @@ a {
     color: #4E4E4E;
 }
 
+.hot-deals_2_hero_container {
+    background-image: url(../Images/Banner/promotions-page-banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 26px;
+    position: relative;
+}
+.hot-deals_2_hero_container .shape {
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: 26vw;
+    height: 52px;
+}
+
+
+.hot-deals_2_hero_container .hot-deals_hero_main {
+    min-height: 290px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+.hot-deals_2_hero_container .hot-deals_hero_description {
+    width: 56%;
+    padding: 45px 0 24px 0;
+}
+
+.hot-deals_2_hero_container .hot-deals_hero_description h2 {
+    margin-bottom: 0;
+    max-width: 200px;
+    position: relative;
+    z-index: 4;    
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--yellow);
+}
+.hot-deals_2_hero_container .hot-deals_hero_description h1 {
+    font-size: clamp(28px, 5vw, 50px);
+    font-weight: 700;
+    font-family: poppins;
+    color: #53B175;
+    margin-bottom: 22px;
+    margin-top: 25px;
+}
+
+.hot-deals_hero_description h1 span {
+    color: black;
+}
+
+.hot-deals_2_hero_container .hot-deals_hero_description .shop-now-btn {
+    padding: 10px 16px;
+    background: var(--yellow);
+    border-radius: 8px;
+    font-size: clamp(14px, 5vw, 20px);
+    color: white;
+    font-weight: 700;
+}
+.hot-deals_hero_banner_images {
+    position: relative;
+}
+.hot-deals_hero_banner_images .badge {
+    position: absolute;
+    left: -100px;
+    top: 12px;
+    z-index: 2;
+    background: var(--yellow);
+    height: 148px;
+    width: 148px;
+    border-radius: 148px;    
+    padding: 19px 24px;
+    text-align: center;
+}
+.hot-deals_hero_banner_images .badge::before {
+    content: "";
+    position: absolute;
+    top: -27px;
+    width: 2px;
+    height: 28px;
+    background-color: black;
+}
+.hot-deals_hero_banner_images .badge p {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.hot-deals_hero_banner_images .badge h3 {
+    margin: 6px 0;
+    font-size: 40px;
+    font-weight: 700;    
+}
+.hot-deals_hero_banner_images .image-2 {
+    max-width: 350px;
+    width: 100%;
+    transform: scaleX(-1);
+}
+.sale-cards-container {
+    margin-bottom: 20px;
+}
+.sale-cards-container .deals-container {
+    margin-bottom: 38px;
+    margin-top: 30px;
+}
+.sale-cards-container .deal-card {
+    padding: 20px 16px 28px 16px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 0px #00000040;
+}
+.sale-cards-container .deal-card .discount-badge {
+    top: 20px;
+    left: 16px;
+}
+.sale-cards-container .deal-card .star-rating {
+    margin: 8px 0;
+}
+.sale-cards-container .deal-card .vendor {
+    font-weight: 700;
+}
+.sale-cards-container .deal-card .vendor span {
+    color: var(--green) ;
+
+}
+.sale-cards-container .deal-card .price {
+    color: var(--green);
+    font-weight: 700;
+    font-size: 14px;
+}
+.sale-cards-container .deal-card .original-price {
+    color: #4E4E4E;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+.sale-cards-container .deal-card .addbutton {
+    height: 38px;
+    width: 38px;
+    border-radius: 30px;
+    background-color: #F2F2F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px !important;
+}
+
+.categories-container .categories {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding-top: 35px;
+}
+.categories-container .categories .category-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+}
+.categories .category-card h3 {
+    font-weight: 700;
+    font-size: clamp(18px, 5vw, 26px);
+    margin-bottom: 6px;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.categories .category-card p {
+    color: var(--red);
+}
+
+
+.ProductCardImage {
+    box-shadow: 0px 4px 4px 0px #00000040;
+    border-radius: 8px;
+    padding: 14px 35px;
+}
+.ProductCardImage .heart, .ProductCardImage .eye {
+    display: none;
+}
+.ProductCardImage .badge {
+    background: var(--red);
+    padding: 5px 8px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.bi-star-fill::before, .bi-star::before {
+    font-size: 12px;
+}
+.searchaddbutton {
+    height: 38px;
+    width: 38px;
+    border-radius: 30px;
+    background-color: #F2F2F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px !important;
+    border: none;
+}
+
+.ProductCardImage .CategoryMainCardImage img {
+    width: 165px;
+    height: 190px;
+}
+.ProductCardImage h1 {
+    font-size: 14px;
+    color: #4D4D4D;
+}
+
+
 /* Hero */
 /* .hot_deals_hero_main {
     background-image: url(../Images/Banner/Hot_Deal_Banner.jpg);
@@ -31,39 +251,54 @@ a {
    
 } */
 
-
-
-
-
 .hot_deals_hero_main {
-    background-image: url('/Assets/Images/Banner/Hot_Deal_Banner.jpg'); /* Replace with the correct path */
-    background-size: contain; /* Ensures the image covers the full container */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling */
-    width: 100%; /* Full width */
-    height: calc(100vh - 80px); /* Full viewport height minus header (if any) */
-    max-height: 700px; /* Ensures the banner does not stretch too tall */
+    background-image: url('/Assets/Images/Banner/Hot_Deal_Banner.jpg');
+    /* Replace with the correct path */
+    background-size: contain;
+    /* Ensures the image covers the full container */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents tiling */
+    width: 100%;
+    /* Full width */
+    height: calc(100vh - 80px);
+    /* Full viewport height minus header (if any) */
+    max-height: 700px;
+    /* Ensures the banner does not stretch too tall */
 }
 
 /* Responsive adjustments */
 @media screen and (max-width: 1024px) {
     .hot_deals_hero_main {
-        height: 80vh; /* Reduce height on medium screens */
-        background-size: contain; /* Contain image without cropping */
+        height: 80vh;
+        /* Reduce height on medium screens */
+        background-size: contain;
+        /* Contain image without cropping */
     }
-}
-
-@media screen and (max-width: 768px) {
-    .hot_deals_hero_main {
-        height: 60vh; /* Let content dictate the height */
-        background-size: contain; /* Ensure full image visibility */
+    .hot-deals_2_hero_container .shape {
+        height: 40px;
+    }
+    .hot-deals_2_hero_container .hot-deals_hero_description h1 {
+        margin-top: 16px;
+    }
+    .hot-deals_2_hero_container .hot-deals_hero_description h2 {
+        font-size: 18px;
+    }
     
 }
+
+@media screen and (max-width: 991px) {
+    .categories-container .categories {
+        flex-wrap: wrap;
+    }
 }
 @media screen and (max-width: 480px) {
     .hot_deals_hero_main {
-        height: 40vh; /* Further reduce height on small screens */
-        background-size: contain; /* Full cover on smaller screens */
+        height: 40vh;
+        /* Further reduce height on small screens */
+        background-size: contain;
+        /* Full cover on smaller screens */
     }
 }
 
@@ -75,7 +310,7 @@ a {
     justify-content: space-between;
     align-items: center;
     padding-top: 15px;
-    
+
 }
 
 .hot_deals_hero_description {
@@ -115,12 +350,14 @@ a {
 .hot_deals_for_you1 {
     width: 30%;
 }
-.hotdealsHeadingSub{
+
+.hotdealsHeadingSub {
     font-size: 64px;
     font-weight: 700;
     color: var(--green);
     font-family: poppins;
 }
+
 .hot_deals_for_you1_text_black {
     font-size: 40px;
     font-weight: 700;
@@ -137,7 +374,8 @@ a {
 .hot_deals_for_you1_text_green {
     color: #4E4E4E;
 }
-.HotdealsParaSub{
+
+.HotdealsParaSub {
     font-size: 20px;
     font-weight: 500;
     font-family: Quicksand;
@@ -204,6 +442,10 @@ a {
     color: #29292E;
     margin-top: 15px;
     text-align: center;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .category_item_image {
@@ -216,27 +458,58 @@ a {
     justify-content: center;
     align-items: center;
 }
-.HotDealsCatgeoryMain{
+
+.HotDealsCatgeoryMain {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
 }
-.HotDealsCategoryCard{
+
+.HotDealsCategoryCard {
     width: 16.66%;
     margin-bottom: 30px;
 }
 
 @media screen and (max-width:768px) {
+    
+    .hot-deals_2_hero_container .hot-deals_hero_main {
+        min-height: 260px;    
+    }
+    .hot-deals_2_hero_container .hot-deals_hero_description {
+        width: 100%;
+    }
+    .deals-container .deal-card img {
+        height: initial;
+    }
+    .hot-deals_hero_banner_images {
+        display: none;
+    }
+    .hot-deals_2_hero_container .shape {
+        height: 32px;
+    }
+    .hot-deals_2_hero_container .hot-deals_hero_description h1 {
+        margin-top: 18px;
+    }
+    .hot_deals_hero_main {
+        height: 60vh;
+        background-size: contain;
+
+    }
+    .hot-deals_2_hero_container .hot-deals_hero_description {
+        padding: 40px 0;
+    }
     .HotDealsCategoryCard {
         width: 50%;
         margin-bottom: 30px;
     }
+
     .hot_deals_categories_image {
         clip-path: circle(50%);
         width: 75%;
     }
+
     .hot_deals_hero_image {
         display: none;
     }
@@ -298,5 +571,32 @@ a {
         font-weight: 700;
         color: black;
         font-family: poppins;
+    }
+}
+@media screen and (max-width:680px) {
+    .hot-deals_2_hero_container .shape {
+        display: none;
+    }
+    .categories-container .categories {
+        justify-content: center;
+    }
+    .hot-deals_2_hero_container .hot-deals_hero_description h2 {
+        position: relative;
+        font-size: 14px !important;
+        padding: 8px;
+    }
+    .hot-deals_2_hero_container .hot-deals_hero_description h2::before {
+        content: "";
+        position: absolute;
+        background: var(--green);
+        border-radius: 8px;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 70%;
+        z-index: -2;
+    }
+    .hot-deals_2_hero_container .hot-deals_hero_description h1 {
+        margin-top: 14px;
     }
 }

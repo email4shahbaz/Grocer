@@ -290,7 +290,7 @@ li {
     border-radius: 4px;
     font-family: 'Quicksand';
     font-size: 14px;
-    color: #999999;
+    color: #000000;
 }
 .addAddressInputs:focus{
     outline: none;

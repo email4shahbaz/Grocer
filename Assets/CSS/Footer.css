@@ -5,7 +5,7 @@ li{
     margin-left: 150px;
 }
 .footer-logo-cont{
-    width: 40%;
+    /* width: 40%; */
 }
 .footer_logo{
     max-width: 230px;
@@ -36,7 +36,8 @@ li{
 .footermainWrapper .footer-content {
     /* width: 100%; */
     /* padding: 0 12px; */
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 50px;
     padding-bottom: 20px;
 }
@@ -51,7 +52,9 @@ li{
 
 .footer-links{
     display: flex;
-    gap: 50px;
+    justify-content: center;
+    gap:50px;
+   
 }
 
 .footer-content .footer-nav:nth-child(1) .footerheadings {
@@ -64,7 +67,7 @@ li{
     /* text-align: center; */
     font-weight: 500;
     /* margin-top: -30px; */
-    max-width: 409px;
+    /* max-width: 409px; */
     margin-right: auto;
     /* margin-top: -35px; */
     /* padding: 0 18px !important; */
@@ -179,7 +182,7 @@ li{
 
 .footer-subscribe {
     text-align: left;
-    width: 40%;
+    /* width: 40%; */
 }
 
 .newsletter-form {

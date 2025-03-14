@@ -82,130 +82,253 @@
     <link rel="stylesheet" href="/Assets/CSS/Animations.css">
     <link rel="stylesheet" href="/Assets/CSS/responsive.css" />
     <link rel="stylesheet" href="/Assets/CSS/Components/products.css">
-        <!-- {{-- Wishlist Page Css Custom Style --}} -->
-        <link rel="stylesheet" href="/Assets/CSS/wishlist.css">
-         <!-- {{-- SubNav Home Custom Stylesheet --}} -->
+    <!-- {{-- Wishlist Page Css Custom Style --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/wishlist.css">
+    <!-- {{-- SubNav Home Custom Stylesheet --}} -->
     <link rel="stylesheet" href="/Assets/CSS/subnav_home.css">
-     <!-- jQuery -->
-     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-     <!-- Bootstrap JS -->
-     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-      <!-- Favicon -->
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- Favicon -->
     <link rel="shortcut icon" href="Assets/Images/Banner/Favicon.png" type="image/x-icon">
- 
+
 </head>
 
 <body>
-<!-- Animated Logo Cover -->
-<div id="logo-cover" class="logo-cover d-flex justify-content-center align-items-center">
-    <img src="Assets/Images/Icons/GrocerLogo.png" alt="Grocer Logo" class="animated-logo" />
-  </div>
-  
-<!-- Animated Logo End -->
+
+    <!-- Animated Logo Cover -->
+    <div id="logo-cover" class="logo-cover d-flex justify-content-center align-items-center">
+        <img src="Assets/Images/Icons/GrocerLogo.png" alt="Grocer Logo" class="animated-logo" />
+    </div>
+
+    <!-- Animated Logo End -->
 
     <!-- Header dynamically added from index.js file -->
     <header></header>
 
 
-    <!--********* BREADCRUMBS *********-->
-    <div class="breadcrumbs">
-        <div class="container">
-            <ul class="breadcrumb">
-                <li><a href="/" wire:navigate>Home</a></li>
-                <li><a href="/promotions.html" wire:navigate>Promotions</a></li>
-            </ul>
-        </div>
-    </div>
-    <!--********* BREADCRUMBS *********-->
-    <!-- {{-- **************Main Heading**************** --}} -->
-    <div class="container">
-        <h1 class="promotions_main_heading">Savor the Savings Explore Our Latest Grocery Promotions</h1>
-    </div>
-    <!-- {{-- **************Hero**************** --}} -->
-    <div class="promotions_hero_container">
+    <!-- {{-- **************Hero-Banner**************** --}} -->
+    <div class="promotions_2_hero_container">
         <div class="container promotions_hero_main">
             <div class="promotions_hero_description">
-                <h1>Fresh Products</h1>
-                <h2>At Affordable Price</h2>
-                <h3>10% off Now</h3>
+                <h1>Exclusive Grocer</h1>
+                <h2>and Promotion Deals</h2>
+                <h3>Up to 50% off</h3>
+                <a href="" class="offerSButton">
+                    Order Now
+                    <i class="bi bi-arrow-right-short"></i></a>
+                </a>
             </div>
             <div class="promotions_hero_fruit_image">
-                <img src="/Assets/Images/Icons/promotions_hero.webp" alt="" loading="lazy">
+                <img class="image-1" src="/Assets/Images/Banner/grocery-basket.png" alt="" loading="lazy">
+                <img class="image-2" src="/Assets/Images/Banner/promotions-banner-image-2.png" alt="" loading="lazy">
             </div>
         </div>
     </div>
-    <!-- {{-- **************Products**************** --}} -->
-    <div class="container">
-        <h1 class="promotions_products_main_heading">Dive into Our Exclusive Promotions Now!</h1>
-        <div class="promotions_products_banner_main">
-            <div class="promotions_banner_and_products">
-                <div class="promotions_banner">
-                    <img src="/Assets/Images/Banner/SearchOffer.webp" alt="">
-                </div>
-                <div class="promotions_side_products">
-                        
-                </div>
+    <!-- {{-- **************Hero-Banner**************** --}} -->
+
+    <div class="container featured_categories">
+        <h1 class="section-heading">Featured Categories</h1>
+        <div class="featured-categories">
+            <div class="slider-controller prev">
+                <img src="/Assets/Images/Icons/arrow-prev.png" alt="">
             </div>
-            <div class="promotions_products_mainDiv">
-                <div class="PromotionsDivProducts">
-                      
-                </div>
-                <div class="pagination-container">
-                    <ul class="pagination">
-                        <!-- Previous Button -->
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" aria-disabled="true">«</a>
-                        </li>
-                        <!-- Page Number Buttons -->
-                        <li class="page-item active">
-                            <a class="page-link" href="#">1</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">2</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">3</a>
-                        </li>
-                        <li class="dots">...</li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">21</a>
-                        </li>
-                        <!-- Next Button -->
-                        <li class="page-item">
-                            <a class="page-link" href="#">»</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="slider-controller next">
+                <img src="/Assets/Images/Icons/arrow-next.png" alt="">
             </div>
+            <a href="#" class="category-card">
+                <div class="category-image">
+                    <div class="badge orange">Upto 60% off</div>
+                    <img src="/Assets/Images/Categories/fruits.png" alt="" loading="lazy" />
+                </div>
+                <div class="category-title">Fruits</div>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-image">
+                    <div class="badge green">Upto 60% off</div>
+                    <img src="/Assets/Images/Categories/vegitables.png" alt="" loading="lazy" />
+                </div>
+                <div class="category-title">Vegitables</div>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-image">
+                    <img src="/Assets/Images/Categories/meat.png" alt="" loading="lazy" />
+                </div>
+                <div class="category-title">Meat</div>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-image">
+                    <img src="/Assets/Images/Categories/fish.png" alt="" loading="lazy" />
+                </div>
+                <div class="category-title">Fish</div>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-image">
+                    <div class="badge red">Upto 60% off</div>
+                    <img src="/Assets/Images/Categories/dairy-and-milk.png" alt="" loading="lazy" />
+                </div>
+                <div class="category-title">Dairy & Milk</div>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-image">
+                    <img src="/Assets/Images/Categories/wheat.png" alt="" loading="lazy" />
+                </div>
+                <div class="category-title">Wheat</div>
+            </a>
         </div>
-        <hr class="mt-5">
+        <hr>
     </div>
 
+    <div class="container shopping-vouchers">
+        <h1 class="section-heading">Shopping Vouchers</h1>
+        <div class="vouchers-wrapper">
+            <div class="voucher-card">
+                <div class="card-section-1">
+                    <span>Mega Eid Sale</span>
+                    <h3>Voucher MAX</h3>
+                    <p>Voucher Upto $20Off</p>
+                </div>
+                <div class="card-section-2">
+                    <h2>10% Off</h2>
+                    <h3>Min. spend $100</h3>
+                    <div class="time-period">
+                        <p>12/03/2025</p>
+                        <p>- 12/03/2025</p>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between buttons">
+                        <a href="#" class="voucher-button-1">T & C</a>
+                        <a href="#" class="voucher-button-2">Collect</a>
+                    </div>
+                </div>
+            </div>
+            <div class="voucher-card">
+                <div class="card-section-1">
+                    <span>Mega Eid Sale</span>
+                    <h3>Voucher MAX</h3>
+                    <p>Voucher Upto $20Off</p>
+                </div>
+                <div class="card-section-2">
+                    <h2>10% Off</h2>
+                    <h3>Min. spend $100</h3>
+                    <div class="time-period">
+                        <p>12/03/2025</p>
+                        <p>- 12/03/2025</p>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between buttons">
+                        <a href="#" class="voucher-button-1">T & C</a>
+                        <a href="#" class="voucher-button-2">Collect</a>
+                    </div>
+                </div>
+            </div>
+            <div class="voucher-card">
+                <div class="card-section-1">
+                    <span>Mega Eid Sale</span>
+                    <h3>Voucher MAX</h3>
+                    <p>Voucher Upto $20Off</p>
+                </div>
+                <div class="card-section-2">
+                    <h2>10% Off</h2>
+                    <h3>Min. spend $100</h3>
+                    <div class="time-period">
+                        <p>12/03/2025</p>
+                        <p>- 12/03/2025</p>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between buttons">
+                        <a href="#" class="voucher-button-1">T & C</a>
+                        <a href="#" class="voucher-button-2">Collect</a>
+                    </div>
+                </div>
+            </div>
+            <div class="voucher-card">
+                <div class="card-section-1">
+                    <span>Mega Eid Sale</span>
+                    <h3>Voucher MAX</h3>
+                    <p>Voucher Upto $20Off</p>
+                </div>
+                <div class="card-section-2">
+                    <h2>10% Off</h2>
+                    <h3>Min. spend $100</h3>
+                    <div class="time-period">
+                        <p>12/03/2025</p>
+                        <p>- 12/03/2025</p>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between buttons">
+                        <a href="#" class="voucher-button-1">T & C</a>
+                        <a href="#" class="voucher-button-2">Collect</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <div class="container offers-container">
+        <div class="offers">
+            <div class="slider-controller prev">
+                <img src="/Assets/Images/Icons/arrow-prev.png" alt="">
+            </div>
+            <div class="slider-controller next">
+                <img src="/Assets/Images/Icons/arrow-next.png" alt="">
+            </div>
+            <div class="free-delivery-card">
+                <div class="offerContent">
+                    <span class="offerContentBadgeOne">Free Delivery</span>
+                    <h1>Free delivery over $50</h1>
+                    <p>Shop $50 product and get free delivery anywhre.</p>
+                    <a href="/promotions.html" class="offerSButton">Shop Now <i class="bi bi-arrow-right-short"></i></a>
+                </div>
+                <div class="img-cont">
+                    <img src="./Assets/Images/Banner/Offer1-img.webp" class="offersImage" alt="">
+                </div>
+
+            </div>
+            <div class="organic-food-card">
+                <div class="offerContent">
+                    <span class="offerContentBadgeTwo">60% Off</span>
+                    <h1>Organic Food</h1>
+                    <p>Save up to 60% off on your first order</p>
+                    <a href="/promotions.html" class="offerSButton">Order Now <i
+                            class="bi bi-arrow-right-short"></i></a>
+                </div>
+                <div class="img-cont">
+                    <img src="./Assets/Images/Banner/Offer2-img.webp" class="offersImage" alt="" />
+                </div>
+            </div>
+            <div class="delivery-card-container">
+
+            </div>
+        </div>
+        <hr>
+    </div>
+
+
+
     <!--********* FOOTER *********-->
-  
+
     <!-- Footer dynamically added from index.js file -->
-	<footer></footer>
+    <footer></footer>
     <!--********* FOOTER *********-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- jQuery -->
     <script>
         const menuItems = document.querySelectorAll('.menu-item');
-    
+
         menuItems.forEach(item => {
             item.addEventListener('click', () => {
                 // Hide all content
                 document.querySelectorAll('.content > div').forEach(content => {
                     content.style.display = 'none';
                 });
-    
+
                 // Show the selected content
                 const contentId = `content-${item.id}`;
                 const contentToShow = document.getElementById(contentId);
                 if (contentToShow) {
                     contentToShow.style.display = 'block';
                 }
-    
+
                 // Update menu item color
                 menuItems.forEach(menuItem => {
                     menuItem.classList.remove('active');
@@ -213,7 +336,7 @@
                 item.classList.add('active');
             });
         });
-    
+
         // Set initial state
         const initialMenuItem = document.getElementById('item1'); // Assuming the first menu item has id 'item1'
         if (initialMenuItem) {
@@ -221,16 +344,16 @@
         }
     </script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    
+
     <script>
-        $(document).ready(function() {
-            $(".FeaturedBtnLeft").click(function() {
+        $(document).ready(function () {
+            $(".FeaturedBtnLeft").click(function () {
                 $(".WebViewCarouselOneProductDetails").animate({
                     scrollLeft: "-=250px" // Adjust the value as needed for the scroll distance
                 }, "slow");
             });
-    
-            $(".FeaturedBtnRight").click(function() {
+
+            $(".FeaturedBtnRight").click(function () {
                 $(".WebViewCarouselOneProductDetails").animate({
                     scrollLeft: "+=250px" // Adjust the value as needed for the scroll distance
                 }, "slow");
@@ -238,20 +361,22 @@
         });
     </script>
     <script>
-        $(document).ready(function() {
-            $(".CategoryBtnLeft").click(function() {
+        $(document).ready(function () {
+            $(".CategoryBtnLeft").click(function () {
                 $(".WebViewCategoriesCardOneProductDetails").animate({
                     scrollLeft: "-=250px" // Adjust the value as needed for the scroll distance
                 }, "slow");
             });
-    
-            $(".CategoryBtnRight").click(function() {
+
+            $(".CategoryBtnRight").click(function () {
                 $(".WebViewCategoriesCardOneProductDetails").animate({
                     scrollLeft: "+=250px" // Adjust the value as needed for the scroll distance
                 }, "slow");
             });
         });
     </script>
+
+
     <script src="/Assets/JS/promotionsMain.js"></script>
     <script src="/Assets/JS/promotionsSub.js"></script>
     <script src="/Assets/JS/cart_dropdown.js"></script>

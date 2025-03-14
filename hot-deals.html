@@ -71,6 +71,7 @@
     <link rel="stylesheet" href="/Assets/CSS/Home.css">
     <link rel="stylesheet" href="Assets/CSS/cart_dropdown.css">
     <link rel="stylesheet" href="Assets/CSS/HotDeals.css">
+    <link rel="stylesheet" href="/Assets/CSS/Components/products.css">
     <link rel="stylesheet" href="/Assets/CSS/navbar_side_icons.css">
     <link rel="stylesheet" href="/Assets/CSS/Animations.css">
     <link rel="stylesheet" href="/Assets/CSS/responsive.css" />
@@ -115,271 +116,269 @@
     </div>
     <!--********* BREADCRUMBS *********-->
 
-    <!-- {{-- Main Heading --}} -->
-    <div class="container">
-        <h1 class="hot_deals_main_heading">Check Out Our Hottest Grocery Deals Now</h1>
-    </div>
-
-    <!-- {{-- Hero --}} -->
-    <div class="hot_deals_hero_main">
-        <div class="container">
-            <div class="hot_deals_hero_sub_main">
-                <!-- <div class="hot_deals_hero_description">
-                    <h3 class="hot_deals_hero_red_text">Sale up to 30%</h3>
-                    <h1 class="hot_deals_hero_green_text">Healthy <span class="hot_deals_hero_green_text_black">and</span>
-                    </h1>
-                    <h1 class="hot_deals_hero_black_text"> Fresh Food For </h1>
-                    <h1 class="hot_deals_hero_green_text">You</h1>
-                </div> -->
-                <!-- <div class="hot_deals_hero_image">
-                    <img src='/Assets/Images/Icons/hot_deals_hero.png' alt="">
-                </div> -->
+    <!-- {{-- **************Hero-Banner**************** --}} -->
+    <div class="hot-deals_2_hero_container">
+        <img class="shape" src="/Assets/Images/Banner/banner-shape.png" alt="" loading="lazy">
+        <div class="container hot-deals_hero_main">
+            <div class="hot-deals_hero_description">
+                <h2>MEGA EID Sale</h2>
+                <h1>Healthy <span>and <br> Fresh Food For</span> You </h1>
+                <a href="" class="shop-now-btn">Shop Now</a>
+            </div>
+            <div class="hot-deals_hero_banner_images">
+                <div class="badge">
+                    <p>Up to</p>
+                    <h3>70%</h3>
+                    <p>Off</p>
+                </div>
+                <img class="image-2" src="/Assets/Images/Banner/grocery-basket.png" alt="" loading="lazy">
             </div>
         </div>
     </div>
+    <!-- {{-- **************Hero-Banner**************** --}} -->
 
-    <!-- {{-- Hot Deals For You --}} -->
-    <div class="container">
-        <div class="hotdealsSub">
-            <div class="hot_deals_for_you1">
-                <h1 class="hot_deals_for_you1_text_black">Hot <img src="/Assets/Images/Icons/flame-icon 1.png" /></h1>
-                <h2 class="hotdealsHeadingSub">Deals <span class="hot_deals_for_you1_text_green">for you</span></h2>
-                <p class="HotdealsParaSub">Find unbeatable prices on fresh
-                    produce pantry staples more with
-                    our scorching hot deals! Hurry
-                    these sizzling savings won't last
-                    long.</p>
-            </div>
-            <div class="hot_deals_for_you2">
-                <img src="/Assets/Images/Icons/fresh1.png" alt="">
-                <h1>Fresh</h1>
-                <p>Products is fresher than
-                    other stores</p>
-            </div>
-            <div class="hot_deals_for_you2">
-                <img src="/Assets/Images/Icons/fresh2.png" alt="">
-                <h1>Healthy</h1>
-                <p>Products is fresher than
-                    other stores</p>
-            </div>
-            <div class="hot_deals_for_you2">
-                <img src="/Assets/Images/Icons/fresh3.png" alt="">
-                <h1>Fast</h1>
-                <p>Products is fresher than
-                    other stores</p>
-            </div>
-        </div>
-        <div class="hot_deals_categories">
-            <div class="deals-of-the-day mb-5">
-                <div class="header">
-                    <h2 class="deals-title">Deals of the Day</h2>
+    <div class="container sale-cards-container">
+        <h1 class="section-heading">New on Sale</h1>
+        <div class="deals-container">
+            <div class="deal-card">
+                <a href="product-details.html?product-id=1&amp;category-file=Snacks.json">
+                    <div class="product-image">
+                        <img src="/Assets/Images/Deals/deal1.jpg"
+                            alt="Get a 500ml Soft Drink Free on Purchase of 2 Lays.">
+                        <div class="timer-holder">
+                            <div class="timer-container deal-timer">
+                                <div class="time-box_deal">
+                                    <span id="days">0</span> <span class="timer-day">Days</span>
+                                </div>
+
+                                <div class="time-box_deal">
+                                    <span id="hours">6</span> <span class="timer-day">Hours</span>
+                                </div>
+
+                                <div class="time-box_deal">
+                                    <span id="minutes">29</span> <span class="timer-day">Mins</span>
+                                </div>
+
+                                <div class="time-box_deal">
+                                    <span id="seconds">31</span>
+                                    <span class="timer-day">Secs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="details">
+                    <h3>Get a 500ml Soft Drink Free on Purchase of 2 Lays.</h3>
+                    <div class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></div>
+                    <p class="vendor"> By <span>Grocer</span> </p>
                 </div>
-                <div class="deals-container" id="deals-container">
-                    <!-- Dynamic product cards will be inserted here -->
-                    <div class="deal-card">
-                        <a href="product-details.html?product-id=1&amp;category-file=Snacks.json">
-                            <div class="product-image">
-                                <img src="/Assets/Images/Deals/deal1.jpg"
-                                    alt="Get a 500ml Soft Drink Free on Purchase of 2 Lays.">
-                                <div class="timer-holder">
-                                    <div class="timer-container deal-timer">
-                                        <div class="time-box_deal">
-                                            <span id="days">0</span> <span class="timer-day">Days</span>
-                                        </div>
-
-                                        <div class="time-box_deal">
-                                            <span id="hours">6</span> <span class="timer-day">Hours</span>
-                                        </div>
-
-                                        <div class="time-box_deal">
-                                            <span id="minutes">29</span> <span class="timer-day">Mins</span>
-                                        </div>
-
-                                        <div class="time-box_deal">
-                                            <span id="seconds">31</span>
-                                            <span class="timer-day">Secs</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-
-                        <div class="details">
-                            <h3>Get a 500ml Soft Drink Free on Purchase of 2 Lays.</h3>
-                            <div class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                    class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></div>
-                            <p class="vendor"> By Grocer</p>
-                            <div class="d-flex ">
-                                <p class="price ">$2.99</p>
-                                <p class="original-price ">$3.99</p>
-                            </div>
-
-                        </div>
-                        <div class="discount-badge">Save 25%</div>
-                        <button class="btn addbutton py-2" data-id="1"
-                            data-name="Get a 500ml Soft Drink Free on Purchase of 2 Lays." data-price="2.99"
-                            data-image="/Assets/Images/Deals/deal1.jpg" data-quantity="1">
-                            <i class="bi bi-cart"></i>&nbsp;Add
-                        </button>
+                <div class="discount-badge">Save 25%</div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                        <p class="price">$2.99</p>
+                        <p class="original-price ">$3.99</p>
                     </div>
-                    <div class="deal-card">
-                        <a href="product-details.html?product-id=3&amp;category-file=Snacks.json">
-                            <div class="product-image">
-                                <img src="/Assets/Images/Deals/deal2.jpg"
-                                    alt="Free Package of Fresh Dates on Purchase of 1kg of Almonds">
-                                <div class="timer-holder">
-                                    <div class="timer-container deal-timer">
-                                        <div class="time-box_deal">
-                                            <span id="days">0</span> <span class="timer-day">Days</span>
-                                        </div>
-
-                                        <div class="time-box_deal">
-                                            <span id="hours">5</span> <span class="timer-day">Hours</span>
-                                        </div>
-
-                                        <div class="time-box_deal">
-                                            <span id="minutes">2</span> <span class="timer-day">Mins</span>
-                                        </div>
-
-                                        <div class="time-box_deal">
-                                            <span id="seconds">10</span>
-                                            <span class="timer-day">Secs</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-
-                        <div class="details">
-                            <h3>Free Package of Fresh Dates on Purchase of 1kg of Almonds</h3>
-                            <div class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                    class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></div>
-                            <p class="vendor"> By Grocer</p>
-                            <div class="d-flex ">
-                                <p class="price ">$1.99</p>
-                                <p class="original-price ">$3.99</p>
-                            </div>
-
-                        </div>
-                        <div class="discount-badge">Save 50%</div>
-                        <button class="btn addbutton py-2" data-id="3"
-                            data-name="Free Package of Fresh Dates on Purchase of 1kg of Almonds" data-price="1.99"
-                            data-image="/Assets/Images/Deals/deal2.jpg" data-quantity="1">
-                            <i class="bi bi-cart"></i>&nbsp;Add
-                        </button>
-                    </div>
-                    <div class="deal-card">
-                        <a href="product-details.html?product-id=1&amp;category-file=Fruits.json">
-                            <div class="product-image">
-                                <img src="/Assets/Images/Deals/deal3.jpg" alt="Buy 1 get 1 Free on Fresh Vegetables">
-                                <div class="timer-holder">
-                                    <div class="timer-container deal-timer">
-                                        <div class="time-box_deal">
-                                            <span id="days">0</span> <span class="timer-day">Days</span>
-                                        </div>
-
-                                        <div class="time-box_deal">
-                                            <span id="hours">15</span> <span class="timer-day">Hours</span>
-                                        </div>
-
-                                        <div class="time-box_deal">
-                                            <span id="minutes">28</span> <span class="timer-day">Mins</span>
-                                        </div>
-
-                                        <div class="time-box_deal">
-                                            <span id="seconds">20</span>
-                                            <span class="timer-day">Secs</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-
-                        <div class="details">
-                            <h3>Buy 1 get 1 Free on Fresh Vegetables</h3>
-                            <div class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                    class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                            <p class="vendor"> By Grocer</p>
-                            <div class="d-flex ">
-                                <p class="price ">$2.99</p>
-                                <p class="original-price ">$3.99</p>
-                            </div>
-
-                        </div>
-                        <div class="discount-badge">Save 25%</div>
-                        <button class="btn addbutton py-2" data-id="1" data-name="Buy 1 get 1 Free on Fresh Vegetables"
-                            data-price="2.99" data-image="/Assets/Images/Deals/deal3.jpg" data-quantity="1">
-                            <i class="bi bi-cart"></i>&nbsp;Add
-                        </button>
-                    </div>
-                    <div class="deal-card">
-                        <a href="product-details.html?product-id=2&amp;category-file=Vegetables.json">
-                            <div class="product-image">
-                                <img src="/Assets/Images/Deals/deal4.jpg"
-                                    alt="Free Wheatable Buscuit on Purchase of 2 Everyday Packs.">
-                                <div class="timer-holder">
-                                    <div class="timer-container deal-timer">
-                                        <div class="time-box_deal">
-                                            <span id="days">0</span> <span class="timer-day">Days</span>
-                                        </div>
-
-                                        <div class="time-box_deal">
-                                            <span id="hours">20</span> <span class="timer-day">Hours</span>
-                                        </div>
-
-                                        <div class="time-box_deal">
-                                            <span id="minutes">42</span> <span class="timer-day">Mins</span>
-                                        </div>
-
-                                        <div class="time-box_deal">
-                                            <span id="seconds">55</span>
-                                            <span class="timer-day">Secs</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-
-                        <div class="details">
-                            <h3>Free Wheatable Buscuit on Purchase of 2 Milk Packs.</h3>
-                            <div class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                    class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
-                            </div>
-                            <p class="vendor"> By Grocer</p>
-                            <div class="d-flex ">
-                                <p class="price ">$1.99</p>
-                                <p class="original-price ">$3.99</p>
-                            </div>
-
-                        </div>
-                        <div class="discount-badge">Save 50%</div>
-                        <button class="btn addbutton py-2" data-id="2"
-                            data-name="Free Wheatable Buscuit on Purchase of 2 Everyday Packs." data-price="1.99"
-                            data-image="/Assets/Images/Deals/deal4.jpg" data-quantity="1">
-                            <i class="bi bi-cart"></i>&nbsp;Add
-                        </button>
-                    </div>
+                    <button class="btn addbutton py-2" data-id="1"
+                        data-name="Get a 500ml Soft Drink Free on Purchase of 2 Lays." data-price="2.99"
+                        data-image="/Assets/Images/Deals/deal1.jpg" data-quantity="1">
+                        <img src="/Assets/Images/Icons//add-to-cart.png" />
+                    </button>
                 </div>
             </div>
-            <h1>Categories</h1>
-            <div class="HotDealsCatgeoryMain" id="category-container">
+            <div class="deal-card">
+                <a href="product-details.html?product-id=3&amp;category-file=Snacks.json">
+                    <div class="product-image">
+                        <img src="/Assets/Images/Deals/deal2.jpg"
+                            alt="Free Package of Fresh Dates on Purchase of 1kg of Almonds">
+                        <div class="timer-holder">
+                            <div class="timer-container deal-timer">
+                                <div class="time-box_deal">
+                                    <span id="days">0</span> <span class="timer-day">Days</span>
+                                </div>
+                                <div class="time-box_deal">
+                                    <span id="hours">5</span> <span class="timer-day">Hours</span>
+                                </div>
 
+                                <div class="time-box_deal">
+                                    <span id="minutes">2</span> <span class="timer-day">Mins</span>
+                                </div>
+
+                                <div class="time-box_deal">
+                                    <span id="seconds">10</span>
+                                    <span class="timer-day">Secs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="details">
+                    <h3>Free Package of Fresh Dates on Purchase of 1kg of Almonds</h3>
+                    <div class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></div>
+                    <p class="vendor"> By <span>Grocer</span> </p>
+                </div>
+                <div class="discount-badge">Save 50%</div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                        <p class="price">$1.99</p>
+                        <p class="original-price ">$3.99</p>
+                    </div>
+                    <button class="btn addbutton py-2" data-id="3"
+                        data-name="Free Package of Fresh Dates on Purchase of 1kg of Almonds" data-price="1.99"
+                        data-image="/Assets/Images/Deals/deal2.jpg" data-quantity="1">
+                        <img src="/Assets/Images/Icons//add-to-cart.png" />
+                    </button>
+                </div>
+            </div>
+            <div class="deal-card">
+                <a href="product-details.html?product-id=1&amp;category-file=Fruits.json">
+                    <div class="product-image">
+                        <img src="/Assets/Images/Deals/deal3.jpg" alt="Buy 1 get 1 Free on Fresh Vegetables">
+                        <div class="timer-holder">
+                            <div class="timer-container deal-timer">
+                                <div class="time-box_deal">
+                                    <span id="days">0</span> <span class="timer-day">Days</span>
+                                </div>
+
+                                <div class="time-box_deal">
+                                    <span id="hours">15</span> <span class="timer-day">Hours</span>
+                                </div>
+
+                                <div class="time-box_deal">
+                                    <span id="minutes">28</span> <span class="timer-day">Mins</span>
+                                </div>
+
+                                <div class="time-box_deal">
+                                    <span id="seconds">20</span>
+                                    <span class="timer-day">Secs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="details">
+                    <h3>Buy 1 get 1 Free on Fresh Vegetables</h3>
+                    <div class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    <p class="vendor"> By <span>Grocer</span> </p>
+                </div>
+                <div class="discount-badge">Save 25%</div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                        <p class="price ">$2.99</p>
+                        <p class="original-price ">$3.99</p>
+                    </div>
+                    <button class="btn addbutton py-2" data-id="1" data-name="Buy 1 get 1 Free on Fresh Vegetables"
+                        data-price="2.99" data-image="/Assets/Images/Deals/deal3.jpg" data-quantity="1">
+                        <img src="/Assets/Images/Icons//add-to-cart.png" />
+                    </button>
+                </div>
+            </div>
+            <div class="deal-card">
+                <a href="product-details.html?product-id=2&amp;category-file=Vegetables.json">
+                    <div class="product-image">
+                        <img src="/Assets/Images/Deals/deal4.jpg"
+                            alt="Free Wheatable Buscuit on Purchase of 2 Everyday Packs.">
+                        <div class="timer-holder">
+                            <div class="timer-container deal-timer">
+                                <div class="time-box_deal">
+                                    <span id="days">0</span> <span class="timer-day">Days</span>
+                                </div>
+
+                                <div class="time-box_deal">
+                                    <span id="hours">20</span> <span class="timer-day">Hours</span>
+                                </div>
+
+                                <div class="time-box_deal">
+                                    <span id="minutes">42</span> <span class="timer-day">Mins</span>
+                                </div>
+
+                                <div class="time-box_deal">
+                                    <span id="seconds">55</span>
+                                    <span class="timer-day">Secs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="details">
+                    <h3>Free Wheatable Buscuit on Purchase of 2 Milk Packs.</h3>
+                    <div class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+                    </div>
+                    <p class="vendor"> By <span>Grocer</span> </p>
+                </div>
+                <div class="discount-badge">Save 50%</div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                        <p class="price ">$1.99</p>
+                        <p class="original-price ">$3.99</p>
+                    </div>
+                    <button class="btn addbutton py-2" data-id="2"
+                        data-name="Free Wheatable Buscuit on Purchase of 2 Everyday Packs." data-price="1.99"
+                        data-image="/Assets/Images/Deals/deal4.jpg" data-quantity="1">
+                        <img src="/Assets/Images/Icons//add-to-cart.png" />
+                    </button>
+                </div>
             </div>
         </div>
         <hr>
     </div>
 
+    <div class="container categories-container">
+        <h1 class="section-heading">Shop By Category</h1>
+            <div class="categories">
+                <div class="category-card">
+                    <figure>
+                        <img src="Assets/Images/Categories/fresh-produce.jpg" alt="">
+                    </figure>
+                    <h3>Fresh Produce</h3>
+                    <p>View More</p>
+                </div>
+                <div class="category-card">
+                    <figure>
+                        <img src="Assets/Images/Categories/meat-&-seafood.jpg" alt="">
+                    </figure>
+                    <h3>Meat & Seafood</h3>
+                    <p>View More</p>
+                </div>
+                <div class="category-card">
+                    <figure>
+                        <img src="Assets/Images/Categories/dairy-&-frozen.jpg" alt="">
+                    </figure>
+                    <h3>Dairy & Frozen</h3>
+                    <p>View More</p>
+                </div>
+                <div class="category-card">
+                    <figure>
+                        <img src="Assets/Images/Categories/snack-&-beverages.jpg" alt="">
+                    </figure>
+                    <h3>Snacks & Beverages</h3>
+                    <p>View More</p>
+                </div>
+            </div>
+        <hr>
+    </div>
+
+    <div class="container off-products-container">
+        <h1 class="section-heading">FLAT 50% Off on Fresh Produce</h1>
+        <div class="row mt-5" id="latestProductsContainer">
+        </div>
+        <hr>
+    </div>
+
+
+
     <!--********* FOOTER *********-->
-    
+
     <!-- Footer dynamically added from index.js file -->
-	<footer></footer>
+    <footer></footer>
     <!--********* FOOTER *********-->
-    
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- jQuery -->
     <script>
         const menuItems = document.querySelectorAll('.menu-item');
@@ -444,6 +443,7 @@
             });
         });
     </script>
+    <script src="/Assets/JS/newproduct.js"></script>
     <script src="/Assets/JS/hotdealsCategory.js"></script>
     <script src="/Assets/JS/cart_dropdown.js"></script>
     <script src="/Assets/JS/index.js"></script>
@@ -466,6 +466,5 @@
     <script src="/Assets/JS/navbar.js"></script>
     <script src="/Assets/JS/browse_category_dropdown.js"></script>
     <script src="/Assets/JS/index.js"></script>
-</body>
 
-</html>
+</body>
