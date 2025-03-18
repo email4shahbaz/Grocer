@@ -114,6 +114,9 @@
     position: relative;
     cursor: pointer;
 }
+.deal-card .product-image img {
+    height: 220px;
+}
 
 .deal-card .timer-holder{
     width: 100%;
