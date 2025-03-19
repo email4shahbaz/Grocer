@@ -158,11 +158,13 @@ a {
 .sale-cards-container .deal-card .price {
     color: var(--green);
     font-weight: 700;
+    margin-bottom: 0px;
     font-size: 14px;
 }
 .sale-cards-container .deal-card .original-price {
     color: #4E4E4E;
     font-size: 12px;
+    margin-left:5px;
     text-decoration: line-through;
 }
 .sale-cards-container .deal-card .addbutton {

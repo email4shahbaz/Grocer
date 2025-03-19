@@ -156,7 +156,7 @@ li{
     font-weight: 400;
     color: #253D4E;
     font-family: poppins;
-    margin: 0px;
+    margin: 20px 0;
 }
 
 .footericons {
@@ -164,6 +164,7 @@ li{
     justify-content: flex-end;
     align-items: center;
     gap: 5px;
+    margin: 20px 0;
 }
 
 .MobileViewFooterSocialIcons{

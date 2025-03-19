@@ -18,6 +18,7 @@
     font-size: 35px;
     color: black;
     font-weight: 400;
+    padding-left:40px;
     font-family: 'Roboto';
 }
 
@@ -28,6 +29,7 @@
     border-radius: 15px;
     font-size: 14px;
     font-weight: 400;
+    margin-right: 60px;
     padding: 5px 20px;
 }
 .tablemainAddress{
@@ -85,7 +87,7 @@
 .address_table_ td {
     border-bottom: 1px solid #ddd;
     /* Border on every row */
-    padding: 20px 60px;
+    padding: 20px 40px;
     white-space: nowrap;
 }
 .Addressinp{
