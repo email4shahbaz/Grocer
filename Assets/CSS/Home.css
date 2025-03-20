@@ -413,6 +413,9 @@ body {
     ;
 }
 
+
+
+
 .offers_description {
     /* margin-top: 50px;
     margin-left: 30px;
@@ -1492,7 +1495,7 @@ li {
 
 @media screen and (min-width: 1700px) {
     .hero_main {
-        max-width: 1700px;
+        max-width: 10px;
     }
 
     .hero_description_one {

@@ -67,5 +67,29 @@
             "fats": "0.2g",
             "carbohydrates": "10g"
         }
+    },
+
+    {
+        "id": "4",
+        "name": "Carrots",
+        "price": 1.0,
+        "discountedPrice": 0.95,
+        "unit": "Kg",
+        "sku": "VEG002",
+        "image": ["/Assets/Images/Products/Potatto.png"],
+        "discount": 5,
+        "description": "Crunchy and fresh carrots, ideal for salads.",
+        "detailedDescription": "These carrots are fresh, crunchy, and packed with nutrients, making them great for salads, soups, and snacking.",
+        "rating": 4,
+        "tags": ["Crunchy", "Fresh", "Nutritious"],
+        "categoryName": "Vegetables",
+        "sold_quantity": 30,
+        "total_quantity": 50,
+        "nutrition": {
+            "calories": 41,
+            "protein": "0.9g",
+            "fats": "0.2g",
+            "carbohydrates": "10g"
+        }
     }
 ]

@@ -1074,7 +1074,7 @@
         padding: 0 15px;
     }
     .searchButtonCate select {
-        /* padding: 8px; */
+        padding: 1px;
     }
     .category-dropdown {
         flex-direction: column;
@@ -1151,3 +1151,18 @@
         left: 5%;
     }
 }
+
+
+/* @media (max-width: 1920px) {
+    .container { max-width: 1920px; padding: 0 78px;}
+    .top-header { font-size: 16px;}
+    .main_navbar{ font-size: 20px !important; padding: 14px 0;}
+    .logo_main_image img{width: 180px;}
+    .SearchwithCategoriesLists{font-size: 18px;}
+    .search_inp{font-size: 18px;}
+    .cart_heading img {height: 32px; width: 32px;}
+    .wislistHeading{font-size: 18px !important;}
+    .mycartCustomHeading1, .mycartCustomHeading2 {font-size: 18px;}
+    .Login_btn{font-size: 20px;}
+    
+} */
