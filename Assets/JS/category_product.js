@@ -2,26 +2,27 @@ document.addEventListener("DOMContentLoaded", async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const categoryFile = urlParams.get('category-file');
 
-    if (!categoryFile) {
-        document.getElementById('product-list').innerHTML = "<p>No products found.</p>";
-        return;
-    }
+    if (categoryFile!=null && document.getElementById('product-list') !== null) {
+       
+   
+        try {
+            const response = await fetch(`Assets/json_files/${categoryFile}`);
+            if (!response.ok) throw new Error(`Failed to load category products.`);
 
-    try {
-        const response = await fetch(`Assets/json_files/${categoryFile}`);
-        if (!response.ok) throw new Error(`Failed to load category products.`);
+            const products = await response.json();
+            const categoryName = products[0]?.categoryName || 'Category';
 
-        const products = await response.json();
-        const categoryName = products[0]?.categoryName || 'Category';
+            document.getElementById('category-title').innerText = categoryName;
+            document.getElementById('category-breadcrumb').innerText = categoryName;
 
-        document.getElementById('category-title').innerText = categoryName;
-        document.getElementById('category-breadcrumb').innerText = categoryName;
+            renderProducts(products, categoryFile);
 
-        renderProducts(products, categoryFile);
-
-    } catch (error) {
-        console.error("Error loading products:", error);
-        document.getElementById("product-list").innerHTML = "<p>Failed to load products. Please try again later.</p>";
+        } catch (error) {
+            //console.error("Error loading products:", error);
+            if(document.getElementById("product-list")!==null){
+                document.getElementById("product-list").innerHTML = "<p>Failed to load products. Please try again later.</p>";
+            }
+        }
     }
 });
 

@@ -10,18 +10,18 @@
                 <span>|</span>
                 <a href="refund.html">Refund Order</a>
 
-            
-                
+
+
             </div>
 
-             <div class="top-header-center">
-                    <i class="bi bi-truck" style></i>
-                    <span>Free shipping on orders over $50 </span>
+            <div class="top-header-center">
+                <i class="bi bi-truck" style></i>
+                <span>Free shipping on orders over $50 </span>
             </div>
             <div class="top-header-right">
                 <a href="faq.html">Help & FAQs</a>
                 <span>|</span>
-               <a href="track.html">Track Order</a>
+                <a href="track.html">Track Order</a>
             </div>
         </div>
     </div>
@@ -30,21 +30,21 @@
     <nav class="navbar navbar-expand-lg bg-white shadow-sm main_navbar">
         <div class="d-flex flex-nowrap justify-content-between w-100">
             <div class="logo_main_image d-flex gap-2 align-items-center">
-              
-                    <!-- {{-- MVSideBarOpenIcon --}} -->
-                    <a href="#" class="SideBarOpenIcon" id="sidebarToggle">
-                        <!-- <img src="Assets/Images/SmallIcons/SideBarOpenIcon.webp" alt="collapseIcon" loading="lazy" /> -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                            class="bi bi-justify sidebarIcon" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
-                        </svg>
-                    </a>
-                    <!-- {{-- MVSideBarOpenIcon --}} -->
-                    <a href="/index.html"> <img src="/Assets/Images/Icons/GrocerLogo.webp"
-                            onerror="this.src='/Assets/IMAGES/ErrorImage.webp'" wire:navigate href="/index.html"
-                            alt="Grocer__Logo" class="mainlogo" loading="lazy" /></a>
-               
+
+                <!-- {{-- MVSideBarOpenIcon --}} -->
+                <a href="#" class="SideBarOpenIcon" id="sidebarToggle">
+                    <!-- <img src="Assets/Images/SmallIcons/SideBarOpenIcon.webp" alt="collapseIcon" loading="lazy" /> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                        class="bi bi-justify sidebarIcon" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                </a>
+                <!-- {{-- MVSideBarOpenIcon --}} -->
+                <a href="/index.html"> <img src="/Assets/Images/Icons/GrocerLogo.webp"
+                        onerror="this.src='/Assets/IMAGES/ErrorImage.webp'" wire:navigate href="/index.html"
+                        alt="Grocer__Logo" class="mainlogo" loading="lazy" /></a>
+
             </div>
             <div class="nav-item search_button">
                 <form class="d-flex" onsubmit="event.preventDefault();">
@@ -56,8 +56,8 @@
                         <!-- <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="" /> -->
                         <div class="input-cont">
                             <input type="text" wire:model.live.debounce.300ms="search_query"
-                                class="shadow-md border-0 search_inp" maxlength="20"
-                                placeholder="Search for items..." aria-label="Search" autocomplete="off" />
+                                class="shadow-md border-0 search_inp" maxlength="20" placeholder="Search for items..."
+                                aria-label="Search" autocomplete="off" />
                         </div>
                         <button class="btn rounded-0 shadow-md search_btn" type="submit">
                             <img src="Assets/Images/SmallIcons/search.webp" alt="searchIcon" loading="lazy" />
@@ -82,7 +82,8 @@
                 <!-- Replace Mini Cart Button in Navigation -->
                 <div class="d-flex cart_button align-items-center">
                     <h1 class="cart_heading position-relative">
-                        <img src="Assets/Images/SmallIcons/ShopCart.webp" width="25" height="24" alt="cartButton" loading="lazy" />
+                        <img src="Assets/Images/SmallIcons/ShopCart.webp" width="25" height="24" alt="cartButton"
+                            loading="lazy" />
                         <span class="position-absolute translate-middle wishlist_badge_counter border border-light"
                             id="cartBadge">
                             0
@@ -106,26 +107,28 @@
                     <div class="nav-item d-flex profile_image d-none">
                         <img src="Assets/Images/Banner/user4.webp" class="user_profile_image user_profile_image_nav"
                             alt="UserImage" loading="lazy" />
-                         
-                            <span class="top-a">Johannes</span></span>
-                            <div class="dropdown">
-                                <a class="nav-link dropdown-toggle loginheadingNav" href="#" role="button" data-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <img src="Assets/Images/SmallIcons/ArrowDown.svg" alt="" />
-                                </a>
-                                <ul class="dropdown-menu custom-dropdown-menu">
-                                    <li><a class="dropdown-item" href="/history.html">Order History</a></li>
-                                    <li><a class="dropdown-item" href="/setting.html">Settings</a></li>
-                                    <li><a class="dropdown-item" href="/orders.html">Orders</a></li>
-                                    <hr class="dropdown-divider">
-                                    <li><div class="dropdown-item logout" onclick="logout()">Logout</div></li>
-                                    <!-- <li><a class="dropdown-item" href="/authentication/register.html">Register</a></li> -->
-                                </ul>
-                            </div>
-                    </div>     
+
+                        <span class="top-a">Johannes</span></span>
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle loginheadingNav" href="#" role="button"
+                                data-toggle="dropdown" aria-expanded="false">
+                                <img src="Assets/Images/SmallIcons/ArrowDown.svg" alt="" />
+                            </a>
+                            <ul class="dropdown-menu custom-dropdown-menu">
+                                <li><a class="dropdown-item" href="/history.html">Order History</a></li>
+                                <li><a class="dropdown-item" href="/setting.html">Settings</a></li>
+                                <li><a class="dropdown-item" href="/orders.html">Orders</a></li>
+                                <hr class="dropdown-divider">
+                                <li>
+                                    <div class="dropdown-item logout" onclick="logout()">Logout</div>
+                                </li>
+                                <!-- <li><a class="dropdown-item" href="/authentication/register.html">Register</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
-              
+
             </div>
 
 
@@ -139,7 +142,7 @@
                 </div>
 
                 <!-- Mobile Drawer Cart -->
-                <div class="cart-drawer-overlay"></div> 
+                <div class="cart-drawer-overlay"></div>
                 <div class="cart-drawer" id="mobileCartDrawer">
                     <div class="cart-drawer-header">
                         <span class="cart-drawer-title">Your Cart</span>
@@ -158,8 +161,7 @@
                     <h1 class="mobile-cart-heading position-relative">
                         <img src="Assets/Images/SmallIcons/ShopCart.webp" alt="cartImage" loading="lazy"
                             id="openMobileCartDrawer" />
-                        <span
-                            class="position-absolute translate-middle border border-light wishlist_badge_mobile"
+                        <span class="position-absolute translate-middle border border-light wishlist_badge_mobile"
                             id="mobileCartBadge">
                             0
                         </span>
@@ -169,64 +171,29 @@
 
 
             </div>
-        
+
             <!-- Drawer Structure -->
             <div class="cart-drawer-overlay"></div>
             <div class="cart-drawer" id="cartDrawer">
                 <div class="cart-drawer-header">
                     <div class="cart-drawer open" id="cartDrawer">
-                <div class="cart-drawer-header">
-                    <span class="cart-drawer-title">Your Cart</span>
-                    <span class="cart-drawer-close" id="cartDrawerClose">×</span>
-                </div>
-                <div class="cart-drawer-body">
-            <div class="cart-item d-flex justify-content-between align-items-center mb-3">
-                <div class="d-flex align-items-center">
-                    <img src="/Assets/Images/Products/Apple.png" alt="Buy 1 get 1 Free on Fresh Fruits" style="width: 50px; height: 50px; margin-right: 10px;">
-                    <span>Buy 1 get 1 Free on Fresh Fruits </span>
-                </div>
-                <div class="d-flex align-items-center ">
-            <button class="btn btn-sm quantity-button decrement" data-name="Buy 1 get 1 Free on Fresh Fruits">
-                <span class="arrow down"></span>
-            </button>
-        <span class="">1</span>
-            <button class="btn btn-sm quantity-button increment mx-2" data-name="Buy 1 get 1 Free on Fresh Fruits">
-                <span class="arrow up"></span>
-            </button>
-            <strong>$2.99</strong>
-            <button class="btn btn-danger-green btn-sm remove-cart-item" data-name="Buy 1 get 1 Free on Fresh Fruits">X</button>
-        </div>
-            </div>
-        
-            <div class="cart-item d-flex justify-content-between align-items-center mb-3">
-                <div class="d-flex align-items-center">
-                    <img src="/Assets/Images/Products/almonds.jpg" alt="40% OFF on Snaks &amp; Beverages" style="width: 50px; height: 50px; margin-right: 10px;">
-                    <span>40% OFF on Snaks &amp; Beverages </span>
-                </div>
-                <div class="d-flex align-items-center ">
-            <button class="btn btn-sm quantity-button decrement" data-name="40% OFF on Snaks &amp; Beverages">
-                <span class="arrow down"></span>
-            </button>
-        <span class="">1</span>
-            <button class="btn btn-sm quantity-button increment mx-2" data-name="40% OFF on Snaks &amp; Beverages">
-                <span class="arrow up"></span>
-            </button>
-            <strong>$1.99</strong>
-            <button class="btn btn-danger-green btn-sm remove-cart-item" data-name="40% OFF on Snaks &amp; Beverages">X</button>
-        </div>
-            </div>
-        </div>
-                <div class="cart-drawer-footer">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <span class="fw-bold">Total:</span>
-                <span class="fw-bold">$4.98</span>
-            </div>
-            <div class="d-flex justify-content-between">
-                <a href="/cart.html" class="btn btn-primary">My Cart</a>
-                <a href="/billing.html" class="drawercart-checkout btn btn-success">Checkout</a>
-            </div>
-        </div>
-            </div>
+                        <div class="cart-drawer-header">
+                            <span class="cart-drawer-title">Your Cart</span>
+                            <span class="cart-drawer-close" id="cartDrawerClose">×</span>
+                        </div>
+                        <div class="cart-drawer-body">
+                        </div>
+                        <div class="cart-drawer-footer">
+                            <!-- <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="fw-bold">Total:</span>
+                                <span class="fw-bold">$0.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="/cart.html" class="btn btn-primary">My Cart</a>
+                                <a href="/billing.html" class="drawercart-checkout btn btn-success">Checkout</a>
+                            </div> -->
+                        </div>
+                    </div>
                     <span class="cart-drawer-title">Your Cart</span>
                     <span class="cart-drawer-close" id="cartDrawerClose">&times;</span>
                 </div>
@@ -251,8 +218,8 @@
                 <!-- <img src="Assets/Images/Icons/dividerSearch.svg" class="searchDividerIcon" alt="" /> -->
                 <div class="input-cont">
                     <input type="text" wire:model.live.debounce.300ms="search_query"
-                        class="shadow-md border-0 search_inp" maxlength="20"
-                        placeholder="Search for items..." aria-label="Search" autocomplete="off" />
+                        class="shadow-md border-0 search_inp" maxlength="20" placeholder="Search for items..."
+                        aria-label="Search" autocomplete="off" />
                 </div>
                 <button class="btn rounded-0 shadow-md search_btn" type="submit">
                     <img src="Assets/Images/SmallIcons/search.webp" alt="searchIcon" loading="lazy" />
@@ -260,7 +227,7 @@
             </div>
         </form>
     </div>
-    
+
     <!--********** NAVIGATION **********-->
 
 
@@ -315,7 +282,7 @@
         <div class="homeSubNavBarLayout">
 
 
-            
+
             <!-- Browse All Categories Button -->
             <div class="homeSubNavBarItem1">
                 <button class="Explore_all_categories_Btn" onclick="toggleDropdown()">
@@ -332,23 +299,27 @@
 
                     <div class="position-relative d-none d-md-block promotion1">
                         <a href="/promotions.html" wire:navigate="">
-                            <img src="./Assets/Images/Banner/Green.png" onerror="this.src='Assets/Images/Banner/Offer1.webp'" class="offersBanner" alt="">
-                            <img src="./Assets/Images/Banner/Offer2-img.webp" style="position: absolute; bottom: 0px; right: 0px;" alt="">
-                            </a><div class="offerContent2"><a href="/promotions.html" wire:navigate="">
+                            <img src="./Assets/Images/Banner/Green.png"
+                                onerror="this.src='Assets/Images/Banner/Offer1.webp'" class="offersBanner" alt="">
+                            <img src="./Assets/Images/Banner/Offer2-img.webp"
+                                style="position: absolute; bottom: 0px; right: 0px;" alt="">
+                        </a>
+                        <div class="offerContent2"><a href="/promotions.html" wire:navigate="">
                                 <span class="offerContentBadgeTwo">60% Off</span>
                                 <h1>Organic Food</h1>
                                 <p>Save up to 60% off on your first order</p>
-                                </a><a href="/promotions.html" class="offerSButton">Order Now <i class="bi bi-arrow-right-short"></i></a>
-                            </div>
-                        
+                            </a><a href="/promotions.html" class="offerSButton">Order Now <i
+                                    class="bi bi-arrow-right-short"></i></a>
+                        </div>
+
                     </div>
 
                     <!-- Right Side: Category Grid -->
                     <div class="category-grid">
-                        
+
                     </div>
                 </div>
-            
+
             </div>
             <!-- Navbar Links -->
             <div class="homeSubNavBarItem2">
@@ -364,7 +335,7 @@
                                 class="bi bi-megaphone navbar-icon"></i> New Products</a></li>
                     <!-- <li class="nav-item"><a href="/new-products.html" class="SubnavIconsAdjustment"><i
                                     class="bi bi-fire navbar-icon"></i> Blog</a></li> -->
-                    
+
                 </ul>
             </div>
 
@@ -387,4 +358,3 @@
         </div>
     </nav>
 </div>
-

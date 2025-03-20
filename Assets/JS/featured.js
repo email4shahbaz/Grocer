@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const featuredContainer = document.querySelector('.homefeaturedProductsMain');
     const mobileFeaturedContainer = document.querySelector('.MobileViewFeaturedCardMain');
-    const categoryInputs = document.querySelectorAll('input[type="radio"]');
-    const categoryLabels = document.querySelectorAll('.categoryLabel');
+    const categoryInputs = document.querySelectorAll('input[type="radio"].featured');
+    const categoryLabels = document.querySelectorAll('.categoryLabel.featured');
 
     // Ensure labels and inputs are linked and clickable
     categoryInputs.forEach((input, index) => {
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
     // Function to fetch and render products
-    async function fetchAndRenderProducts(categoryFile, categoryName) {
+    async function fetchAndRenderFeaturedProducts(categoryFile, categoryName) {
         try {
             const response = await fetch(`/Assets/json_files/${categoryFile}`);
             if (!response.ok) {
@@ -278,7 +278,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             // Update active state for labels
             categoryLabels.forEach(label => label.classList.remove('Active_category'));
-            categoryLabels[index].classList.add('Active_category');
 
             // Determine the file to fetch based on the selected category
             let categoryFile;
@@ -300,7 +299,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
 
             // Fetch and render products for the selected category
-            await fetchAndRenderProducts(categoryFile, selectedCategory);
+            await fetchAndRenderFeaturedProducts(categoryFile, selectedCategory);
+            categoryLabels[index].classList.add('Active_category');
+
         });
     });
 
@@ -309,7 +310,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (defaultInput) {
         defaultInput.checked = true;
         categoryLabels[0].classList.add('Active_category');
-        await fetchAndRenderProducts('featured_product.json', 'All');
+        await fetchAndRenderFeaturedProducts('featured_product.json', 'All');
     }
 
     // Initialize wishlist counter on page load
