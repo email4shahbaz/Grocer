@@ -14,7 +14,9 @@ function includeHTML(file, elementTag) {
 
               // Extract and execute scripts
             executeScripts(tempDiv);
-            document.dispatchEvent(new Event("HeaderFooterScriptsLoaded"));
+            if(elementTag == 'header'){
+                document.dispatchEvent(new Event("HeaderFooterScriptsLoaded"));
+            }
         })
         .catch(error => console.error(`Error loading ${file}:`, error));
 }
@@ -108,12 +110,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     var loginBtn = document.querySelector('.Login_btn');
     var profileImage = document.querySelector('.profile_image');
-    if(localStorage.getItem('email') != null){
+    if(localStorage.getItem('email') != null && loginBtn!=null && profileImage!=null){
         //alert('User is logged in');
         loginBtn.classList.add('d-none');
         profileImage.classList.remove('d-none');
     }
-    else{
+    else if(localStorage.getItem('email') == null && loginBtn!=null && profileImage!=null){
        // alert('User is not logged in');
         loginBtn.classList.remove = 'd-none';
         profileImage.classList.add = 'd-none';

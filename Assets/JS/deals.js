@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const dealsContainer = document.getElementById("deals-container");
+    if(dealsContainer === null) return;
 
     // Fetch the JSON data for the deals
     const response = await fetch("/Assets/json_files/deals_of_the_day.json");

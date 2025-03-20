@@ -385,44 +385,44 @@
                     <ul class="d-flex justify-content-between flex-nowrap category_listing2 gap-3">
                         <li class="All ">
                             <div class="d-flex">
-                                <input type="radio" value="0" class="d-none"
+                                <input type="radio" value="" class="d-none featured"
                                     wire:model.live="featuredProductCategory" />
-                                <label for="" role="button" class="categoryLabel ">All</label>
+                                <label for="" role="button" class="categoryLabel featured Active_category">All</label>
                             </div>
                         </li>
                         <!-- @foreach ($categoryLists as $item) -->
                         <li class="Fruits">
                             <div class="d-flex">
                                 <input type="radio" wire:model.live="featuredProductCategory" value=""
-                                    class="d-none" />
-                                <label for="" role="button" class="categoryLabel ">Fruits</label>
+                                    class="d-none featured" />
+                                <label for="" role="button" class="categoryLabel featured">Fruits</label>
                             </div>
                         </li>
                         <li class="">
                             <div class="d-flex">
                                 <input type="radio" wire:model.live="featuredProductCategory" value=""
-                                    class="d-none" />
-                                <label for="" role="button" class="categoryLabel ">Vegitables</label>
+                                    class="d-none featured" />
+                                <label for="" role="button" class="categoryLabel featured">Vegitables</label>
                             </div>
                         </li>
                         <li class="">
                             <div class="d-flex">
                                 <input type="radio" wire:model.live="featuredProductCategory" value=""
-                                    class="d-none" />
-                                <label for="" role="button" class="categoryLabel ">Beverages</label>
+                                    class="d-none featured" />
+                                <label for="" role="button" class="categoryLabel featured">Beverages</label>
                             </div>
                         </li>
 
                         <li class="">
                             <div class="d-flex">
                                 <input type="radio" wire:model.live="featuredProductCategory" value=""
-                                    class="d-none" />
-                                <label for="" role="button" class="categoryLabel ">Dairy</label>
+                                    class="d-none featured" />
+                                <label for="" role="button" class="categoryLabel featured">Dairy</label>
                             </div>
                         </li>
                         <!-- @endforeach -->
                     </ul>
-                </div> b
+                </div> 
                 <div class="row position-relative ">
                     <div id="products" class="WebViewCarouselTwo">
                         <div class="flex-nowrap homefeaturedProductsMain">
@@ -493,24 +493,24 @@
                             <ul class="d-flex justify-content-between flex-nowrap category_listing2 p-0 gap-3">
                                 <li class="">
                                     <div class="d-flex">
-                                        <input type="radio" value="/popular" class="d-none" id="popular"
+                                        <input type="radio" value="/popular" class="d-none best" id="popular"
                                             wire:model.live="bestSellId" />
-                                        <label for="popular" role="button" class="categoryLabel ">Best
+                                        <label for="popular" role="button" class="categoryLabel best">Best
                                             Sells</label>
                                     </div>
                                 </li>
                                 <li class="">
                                     <div class="d-flex">
-                                        <input type="radio" value="/trending" class="d-none" id="trending"
+                                        <input type="radio" value="/trending" class="d-none best" id="trending"
                                             wire:model.live="bestSellId" />
-                                        <label for="trending" role="button" class="categoryLabel ">Trending</label>
+                                        <label for="trending" role="button" class="categoryLabel best">Trending</label>
                                     </div>
                                 </li>
                                 <li class="">
                                     <div class="d-flex">
-                                        <input type="radio" value="/latest" class="d-none" id="latest"
+                                        <input type="radio" value="/latest" class="d-none best" id="latest"
                                             wire:model.live="bestSellId" />
-                                        <label for="latest" role="button" class="categoryLabel ">New</label>
+                                        <label for="latest" role="button" class="categoryLabel best">New</label>
                                     </div>
                                 </li>
                             </ul>
@@ -801,6 +801,7 @@
     <!-- jQuery (needed for Bootstrap modals) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/Assets/JS/index.js" defer></script>
+    <script src="/Assets/JS/header.js" defer></script>
     <script src="/Assets/JS/promo-popup.js" defer></script>
     <script src="/Assets/JS/product_details.js" defer></script>
     <script src="/Assets/JS/search_product.js" defer></script>
@@ -820,7 +821,7 @@
     <script src="/Assets/JS/wishlist.js"></script>
     <script src="/Assets/JS/Animations.js"></script>
     <script src="/Assets/JS/deals.js" defer></script>
-    <script src="/Assets/JS/quick-view.js"></script>
+    <!-- <script src="/Assets/JS/quick-view.js"></script> -->
     <script src="/Assets/JS/mob_search.js"></script>
     <script src="/Assets/JS/category_product.js" defer></script>
     

@@ -1,96 +1,96 @@
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    // let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    // Function to update the drawer cart UI
-    function updateDrawerCart() {
-        const cartDrawerBody = document.querySelector("#cartDrawer .cart-drawer-body");
-        const cartDrawerFooter = document.querySelector("#cartDrawer .cart-drawer-footer");
-        const cartTotalElement = document.querySelector(".mycartCustomHeading2");
+    // // Function to update the drawer cart UI
+    // function updateDrawerCart() {
+    //     const cartDrawerBody = document.querySelector("#cartDrawer .cart-drawer-body");
+    //     const cartDrawerFooter = document.querySelector("#cartDrawer .cart-drawer-footer");
+    //     const cartTotalElement = document.querySelector(".mycartCustomHeading2");
 
-        if(cartTotalElement!=null){
-            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-            const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-            //cartBadge.textContent = totalItems;
-            cartTotalElement.textContent = `$${totalPrice.toFixed(2)}`;
-            cartDrawerBody.innerHTML = ""; // Clear previous items
+    //     if(cartTotalElement!=null){
+    //         const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    //         const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    //         //cartBadge.textContent = totalItems;
+    //         cartTotalElement.textContent = `$${totalPrice.toFixed(2)}`;
+    //         cartDrawerBody.innerHTML = ""; // Clear previous items
 
-            if (cart.length === 0) {
-                cartDrawerBody.innerHTML = `<p class="text-center mt-3">Your cart is empty.</p>`;
-                cartDrawerFooter.innerHTML = ""; // No footer if cart is empty
-            } 
-            else {
-                let totalPrice = 0;
+    //         if (cart.length === 0) {
+    //             cartDrawerBody.innerHTML = `<p class="text-center mt-3">Your cart is empty.</p>`;
+    //             cartDrawerFooter.innerHTML = ""; // No footer if cart is empty
+    //         } 
+    //         else {
+    //             let totalPrice = 0;
 
-                cart.forEach((item) => {
-                    totalPrice += item.price * item.quantity;
+    //             cart.forEach((item) => {
+    //                 totalPrice += item.price * item.quantity;
 
-                    // Create a cart item element
-                    const cartItem = `
-                        <div class="cart-item d-flex justify-content-between align-items-center mb-3">
-                        <div class="d-flex align-items-center">
-                            <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; margin-right: 10px;">
-                            <span>${item.name} </span>
-                        </div>
-                        <div class="d-flex align-items-center">
-                    <button class="btn btn-sm quantity-button decrement" data-name="${item.name}">
-                        <span  class="arrow down"></span>
-                    </button>
-                <span class="">${item.quantity}</span>
-                    <button class="btn btn-sm quantity-button increment" data-name="${item.name}">
-                        <span class="arrow up"></span>
-                    </button>
-                    <strong>$${(item.price * item.quantity).toFixed(2)}</strong>
-                    <button class="btn btn-danger-green btn-sm remove-cart-item" data-name="${item.name}">X</button>
-                </div>
-                    </div>
-                `;
-                cartDrawerBody.insertAdjacentHTML("beforeend", cartItem);
-            });
+    //                 // Create a cart item element
+    //                 const cartItem = `
+    //                     <div class="cart-item d-flex justify-content-between align-items-center mb-3">
+    //                     <div class="d-flex align-items-center">
+    //                         <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; margin-right: 10px;">
+    //                         <span>${item.name} </span>
+    //                     </div>
+    //                     <div class="d-flex align-items-center">
+    //                 <button class="btn btn-sm quantity-button decrement" data-name="${item.name}">
+    //                     <span  class="arrow down"></span>
+    //                 </button>
+    //             <span class="">${item.quantity}</span>
+    //                 <button class="btn btn-sm quantity-button increment" data-name="${item.name}">
+    //                     <span class="arrow up"></span>
+    //                 </button>
+    //                 <strong>$${(item.price * item.quantity).toFixed(2)}</strong>
+    //                 <button class="btn btn-danger-green btn-sm remove-cart-item" data-name="${item.name}">X</button>
+    //             </div>
+    //                 </div>
+    //             `;
+    //             cartDrawerBody.insertAdjacentHTML("beforeend", cartItem);
+    //         });
             
 
-            // Update footer with total price and action buttons
-            cartDrawerFooter.innerHTML = `
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <span class="fw-bold">Total:</span>
-                    <span class="fw-bold">$${totalPrice.toFixed(2)}</span>
-                </div>
-                <div class="d-flex justify-content-between">
-                    <a href="/cart.html" class="btn btn-primary">My Cart</a>
-                    <a href="/billing.html" class="btn btn-success">Checkout</a>
-                </div>
-            `;
-        }
+    //         // Update footer with total price and action buttons
+    //         cartDrawerFooter.innerHTML = `
+    //             <div class="d-flex justify-content-between align-items-center mb-3">
+    //                 <span class="fw-bold">Total:</span>
+    //                 <span class="fw-bold">$${totalPrice.toFixed(2)}</span>
+    //             </div>
+    //             <div class="d-flex justify-content-between">
+    //                 <a href="/cart.html" class="btn btn-primary">My Cart</a>
+    //                 <a href="/billing.html" class="btn btn-success">Checkout</a>
+    //             </div>
+    //         `;
+    //     }
 
-        // Add event listeners for remove buttons
-        document.querySelectorAll(".remove-cart-item").forEach((button) => {
-            button.addEventListener("click", (e) => {
-                const productName = e.target.getAttribute("data-name");
-                cart = cart.filter((item) => item.name !== productName);
-                localStorage.setItem("cart", JSON.stringify(cart));
-                updateDrawerCart(); // Re-render the cart drawer
-            });
-        });
-        }
-    }
+    //     // Add event listeners for remove buttons
+    //     document.querySelectorAll(".remove-cart-item").forEach((button) => {
+    //         button.addEventListener("click", (e) => {
+    //             const productName = e.target.getAttribute("data-name");
+    //             cart = cart.filter((item) => item.name !== productName);
+    //             localStorage.setItem("cart", JSON.stringify(cart));
+    //             updateDrawerCart(); // Re-render the cart drawer
+    //         });
+    //     });
+    //     }
+    // }
 
     
 
-    function addToCart(product) {
-        const existingProduct = cart.find((item) => item.name === product.name);
+    // function addToCart(product) {
+    //     const existingProduct = cart.find((item) => item.name === product.name);
 
-        if (existingProduct) {
-            existingProduct.quantity += product.quantity;
-        } else {
-            cart.push(product);
-        }
+    //     if (existingProduct) {
+    //         existingProduct.quantity += product.quantity;
+    //     } else {
+    //         cart.push(product);
+    //     }
 
-        localStorage.setItem("cart", JSON.stringify(cart));
-        updateDrawerCart();
+    //     localStorage.setItem("cart", JSON.stringify(cart));
+    //     updateDrawerCart();
 
-        // Automatically open the cart drawer
-        cartDrawer.classList.add("open");
-        cartDrawerOverlay.style.display = "block";
-    }
+    //     // Automatically open the cart drawer
+    //     cartDrawer.classList.add("open");
+    //     cartDrawerOverlay.style.display = "block";
+    // }
 
 
 
@@ -134,9 +134,9 @@ function updateCartBadge() {
 
     // Listen for cart-updated events
     document.body.addEventListener("cart-updated", (e) => {
-        updateDrawerCart();
+        //updateDrawerCart();
         //updateNavbarCart();
-        updateCartBadge();
+        //updateCartBadge();
     });
 
     
@@ -181,10 +181,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         cartDrawerOverlay.addEventListener("click", closeDrawer);
     }
 
-    updateDrawerCart(); // Initialize the cart drawer on page load
+    //updateDrawerCart(); // Initialize the cart drawer on page load
 
     const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-    updateCartBadge(cartItems.length);
+    //updateCartBadge(cartItems.length);
 
 
     const urlParams = new URLSearchParams(window.location.search);
