@@ -743,6 +743,10 @@ li {
     margin-left: 15%;
 }
 
+.hero_img_grocery {
+  height: 50vh;
+}
+
 
 
 @media screen and (max-width:500px) {
