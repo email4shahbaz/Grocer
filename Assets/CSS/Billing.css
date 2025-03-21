@@ -42,7 +42,7 @@ li {
     font-family: poppins;
 }
 
-.proceed_checkOut_btn {
+.proceed_checkOut_btn, .place_order_btn {
     font-family: poppins;
     border: none;
     width: 100%;
