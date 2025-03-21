@@ -165,6 +165,7 @@ a {
     color: #4E4E4E;
     font-size: 12px;
     margin-left:5px;
+    margin-bottom: 0px;
     text-decoration: line-through;
 }
 .sale-cards-container .deal-card .addbutton {
