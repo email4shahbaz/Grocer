@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const shippingElement = document.getElementById("shipping");
     const totalElement = document.getElementById("total");
     const paymentMethods = document.querySelectorAll('input[name="payment_method"]');
-    const proceedToCheckoutButton = document.querySelector(".proceed_checkOut_btn");
+    const placeOrderBtn = document.querySelector(".place_order_btn");
 
     // Retrieve Checkout Data
     const checkoutData = JSON.parse(localStorage.getItem("checkoutData")) || {};
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
 
     // Event Listener for Checkout Button
-    proceedToCheckoutButton.addEventListener("click", (event) => {
+    placeOrderBtn.addEventListener("click", (event) => {
         event.preventDefault();
 
         const selectedPaymentMethod = document.querySelector('input[name="payment_method"]:checked');
