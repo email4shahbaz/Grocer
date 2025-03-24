@@ -106,14 +106,6 @@ a {
     padding: 19px 24px;
     text-align: center;
 }
-.hot-deals_hero_banner_images .badge::before {
-    content: "";
-    position: absolute;
-    top: -27px;
-    width: 2px;
-    height: 28px;
-    background-color: black;
-}
 .hot-deals_hero_banner_images .badge p {
     font-size: 24px;
     font-weight: 500;
@@ -193,6 +185,16 @@ a {
     flex-direction: column;
     height: 100%;
 }
+.categories-container .category-card figure {
+    max-width: 200px;
+    width: 100%;
+    height: 150px;
+}
+.category-card figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .categories .category-card h3 {
     font-weight: 700;
     font-size: clamp(18px, 5vw, 26px);
@@ -204,6 +206,7 @@ a {
 }
 .categories .category-card p {
     color: var(--red);
+    cursor: pointer;
 }
 
 

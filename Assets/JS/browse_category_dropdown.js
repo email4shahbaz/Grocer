@@ -6,6 +6,7 @@ document.addEventListener("HeaderFooterScriptsLoaded", ()=> {
     }
 });
 
+
 // Function to load categories dynamically
 async function loadCategories() {
     try {

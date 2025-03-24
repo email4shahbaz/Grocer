@@ -43,6 +43,7 @@ a {
     justify-content: center;
     z-index: 4;
     position: absolute;
+    cursor: pointer;
 }
 .slider-controller.prev {
     left: -10px;
