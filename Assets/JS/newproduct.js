@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                             <div class="col align-self-center">
                                 <h1 class="searchpricetag align-self-center">$${productPrice}${productUnit}</h1>
                             </div>
-                            <button class="searchaddbutton" 
+                            <button class="searchaddbutton addbutton" 
                                         data-name="${productName}" 
                                         data-price="${productPrice}" 
                                         data-image="${productImage}" 

@@ -1,10 +1,12 @@
-document.addEventListener("DOMContentLoaded", async () => {
 
+let dealsOfTheDay;
+document.addEventListener("DOMContentLoaded", async () => {
     async function loadDeals() {
         try {
             const response = await fetch("Assets/json_files/deals_of_the_day.json") // Fetch the JSON data for the deals
             if (!response.ok) throw new Error("Failed to load categories.");
             const dealsData = await response.json();
+            dealsOfTheDay = dealsData;
             return dealsData;
 
         } catch (error) {
@@ -68,7 +70,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <div class="d-flex ">
                         <p class="price ">$${deal.discounted_price}</p>
                         <p class="original-price ">$${deal.original_price}</p> </div>
-                        <button class="btn addbutton py-2" 
+                        <button class="btn py-2" onclick="addDealToCart(event)" 
                             data-id="${deal.id}"
                             data-name="${deal.product_name}"
                             data-price="${deal.discounted_price}"
@@ -95,3 +97,30 @@ document.addEventListener("DOMContentLoaded", async () => {
     rednerDealsCards();
 
 });
+
+function addDealToCart(evt){
+    if(dealsOfTheDay!=null){
+        let deal=dealsOfTheDay.find(deal=>deal.id==evt.currentTarget.dataset.id);
+        if(deal!=null && deal.products!=null){
+            //let cart=JSON.parse(localStorage.getItem("cart")) || [];
+            deal.products.forEach(product=>{
+                let item=cart.find(item=>item.id==product.id);
+                if(item!=null){
+                    item.quantity+=1;
+                }else{
+                    item={
+                        id:product.id,
+                        name:product.product_name,
+                        price:product.discounted_price,
+                        image:product.product_image,
+                        quantity:1,
+                        isFree:product.isFree,
+                    };
+                    cart.push(item);
+                }
+            });
+            localStorage.setItem("cart",JSON.stringify(cart));
+            document.body.dispatchEvent(new CustomEvent("cart-updated"));
+        }
+    }
+}

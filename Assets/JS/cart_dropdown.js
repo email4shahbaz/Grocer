@@ -342,79 +342,79 @@ document.addEventListener("HeaderFooterScriptsLoaded", () => {
 // Animated Drawer Cart
 
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const cartDrawer = document.getElementById("cartDrawer");
-        const cartDrawerOverlay = document.querySelector(".cart-drawer-overlay");
-        const openCartDrawer = document.getElementById("openCartDrawer");
-        const closeCartDrawer = document.getElementById("cartDrawerClose");
+    // document.addEventListener("DOMContentLoaded", () => {
+    //     const cartDrawer = document.getElementById("cartDrawer");
+    //     const cartDrawerOverlay = document.querySelector(".cart-drawer-overlay");
+    //     const openCartDrawer = document.getElementById("openCartDrawer");
+    //     const closeCartDrawer = document.getElementById("cartDrawerClose");
     
-        // Open drawer
-        if (openCartDrawer) {
-            openCartDrawer.addEventListener("click", (e) => {
-                e.preventDefault();
-                cartDrawer.classList.add("open");
-                cartDrawerOverlay.classList.add("active");
-            });
-        }
+    //     // Open drawer
+    //     if (openCartDrawer) {
+    //         openCartDrawer.addEventListener("click", (e) => {
+    //             e.preventDefault();
+    //             cartDrawer.classList.add("open");
+    //             cartDrawerOverlay.classList.add("active");
+    //         });
+    //     }
 
         
     
-        // Close drawer
-        if (closeCartDrawer) {
-            closeCartDrawer.addEventListener("click", () => {
-                cartDrawer.classList.remove("open");
-                cartDrawerOverlay.classList.remove("active");
-            });
-        }
+    //     // Close drawer
+    //     if (closeCartDrawer) {
+    //         closeCartDrawer.addEventListener("click", () => {
+    //             cartDrawer.classList.remove("open");
+    //             cartDrawerOverlay.classList.remove("active");
+    //         });
+    //     }
     
-        // Close drawer on overlay click
-        if (cartDrawerOverlay) {
-            cartDrawerOverlay.addEventListener("click", () => {
-                cartDrawer.classList.remove("open");
-                cartDrawerOverlay.classList.remove("active");
-            });
-        }
-    });
+    //     // Close drawer on overlay click
+    //     if (cartDrawerOverlay) {
+    //         cartDrawerOverlay.addEventListener("click", () => {
+    //             cartDrawer.classList.remove("open");
+    //             cartDrawerOverlay.classList.remove("active");
+    //         });
+    //     }
+    // });
 
     
 
 // Animated Closer Button 
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const cartDrawer = document.getElementById("cartDrawer");
-        const cartDrawerOverlay = document.querySelector(".cart-drawer-overlay");
-        const openCartDrawer = document.getElementById("openCartDrawer");
-        const closeCartDrawer = document.getElementById("cartDrawerClose");
+    // document.addEventListener("DOMContentLoaded", () => {
+    //     const cartDrawer = document.getElementById("cartDrawer");
+    //     const cartDrawerOverlay = document.querySelector(".cart-drawer-overlay");
+    //     const openCartDrawer = document.getElementById("openCartDrawer");
+    //     const closeCartDrawer = document.getElementById("cartDrawerClose");
     
-        // Open drawer
-        if (openCartDrawer) {
-            openCartDrawer.addEventListener("click", (e) => {
-                e.preventDefault();
-                cartDrawer.classList.add("open");
-                cartDrawerOverlay.classList.add("active");
-            });
-        }
+    //     // Open drawer
+    //     if (openCartDrawer) {
+    //         openCartDrawer.addEventListener("click", (e) => {
+    //             e.preventDefault();
+    //             cartDrawer.classList.add("open");
+    //             cartDrawerOverlay.classList.add("active");
+    //         });
+    //     }
     
-        // Close drawer with animated button
-        if (closeCartDrawer) {
-            closeCartDrawer.addEventListener("click", () => {
-                closeCartDrawer.classList.add("rotate"); // Add rotation class
-                setTimeout(() => {
-                    closeCartDrawer.classList.remove("rotate"); // Remove rotation after animation
-                    cartDrawer.classList.remove("open");
-                    cartDrawerOverlay.classList.remove("active");
-                }, 400); // Match the duration of the rotation animation
-            });
-        }
+    //     // Close drawer with animated button
+    //     if (closeCartDrawer) {
+    //         closeCartDrawer.addEventListener("click", () => {
+    //             closeCartDrawer.classList.add("rotate"); // Add rotation class
+    //             setTimeout(() => {
+    //                 closeCartDrawer.classList.remove("rotate"); // Remove rotation after animation
+    //                 cartDrawer.classList.remove("open");
+    //                 cartDrawerOverlay.classList.remove("active");
+    //             }, 400); // Match the duration of the rotation animation
+    //         });
+    //     }
     
-        // Close drawer on overlay click
-        if (cartDrawerOverlay) {
-            cartDrawerOverlay.addEventListener("click", () => {
-                cartDrawer.classList.remove("open");
-                cartDrawerOverlay.classList.remove("active");
-            });
-        }
-    });
+    //     // Close drawer on overlay click
+    //     if (cartDrawerOverlay) {
+    //         cartDrawerOverlay.addEventListener("click", () => {
+    //             cartDrawer.classList.remove("open");
+    //             cartDrawerOverlay.classList.remove("active");
+    //         });
+    //     }
+    // });
     
 
 

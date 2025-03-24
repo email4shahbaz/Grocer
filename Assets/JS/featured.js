@@ -240,7 +240,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Add to Cart button functionality
     document.getElementById("addbutton").addEventListener("click", () => {
         const product = getProductDetailsFromModal();
-        addToCart(product);
+        //addToCart(product);
     });
     
     function getProductDetailsFromModal() {

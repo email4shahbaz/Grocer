@@ -4,12 +4,29 @@ let webCartDrawer;
 let mobileCartDrawer;
 let cartOverlay;
 
+ // Sync Cart on Updates
+ document.body.addEventListener("cart-updated", () => {
+    cart = JSON.parse(localStorage.getItem("cart")) || [];
+    updateWebCartBadge();
+    renderWebCartItems();
+    updateMobileCartBadge();
+    renderMobileCartItems();
+
+     // Open the appropriate drawer and overlay
+     const isMobile = window.innerWidth <= 768;
+     if (isMobile) {
+         document.getElementById("mobileCartDrawer").classList.add("open");
+         document.querySelector(newLocal).style.display = "block";
+     } else {
+         document.getElementById("cartDrawer").classList.add("open");
+         document.querySelector(".cart-drawer-overlay").style.display = "block";
+     }
+});
+
 document.addEventListener("HeaderFooterScriptsLoaded", () => {
     webCartDrawer = document.getElementById("cartDrawer");
     mobileCartDrawer = document.getElementById("mobileCartDrawer");
     cartOverlay = document.querySelector(".cart-drawer-overlay");
-
-
 
     cart = JSON.parse(localStorage.getItem("cart")) || [];
     //updateCartBadge();
@@ -51,13 +68,7 @@ document.addEventListener("HeaderFooterScriptsLoaded", () => {
     // Close overlay when clicked
     if(cartOverlay!=null) cartOverlay.addEventListener("click", closeDrawer);
 
-    // Sync Cart on Updates
-    document.body.addEventListener("cart-updated", () => {
-        updateWebCartBadge();
-        renderWebCartItems();
-        updateMobileCartBadge();
-        renderMobileCartItems();
-    });
+   
 
     const searchInput = window.screen.width > 992 ? document.querySelector(".search_inp") : document.querySelector(".search_inp_mobile");
 
@@ -204,11 +215,11 @@ function renderWebCartItems() {
                     <span>${item.name} </span>
                 </div>
                 <div class="d-flex align-items-center ">
-                    <button class="btn btn-sm quantity-button decrement">
+                    <button class="btn btn-sm quantity-button decrement" style="display: ${item.isFree==true ? 'none': 'block'};">
                         <i class="bi bi-dash-square" data-name="${item.name}"></i>
                     </button>
                     <span class="">${item.quantity}</span>
-                    <button class="btn btn-sm quantity-button increment mx-2">
+                    <button class="btn btn-sm quantity-button increment mx-2" style="display: ${item.isFree==true ? 'none': 'block'};">
                         <i class="bi bi-plus-square" data-name="${item.name}"></i>
                     </button>
                     <strong style="margin-left: 15px">$${(item.price * item.quantity).toFixed(2)}</strong>
@@ -455,15 +466,7 @@ function redirectToSearchedProductPage(product) {
         renderMobileCartItems();
         updateMobileCartBadge(); // Synchronize with mobile badge
 
-        // Open the appropriate drawer and overlay
-        const isMobile = window.innerWidth <= 768;
-        if (isMobile) {
-            document.getElementById("mobileCartDrawer").classList.add("open");
-            document.querySelector(newLocal).style.display = "block";
-        } else {
-            document.getElementById("cartDrawer").classList.add("open");
-            document.querySelector(".cart-drawer-overlay").style.display = "block";
-        }
+       
 
         // alert(`${product.name} has been added to the cart!`);
          // Play sound when adding a product to the cart
@@ -553,13 +556,13 @@ document.body.addEventListener("click", (e) => {
 });
 
 
-// Sync Cart on Updates
-document.body.addEventListener("cart-updated", () => {
-    updateWebCartBadge();
-    renderWebCartItems();
-    updateMobileCartBadge();
-    renderMobileCartItems();
-});
+// // Sync Cart on Updates
+// document.body.addEventListener("cart-updated", () => {
+//     updateWebCartBadge();
+//     renderWebCartItems();
+//     updateMobileCartBadge();
+//     renderMobileCartItems();
+// });
 
 
 

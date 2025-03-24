@@ -126,18 +126,19 @@ function updateCartBadge() {
     
    
     
-    document.body.addEventListener("cart-updated", (e) => {
-        updateCartBadge(e.detail.count);
-    });
+    // document.body.addEventListener("cart-updated", (e) => {
+    //     //updateCartBadge(e.detail.count);
+    //     updateCartBadge();
+    // });
 
   
 
-    // Listen for cart-updated events
-    document.body.addEventListener("cart-updated", (e) => {
-        //updateDrawerCart();
-        //updateNavbarCart();
-        //updateCartBadge();
-    });
+    // // Listen for cart-updated events
+    // document.body.addEventListener("cart-updated", (e) => {
+    //     //updateDrawerCart();
+    //     //updateNavbarCart();
+    //     //updateCartBadge();
+    // });
 
     
 
@@ -157,29 +158,29 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
-    // Open and close drawer functionality
-    const cartDrawer = document.getElementById("cartDrawer");
-    const cartDrawerOverlay = document.querySelector(".cart-drawer-overlay");
-    const openCartDrawer = document.getElementById("openCartDrawer");
-    const closeCartDrawer = document.getElementById("cartDrawerClose");
+//     // Open and close drawer functionality
+//     const cartDrawer = document.getElementById("cartDrawer");
+//     const cartDrawerOverlay = document.querySelector(".cart-drawer-overlay");
+//     const openCartDrawer = document.getElementById("openCartDrawer");
+//     const closeCartDrawer = document.getElementById("cartDrawerClose");
 
-    if(openCartDrawer!=null){
-        openCartDrawer.addEventListener("click", (e) => {
-            e.preventDefault();
-            cartDrawer.classList.add("open");
-            cartDrawerOverlay.style.display = "block";
-        });
-}
+//     if(openCartDrawer!=null){
+//         openCartDrawer.addEventListener("click", (e) => {
+//             e.preventDefault();
+//             cartDrawer.classList.add("open");
+//             cartDrawerOverlay.style.display = "block";
+//         });
+// }
 
-    // const closeDrawer = () => {
-    //     cartDrawer.classList.remove("open");
-    //     cartDrawerOverlay.style.display = "none";
-    // };
+//     // const closeDrawer = () => {
+//     //     cartDrawer.classList.remove("open");
+//     //     cartDrawerOverlay.style.display = "none";
+//     // };
 
-    // closeCartDrawer.addEventListener("click", closeDrawer);
-    if(cartDrawerOverlay!=null){
-        cartDrawerOverlay.addEventListener("click", closeDrawer);
-    }
+//     // closeCartDrawer.addEventListener("click", closeDrawer);
+//     if(cartDrawerOverlay!=null){
+//         cartDrawerOverlay.addEventListener("click", closeDrawer);
+//     }
 
     //updateDrawerCart(); // Initialize the cart drawer on page load
 
