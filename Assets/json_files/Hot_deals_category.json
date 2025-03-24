@@ -5,11 +5,41 @@
         "image": "Assets/Images/Products/Apple.png",
         "file": "fruits.json",
         "products": [
-            { "id": 101, "name": "Laptop", "quantity": 5 },
-            { "id": 102, "name": "Smartphone", "quantity": 3 },
-            { "id": 103, "name": "Tablet", "quantity": 2 }, { "id": 101, "name": "Laptop", "quantity": 5 },
-            { "id": 102, "name": "Smartphone", "quantity": 3 },
-            { "id": 103, "name": "Tablet", "quantity": 2 },{ "id": 103, "name": "Tablet", "quantity": 2 }
+            {
+                "id": 101,
+                "name": "Laptop",
+                "quantity": 5
+            },
+            {
+                "id": 102,
+                "name": "Smartphone",
+                "quantity": 3
+            },
+            {
+                "id": 103,
+                "name": "Tablet",
+                "quantity": 2
+            },
+            {
+                "id": 101,
+                "name": "Laptop",
+                "quantity": 5
+            },
+            {
+                "id": 102,
+                "name": "Smartphone",
+                "quantity": 3
+            },
+            {
+                "id": 103,
+                "name": "Tablet",
+                "quantity": 2
+            },
+            {
+                "id": 103,
+                "name": "Tablet",
+                "quantity": 2
+            }
         ]
     },
     {
@@ -17,12 +47,42 @@
         "name": "Vegetables",
         "image": "Assets/Images/Products/Vegitables.png",
         "file": "vegetables.json",
-       "products": [
-            { "id": 101, "name": "Laptop", "quantity": 5 },
-            { "id": 102, "name": "Smartphone", "quantity": 3 },
-            { "id": 103, "name": "Tablet", "quantity": 2 }, { "id": 101, "name": "Laptop", "quantity": 5 },
-            { "id": 102, "name": "Smartphone", "quantity": 3 },
-            { "id": 103, "name": "Tablet", "quantity": 2 },{ "id": 103, "name": "Tablet", "quantity": 2 }
+        "products": [
+            {
+                "id": 101,
+                "name": "Laptop",
+                "quantity": 5
+            },
+            {
+                "id": 102,
+                "name": "Smartphone",
+                "quantity": 3
+            },
+            {
+                "id": 103,
+                "name": "Tablet",
+                "quantity": 2
+            },
+            {
+                "id": 101,
+                "name": "Laptop",
+                "quantity": 5
+            },
+            {
+                "id": 102,
+                "name": "Smartphone",
+                "quantity": 3
+            },
+            {
+                "id": 103,
+                "name": "Tablet",
+                "quantity": 2
+            },
+            {
+                "id": 103,
+                "name": "Tablet",
+                "quantity": 2
+            }
         ]
     },
     {
@@ -31,9 +91,16 @@
         "image": "Assets/Images/Products/butter.png",
         "file": "dairy.json",
         "products": [
-            { "id": 201, "name": "Shirt", "quantity": 10 },
-            { "id": 202, "name": "Jeans", "quantity": 7 }
-          
+            {
+                "id": 201,
+                "name": "Shirt",
+                "quantity": 10
+            },
+            {
+                "id": 202,
+                "name": "Jeans",
+                "quantity": 7
+            }
         ]
     },
     {
@@ -42,9 +109,21 @@
         "image": "Assets/Images/Products/beverages.png",
         "file": "beverages.json",
         "products": [
-            { "id": 201, "name": "Shirt", "quantity": 10 },
-            { "id": 202, "name": "Jeans", "quantity": 7 },
-            { "id": 203, "name": "Jacket", "quantity": 4 }
+            {
+                "id": 201,
+                "name": "Shirt",
+                "quantity": 10
+            },
+            {
+                "id": 202,
+                "name": "Jeans",
+                "quantity": 7
+            },
+            {
+                "id": 203,
+                "name": "Jacket",
+                "quantity": 4
+            }
         ]
     },
     {
@@ -53,20 +132,59 @@
         "image": "Assets/Images/Products/Milk.png",
         "file": "snacks.json",
         "products": [
-            { "id": 201, "name": "Shirt", "quantity": 10 },
-            { "id": 202, "name": "Jeans", "quantity": 7 }
+            {
+                "id": 201,
+                "name": "Shirt",
+                "quantity": 10
+            },
+            {
+                "id": 202,
+                "name": "Jeans",
+                "quantity": 7
+            }
         ]
-    }, {
+    },
+    {
         "id": 1,
         "name": "Fresh Fruits",
         "image": "Assets/Images/Products/Peach.png",
         "file": "fruits.json",
         "products": [
-            { "id": 101, "name": "Laptop", "quantity": 5 },
-            { "id": 102, "name": "Smartphone", "quantity": 3 },
-            { "id": 103, "name": "Tablet", "quantity": 2 }, { "id": 101, "name": "Laptop", "quantity": 5 },
-            { "id": 102, "name": "Smartphone", "quantity": 3 },
-            { "id": 103, "name": "Tablet", "quantity": 2 },{ "id": 103, "name": "Tablet", "quantity": 2 }
+            {
+                "id": 101,
+                "name": "Laptop",
+                "quantity": 5
+            },
+            {
+                "id": 102,
+                "name": "Smartphone",
+                "quantity": 3
+            },
+            {
+                "id": 103,
+                "name": "Tablet",
+                "quantity": 2
+            },
+            {
+                "id": 101,
+                "name": "Laptop",
+                "quantity": 5
+            },
+            {
+                "id": 102,
+                "name": "Smartphone",
+                "quantity": 3
+            },
+            {
+                "id": 103,
+                "name": "Tablet",
+                "quantity": 2
+            },
+            {
+                "id": 103,
+                "name": "Tablet",
+                "quantity": 2
+            }
         ]
     },
     {
@@ -75,11 +193,41 @@
         "image": "Assets/Images/Products/Vegitables.png",
         "file": "vegetables.json",
         "products": [
-            { "id": 101, "name": "Laptop", "quantity": 5 },
-            { "id": 102, "name": "Smartphone", "quantity": 3 },
-            { "id": 103, "name": "Tablet", "quantity": 2 }, { "id": 101, "name": "Laptop", "quantity": 5 },
-            { "id": 102, "name": "Smartphone", "quantity": 3 },
-            { "id": 103, "name": "Tablet", "quantity": 2 },{ "id": 103, "name": "Tablet", "quantity": 2 }
+            {
+                "id": 101,
+                "name": "Laptop",
+                "quantity": 5
+            },
+            {
+                "id": 102,
+                "name": "Smartphone",
+                "quantity": 3
+            },
+            {
+                "id": 103,
+                "name": "Tablet",
+                "quantity": 2
+            },
+            {
+                "id": 101,
+                "name": "Laptop",
+                "quantity": 5
+            },
+            {
+                "id": 102,
+                "name": "Smartphone",
+                "quantity": 3
+            },
+            {
+                "id": 103,
+                "name": "Tablet",
+                "quantity": 2
+            },
+            {
+                "id": 103,
+                "name": "Tablet",
+                "quantity": 2
+            }
         ]
     },
     {
@@ -88,8 +236,16 @@
         "image": "Assets/Images/Products/butter.png",
         "file": "dairy.json",
         "products": [
-            { "id": 201, "name": "Shirt", "quantity": 10 },
-            { "id": 202, "name": "Jeans", "quantity": 7 }
+            {
+                "id": 201,
+                "name": "Shirt",
+                "quantity": 10
+            },
+            {
+                "id": 202,
+                "name": "Jeans",
+                "quantity": 7
+            }
         ]
     },
     {
@@ -98,9 +254,21 @@
         "image": "Assets/Images/Products/beverages.png",
         "file": "beverages.json",
         "products": [
-            { "id": 201, "name": "Shirt", "quantity": 10 },
-            { "id": 202, "name": "Jeans", "quantity": 7 },
-            { "id": 203, "name": "Jacket", "quantity": 4 }
+            {
+                "id": 201,
+                "name": "Shirt",
+                "quantity": 10
+            },
+            {
+                "id": 202,
+                "name": "Jeans",
+                "quantity": 7
+            },
+            {
+                "id": 203,
+                "name": "Jacket",
+                "quantity": 4
+            }
         ]
     },
     {
@@ -109,20 +277,59 @@
         "image": "Assets/Images/Products/Milk.png",
         "file": "snacks.json",
         "products": [
-            { "id": 201, "name": "Shirt", "quantity": 10 },
-            { "id": 202, "name": "Jeans", "quantity": 7 }
+            {
+                "id": 201,
+                "name": "Shirt",
+                "quantity": 10
+            },
+            {
+                "id": 202,
+                "name": "Jeans",
+                "quantity": 7
+            }
         ]
-    }, {
+    },
+    {
         "id": 1,
         "name": "Fruits",
         "image": "Assets/Images/Products/Apple.png",
         "file": "fruits.json",
         "products": [
-            { "id": 101, "name": "Laptop", "quantity": 5 },
-            { "id": 102, "name": "Smartphone", "quantity": 3 },
-            { "id": 103, "name": "Tablet", "quantity": 2 }, { "id": 101, "name": "Laptop", "quantity": 5 },
-            { "id": 102, "name": "Smartphone", "quantity": 3 },
-            { "id": 103, "name": "Tablet", "quantity": 2 },{ "id": 103, "name": "Tablet", "quantity": 2 }
+            {
+                "id": 101,
+                "name": "Laptop",
+                "quantity": 5
+            },
+            {
+                "id": 102,
+                "name": "Smartphone",
+                "quantity": 3
+            },
+            {
+                "id": 103,
+                "name": "Tablet",
+                "quantity": 2
+            },
+            {
+                "id": 101,
+                "name": "Laptop",
+                "quantity": 5
+            },
+            {
+                "id": 102,
+                "name": "Smartphone",
+                "quantity": 3
+            },
+            {
+                "id": 103,
+                "name": "Tablet",
+                "quantity": 2
+            },
+            {
+                "id": 103,
+                "name": "Tablet",
+                "quantity": 2
+            }
         ]
     },
     {
@@ -130,12 +337,42 @@
         "name": "Vegetables",
         "image": "Assets/Images/Products/Vegitables.png",
         "file": "vegetables.json",
-       "products": [
-            { "id": 101, "name": "Laptop", "quantity": 5 },
-            { "id": 102, "name": "Smartphone", "quantity": 3 },
-            { "id": 103, "name": "Tablet", "quantity": 2 }, { "id": 101, "name": "Laptop", "quantity": 5 },
-            { "id": 102, "name": "Smartphone", "quantity": 3 },
-            { "id": 103, "name": "Tablet", "quantity": 2 },{ "id": 103, "name": "Tablet", "quantity": 2 }
+        "products": [
+            {
+                "id": 101,
+                "name": "Laptop",
+                "quantity": 5
+            },
+            {
+                "id": 102,
+                "name": "Smartphone",
+                "quantity": 3
+            },
+            {
+                "id": 103,
+                "name": "Tablet",
+                "quantity": 2
+            },
+            {
+                "id": 101,
+                "name": "Laptop",
+                "quantity": 5
+            },
+            {
+                "id": 102,
+                "name": "Smartphone",
+                "quantity": 3
+            },
+            {
+                "id": 103,
+                "name": "Tablet",
+                "quantity": 2
+            },
+            {
+                "id": 103,
+                "name": "Tablet",
+                "quantity": 2
+            }
         ]
     }
 ]

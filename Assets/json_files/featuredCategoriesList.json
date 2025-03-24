@@ -1,0 +1,36 @@
+[
+    {
+        "discount": "Upto 60% off",
+        "name": "Fruits",
+        "image": "Assets/Images/Categories/fruits.png",
+        "file": "fruits.json"
+    },
+    {
+        "discount": "Upto 40% off",
+        "name": "Vegitables",
+        "image": "Assets/Images/Categories/vegitables.png",
+        "file": "vegetables.json"
+    },
+    {
+        "name": "Meat",
+        "image": "Assets/Images/Categories/meat.png",
+        "file": "meat.json"
+    },
+    {
+        "discount": "Upto 40% off",
+        "name": "Fish",
+        "image": "Assets/Images/Categories/fish.png",
+        "file": "meat.json"
+    },
+    {
+        "name": "Dairy & Milk",
+        "image": "Assets/Images/Categories/dairy-and-milk.png",
+        "file": "dairy.json"
+    },
+    {
+        "name": "Wheat",
+        "image": "Assets/Images/Categories/wheat.png",
+        "file": "snacks.json"
+    }
+
+]

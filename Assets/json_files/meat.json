@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Chicken",
+        "price": 5.99
+    },
+    {
+        "name": "Beef",
+        "price": 7.99
+    },
+    {
+        "name": "Mutton",
+        "price": 6.99
+    }
+]

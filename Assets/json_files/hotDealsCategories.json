@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Fresh Produce",
+        "image": "Assets/Images/Categories/fresh-produce.jpg",
+        "file": "vegetables.json"
+    },
+    {
+        "name": "Meat & Seafood",
+        "image": "Assets/Images/Categories/meat-&-seafood.jpg",
+        "file": "meat.json"
+    },
+    {
+        "name": "Dairy & Frozen",
+        "image": "Assets/Images/Categories/dairy-&-frozen.jpg",
+        "file": "dairy.json"
+    },
+    {
+        "name": "Snacks & Beverages",
+        "image": "Assets/Images/Categories/snack-&-beverages.jpg",
+        "file": "snacks.json"
+    }
+]
