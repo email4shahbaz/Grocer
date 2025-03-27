@@ -130,54 +130,49 @@
     </div>
     <!--********* BREADCRUMBS *********-->
     <div class="container">
-        <h1 class="main_billing_heading">Billing Information</h1>
+        <h1 class="main_billing_heading">Shipping Details </h1>
         <form wire:submit.prevent="placeOrder">
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-9">
                     <!-- {{-- ***********ROW # 1************ --}} -->
                     <div class="row mt-3">
                         <div class="col-sm-12 col-md-12 col-lg-6">
-                            <label for="fname" class="label_billing">Delivery Address <a href=""
-                                    type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                                        class="bi bi-plus-circle"></i></a></label><br>
+                            <label for="fname" class="label_billing">City</label><br>
                             <select name="" id="" class="inp_row1" wire:model="delivery_address_id">
-                                <option value="">Select Address</option>
+                                <option value="">Select City</option>
                                     <option value="{{ $item['id'] }}">Lahore</option>
+                                    <option value="{{ $item['id'] }}">Karachi</option>
+                                    <option value="{{ $item['id'] }}">Islamabad</option>
+                                    <option value="{{ $item['id'] }}">Quetta</option>
+                                    <option value="{{ $item['id'] }}">Rawalpindi</option>
+                                    <option value="{{ $item['id'] }}">Faisalabad</option>
                             </select>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-6">
-                            <label for="lname" class="label_billing">Order Type</label><br>
-                            <select name="" id="" class="inp_row1" wire:model="order_type">
-                                <option value="">Select Type</option>
-                                <option value="delivery">Delivery</option>
-                                <option value="delivery">Self Pickup</option>
-                            </select>
+                            <label for="lname" class="label_billing">Postal Code</label><br>
+                            <input type="text" class="inp_row1" placeholder="Enter your postal code">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12 col-md-12 col-lg-6">
-                            <label for="companyname" class="label_billing">Branch</label><br>
-                            <select name="" id="" class="inp_row1" wire:model="branch_id">
-                                <option value="">Select Branch</option>
-                                    <option value="{{ $branch['id'] }}">Lahore</option>
-                            </select>
+                            <label for="lname" class="label_billing">Full Name</label><br>
+                            <input type="text" class="inp_row1" placeholder="Enter your Full Name">
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-6">
-                            <label for="lname" class="label_billing">Time Slot</label><br>
-                            <select name="" id="" class="inp_row1" wire:model="time_slot_id">
-                                <option value="">Select Slot</option>
-                                    <option value="{{ $item['id'] }}">09:00 PM to 01:00 AM</option>
-                            </select>
+                            <label for="lname" class="label_billing">Contact Number</label><br>
+                            <input type="text" class="inp_row1" placeholder="Enter your contact number">
                         </div>
                     </div>
                     <!-- {{-- ***********ROW # 2************ --}} -->
                     <div class="row">
                         <div class="col">
-                            <label for="order_notes" class="label_billing">Order Notes (Optional)</label><br>
+                            <label for="order_notes" class="label_billing">Address</label><br>
                             <textarea class="inp_row6" wire:model="order_note" rows="4"
-                                placeholder="Notes about your order, e.g. special notes for delivery"></textarea>
+                                placeholder="Enter your full Address"></textarea>
                         </div>
                     </div>
+                    <a href="" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
+                                        class="bi bi-plus-circle"></i></a>
                 </div>
 
              
