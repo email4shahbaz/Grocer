@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             productCard.classList.add('col-sm-6', 'col-md-6', 'col-lg-3', 'mb-4', 'GridsTargetContent');
 
             productCard.innerHTML = `
-                <div class="ProductsCardSearchANDCategory ProductsCard_Animations ProductCardImage mt-3">
+                <div class="ProductsCardSearchANDCategory ProductsCard_Animations ProductCardImage">
                     <div class="badge">${'Save 50%'}</div>
                     <div class="heart">
                         <i class="bi bi-heart"></i>

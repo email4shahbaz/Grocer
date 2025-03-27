@@ -21,7 +21,7 @@ a {
     font-size: 31px;
     font-weight: 700;
     color: #29292E;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     text-decoration: underline;
 }
 .categoryProducts_no_foundHeading{
@@ -43,7 +43,3 @@ a {
 .GridsTargetContent{
     width: 33.3%;
 }
-
-
-
-
