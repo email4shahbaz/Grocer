@@ -11,18 +11,32 @@ body {
     min-width: 320px;
     font-family: Quicksand;
 }
+ul {
+    padding-left: 10px;
+}
 
 .CategoryPageWrapper{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 .CategoryPageSidder{
-    width: 30%;
+    width: 25%;
 }
 .CategoryPageContent{
-    width: 65%;
+    width: 75%;
 }
+.lis_filter {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.lis_filter .fa.fa-star::before {
+    position: relative;
+    top: 5px;
+}
+
 /* .mainProductCardWishlistAlert{
     position: absolute;
     top: 35px;
@@ -222,7 +236,6 @@ li {
     border-radius: 50%;
     border: 2px solid #4CAF50;
     background-color: #4CAF50;
-    margin-right: 5px;
 }
 
 .YellowbannerOffer {
@@ -313,6 +326,9 @@ li {
 }
 
 @media screen and (min-width:501px) and (max-width:991px) {
+    .cartegoryProduct_main_heading {
+        margin-bottom: 20px;
+    }
     .CategoryPageWrapper{
         width: 100%;
         display: flex;
