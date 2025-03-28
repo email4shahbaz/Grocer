@@ -95,7 +95,7 @@
 .addbutton {
     width: 90px;
     font-size: 14px;
-    color: #10B64C;
+    color: var(--green);
     background-color: #DEF9EC;
     padding: 7px 10px !important;
     border-radius: 2px;

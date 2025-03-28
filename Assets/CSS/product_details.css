@@ -67,7 +67,7 @@ body {
 }
 
 .HomeProgress {
-    background-color: #10B64C;
+    background-color: var(--green);
 }
 
 .CategoryBtnRight,

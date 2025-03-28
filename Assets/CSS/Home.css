@@ -547,7 +547,7 @@ body {
     background-color: #F2F3F4;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 50% !important;
     border: none;
     font-size: 24px;
     transition: all 0.3s ease-in-out;
