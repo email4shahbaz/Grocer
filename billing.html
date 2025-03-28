@@ -62,7 +62,7 @@
     <link rel="stylesheet" href="/Assets/CSS/Home.css" />
     <!-- {{-- NavBar Custom Stylesheet --}} -->
     <link rel="stylesheet" href="/Assets/CSS/Navbar.css" />
-<!--category style sheet-->
+    <!--category style sheet-->
     <link rel="stylesheet" href="/Assets/CSS/Components/Home_category.css" />
     <!-- {{-- SubNav Home Custom Stylesheet --}} -->
     <link rel="stylesheet" href="/Assets/CSS/subnav_home.css">
@@ -90,151 +90,167 @@
     <link rel="stylesheet" href="/Assets/CSS/navbar_side_icons.css">
     <link rel="stylesheet" href="/Assets/CSS/Animations.css">
     <link rel="stylesheet" href="/Assets/CSS/responsive.css" />
-        <!-- {{-- Wishlist Page Css Custom Style --}} -->
-        <link rel="stylesheet" href="/Assets/CSS/wishlist.css">
-         <!-- {{-- SubNav Home Custom Stylesheet --}} -->
+    <!-- {{-- Wishlist Page Css Custom Style --}} -->
+    <link rel="stylesheet" href="/Assets/CSS/wishlist.css">
+    <!-- {{-- SubNav Home Custom Stylesheet --}} -->
     <link rel="stylesheet" href="/Assets/CSS/subnav_home.css">
-     <!-- jQuery -->
-     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-     
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
-         <!-- Favicon -->
+    <!-- Favicon -->
     <link rel="shortcut icon" href="Assets/Images/Banner/Favicon.png" type="image/x-icon">
 </head>
 
 <body>
     <!-- Animated Logo Cover -->
-<div id="logo-cover" class="logo-cover d-flex justify-content-center align-items-center">
-    <img src="Assets/Images/Icons/GrocerLogo.png" alt="Grocer Logo" class="animated-logo" />
-  </div>
-  
-<!-- Animated Logo End -->
-    <!--********** NAVIGATION **********-->
-  <!--********** NAVIGATION **********-->
-  <div class="web-container">
-
-    <!-- Header dynamically added from index.js file -->
-    <header></header>    
-    
-   
-    <!--********* BREADCRUMBS *********-->
-    <div class="breadcrumbs">
-        <div class="container">
-            <ul class="breadcrumb">
-                <li><a href="/" wire:navigate>Home</a></li>
-                <li><a href="" wire:navigate>Billing</a></li>
-            </ul>
-        </div>
+    <div id="logo-cover" class="logo-cover d-flex justify-content-center align-items-center">
+        <img src="Assets/Images/Icons/GrocerLogo.png" alt="Grocer Logo" class="animated-logo" />
     </div>
-    <!--********* BREADCRUMBS *********-->
-    <div class="container">
-        <h1 class="main_billing_heading">Shipping Details </h1>
-        <form wire:submit.prevent="placeOrder">
-            <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-9">
-                    <!-- {{-- ***********ROW # 1************ --}} -->
-                    <div class="row mt-3">
-                        <div class="col-sm-12 col-md-12 col-lg-6">
-                            <label for="fname" class="label_billing">City</label><br>
-                            <select name="" id="" class="inp_row1" wire:model="delivery_address_id">
-                                <option value="">Select City</option>
+
+    <!-- Animated Logo End -->
+    <!--********** NAVIGATION **********-->
+    <!--********** NAVIGATION **********-->
+    <div class="web-container">
+
+        <!-- Header dynamically added from index.js file -->
+        <header></header>
+
+
+        <!--********* BREADCRUMBS *********-->
+        <div class="breadcrumbs">
+            <div class="container">
+                <ul class="breadcrumb">
+                    <li><a href="/" wire:navigate>Home</a></li>
+                    <li><a href="" wire:navigate>Billing</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--********* BREADCRUMBS *********-->
+        <div class="container">
+            <h1 class="main_billing_heading">Shipping Details </h1>
+            <form wire:submit.prevent="placeOrder">
+                <div class="row d-flex justify-content-between align-items-start">
+                    <div class="col-sm-12 col-md-12 col-lg-8">
+                        <div class="row">
+                            <div class="input-wrapper">
+                                <label for="country" class="label_billing">Country</label>
+                                <select name="" id="" class="inp_row1" wire:model="delivery_address_id">
+                                    <option value="">Select Country</option>
+                                    <option value="{{ $item['id'] }}">Pakistan</option>
+                                    <option value="{{ $item['id'] }}">UAE</option>
+                                    <option value="{{ $item['id'] }}">India</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-6 input-wrapper">
+                                <label for="lname" class="label_billing">First Name</label>
+                                <input type="text" class="inp_row1" placeholder="Enter your First Name">
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-6 input-wrapper">
+                                <label for="lname" class="label_billing">Last Name</label>
+                                <input type="text" class="inp_row1" placeholder="Enter your Last Name">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-wrapper">
+                                <label for="order_notes" class="label_billing">Address</label>
+                                <input type="text" class="inp_row1" placeholder="Enter your full Address">
+                                <!-- <textarea class="inp_row6" wire:model="order_note" rows="4" placeholder="Enter your full Address"></textarea> -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-6 input-wrapper">
+                                <label for="lname" class="label_billing">Post Code</label>
+                                <input type="text" class="inp_row1" placeholder="Enter your postal code">
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-6 input-wrapper">
+                                <label for="city" class="label_billing">City</label>
+                                <select name="" id="" class="inp_row1" wire:model="delivery_address_id">
+                                    <option value="">Select City</option>
                                     <option value="{{ $item['id'] }}">Lahore</option>
                                     <option value="{{ $item['id'] }}">Karachi</option>
                                     <option value="{{ $item['id'] }}">Islamabad</option>
                                     <option value="{{ $item['id'] }}">Quetta</option>
                                     <option value="{{ $item['id'] }}">Rawalpindi</option>
                                     <option value="{{ $item['id'] }}">Faisalabad</option>
-                            </select>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-6">
-                            <label for="lname" class="label_billing">Postal Code</label><br>
-                            <input type="text" class="inp_row1" placeholder="Enter your postal code">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12 col-md-12 col-lg-6">
-                            <label for="lname" class="label_billing">Full Name</label><br>
-                            <input type="text" class="inp_row1" placeholder="Enter your Full Name">
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-6">
-                            <label for="lname" class="label_billing">Contact Number</label><br>
-                            <input type="text" class="inp_row1" placeholder="Enter your contact number">
-                        </div>
-                    </div>
-                    <!-- {{-- ***********ROW # 2************ --}} -->
-                    <div class="row">
-                        <div class="col">
-                            <label for="order_notes" class="label_billing">Address</label><br>
-                            <textarea class="inp_row6" wire:model="order_note" rows="4"
-                                placeholder="Enter your full Address"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-container">
-                        <h1 class="main_billing_heading">Billing Address</h1>
-                        <div class="radio-group">
-                            <div>
-                            <input type="radio" name="billing" id="same" class="r1" checked onclick="toggleBillingForm()">
-                            <label for="same">Same as shipping address</label>
-                            </div>
-                            <div><input type="radio" name="billing" id="different" onclick="toggleBillingForm()">
-                                <label for="different">Use a different billing address</label></div>
-                        </div>
-                        
-                        <div id="billingForm" class="billing-form">
-                            <div class="form-group">
-                                <label>First Name</label>
-                                <input type="text" placeholder="Your first name">
-                            </div>
-                            <div class="form-group">
-                                <label>Last Name</label>
-                                <input type="text" placeholder="Your last name">
-                            </div>
-                            <div class="form-group">
-                                <label>Company Name (optional)</label>
-                                <input type="text" placeholder="Company name">
-                            </div>
-                            <div class="form-group">
-                                <label>Street Address</label>
-                                <input type="text" placeholder="Street Address">
-                            </div>
-                            <div class="form-group">
-                                <label>City / Region</label>
-                                <select>
-                                    <option>Select</option>
-                                    <option>Lahore</option>
-                                    <option>Karachi</option>
-                                    <option>Islamabad</option>
                                 </select>
                             </div>
-                            
-                            <div class="form-group">
-                                <label>Email</label>
-                                <input type="email" placeholder="Email Address">
-                            </div>
-                            <div class="form-group">
-                                <label>Phone</label>
-                                <input type="text" placeholder="Phone number">
-                            </div>
-                            <div class="form-group">
-                                <label>Order Notes (Optional)</label>
-                                <textarea placeholder="Notes about your order, e.g., special notes for delivery"></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="input-wrapper">
+                                <label for="lname" class="label_billing">Mobile No</label>
+                                <input type="text" class="inp_row1" placeholder="Enter your mobile number">
                             </div>
                         </div>
-                     
+
+                        <div class="form-container">
+                            <h1 class="main_billing_heading heading-2">Billing Address</h1>
+                            <div class="radio-group">
+                                <div class="form-check mb-2 font-poppins">
+                                    <input type="radio" name="billing" id="same" class="r1 form-check-input CategoryRadioCustom" checked onclick="toggleBillingForm()">
+                                    <label for="same">Same as shipping address</label>
+                                </div>
+                                <div class="form-check mb-2 font-poppins">
+                                    <input type="radio" name="billing" id="different" class="form-check-input CategoryRadioCustom" onclick="toggleBillingForm()">
+                                    <label for="different">Use a different billing address</label>
+                                </div>
+                            </div>
+
+                            <div id="billingForm" class="billing-form">
+                                <div class="form-group">
+                                    <label>First Name</label>
+                                    <input type="text" placeholder="Your first name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Last Name</label>
+                                    <input type="text" placeholder="Your last name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Company Name (optional)</label>
+                                    <input type="text" placeholder="Company name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Street Address</label>
+                                    <input type="text" placeholder="Street Address">
+                                </div>
+                                <div class="form-group">
+                                    <label>City / Region</label>
+                                    <select>
+                                        <option>Select</option>
+                                        <option>Lahore</option>
+                                        <option>Karachi</option>
+                                        <option>Islamabad</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" placeholder="Email Address">
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <input type="text" placeholder="Phone number">
+                                </div>
+                                <div class="form-group">
+                                    <label>Order Notes (Optional)</label>
+                                    <textarea
+                                        placeholder="Notes about your order, e.g., special notes for delivery"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </div>
-                   
-                </div>
+                    <div class="col-sm-12 col-md-12 col-lg-3">
 
-             
-
-                <div class="col-sm-12 col-md-12 col-lg-3">
-
-                         <!-- Order Summary Card -->
-                         <div class="card total_bill">
+                        <!-- Order Summary Card -->
+                        <div class="card total_bill">
                             <h3 class="total_cart_main_heading">Order Summary</h3>
-                            <div id="orderSummary" class="ProductSummarymain mt-3">
+                            <div id="orderSummary" class="ProductSummarymain">
                                 <!-- Dynamic product items will be rendered here -->
                             </div>
                             <!-- Totals -->
@@ -251,7 +267,8 @@
                                     <h4 class="Sub_heading_Total_cart">Shipping:</h4>
                                 </div>
                                 <div class="description_summaryPrice">
-                                    <strong id="shipping">$100.00</strong>
+                                    <strong>Free</strong>
+                                    <!-- <strong id="shipping">$100.00</strong> -->
                                 </div>
                             </div>
                             <div class="SummaryProductTotalLast">
@@ -283,127 +300,127 @@
                             <!-- Place Order Button -->
                             <div>
                                 <button class="place_order_btn d-block">
-                                    <a href="thankyou.html" style="color: white;">Proceed to payment</a>
+                                    <a href="thankyou.html" style="color: white;">Place Order</a>
                                 </button>
                             </div>
                         </div>
+                    </div>
                 </div>
-            </div>
-        </form>
-        <hr class="mt-5">
-        <!-- Add New Address Modal -->
-       
-        <!-- Add New Address Modal -->
-    </div>
+            </form>
+            <hr class="mt-5">
+            <!-- Add New Address Modal -->
 
-    <!--********* FOOTER *********-->
+            <!-- Add New Address Modal -->
+        </div>
 
-    <!-- Footer dynamically added from index.js file -->
-	<footer></footer>
-    <!--********* FOOTER *********-->
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- jQuery -->
-    <script>
-        const menuItems = document.querySelectorAll('.menu-item');
-    
-        menuItems.forEach(item => {
-            item.addEventListener('click', () => {
-                // Hide all content
-                document.querySelectorAll('.content > div').forEach(content => {
-                    content.style.display = 'none';
+        <!--********* FOOTER *********-->
+
+        <!-- Footer dynamically added from index.js file -->
+        <footer></footer>
+        <!--********* FOOTER *********-->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- jQuery -->
+        <script>
+            const menuItems = document.querySelectorAll('.menu-item');
+
+            menuItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    // Hide all content
+                    document.querySelectorAll('.content > div').forEach(content => {
+                        content.style.display = 'none';
+                    });
+
+                    // Show the selected content
+                    const contentId = `content-${item.id}`;
+                    const contentToShow = document.getElementById(contentId);
+                    if (contentToShow) {
+                        contentToShow.style.display = 'block';
+                    }
+
+                    // Update menu item color
+                    menuItems.forEach(menuItem => {
+                        menuItem.classList.remove('active');
+                    });
+                    item.classList.add('active');
                 });
-    
-                // Show the selected content
-                const contentId = `content-${item.id}`;
-                const contentToShow = document.getElementById(contentId);
-                if (contentToShow) {
-                    contentToShow.style.display = 'block';
-                }
-    
-                // Update menu item color
-                menuItems.forEach(menuItem => {
-                    menuItem.classList.remove('active');
+            });
+
+            // Set initial state
+            const initialMenuItem = document.getElementById('item1'); // Assuming the first menu item has id 'item1'
+            if (initialMenuItem) {
+                initialMenuItem.click(); // Simulate click on the first menu item to show its content
+            }
+        </script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+        <script>
+
+
+
+
+            function toggleBillingForm() {
+                var billingForm = document.getElementById("billingForm");
+                var differentBilling = document.getElementById("different");
+                billingForm.style.display = differentBilling.checked ? "block" : "none";
+            }
+
+            $(document).ready(function () {
+                $(".FeaturedBtnLeft").click(function () {
+                    $(".WebViewCarouselOneProductDetails").animate({
+                        scrollLeft: "-=250px" // Adjust the value as needed for the scroll distance
+                    }, "slow");
                 });
-                item.classList.add('active');
+
+                $(".FeaturedBtnRight").click(function () {
+                    $(".WebViewCarouselOneProductDetails").animate({
+                        scrollLeft: "+=250px" // Adjust the value as needed for the scroll distance
+                    }, "slow");
+                });
             });
-        });
-    
-        // Set initial state
-        const initialMenuItem = document.getElementById('item1'); // Assuming the first menu item has id 'item1'
-        if (initialMenuItem) {
-            initialMenuItem.click(); // Simulate click on the first menu item to show its content
-        }
-    </script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    
-    <script>
+        </script>
+        <script>
+            $(document).ready(function () {
+                $(".CategoryBtnLeft").click(function () {
+                    $(".WebViewCategoriesCardOneProductDetails").animate({
+                        scrollLeft: "-=250px" // Adjust the value as needed for the scroll distance
+                    }, "slow");
+                });
 
-
-
-
-        function toggleBillingForm() {
-            var billingForm = document.getElementById("billingForm");
-            var differentBilling = document.getElementById("different");
-            billingForm.style.display = differentBilling.checked ? "block" : "none";
-        }
-
-        $(document).ready(function() {
-            $(".FeaturedBtnLeft").click(function() {
-                $(".WebViewCarouselOneProductDetails").animate({
-                    scrollLeft: "-=250px" // Adjust the value as needed for the scroll distance
-                }, "slow");
+                $(".CategoryBtnRight").click(function () {
+                    $(".WebViewCategoriesCardOneProductDetails").animate({
+                        scrollLeft: "+=250px" // Adjust the value as needed for the scroll distance
+                    }, "slow");
+                });
             });
-    
-            $(".FeaturedBtnRight").click(function() {
-                $(".WebViewCarouselOneProductDetails").animate({
-                    scrollLeft: "+=250px" // Adjust the value as needed for the scroll distance
-                }, "slow");
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-            $(".CategoryBtnLeft").click(function() {
-                $(".WebViewCategoriesCardOneProductDetails").animate({
-                    scrollLeft: "-=250px" // Adjust the value as needed for the scroll distance
-                }, "slow");
-            });
-    
-            $(".CategoryBtnRight").click(function() {
-                $(".WebViewCategoriesCardOneProductDetails").animate({
-                    scrollLeft: "+=250px" // Adjust the value as needed for the scroll distance
-                }, "slow");
-            });
-        });
-    </script>
-  <!-- Load jQuery before dependent scripts -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        </script>
+        <!-- Load jQuery before dependent scripts -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<!-- Load JavaScript Files (Ensuring No Duplicates) -->
-<script src="/Assets/JS/header.js" defer></script>
-<script src="/Assets/JS/billing.js" defer></script>
-<script src="/Assets/JS/product_details.js" defer></script>
-<script src="/Assets/JS/cart.js" defer></script>
-<script src="/Assets/JS/cart_dropdown.js" defer></script>
-<script src="/Assets/JS/index.js" defer></script>
-<script src="/Assets/JS/featured.js" defer></script>
-<script src="/Assets/JS/bestsell.js" defer></script>
-<script src="/Assets/JS/homelasttopsell.js" defer></script>
-<script src="/Assets/JS/homelasttrending.js" defer></script>
-<script src="/Assets/JS/homelastpopular.js" defer></script>
-<script src="/Assets/JS/homelastlatest.js" defer></script>
-<script src="/Assets/JS/top_sell_products.js" defer></script>
-<script src="/Assets/JS/search_product.js" defer></script>
-<script src="/Assets/JS/category_product.js" defer></script>
-<script src="/Assets/JS/wishlist.js" defer></script>
-<script src="/Assets/JS/order.js" defer></script>
-<script src="/Assets/JS/mob_search.js" defer></script>
-<script src="/Assets/JS/sidebar_icons.js" defer></script>
-<script src="/Assets/JS/Animations.js" defer></script>
-<script src="/Assets/JS/browse_category_dropdown.js" defer></script>
-<script src="/Assets/JS/navbar.js" defer></script>
-<script src="/Assets/JS/promo-popup.js" defer></script>
+        <!-- Load JavaScript Files (Ensuring No Duplicates) -->
+        <script src="/Assets/JS/header.js" defer></script>
+        <script src="/Assets/JS/billing.js" defer></script>
+        <script src="/Assets/JS/product_details.js" defer></script>
+        <script src="/Assets/JS/cart.js" defer></script>
+        <script src="/Assets/JS/cart_dropdown.js" defer></script>
+        <script src="/Assets/JS/index.js" defer></script>
+        <script src="/Assets/JS/featured.js" defer></script>
+        <script src="/Assets/JS/bestsell.js" defer></script>
+        <script src="/Assets/JS/homelasttopsell.js" defer></script>
+        <script src="/Assets/JS/homelasttrending.js" defer></script>
+        <script src="/Assets/JS/homelastpopular.js" defer></script>
+        <script src="/Assets/JS/homelastlatest.js" defer></script>
+        <script src="/Assets/JS/top_sell_products.js" defer></script>
+        <script src="/Assets/JS/search_product.js" defer></script>
+        <script src="/Assets/JS/category_product.js" defer></script>
+        <script src="/Assets/JS/wishlist.js" defer></script>
+        <script src="/Assets/JS/order.js" defer></script>
+        <script src="/Assets/JS/mob_search.js" defer></script>
+        <script src="/Assets/JS/sidebar_icons.js" defer></script>
+        <script src="/Assets/JS/Animations.js" defer></script>
+        <script src="/Assets/JS/browse_category_dropdown.js" defer></script>
+        <script src="/Assets/JS/navbar.js" defer></script>
+        <script src="/Assets/JS/promo-popup.js" defer></script>
 </body>
 
 </html>

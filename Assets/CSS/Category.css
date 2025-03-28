@@ -21,6 +21,11 @@ ul {
     justify-content: space-between;
     gap: 20px;
 }
+.Filter_section {
+    border: 1px solid rgb(212, 207, 207);
+    border-radius: 8px;
+    padding: 20px;
+}
 .CategoryPageSidder{
     width: 25%;
 }
