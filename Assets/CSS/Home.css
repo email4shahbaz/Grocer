@@ -1494,10 +1494,6 @@ li {
 }
 
 @media screen and (min-width: 1700px) {
-    .hero_main {
-        max-width: 10px;
-    }
-
     .hero_description_one {
         top: 100px;
         left: 90px;
