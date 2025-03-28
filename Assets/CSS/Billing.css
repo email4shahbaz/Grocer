@@ -26,7 +26,9 @@ li {
     border-radius: 5px;
     padding: 20px;
 }
-
+.total_bill .form-check-label {
+    font-weight: 400;
+}
 .Sub_heading_Total_cart {
     font-size: 14px;
     font-weight: 400;
@@ -48,11 +50,11 @@ li {
     width: 100%;
     border-radius: 12px;
     color: white;
-    margin-top: 20px;
+    margin-top: 26px;
     font-size: 16px;
     text-align: center;
     background-color: var(--green);
-    padding: 16px 40px;
+    padding: 11px 40px;
     font-weight: 600;
 }
 
@@ -68,15 +70,17 @@ li {
     font-size: 14px;
     font-weight: 500;
 }
-
+.CategoryRadioCustom:focus {
+    box-shadow: none;
+}
 .CategoryRadioCustom:checked {
+    box-shadow: none;
     appearance: none;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     border: 2px solid #4CAF50;
     background-color: #4CAF50;
-    margin-right: 5px;
 }
 
 .main_billing_heading {
@@ -86,25 +90,36 @@ li {
     color: #1A1A1A;
     margin-top: 50px !important;
 }
-
+.main_billing_heading.heading-2 {
+    font-size: 20px;
+}
+.input-wrapper {
+    margin-top: 22px;
+    padding: 0;
+}
+.input-wrapper:not(:last-child) {
+    padding-right: 35px;
+}
 .label_billing {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 400;
-    margin-top: 5px;
+    margin-bottom: 5px;
     font-family: 'Poppins';
     color: #1A1A1A;
 }
 
 .inp_row1 {
     width: 100%;
-    border-radius: 6px;
-    border: 1px solid #E6E6E6;
-    color: #999999;
+    border-radius: 0;
+    border: 1px solid #A0A0A0;
+    color: #404040;
     padding: 10px;
-    margin-top: 5px;
     font-size: 16px;
     font-family: poppins;
     font-weight: 400;
+}
+.inp_row1::placeholder {
+    color: #999999;
 }
 
 .inp_row1:focus {
@@ -273,6 +288,9 @@ li {
     white-space: nowrap;
     font-weight: 500;
 }
+.description_summaryPrice #total {
+    font-size: 16px;
+}
 
 .font-poppins {
     font-family: poppins;
@@ -298,7 +316,7 @@ li {
 
 .form-container {
     background: white;
-    padding: 20px;
+    padding: 20px 0;
     border-radius: 10px;
   
    
@@ -308,7 +326,7 @@ li {
 }
 label {
     display: block;
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 5px;
 }
 input, select, textarea {
@@ -367,8 +385,10 @@ r1{
     .total_bill {
         margin-top: 10px;
     }
+    .input-wrapper:not(:last-child) {
+        padding-right: 0;
+    }
 }
-
 
 
 
@@ -431,4 +451,5 @@ r1{
     background-color: white; /* Light gray background */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E6E6E6;
 }
