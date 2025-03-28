@@ -101,24 +101,23 @@ document.addEventListener("DOMContentLoaded", async () => {
 function addDealToCart(evt){
     if(dealsOfTheDay!=null){
         let deal=dealsOfTheDay.find(deal=>deal.id==evt.currentTarget.dataset.id);
-        if(deal!=null && deal.products!=null){
+        if(deal!=null){
             //let cart=JSON.parse(localStorage.getItem("cart")) || [];
-            deal.products.forEach(product=>{
-                let item=cart.find(item=>item.id==product.id);
+            //deal.products.forEach(product=>{
+                let item=cart.find(item=>item.id==deal.id);
                 if(item!=null){
                     item.quantity+=1;
                 }else{
                     item={
-                        id:product.id,
-                        name:product.product_name,
-                        price:product.discounted_price,
-                        image:product.product_image,
+                        id:deal.id,
+                        name:deal.product_name,
+                        price:deal.discounted_price,
+                        image:deal.product_image,
                         quantity:1,
-                        isFree:product.isFree,
                     };
                     cart.push(item);
                 }
-            });
+           // });
             localStorage.setItem("cart",JSON.stringify(cart));
             document.body.dispatchEvent(new CustomEvent("cart-updated"));
         }
