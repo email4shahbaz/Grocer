@@ -8,44 +8,8 @@
         "discounted_price": "2.99",
         "original_price": "3.99",
         "categoryName": "Beverages",
-        "discount_percentage": 25,
-        "products":[
+        "discount_percentage": 25
         
-            {
-                "id": 1,
-                "product_name": "Lays",
-                "product_image": "/Assets/Images/Products/lays.jpg",
-                "rating": 4,
-                "vendor": "Grocer",
-                "discounted_price": "1.50",
-                "original_price": "1.50",
-                "categoryName": "Snacks",
-                "discount_percentage": 0
-            },
-            {
-                "id": 2,
-                "product_name": "Lays",
-                "product_image": "/Assets/Images/Products/lays.jpg",
-                "rating": 4,
-                "vendor": "Grocer",
-                "discounted_price": "1.50",
-                "original_price": "1.50",
-                "categoryName": "Snacks",
-                "discount_percentage": 0
-            },
-            {
-                "id": 3,
-                "product_name": "500ml Soft Drink",
-                "product_image": "/Assets/Images/Products/soft-drink.jpeg",
-                "rating": 4,
-                "vendor": "Grocer",
-                "discounted_price": "0.00",
-                "original_price": "1.50",
-                "categoryName": "Beverages",
-                "discount_percentage": 25,
-                "isFree": true
-            }
-        ]
     },
     {
         "id": 2,
@@ -56,32 +20,8 @@
         "discounted_price": "1.99",
         "original_price": "3.99",
         "categoryName": "Snacks",
-        "discount_percentage": 50,
-        "products":[
-            {
-                "id": 4,
-                "product_name": "Almonds",
-                "product_image": "/Assets/Images/Products/almonds.jpg",
-                "rating": 4,
-                "vendor": "Grocer",
-                "discounted_price": "4.99",
-                "original_price": "4.99",
-                "categoryName": "Snacks",
-                "discount_percentage": 0
-            },
-            {
-                "id": 5,
-                "product_name": "Fresh Dates",
-                "product_image": "/Assets/Images/Products/dates.jpg",
-                "rating": 4,
-                "vendor": "Grocer",
-                "discounted_price": "0.00",
-                "original_price": "1.50",
-                "categoryName": "Snacks",
-                "discount_percentage": 25,
-                "isFree": true
-            }
-        ]
+        "discount_percentage": 50
+      
     },
     {
         "id": 3,
@@ -92,32 +32,8 @@
         "discounted_price": "2.99",
         "original_price": "3.99",
         "categoryName": "Vegetables",
-        "discount_percentage": 25,
-        "products":[
-            {
-                "id": 6,
-                "product_name": "Fresh Vegetables",
-                "product_image": "/Assets/Images/Products/Cauliflower.jpg",
-                "rating": 4,
-                "vendor": "Grocer",
-                "discounted_price": "1.50",
-                "original_price": "1.50",
-                "categoryName": "Vegetables",
-                "discount_percentage": 0
-            },
-            {
-                "id": 7,
-                "product_name": "Fresh Vegetables",
-                "product_image": "/Assets/Images/Products/Cauliflower.jpg",
-                "rating": 4,
-                "vendor": "Grocer",
-                "discounted_price": "0.00",
-                "original_price": "0.00",
-                "categoryName": "Vegetables",
-                "discount_percentage": 0,
-                "isFree": true
-            }
-        ]
+        "discount_percentage": 25
+        
     },
     {
         "id": 4,
@@ -128,31 +44,7 @@
         "discounted_price": "1.99",
         "original_price": "3.99",
         "categoryName": "Vegetables",
-        "discount_percentage": 50,
-        "products":[
-            {
-                "id": 8,
-                "product_name": "Nestle Milk Pack",
-                "product_image": "/Assets/Images/Products/milkpack.jpg",
-                "rating": 4,
-                "vendor": "Grocer",
-                "discounted_price": "2.99",
-                "original_price": "2.99",
-                "categoryName": "Dairy",
-                "discount_percentage": 0
-            },
-            {
-                "id": 9,
-                "product_name": "Wheatable Buscuit",
-                "product_image": "/Assets/Images/Products/wheatable.jpg",
-                "rating": 4,
-                "vendor": "Grocer",
-                "discounted_price": "0.00",
-                "original_price": "1.50",
-                "categoryName": "Snacks",
-                "discount_percentage": 25,
-                "isFree": true
-            }
-        ]
+        "discount_percentage": 50
+       
     }
 ]
