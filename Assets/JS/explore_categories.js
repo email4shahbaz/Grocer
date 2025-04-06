@@ -55,6 +55,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                             </div>
                             <div class="text-center align-self-center">
                                 <button class="LastCardAddButton" 
+                                    data-id="${productId}"
+                                    data-name="${productName}"
+                                    data-price="${productPrice}"
+                                    data-image="${productImage}"
                                     wire:click.prevent="addToCart('${productId}', '${productName}', '${productImage}', '${productPrice}', @json(product.variations), '${productUnit}')">
                                     <i class="bi bi-cart"></i>Add
                                 </button>

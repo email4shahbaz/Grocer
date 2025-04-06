@@ -455,7 +455,7 @@
                         <span class="offerContentBadgeOne">Free Delivery</span>
                         <h1>Free delivery over $50</h1>
                         <p>Shop $50 product and get free delivery anywhre.</p>
-                        <a href="/promotions.html" class="offerSButton">Shop Now <i
+                        <a href="/category-product.html?category-file=beverages.json" class="offerSButton">Shop Now <i
                                 class="bi bi-arrow-right-short"></i></a>
                     </div>
                     <div class="img-cont">
@@ -468,7 +468,7 @@
                         <span class="offerContentBadgeTwo">60% Off</span>
                         <h1>Organic Food</h1>
                         <p>Save up to 60% off on your first order</p>
-                        <a href="/promotions.html" class="offerSButton">Order Now <i
+                        <a href="/category-product.html?category-file=fruits.json" class="offerSButton">Order Now <i
                                 class="bi bi-arrow-right-short"></i></a>
                     </div>
                     <div class="img-cont">
@@ -557,8 +557,8 @@
                 </div>
                 <!-- {{-- *****************Mobile View************** --}} -->
                 <div class="d-flex justify-content-start align-items-start position-relative bestSellingProducts">
-                    <div class="d-flex justify-content-start BestsellProductsSection customWidth_80"> </div>
-                    <div class="OffCard">
+                    <div class="d-flex justify-content-start BestsellProductsSection customWidth_100"> </div>
+                    <div class="OffCard" style="display: none;">
                         <h1 class="OffCardPercentHeading">10% OFF</h1>
                         <p class="OffCardPercentDescription">For new member sign up at the first time</p>
                         <div class="card-body">
@@ -761,10 +761,7 @@
                     scrollLeft: "+=250px" // Adjust the value as needed for the scroll distance
                 }, "slow");
             });
-        });
-    </script>
-    <script>
-        $(document).ready(function () {
+
             $(".FeaturedBtnLeft").click(function () {
                 $(".WebViewCarouselTwo").animate({
                     scrollLeft: "-=250px" // Adjust the value as needed for the scroll distance
@@ -778,6 +775,7 @@
             });
         });
     </script>
+   
      <script>
         $(document).ready(function () {
             $(".BestSellProductarrowbtnLeft").click(function () {

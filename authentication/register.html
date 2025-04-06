@@ -121,7 +121,7 @@
         </div>
       </div>
       <div class="RegisterGreenSection">
-        <form id="registerForm">
+        <form id="registerForm" onsubmit="return register()">
           <div class="mx-auto Register_form_container mt-5 mb-5">
             <div class="RegisterMobileViewLogo">
               <img
@@ -155,7 +155,7 @@
               Or use your email for registration
             </h3>
 
-            <label for="f_name" class="register_form_label">First Name</label
+            <label for="f_name" class="register_form_label">Full Name</label
             ><br />
             <div class="nameFieldIcon">
               <input
@@ -186,23 +186,23 @@
               />
             </div>
             
-            <label for="l_name" class="register_form_label">Password</label
+            <label for="password" class="register_form_label">Password</label
               ><br />
               <div class="nameFieldIcon">
                 <input
                   type="text"
-                  name="l_name"
+                  name="password"
                   class="register_form_inp1"
                   required
                 /><br />
               </div>
 
-              <label for="l_name" class="register_form_label">Confirm Password</label
+              <label for="confirm-password" class="register_form_label">Confirm Password</label
                 ><br />
                 <div class="nameFieldIcon">
                   <input
                     type="text"
-                    name="l_name"
+                    name="confirm-password"
                     class="register_form_inp1"
                     required
                   /><br />
@@ -213,6 +213,29 @@
           </div>
         </form>
         <script src="/Assets/JS/Animations.js"></script>
+        <script>
+          function register() {
+            var name= document.querySelector("input[name=f_name]").value;
+            var email = document.querySelector("input[name=email]").value;
+            var password = document.querySelector("input[name=password]").value; 
+            var confirmPassword = document.querySelector("input[name=confirm-password]").value;
+
+    
+           
+            if (password != confirmPassword) {
+              alert("Passwords do not match");
+              return false;
+            }
+
+            else if (name!= "" && email != " " && password != " " && confirmPassword != " ") {
+              localStorage.setItem("email", email);
+              //localStorage.setItem("password", password);
+              window.location.replace('/index.html');
+            }
+            return false;
+          }
+        </script>
+      </body>
 </body>
 </html>
 

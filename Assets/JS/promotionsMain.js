@@ -71,11 +71,12 @@ document.addEventListener('DOMContentLoaded', () => {
                                 </div>
                                 <div class="col text-center align-self-center">
                                     <button class="searchaddbutton" 
+                                            data-id="${id}"
                                             data-name="${name}" 
                                             data-price="${discountedPrice}" 
                                             data-image="${imageUrl}" 
                                             data-quantity="1">
-                                        <img src="/Assets/Images/SmallIcons/Bag.png" alt="">
+                                        <img  src="/Assets/Images/SmallIcons/Bag.png" alt="">
                                     </button>
                                 </div>
                             </div>

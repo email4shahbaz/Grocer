@@ -59,6 +59,10 @@ fetch(`https://grocer.softwaresystems.us/api/v1/products/related-products/${urlP
                                 </div>
                                 <div class="text-end align-self-center">
                                     <a class="btn addbutton py-2"
+                                        data-id="${product.id}"
+                                        data-name="${product.name}"
+                                        data-price="${discountedPrice}"
+                                        data-image="${product.image[0]}"
                                         wire:click.prevent="addToCart('${product.id}', '${product.name}', '${product.image[0]}', '${discountedPrice}', [], '${product.unit}')">
                                         <i class="bi bi-cart"></i>&nbsp;Add
                                     </a>

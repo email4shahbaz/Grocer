@@ -86,7 +86,7 @@ body {
 
 .homefeaturedProductsMain {
     display: flex;
-    overflow: hidden;
+    /* overflow: hidden; */
     justify-content: flex-start;
     align-items: center;
     gap: 34px;
@@ -553,12 +553,13 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-.BestSellProductarrowbtnLeft :Hover {
+.BestSellProductarrowbtnLeft:hover {
     background-color: var(--green);
     color: white;
 }
 
-.BestSellProductarrowbtnRight:Hover {
+
+.BestSellProductarrowbtnRight:hover {
     background-color: var(--green);
     color: white;
 }

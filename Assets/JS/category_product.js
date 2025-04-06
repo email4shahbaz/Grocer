@@ -32,7 +32,7 @@ function renderProducts(products, categoryFile) {
 
     products.forEach(product => {
         const productCard = `
-            <div class="col-sm-6 col-md-6 col-lg-3 mb-4 GridsTargetContent ">
+            <div class="col-sm-6 col-md-6 col-lg-4 mb-4 GridsTargetContent ">
                 <div class="ProductsCardSearchANDCategory">
                     <div class="CategoryMainCardImage">
                         <a href="product-details.html?product-id=${product.id}&category-file=${encodeURIComponent(
@@ -43,7 +43,12 @@ function renderProducts(products, categoryFile) {
                     </div>
                     <div class="card-body">
                         <h1 class="h2 searchcard_heading">${product.name}</h1>
-                        <h1 class="searchpricetag">${product.price}$ <button class="searchaddbutton">
+                        <h1 class="searchpricetag">${product.price}$ <button class="searchaddbutton"
+                            data-id="${product.id}"
+                            data-name="${product.name}"
+                            data-price="${product.price}"
+                            data-image="${product.image}"
+                        >
                                         <img src="/Assets/Images/SmallIcons/Bag.png" alt="">
                                     </button></h1>
                     </div>

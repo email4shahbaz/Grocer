@@ -50,8 +50,15 @@ document.addEventListener("DOMContentLoaded", async () => {
             const productId = button.dataset.id;
             const isInWishlist = wishlist.some(item => item.id === productId);
             button.classList.toggle('in-wishlist', isInWishlist);
+            button.innerHTML = isInWishlist
+                ? '<i class="bi bi-heart-fill"></i>'
+                : '<i class="bi bi-heart"></i>';
         });
     }
+
+   
+
+
     // Function to fetch and render products
     async function fetchAndRenderFeaturedProducts(categoryFile, categoryName) {
         try {
@@ -87,7 +94,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                                      class="featuredProductImage" alt="${product.name}" loading="lazy">
                             </a>
                                <div class="product-overlay-icons">
-                                <button class="wishlist-icon ${wishlist.some(item => item.id === product.id) ? 'in-wishlist' : ''}" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}" data-category="${categoryFile}">
+                                <button class="wishlist-icon" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}" data-category="${categoryFile}">
                                     <i class="bi bi-heart"></i>
                                 </button>
                               <button class="eye-icon" data-id="${product.id}" data-category="${categoryFile}">

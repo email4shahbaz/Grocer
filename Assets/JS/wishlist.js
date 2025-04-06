@@ -122,10 +122,14 @@ function handleRemoveFromWishlist(button) {
     alert("Product removed from your wishlist.");
 }
 
+
+document.addEventListener("HeaderFooterScriptsLoaded", () => {
+    // Update the wishlist counter when header and footer scripts are loaded
+    updateWishlistCounter();
+});
+
 // Initialize wishlist counter on page load
 document.addEventListener("DOMContentLoaded", () => {
-    updateWishlistCounter(); // Ensure wishlist counter is updated when the page loads
-
     // Initialize the wishlist items on the wishlist page
     const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
     renderWishlist(wishlist);
@@ -176,5 +180,8 @@ function renderWishlistIcons() {
         const isInWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
         const isProductInWishlist = isInWishlist.some(item => item.id === productId);
         button.classList.toggle('in-wishlist', isProductInWishlist);
+        button.innerHTML = isProductInWishlist
+            ? '<i class="bi bi-heart-fill"></i>'
+            : '<i class="bi bi-heart"></i>';
     });
 }

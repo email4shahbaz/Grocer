@@ -433,14 +433,14 @@ function redirectToSearchedProductPage(product) {
 
  // Add to Cart Functionality
  document.body.addEventListener("click", (e) => {
+    const match = e.target.closest('.searchaddbutton, .BestSellCardAddButton, .LastCardAddButton, .addbutton');
+
     if (
-        e.target.classList.contains("searchaddbutton") ||
-        e.target.classList.contains("BestSellCardAddButton") ||
-        e.target.classList.contains("LastCardAddButton") ||
-        e.target.classList.contains("addbutton")
+      match
+        
         
     ) {
-        const button = e.target;
+        const button = match;
 
         // Get product details from data attributes
         const product = {
