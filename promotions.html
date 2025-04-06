@@ -162,7 +162,7 @@
                     </div>
                     <div class="d-flex align-items-center justify-content-between buttons">
                         <a href="#" class="voucher-button-1">T & C</a>
-                        <a href="#" class="voucher-button-2">Collect</a>
+                        <button class="button" onclick="showPopup()">Collect</button>
                     </div>
                 </div>
             </div>
@@ -181,7 +181,7 @@
                     </div>
                     <div class="d-flex align-items-center justify-content-between buttons">
                         <a href="#" class="voucher-button-1">T & C</a>
-                        <a href="#" class="voucher-button-2">Collect</a>
+                        <button class="button" onclick="showPopup()">Collect</button>
                     </div>
                 </div>
             </div>
@@ -200,7 +200,7 @@
                     </div>
                     <div class="d-flex align-items-center justify-content-between buttons">
                         <a href="#" class="voucher-button-1">T & C</a>
-                        <a href="#" class="voucher-button-2">Collect</a>
+                        <button class="button" onclick="showPopup()">Collect</button>
                     </div>
                 </div>
             </div>
@@ -219,11 +219,16 @@
                     </div>
                     <div class="d-flex align-items-center justify-content-between buttons">
                         <a href="#" class="voucher-button-1">T & C</a>
-                        <a href="#" class="voucher-button-2">Collect</a>
+                        <button class="button" onclick="showPopup()">Collect</button>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="overlay" id="overlay"></div>
+                        <div class="popup" id="popup">
+                            <p>You have collected the voucher code!</p>
+                            <button class="close-btn" onclick="closePopup()">OK</button>
+                        </div>
         <hr>
     </div>
 
@@ -263,7 +268,7 @@
 
             </div>
         </div>
-        <hr>
+       
     </div>
 
 
@@ -337,7 +342,17 @@
                 }, "slow");
             });
         });
-    </script>
+   
+    function showPopup() {
+        document.getElementById("popup").classList.add("active");
+        document.getElementById("overlay").classList.add("active");
+    }
+
+    function closePopup() {
+        document.getElementById("popup").classList.remove("active");
+        document.getElementById("overlay").classList.remove("active");
+    }
+</script>
 
     <script src="/Assets/JS/index.js" defer></script>
     <script src="/Assets/JS/header.js" defer></script>

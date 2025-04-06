@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
        
         if (paymentMethod === "COD") {
-            window.location.href = "/cod.html";
+            window.location.href = "/thankyou.html";
         } else if (paymentMethod === "CardPayment") {
             window.location.href = "/card-payment.html";
         }
@@ -81,10 +81,10 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
 
         const selectedPaymentMethod = document.querySelector('input[name="payment_method"]:checked');
-        if (!selectedPaymentMethod) {
-            alert("Please select a payment method.");
-            return;
-        }
+        // if (!selectedPaymentMethod) {
+        //     alert("Please select a payment method.");
+        //     return;
+        // }
 
         if (cart.length === 0) {
             alert("Your cart is empty.");
