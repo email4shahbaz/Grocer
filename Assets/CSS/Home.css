@@ -208,7 +208,7 @@ body {
 
 .BestsellProductsSection {
     overflow-y: auto;
-    gap: 10px;
+    justify-content: space-between !important;
 }
 
 .customWidth_80 {

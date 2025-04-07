@@ -19,6 +19,7 @@ ul {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom:20px;
     gap: 20px;
 }
 .Filter_section {

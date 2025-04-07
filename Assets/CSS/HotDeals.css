@@ -180,6 +180,7 @@ a {
 }
 .categories-container .categories .category-card {
     display: flex;
+    cursor: pointer;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
@@ -205,7 +206,7 @@ a {
     text-overflow: ellipsis;
 }
 .categories .category-card p {
-    color: var(--red);
+    color: var(--green);
     cursor: pointer;
 }
 
