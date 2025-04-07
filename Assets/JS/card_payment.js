@@ -24,7 +24,7 @@ document.getElementById("payNowButton").addEventListener("click", function () {
         document.body.dispatchEvent(new CustomEvent("cart-updated", { detail: { count: 0 } }));
 
         // Redirect to the Thank You page
-       // window.location.href = "/cod.html";
+       // window.location.href = "/thankyou.html";
     } else {
         alert("Payment failed. Please try again.");
     }
