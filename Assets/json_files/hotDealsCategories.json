@@ -18,5 +18,10 @@
         "name": "Snacks & Beverages",
         "image": "Assets/Images/Categories/snack-&-beverages.jpg",
         "file": "snacks.json"
+    },
+    {
+        "name": "Fruits",
+        "image": "Assets/Images/Categories/fruits.jpg",
+        "file": "fruits.json"
     }
 ]
