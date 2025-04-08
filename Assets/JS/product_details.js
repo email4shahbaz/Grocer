@@ -145,6 +145,7 @@ function updateCartBadge() {
 
 
 document.addEventListener("DOMContentLoaded", async () => {
+   
     // Handle Add to Cart button
     const addToCartButton = document.querySelector("#add-to-cart-btn");
     if (addToCartButton) {
@@ -214,7 +215,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         renderProductDetails(product);
         setupQuantityControls();
-        setupFavoriteButton(product, categoryFile);
+        //setupFavoriteButton(product, categoryFile);
     } catch (error) {
         console.error("Error loading product details:", error);
         document.getElementById("product-details").innerHTML = "<p>Failed to load product details. Please try again later.</p>";
@@ -298,6 +299,30 @@ function renderProductDetails(product) {
     const tags = product.tags ? product.tags.join(", ") : "No Tags";
     document.getElementById("product-tags").innerText = tags;
     document.getElementById("product-category").innerText = product.categoryName || "Unknown";
+
+    //Render Add to Cart Button
+    const addToCartButton = document.getElementById("btnAddToCart");
+    if (addToCartButton) {
+        addToCartButton.innerHTML = `
+                <div class="d-flex align-items-center gap-2">
+                    <button id="add-to-cart-btn" class="cart_buttonproduct addbutton"
+                        data-id="${product.id}"
+                        data-name="${product.name}"
+                        data-price="${product.price}"
+                        data-image="${product.image}">
+                            Add To Cart
+                        <img src="/Assets/Images/SmallIcons/Bagwhite.webp" alt="Cart Icon">
+                    </button>
+                    <div class="wishlist-btn">
+                        <button class="wishlist-icon" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}" data-category="${category}_product.json">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                   
+                </div>`;
+    }
+
+
      // Render Nutrition Information
   if (product.nutrition) {
     document.getElementById("nutrition-info").innerHTML = `
@@ -351,33 +376,33 @@ function setupQuantityControls() {
     });
 }
 
-function setupFavoriteButton(product, categoryFile) {
-    const favoriteButton = document.querySelector(".love_button");
-    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+// function setupFavoriteButton(product, categoryFile) {
+//     const favoriteButton = document.querySelector(".love_button");
+//     let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
-    // Check if product is already in the wishlist
-    const isFavorite = wishlist.some((item) => item.id === product.id && item.categoryFile === categoryFile);
-    if (isFavorite) {
-        favoriteButton.classList.add("active");
-    }
+//     // Check if product is already in the wishlist
+//     const isFavorite = wishlist.some((item) => item.id === product.id && item.categoryFile === categoryFile);
+//     if (isFavorite) {
+//         favoriteButton.classList.add("active");
+//     }
 
-    favoriteButton.addEventListener("click", () => {
-        wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-        const isFavorite = wishlist.some((item) => item.id === product.id && item.categoryFile === categoryFile);
+//     favoriteButton.addEventListener("click", () => {
+//         wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+//         const isFavorite = wishlist.some((item) => item.id === product.id && item.categoryFile === categoryFile);
 
-        if (isFavorite) {
-            wishlist = wishlist.filter((item) => !(item.id === product.id && item.categoryFile === categoryFile));
-            favoriteButton.classList.remove("active");
-            alert(`${product.name} removed from your wishlist.`);
-        } else {
-            wishlist.push({ ...product, categoryFile });
-            favoriteButton.classList.add("active");
-            alert(`${product.name} added to your wishlist.`);
-        }
+//         if (isFavorite) {
+//             wishlist = wishlist.filter((item) => !(item.id === product.id && item.categoryFile === categoryFile));
+//             favoriteButton.classList.remove("active");
+//             alert(`${product.name} removed from your wishlist.`);
+//         } else {
+//             wishlist.push({ ...product, categoryFile });
+//             favoriteButton.classList.add("active");
+//             alert(`${product.name} added to your wishlist.`);
+//         }
 
-        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+//         localStorage.setItem("wishlist", JSON.stringify(wishlist));
         
-        // Update wishlist counter after modification
-        updateWishlistCounter(wishlist);
-    });
-}
+//         // Update wishlist counter after modification
+//         updateWishlistCounter(wishlist);
+//     });
+// }
