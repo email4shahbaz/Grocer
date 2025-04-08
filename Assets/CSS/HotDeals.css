@@ -33,7 +33,7 @@ a {
 }
 
 .hot-deals_2_hero_container {
-    background-image: url(../Images/Banner/promotions-page-banner.jpg);
+    background-image: url(../Images/Banner/HeroHome.webp);
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 26px;
@@ -129,7 +129,7 @@ a {
     margin-top: 30px;
 }
 .sale-cards-container .deal-card {
-    padding: 20px 16px 28px 16px;
+    /* padding: 20px 16px 28px 16px; */
     border-radius: 15px;
     box-shadow: 2px 2px 2px 0px #00000040;
 }

@@ -321,7 +321,7 @@ function renderProductDetails(product) {
                    
                 </div>`;
     }
-
+    
 
      // Render Nutrition Information
   if (product.nutrition) {

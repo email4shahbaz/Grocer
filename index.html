@@ -197,7 +197,11 @@
                             <p><strong>Category:</strong> <span id="product-category">Unknown</span></p>
                             <p><strong>Tags:</strong> <span id="product-tags">No Tags</span></p>
                             <p id="fomo-message" class="text-danger"></p> <!-- FOMO message will appear here -->
-                            <button id="addbutton" class="btn btn-success">Add to Cart</button>
+                            <button id="addbutton"  class="btn btn-success addbutton py-2" 
+                            data-id="${product.id}" 
+                            data-name="${product.name}" 
+                            data-price="${product.price}" 
+                            data-image="${product.image}">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -455,7 +459,7 @@
                         <span class="offerContentBadgeOne">Free Delivery</span>
                         <h1>Free delivery over $50</h1>
                         <p>Shop $50 product and get free delivery anywhre.</p>
-                        <a href="/category-product.html?category-file=beverages.json" class="offerSButton">Shop Now <i
+                        <a href="/category.html" class="offerSButton">Shop Now <i
                                 class="bi bi-arrow-right-short"></i></a>
                     </div>
                     <div class="img-cont">

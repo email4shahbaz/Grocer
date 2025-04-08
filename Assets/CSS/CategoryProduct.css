@@ -22,7 +22,7 @@ a {
     font-weight: 700;
     color: #29292E;
     margin-bottom: 40px;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 .categoryProducts_no_foundHeading{
     text-align: center;
