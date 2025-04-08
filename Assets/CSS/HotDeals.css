@@ -206,7 +206,7 @@ a {
     text-overflow: ellipsis;
 }
 .categories .category-card p {
-    color: var(--green);
+    color: var(--yellow);
     cursor: pointer;
 }
 
