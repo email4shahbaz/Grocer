@@ -285,6 +285,22 @@ li {
     border-radius: 50%;
 }
 
+.wishlist-btn{
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    background-color: #20b52614;
+    border-radius: 50%;
+}
+
+.wishlist-btn .wishlist-icon{
+    margin-top: 2px;
+    width: 24px;
+    height: 24px;
+}
+
 .counter {
     border-radius: 30px;
     border: 1px solid #E6E6E6;
