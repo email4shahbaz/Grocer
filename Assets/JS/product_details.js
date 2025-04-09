@@ -254,31 +254,31 @@ function renderDiscountBadge(product) {
 
 
 
-function addFomoAndBadge(product) {
+// function addFomoAndBadge(product) {
     
 
-    // Add FOMO Message
-    const fomoSection = document.createElement("div");
-    fomoSection.className = "fomo-message";
+//     // Add FOMO Message
+//     const fomoSection = document.createElement("div");
+//     fomoSection.className = "fomo-message";
 
-    // Generate a unique FOMO message based on product properties
-    const fomoMessages = [
-        `Hurry! Only ${product.stock || 5} items left in stock. Order now!`,
-        `${product.name} is trending! Don't miss out on this popular item.`,
-        `Limited time offer on ${product.name}. Buy before the deal ends!`,
-        `Best seller alert! ${product.name} is running out fast.`,
-    ];
-    const randomMessage = fomoMessages[Math.floor(Math.random() * fomoMessages.length)];
+//     // Generate a unique FOMO message based on product properties
+//     const fomoMessages = [
+//         `Hurry! Only ${product.stock || 5} items left in stock. Order now!`,
+//         `${product.name} is trending! Don't miss out on this popular item.`,
+//         `Limited time offer on ${product.name}. Buy before the deal ends!`,
+//         `Best seller alert! ${product.name} is running out fast.`,
+//     ];
+//     const randomMessage = fomoMessages[Math.floor(Math.random() * fomoMessages.length)];
 
-    fomoSection.innerHTML = `
-        <i class="bi bi-exclamation-circle-fill"></i>
-        ${randomMessage}
-    `;
+//     fomoSection.innerHTML = `
+//         <i class="bi bi-exclamation-circle-fill"></i>
+//         ${randomMessage}
+//     `;
 
-    // Add the FOMO message below the product description
-    const detailsSection = document.querySelector(".product_details_section");
-    detailsSection.prepend(fomoSection);
-}
+//     // Add the FOMO message below the product description
+//     const detailsSection = document.querySelector(".product_details_section");
+//     detailsSection.prepend(fomoSection);
+// }
 
 // Modify the `renderProductDetails` function to include FOMO and Badge
 function renderProductDetails(product) {
@@ -299,30 +299,6 @@ function renderProductDetails(product) {
     const tags = product.tags ? product.tags.join(", ") : "No Tags";
     document.getElementById("product-tags").innerText = tags;
     document.getElementById("product-category").innerText = product.categoryName || "Unknown";
-
-    //Render Add to Cart Button
-    const addToCartButton = document.getElementById("btnAddToCart");
-    if (addToCartButton) {
-        addToCartButton.innerHTML = `
-                <div class="d-flex align-items-center gap-2">
-                    <button id="add-to-cart-btn" class="cart_buttonproduct addbutton"
-                        data-id="${product.id}"
-                        data-name="${product.name}"
-                        data-price="${product.price}"
-                        data-image="${product.image}">
-                            Add To Cart
-                        <img src="/Assets/Images/SmallIcons/Bagwhite.webp" alt="Cart Icon">
-                    </button>
-                    <div class="wishlist-btn">
-                        <button class="wishlist-icon" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}" data-category="${category}_product.json">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                   
-                </div>`;
-    }
-    
-
      // Render Nutrition Information
   if (product.nutrition) {
     document.getElementById("nutrition-info").innerHTML = `
