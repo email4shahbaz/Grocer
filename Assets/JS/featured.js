@@ -214,6 +214,18 @@ document.addEventListener("DOMContentLoaded", async () => {
         } else {
             fomoMessageContainer.innerText = ""; // No FOMO message
         }
+
+        const btnAdd = document.getElementById('popup-btn-add');
+        if(btnAdd!=null){
+            btnAdd.innerHTML = ` <button id="addbutton" class="btn btn-success addbutton py-2" 
+                            data-id="${product.id}" 
+                            data-name="${product.name}" 
+                            data-price="${product.price}" 
+                            data-image="${product.image}" 
+                            data-quantity="1">
+                            Add to Cart</button>`;
+        }
+
     
         // Show the modal using Bootstrap modal method
         $('#quick-view-modal').modal('show');
@@ -244,11 +256,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         return fomoMessages;
     }
     
-    // Add to Cart button functionality
-    document.getElementById("addbutton").addEventListener("click", () => {
-        const product = getProductDetailsFromModal();
-        //addToCart(product);
-    });
+ 
     
     function getProductDetailsFromModal() {
         return {
