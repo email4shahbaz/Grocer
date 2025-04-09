@@ -139,16 +139,17 @@
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-6 position-relative">
 
+            <div id="product-badge" class="product-badge" style="display: none;"></div>
            
              <!-- Product Image -->
-    <img id="product-image" src="" class="img-fluid w-100" alt="Product Image" loading="lazy">
-     <!-- Discount Badge (placeholder) -->
-     <div id="product-badge" class="product-badge" style="display: none;"></div>
+            <img id="product-image" src="" class="img-fluid w-100" alt="Product Image" loading="lazy">
+            <!-- Discount Badge (placeholder) -->
             
         </div>
 
 
         <div class="col-sm-12 col-md-12 col-lg-6 product_details_section">
+            <div id="fomo-div"></div>
             <!-- Product Name and Stock Status -->
             <div class="productNameAndStock">
                 <h5 id="product-name">Product Name</h5>
@@ -234,18 +235,10 @@
                     <h2 id="counting">1</h2>
                     <button id="decrement-btn" class="decrementbtn">-</button>
                 </div>
-                <div class="ProductDetailsCartButtonDiv">
-                    <button id="add-to-cart-btn" class="cart_buttonproduct">
-                        Add To Cart
-                        <img src="/Assets/Images/SmallIcons/Bagwhite.webp" alt="Cart Icon">
-                    </button>
+                <div id="btnAddToCart" class="ProductDetailsCartButtonDiv">
+                    
                 </div>
-                <div class="heart_button">
-                    <button class="love_button">
-                        <i class="bi bi-heart"></i>
-                    </button>
-                </div>
-              
+             
               
 
             </div>

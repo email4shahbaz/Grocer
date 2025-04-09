@@ -115,49 +115,9 @@
 
 
 
-     // Update Cart Badge
-function updateCartBadge() {
-    const cartBadge = document.getElementById("cartBadge");
-    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-    if(cartBadge!=null) cartBadge.textContent = totalItems;
-}
-
-
-    
-   
-    
-    // document.body.addEventListener("cart-updated", (e) => {
-    //     //updateCartBadge(e.detail.count);
-    //     updateCartBadge();
-    // });
-
-  
-
-    // // Listen for cart-updated events
-    // document.body.addEventListener("cart-updated", (e) => {
-    //     //updateDrawerCart();
-    //     //updateNavbarCart();
-    //     //updateCartBadge();
-    // });
-
-    
-
-
 
 document.addEventListener("DOMContentLoaded", async () => {
    
-    // Handle Add to Cart button
-    const addToCartButton = document.querySelector("#add-to-cart-btn");
-    if (addToCartButton) {
-        addToCartButton.addEventListener("click", () => {
-            const product = getProductDetails();
-            addToCart(product);
-            // alert(`${product.name} has been added to the cart!`);
-            // Play sound when adding a product to the cart
-            const sound = new Audio("Sound/button-28.mp3"); // Replace with the actual path
-            sound.play();
-        });
-    }
 
 //     // Open and close drawer functionality
 //     const cartDrawer = document.getElementById("cartDrawer");
@@ -270,14 +230,19 @@ function addFomoAndBadge(product) {
     ];
     const randomMessage = fomoMessages[Math.floor(Math.random() * fomoMessages.length)];
 
-    fomoSection.innerHTML = `
+    // fomoSection.innerHTML = `
+    //     <i class="bi bi-exclamation-circle-fill"></i>
+    //     ${randomMessage}
+    // `;
+
+    // Add the FOMO message below the product description
+    const fomoDiv = document.getElementById("fomo-div");
+
+
+    fomoDiv.innerHTML=`
         <i class="bi bi-exclamation-circle-fill"></i>
         ${randomMessage}
     `;
-
-    // Add the FOMO message below the product description
-    const detailsSection = document.querySelector(".product_details_section");
-    detailsSection.prepend(fomoSection);
 }
 
 // Modify the `renderProductDetails` function to include FOMO and Badge
@@ -313,6 +278,28 @@ function renderProductDetails(product) {
 } else {
     document.getElementById("nutrition-info").innerText = "No nutrition information available.";
 }
+
+    //Render Add to Cart Button
+    const addToCartButton = document.getElementById("btnAddToCart");
+    if (addToCartButton) {
+        addToCartButton.innerHTML = `
+                <div class="d-flex align-items-center gap-2">
+                    <button id="add-to-cart-btn" class="cart_buttonproduct addbutton"
+                        data-id="${product.id}"
+                        data-name="${product.name}"
+                        data-price="${product.price}"
+                        data-image="${product.image}">
+                            Add To Cart
+                        <img src="/Assets/Images/SmallIcons/Bagwhite.webp" alt="Cart Icon">
+                    </button>
+                    <div class="wishlist-btn">
+                        <button class="wishlist-icon" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}" data-category="${category}_product.json">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                
+                </div>`;
+    }
 
     // Add Badge and FOMO elements
     addFomoAndBadge(product);

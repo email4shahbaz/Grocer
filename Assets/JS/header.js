@@ -189,7 +189,7 @@ function populateCategoryDropdown(categories) {
 // Functions for Web View
 function updateWebCartBadge() {
     const webCartBadge = document.getElementById("cartBadge");
-    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const totalItems = cart.length;// .reduce((sum, item) => sum + item.quantity, 0);
     if (webCartBadge) webCartBadge.textContent = totalItems;
 }
 
@@ -262,7 +262,7 @@ function renderWebCartItems() {
 // Functions for Mobile View
 function updateMobileCartBadge() {
     const mobileCartBadge = document.getElementById("mobileCartBadge");
-    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const totalItems = cart.length;// cart.reduce((sum, item) => sum + item.quantity, 0);
     if (mobileCartBadge) mobileCartBadge.textContent = totalItems;
 }
 

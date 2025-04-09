@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Helper: Update Navbar Cart UI
     function updateNavbarCartUI() {
-        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        const totalItems = cart.length;// cart.reduce((sum, item) => sum + item.quantity, 0);
         const totalAmount = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
         // Update cart badge counter
