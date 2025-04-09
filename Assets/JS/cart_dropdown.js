@@ -3,12 +3,15 @@ document.addEventListener("HeaderFooterScriptsLoaded", () => {
     // let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     // // Functions for Web View
-    // function updateWebCartBadge() {
-    //     const webCartBadge = document.getElementById("cartBadge");
-    //     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-    //     if (webCartBadge) webCartBadge.textContent = totalItems;
-    // }
+    // function updateCartBadge() {
+    //     const cartBadge = document.getElementById("cartBadge");
+    //     const totalItems = cart.length; // Count of unique products only
+    //     if (cartBadge) {
+    //         cartBadge.textContent = totalItems;
+    //     }
+    //     cartBadge.textContent = `${totalItems} items`;
 
+    // }
     // function renderWebCartItems() {
     //     const cartDrawerBody = document.querySelector("#cartDrawer .cart-drawer-body");
     //     const cartDrawerFooter = document.querySelector("#cartDrawer .cart-drawer-footer");

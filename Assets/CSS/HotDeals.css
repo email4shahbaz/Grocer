@@ -206,10 +206,11 @@ a {
     text-overflow: ellipsis;
 }
 .categories .category-card p {
-    color: var(--yellow);
+    color: black;
+    font-family: Quicksand;
     cursor: pointer;
+    text-decoration: underline;
 }
-
 
 .ProductCardImage {
     box-shadow: 0px 4px 4px 0px #00000040;

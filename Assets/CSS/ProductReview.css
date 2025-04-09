@@ -151,6 +151,7 @@ li {
 
 .ProductReviewSubmitButton {
     border: none;
+    text-align: center;
     background-color: var(--green);
     border-radius: 12px;
     padding: 12px 20px;

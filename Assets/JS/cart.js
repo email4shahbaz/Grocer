@@ -221,3 +221,5 @@ proceedToCheckoutButton.addEventListener("click", (e) => {
     // Initial Render
     renderCart();
 });
+
+
