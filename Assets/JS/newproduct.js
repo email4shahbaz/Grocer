@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             throw new Error("Invalid JSON structure: expected an array of products.");
         }
 
+        
         // Render each product dynamically
         latestProducts.forEach((product) => {
             const productId = product.id;
@@ -41,7 +42,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             productCard.innerHTML = `
                 <div class="ProductsCardSearchANDCategory ProductsCard_Animations ProductCardImage">
-                    <div class="badge">${'Save 50%'}</div>
+                    <div class="badge">${'Save 10%'}</div>
                     <div class="heart">
                         <i class="bi bi-heart"></i>
                     </div>

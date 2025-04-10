@@ -6,18 +6,18 @@
         "file": "fruits.json"
     },
     {
-        "discount": "Upto 40% off",
+        "discount": "Upto 20% off",
         "name": "Vegitables",
         "image": "Assets/Images/Categories/vegitables.png",
         "file": "vegetables.json"
     },
     {
-        "name": "Meat",
-        "image": "Assets/Images/Categories/meat.png",
+        "name": "Beverages",
+        "image": "Assets/Images/Categories/beverages.png",
         "file": "meat.json"
     },
     {
-        "discount": "Upto 40% off",
+        "discount": "25% off",
         "name": "Fish",
         "image": "Assets/Images/Categories/fish.png",
         "file": "meat.json"

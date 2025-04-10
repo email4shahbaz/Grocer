@@ -191,6 +191,24 @@ li {
     font-family: poppins;
     margin-left: 2px;
 }
+.product-badge {
+    position: absolute;
+    top: 10px; /* Align to the top */
+    left: 10px; /* Align to the left */
+    background-color: #F61B40; /* Red for discounts */
+    color: white;
+    width:80px;
+    padding: 5px 10px;
+    font-size: 13px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    z-index: 10;
+    text-transform: uppercase;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: bounceIn 2.5s ease-out infinite; Add animation */
+   
+}
 
 .cutprice {
     font-size: 20px;
@@ -496,6 +514,20 @@ li {
 .MobileViewProductPropertiesMain,
 .MVlove_button {
     display: none;
+}
+
+.fomo-message {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #53B175;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 @media screen and (max-width:500px) {
@@ -862,7 +894,7 @@ li {
 
 
 /* FOMO Section */
-.fomo-message {
+.fom0-message {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 10px 15px;
