@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     </td>
                     <td>
                         <div>
-                            <h1 class="price_bar_cart">$${item.price.toFixed(2)}</h1>
+                            <h1 class="price_bar_cart">$${parseInt(item.price).toFixed(2)}</h1>
                         </div>
                     </td>
                     <td>
@@ -142,6 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Update Navbar Cart UI
         updateNavbarCartUI();
+        
     }
 
     // Update Cart Logic

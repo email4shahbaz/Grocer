@@ -192,11 +192,11 @@
                             <h1 class="main_billing_heading heading-2">Billing Address</h1>
                             <div class="radio-group">
                                 <div class="form-check mb-2 font-poppins">
-                                    <input type="radio" name="billing" id="same" class="r1 form-check-input CategoryRadioCustom" checked onclick="toggleBillingForm()">
+                                    <input type="radio" name="billing" id="same" class="r1 form-check-input CategoryRadioCustom" checked onclick="toggleBillingForm()" data-canUncheck="false">
                                     <label for="same">Same as shipping address</label>
                                 </div>
                                 <div class="form-check mb-2 font-poppins">
-                                    <input type="radio" name="billing" id="different" class="form-check-input CategoryRadioCustom" onclick="toggleBillingForm()">
+                                    <input type="radio" name="billing" id="different" class="form-check-input CategoryRadioCustom" onclick="toggleBillingForm()" data-canUncheck="false">
                                     <label for="different">Use a different billing address</label>
                                 </div>
                             </div>
@@ -285,14 +285,14 @@
                                 <h3 class="total_cart_main_heading">Payment Method</h3>
                                 <div class="form-check mb-2 font-poppins">
                                     <input class="form-check-input CategoryRadioCustom" type="radio"
-                                        name="payment_method" id="flexRadioDefault1" value="COD" checked />
+                                        name="payment_method" id="flexRadioDefault1" value="COD" checked  data-canUncheck="false"/>
                                     <label class="form-check-label" for="flexRadioDefault1">
                                         Cash on Delivery
                                     </label>
                                 </div>
                                 <div class="form-check mb-2 font-poppins">
                                     <input class="form-check-input CategoryRadioCustom" type="radio"
-                                        name="payment_method" id="flexRadioDefault2" value="CardPayment" />
+                                        name="payment_method" id="flexRadioDefault2" value="CardPayment" data-canUncheck="false"/>
                                     <label class="form-check-label" for="flexRadioDefault2">
                                         Card Payment
                                     </label>

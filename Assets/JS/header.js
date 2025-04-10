@@ -4,6 +4,22 @@ let webCartDrawer;
 let mobileCartDrawer;
 let cartOverlay;
 
+
+document.addEventListener("DOMContentLoaded", ()=>{
+     //Add check/uncheck functionality to the category checkboxes
+     document.querySelectorAll('input[type="radio"]').forEach(radio => {
+        radio.addEventListener("click", function(e) {
+            if (this.checked && this.getAttribute("data-checked") === "true" && this.getAttribute("data-canUncheck") !== "false") {
+                this.checked = false;
+                this.removeAttribute("data-checked");
+            } else {
+                document.querySelectorAll('input[type="radio"]').forEach(r => r.removeAttribute("data-checked"));
+                this.setAttribute("data-checked", "true");
+            }
+        });
+    });
+})
+
  // Sync Cart on Updates
  document.body.addEventListener("cart-updated", () => {
     cart = JSON.parse(localStorage.getItem("cart")) || [];
