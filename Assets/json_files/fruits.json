@@ -16,7 +16,9 @@
             "protein": "0.3g",
             "fats": "0.2g",
             "carbohydrates": "14g"
-        }
+            
+        },
+        "discount_percentage": 8
     },
     {
         "id": "2",

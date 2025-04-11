@@ -8,7 +8,7 @@
         "discounted_price": "2.99",
         "original_price": "3.99",
         "categoryName": "Beverages",
-        "discount_percentage": 25
+        "discount_percentage": 5
         
     },
     {
@@ -20,7 +20,7 @@
         "discounted_price": "1.99",
         "original_price": "3.99",
         "categoryName": "Snacks",
-        "discount_percentage": 50
+        "discount_percentage": 10
       
     },
     {
@@ -32,7 +32,7 @@
         "discounted_price": "2.99",
         "original_price": "3.99",
         "categoryName": "Vegetables",
-        "discount_percentage": 25
+        "discount_percentage": 7
         
     },
     {
@@ -44,7 +44,7 @@
         "discounted_price": "1.99",
         "original_price": "3.99",
         "categoryName": "Vegetables",
-        "discount_percentage": 50
+        "discount_percentage": 8
        
     }
 ]

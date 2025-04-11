@@ -26,41 +26,55 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 });
 
+
 function renderProducts(products, categoryFile) {
     const productList = document.getElementById("product-list");
     productList.innerHTML = "";
 
     products.forEach(product => {
+        const hasDiscount = product.discountedPrice && product.discountedPrice < product.price;
+        const discountPercent = hasDiscount
+            ? Math.round(((product.price - product.discountedPrice) / product.price) * 100)
+            : 0;
+
+        const discountBadgeHTML = hasDiscount
+            ? `<div class="discount-badge">Save ${discountPercent}%</div>`
+            : "";
+
         const productCard = `
-            <div class="col-sm-6 col-md-6 col-lg-4 mb-4 GridsTargetContent ">
-                <div class="ProductsCardSearchANDCategory">
+            <div class="col-sm-6 col-md-6 col-lg-4 mb-4 GridsTargetContent">
+                <div class="ProductsCardSearchANDCategory position-relative">
+                    ${discountBadgeHTML}
                     <div class="CategoryMainCardImage">
-                        <a href="product-details.html?product-id=${product.id}&category-file=${encodeURIComponent(
-            categoryFile
-        )}">
+                        <a href="product-details.html?product-id=${product.id}&category-file=${encodeURIComponent(categoryFile)}">
                             <img src="${product.image}" class="card_main_image p-2" alt="${product.name}">
                         </a>
                     </div>
                     <div class="card-body">
                         <h1 class="h2 searchcard_heading">${product.name}</h1>
-                        <h1 class="searchpricetag">${product.price}$ <button class="searchaddbutton"
-                            data-id="${product.id}"
-                            data-name="${product.name}"
-                            data-price="${product.price}"
-                            data-image="${product.image}"
-                        >
-                                        <img src="/Assets/Images/SmallIcons/Bag.png" alt="">
-                                    </button></h1>
+                        <h1 class="searchpricetag">
+                            ${hasDiscount ? `<span class="searchpricetag">${product.discountedPrice}$</span> <span class="text-muted text-decoration-line-through">${product.price}$</span>` : `${product.price}$`}
+                            <button class="searchaddbutton"
+                                data-id="${product.id}"
+                                data-name="${product.name}"
+                                data-price="${product.price}"
+                                data-image="${product.image}">
+                                <img src="/Assets/Images/SmallIcons/Bag.png" alt="">
+                            </button>
+                        </h1>
                     </div>
                     <div class="d-flex justify-between items-center gap-1 RatingStars">
-                            <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star unChecked"></span>
-                            <div class="col text-center align-self-center">
-                                </div>
-                                
-                        </div>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star unChecked"></span>
+                        <div class="col text-center align-self-center"></div>
+                    </div>
                 </div>
             </div>
         `;
+
         productList.innerHTML += productCard;
     });
 }

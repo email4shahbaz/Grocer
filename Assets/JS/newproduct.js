@@ -39,10 +39,12 @@ document.addEventListener("DOMContentLoaded", async () => {
             // Create product card
             const productCard = document.createElement('div');
             productCard.classList.add('col-sm-6', 'col-md-6', 'col-lg-3', 'mb-4', 'GridsTargetContent');
-
+// Calculate discount percentage if discountedPrice exists
+const discountPercentage = product.discountedPrice ? Math.round(((product.price - product.discountedPrice) / product.price) * 100) : null;
+const featuredCard = document.createElement('div');
             productCard.innerHTML = `
                 <div class="ProductsCardSearchANDCategory ProductsCard_Animations ProductCardImage">
-                    <div class="badge">${'Save 10%'}</div>
+                    <div class="badge">Save ${discountPercentage}%</div>
                     <div class="heart">
                         <i class="bi bi-heart"></i>
                     </div>

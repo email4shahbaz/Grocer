@@ -31,11 +31,22 @@ document.addEventListener("DOMContentLoaded", async () => {
             const productRating = product.rating || 0;
 
             // Create a product card dynamically
+            products.forEach(product => {
+                const hasDiscount = product.discountedPrice && product.discountedPrice < product.price;
+                const discountPercent = hasDiscount
+                    ? Math.round(((product.price - product.discountedPrice) / product.price) * 100)
+                    : 0;
+        
+                const discountBadgeHTML = hasDiscount
+                    ? `<div class="discount-badge">Save ${discountPercent}%</div>`
+                    : "";
+        
             const productCard = document.createElement('div');
             productCard.className = "lastHomeCardMainDiv mt-3 ProductsCard_Animations ProductCardImage";
             productCard.innerHTML = `
                 <div class="homeLastCardTag">
-                    <h6>Save ${discount}%</h6>
+                     <div class="ProductsCardSearchANDCategory position-relative">
+                    ${discountBadgeHTML}
                 </div>
                 <div class="card_img p-1">
                     <a href="product-details.html?product-id=${productId}&category-file=latest_product.json" class="product-details-link" data-id="${productId}" data-category="latest_product.json">

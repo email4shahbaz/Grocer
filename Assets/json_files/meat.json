@@ -1,13 +1,16 @@
 [
     {
+        "image": ["Assets/Images/Products/Chicken.png"],
         "name": "Chicken",
         "price": 5.99
     },
     {
+        "image": ["Assets/Images/Products/Beef.png"],
         "name": "Beef",
         "price": 7.99
     },
     {
+        "image": ["Assets/Images/Products/Mutton.png"],
         "name": "Mutton",
         "price": 6.99
     }

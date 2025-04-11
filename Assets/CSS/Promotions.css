@@ -257,6 +257,7 @@ a {
     display: none;
     position: fixed;
     top: 50%;
+    text-align: center;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
@@ -290,7 +291,7 @@ a {
     border-radius: 5px;
 }
 .close-btn {
-    background: #333;
+    background: var(--green);
     color: #fff;
     padding: 5px 10px;
     border: none;

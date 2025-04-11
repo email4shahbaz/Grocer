@@ -19,8 +19,9 @@
             "calories": 39,
             "protein": "0.9g",
             "fats": "0.3g",
-            "carbohydrates": "10g"
-        }
+            "carbohydrates": "10g"  
+        },
+        "discount_percentage": 8
     },
     {
         "id": "2",

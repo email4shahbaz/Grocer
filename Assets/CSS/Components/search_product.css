@@ -114,7 +114,7 @@
     font-size: 16px;
     font-weight: 500;
     font-family: poppins;
-    color: #1A1A1A;
+    color: #1A1A1A !important;
 }
 
 .searchcard_heading {
