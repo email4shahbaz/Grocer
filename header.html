@@ -47,7 +47,7 @@
 
             </div>
             <div class="nav-item search_button">
-                <form class="d-flex" onsubmit="event.preventDefault();">
+             
                     <div class="input-group searchButtonCate">
                         <select name="" id="search_select_category" wire:model.live="search_category"
                             class="SearchwithCategoriesLists">
@@ -59,11 +59,11 @@
                                 class="shadow-md border-0 search_inp" maxlength="20" placeholder="Search for items..."
                                 aria-label="Search" autocomplete="off" />
                         </div>
-                        <button class="btn rounded-0 shadow-md search_btn" type="submit">
+                        <button class="btn rounded-0 shadow-md search_btn" >
                             <img src="Assets/Images/SmallIcons/search.webp" alt="searchIcon" loading="lazy" />
                         </button>
                     </div>
-                </form>
+               
             </div>
 
             <div class="navbar-right d-flex gap-4">
@@ -213,7 +213,7 @@
     </nav>
     <!-- search.html (Mobile View) -->
     <div class="search_component">
-        <form class="d-flex" onsubmit="event.preventDefault();">
+
             <div class="input-group searchButtonCate">
                 <select name="" id="search_select_category_mobile" wire:model.live="search_category"
                     class="SearchwithCategoriesLists">
@@ -225,11 +225,11 @@
                         class="shadow-md border-0 search_inp" maxlength="20" placeholder="Search for items..."
                         aria-label="Search" autocomplete="off" />
                 </div>
-                <button class="btn rounded-0 shadow-md search_btn" type="submit">
+                <button class="btn rounded-0 shadow-md search_btn">
                     <img src="Assets/Images/SmallIcons/search.webp" alt="searchIcon" loading="lazy" />
                 </button>
             </div>
-        </form>
+       
     </div>
 
     <!--********** NAVIGATION **********-->
