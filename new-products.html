@@ -378,6 +378,28 @@
             </div>
         <div class="CategoryPageContent">   
              <h1 class="cartegoryProduct_main_heading">New Products</h1>
+             <div class="filters">
+                <h4> 32 Results Found</h4>
+                <div class="col-sm-6 col-md-6 col-lg-4 sortingBoxMain">
+                    <div class="CategoryGrid_icons">
+                        <button class="OneByOneGrid">
+                            <img src="/Assets/Images/SmallIcons/OneByOneGrid.webp" alt="">
+                        </button>
+                        <button class="TwoByTwoGrid">
+                            <img src="/Assets/Images/SmallIcons/TwoByTwoGrid.webp" alt="">
+                        </button>
+                        <button class="ThreeByThreeGrid">
+                            <img src="/Assets/Images/SmallIcons/ThreeByThreeGrid.webp" alt="">
+                        </button>
+                    </div>
+                    <div class="dropdown item_sorts_by">
+                        <select wire:model.live="sortBy" class="customSortingSelect">
+                            <option value="latest">Latest</option>
+                            <option value="price">Price</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
             <div class="row mt-5" id="latestProductsContainer">
             <!-- <div class="col-sm-6 col-md-6 col-lg-3 mb-4 GridsTargetContent">
                 <div class="ProductsCardSearchANDCategory">
