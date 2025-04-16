@@ -146,7 +146,7 @@ document.addEventListener("HeaderFooterScriptsLoaded", () => {
 	});
 
 
-    let searchButton = window.screen.width > 992 ? document.querySelector(".search_button") : document.querySelector(".search_button_mobile");
+    let searchButton = window.screen.width > 992 ? document.querySelector(".search_btn") : document.querySelector(".search_btn_mobile");
     searchButton.addEventListener("click", (e) => {
         e.preventDefault();
         const query = searchInput.value.trim();
@@ -454,7 +454,6 @@ function renderSuggestions(suggestions) {
             url.searchParams.set("product-id", product.id);
             url.searchParams.set("category-file", product.categoryName+".json");
             window.location.href = url;
-                    
         });
 
         searchSuggestionsContainer.appendChild(suggestionItem);
