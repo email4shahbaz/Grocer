@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     });
 })
 
+
  // Sync Cart on Updates
  document.body.addEventListener("cart-updated", () => {
     cart = JSON.parse(localStorage.getItem("cart")) || [];
