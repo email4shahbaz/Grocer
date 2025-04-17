@@ -8,20 +8,21 @@ let searchSuggestionsContainer;
 let searchSuggestionsCategory = 'All Categories'; // Default category for search suggestions
 
 
-document.addEventListener("DOMContentLoaded", ()=>{
-     //Add check/uncheck functionality to the category checkboxes
-     document.querySelectorAll('input[type="radio"]').forEach(radio => {
-        radio.addEventListener("click", function(e) {
-            if (this.checked && this.getAttribute("data-checked") === "true" && this.getAttribute("data-canUncheck") !== "false") {
-                this.checked = false;
-                this.removeAttribute("data-checked");
-            } else {
-                document.querySelectorAll('input[type="radio"]').forEach(r => r.removeAttribute("data-checked"));
-                this.setAttribute("data-checked", "true");
-            }
-        });
-    });
-})
+document.addEventListener("DOMContentLoaded", () => {
+    // const radios = document.querySelectorAll('input[type="radio"]');
+    // let lastChecked = null;
+
+    // radios.forEach(radio => {
+    //     radio.addEventListener('click', function () {
+    //     if (this === lastChecked) {
+    //         this.checked = false;
+    //         lastChecked = null;
+    //     } else {
+    //         lastChecked = this;
+    //     }
+    //     });
+    // });
+});
 
 
  // Sync Cart on Updates
