@@ -160,8 +160,8 @@ function renderBestProducts(products, category) {
                     </div>
                     <div class="row mt-2">
                         <div class="col d-flex">
-                            <h1 class="BestSellCardPriceTag align-self-center">$${discountedPrice}</h1>
-                            <del class="BestSellCard-oldPrice">$${productPrice}</del>
+                           <h1 class="BestSellCardPriceTag align-self-center">${productPrice}$</h1>
+                          
                         </div>
                     </div>
                     <div class="col">
