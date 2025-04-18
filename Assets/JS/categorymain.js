@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                                     <button class="searchaddbutton"
                                         data-id="${productId}"
                                         data-name="${productName}"
-                                        data-price="${productPrice}"
+                                        data-price="${product.discountedPrice}"
                                         data-image="${productImage}"
                                     >
 

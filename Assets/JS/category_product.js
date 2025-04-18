@@ -57,7 +57,7 @@ function renderProducts(products, categoryFile) {
                             <button class="searchaddbutton"
                                 data-id="${product.id}"
                                 data-name="${product.name}"
-                                data-price="${product.price}"
+                                data-price="${product.discountedPrice}"
                                 data-image="${product.image}">
                                 <img src="/Assets/Images/SmallIcons/Bag.png" alt="">
                             </button>

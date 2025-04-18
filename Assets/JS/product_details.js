@@ -287,7 +287,7 @@ function renderProductDetails(product) {
                     <button id="add-to-cart-btn" class="cart_buttonproduct addbutton"
                         data-id="${product.id}"
                         data-name="${product.name}"
-                        data-price="${product.price}"
+                        data-price="${product.discountedPrice}"
                         data-image="${product.image}">
                             Add To Cart
                         <img src="/Assets/Images/SmallIcons/Bagwhite.webp" alt="Cart Icon">

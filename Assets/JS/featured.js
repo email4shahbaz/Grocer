@@ -122,14 +122,14 @@ document.addEventListener("DOMContentLoaded", async () => {
                             <p class="offer">Limited time offer</p>
                             <div class="PriceDivFeaturedProduct mt-2">
                                 <div class="d-flex">
-                                    <h1 class="pricetag align-self-center">${product.price}$</h1>
-                                    ${product.discountedPrice ? `<h1 class="crosspricetag text-decoration-line-through align-self-center mx-2">${product.discountedPrice}$</h1>` : ''}
+                                    <h1 class="pricetag align-self-center">${product.discountedPrice}$</h1>
+                                    ${product.price ? `<h1 class="crosspricetag text-decoration-line-through align-self-center mx-2"> ${product.price}$</h1>` : ''}
                                 </div>
                                 <div class="text-end align-self-center">
                                     <button class="btn addbutton py-2" 
                                             data-id="${product.id}" 
                                             data-name="${product.name}" 
-                                            data-price="${product.price}" 
+                                            data-price="${product.discountedPrice}" 
                                             data-image="${product.image}" 
                                             data-quantity="1">
                                         <i class="bi bi-cart"></i>&nbsp;Add
@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             btnAdd.innerHTML = ` <button id="addbutton" class="btn btn-success addbutton py-2" 
                             data-id="${product.id}" 
                             data-name="${product.name}" 
-                            data-price="${product.price}" 
+                            data-price="${product.discountedPrice}" 
                             data-image="${product.image}" 
                             data-quantity="1">
                             Add to Cart</button>`;

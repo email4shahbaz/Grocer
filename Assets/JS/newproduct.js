@@ -70,7 +70,7 @@ const featuredCard = document.createElement('div');
                             <button class="searchaddbutton addbutton" 
                                         data-id="${productId}"
                                         data-name="${productName}" 
-                                        data-price="${productPrice}" 
+                                        data-price="${product.discountedPrice}" 
                                         data-image="${productImage}" 
                                         data-quantity="1">
                                     <img src="/Assets/Images/SmallIcons/Bag.png" alt="Add to Cart">

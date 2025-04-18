@@ -160,8 +160,8 @@ function renderBestProducts(products, category) {
                     </div>
                     <div class="row mt-2">
                         <div class="col d-flex">
-                           <h1 class="BestSellCardPriceTag align-self-center">${productPrice}$</h1>
-                          
+                           <h1 class="BestSellCardPriceTag align-self-center">$${discountedPrice}</h1>
+                            <del class="BestSellCard-oldPrice">$${productPrice}</del>
                         </div>
                     </div>
                     <div class="col">
@@ -175,7 +175,7 @@ function renderBestProducts(products, category) {
                         <button class="btn BestSellCardAddButton py-2 w-100"
                             data-id="${productId}"
                             data-name="${productName}"
-                            data-price="${productPrice}"
+                            data-price="${product.discountedPrice}"
                             data-image="${productImage}">
                             <i class="bi bi-cart"></i>&nbsp;Add to cart
                         </button>

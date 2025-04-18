@@ -112,7 +112,7 @@ function renderSearchProductItem(product) {
 						  <button class="btn addbutton py-2" 
 								  data-id="${product.id}" 
 								  data-name="${product.name}" 
-								  data-price="${product.price}" 
+								  data-price="${product.discountedPrice}" 
 								  data-image="${product.image}" 
 								  data-quantity="1">
 							  <i class="bi bi-cart"></i>&nbsp;Add

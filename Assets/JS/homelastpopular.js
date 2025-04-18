@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                                 data-id="${productId}"
                                 data-name="${productName}"
                                 data-image="${productImage}"
-                                data-price="${productPrice}"
+                                data-price="${product.discountedPrice}"
                                 data-quantity="1">
                                 <i class="bi bi-cart"></i>&nbsp;Add
                             </button>
