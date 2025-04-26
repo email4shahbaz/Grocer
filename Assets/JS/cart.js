@@ -1,34 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const cartItemsContainer = document.querySelector("tbody"); // Target cart table body
-    const subtotalElement = document.getElementById("subtotal"); // For subtotal
-    const shippingElement = document.getElementById("shipping"); // For shipping
-    const totalElement = document.getElementById("total"); // For total
+    const cartItemsContainer = document.querySelector("tbody");
+    const subtotalElement = document.getElementById("subtotal");
+    const shippingElement = document.getElementById("shipping");
+    const totalElement = document.getElementById("total");
     const proceedToCheckoutButton = document.querySelector(".proceed_checkOut_btn");
-    const cartBadge = document.querySelector(".cart_heading .wishlist_badge"); // Navbar cart badge counter
-    const cartTotalElement = document.querySelector(".mycartCustomHeading2"); // Total in navbar dropdown
-    const cartDropdownContent = document.querySelector(".cart_dropdownCustom .w-75"); // Dropdown cart content
-    const SHIPPING_COST = 100.0; // Static shipping cost
+    const cartBadge = document.querySelector(".cart_heading .wishlist_badge");
+    const cartTotalElement = document.querySelector(".mycartCustomHeading2");
+    const cartDropdownContent = document.querySelector(".cart_dropdownCustom .w-75");
+    const SHIPPING_COST = 100.0;
 
-    // Helper: Save cart to localStorage
     function saveCart() {
         localStorage.setItem("cart", JSON.stringify(cart));
     }
 
-    // Helper: Update Navbar Cart UI
     function updateNavbarCartUI() {
-        const totalItems = cart.length;// cart.reduce((sum, item) => sum + item.quantity, 0);
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
         const totalAmount = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
-        // Update cart badge counter
         cartBadge.textContent = totalItems;
-
-        // Update dropdown total
         cartTotalElement.textContent = `$${totalAmount.toFixed(2)}`;
 
-        // Update dropdown content
+        let cartHTML = '';
+
         if (cart.length === 0) {
-            cartDropdownContent.innerHTML = `
+            cartHTML = `
                 <div>
                     <h1 class="text-center">Cart is Empty</h1>
                     <div class="mt-3 mb-3 d-flex justify-content-between align-items-center gap-3">
@@ -39,8 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
         } else {
             const itemsHTML = cart
-                .map(
-                    (item) => `
+                .map(item => `
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
                             <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px;" />
@@ -50,11 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
                             <strong>$${(item.price * item.quantity).toFixed(2)}</strong>
                         </div>
                     </div>
-                `
-                )
-                .join("");
+                `).join('');
 
-            cartDropdownContent.innerHTML = `
+            cartHTML = `
                 <div>
                     ${itemsHTML}
                     <div class="d-flex justify-content-between align-content-center mt-3">
@@ -68,11 +61,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             `;
         }
+
+        cartDropdownContent.innerHTML = cartHTML;
     }
 
-    // Helper: Render the cart table and totals
     function renderCart() {
-        cartItemsContainer.innerHTML = ""; // Clear the cart table
+        cartItemsContainer.innerHTML = "";
         let subtotal = 0;
 
         if (cart.length === 0) {
@@ -82,7 +76,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 </tr>
             `;
             subtotalElement.innerText = "$0.00";
+            shippingElement.innerText = "$0.00";
             totalElement.innerText = "$0.00";
+            updateNavbarCartUI();
             return;
         }
 
@@ -104,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     </td>
                     <td>
                         <div>
-                            <h1 class="price_bar_cart">$${parseInt(item.price).toFixed(2)}</h1>
+                            <h1 class="price_bar_cart">$${parseFloat(item.price).toFixed(2)}</h1>
                         </div>
                     </td>
                     <td>
@@ -117,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 <i class="bi bi-plus"></i>
                             </button>
                         </div>
-                    </td>
+                    </td> 
                     <td>
                         <div class="priceXCrossBtnDivCart">
                             <h1 class="price_bar_cart">$${itemSubtotal.toFixed(2)}</h1>
@@ -134,37 +130,32 @@ document.addEventListener("DOMContentLoaded", () => {
             cartItemsContainer.innerHTML += row;
         });
 
-        // Update totals
         const total = subtotal + SHIPPING_COST;
         subtotalElement.innerText = `$${subtotal.toFixed(2)}`;
         shippingElement.innerText = `$${SHIPPING_COST.toFixed(2)}`;
         totalElement.innerText = `$${total.toFixed(2)}`;
 
-        // Update Navbar Cart UI
         updateNavbarCartUI();
-        
     }
 
-    // Update Cart Logic
     function updateCart(action, index) {
         if (action === "increment") {
-            cart[index].quantity += 1; // Increment the quantity
+            cart[index].quantity += 1;
         } else if (action === "decrement") {
             if (cart[index].quantity > 1) {
-                cart[index].quantity -= 1; // Decrement the quantity
+                cart[index].quantity -= 1;
             } else {
                 alert("Minimum quantity is 1. Cannot decrement further.");
             }
         } else if (action === "remove") {
-            cart.splice(index, 1); // Remove the product from the cart
+            cart.splice(index, 1);
             alert("Product removed from the cart.");
         }
 
-        saveCart(); // Save the updated cart
-        renderCart(); // Re-render the cart
+        saveCart();
+        renderCart();
     }
 
-    // Add event listeners for increment, decrement, and remove
     cartItemsContainer.addEventListener("click", (e) => {
         const button = e.target.closest("button");
         const crossButton = e.target.closest(".cross_button_cart");
@@ -175,52 +166,35 @@ document.addEventListener("DOMContentLoaded", () => {
             : parseInt(crossButton.dataset.index, 10);
         const action = button ? button.dataset.action : "remove";
 
-        if (index !== undefined && action) {
-            updateCart(action, index); // Call updateCart with action and index
+        if (!isNaN(index) && action) {
+            updateCart(action, index);
         }
     });
 
+    proceedToCheckoutButton.addEventListener("click", (e) => {
+        e.preventDefault();
 
+        const total = parseFloat(totalElement.innerText.replace("$", "").trim());
 
+        if (cart.length === 0) {
+            alert("Your cart is empty. Add items to proceed to checkout.");
+            return;
+        }
 
-    // Proceed to Checkout
-proceedToCheckoutButton.addEventListener("click", (e) => {
-    e.preventDefault();
+        if (isNaN(total) || total <= 0) {
+            alert("Error calculating total. Please try again.");
+            return;
+        }
 
-    const total = parseFloat(totalElement.innerText.replace("$", "").trim());
+        const checkoutData = {
+            cart,
+            subtotal: parseFloat(subtotalElement.innerText.replace("$", "").trim()),
+            shipping: SHIPPING_COST,
+            total,
+        };
+        localStorage.setItem("checkoutData", JSON.stringify(checkoutData));
+        window.location.href = "billing.html";
+    });
 
-    if (cart.length === 0) {
-        alert("Your cart is empty. Add items to proceed to checkout.");
-        return;
-    }
-
-    if (isNaN(total) || total <= 0) {
-        alert("Error calculating total. Please try again.");
-        return;
-    }
-
-    // Store the cart, subtotal, shipping, and total in localStorage for use on the billing page
-    const checkoutData = {
-        cart,
-        subtotal: parseFloat(subtotalElement.innerText.replace("$", "").trim()),
-        shipping: SHIPPING_COST,
-        total,
-    };
-    localStorage.setItem("checkoutData", JSON.stringify(checkoutData));
-
-    // Redirect to the billing page
-    window.location.href = "billing.html";
-});
-
-
-
-
-
-
-
-    
-    // Initial Render
     renderCart();
 });
-
-
