@@ -293,7 +293,7 @@ function renderProductDetails(product) {
                         <img src="/Assets/Images/SmallIcons/Bagwhite.webp" alt="Cart Icon">
                     </button>
                     <div class="wishlist-btn">
-                        <button class="wishlist-icon" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}" data-category="${category}_product.json">
+                        <button class="wishlist-icon" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}" data-category="${category.toLowerCase()}_product.json">
                             <i class="bi bi-heart"></i>
                         </button>
                     </div>

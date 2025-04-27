@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     try {
         // Fetch all products from the API
-        const productsResponse = await fetch('/Assets/json_files/category_Sub.json'); // Ensure the JSON file path is correct
+        const productsResponse = await fetch('/Assets/json_files/category_sub.json'); // Ensure the JSON file path is correct
         if (!productsResponse.ok) {
             throw new Error(`HTTP error! Status: ${productsResponse.status}`);
         }

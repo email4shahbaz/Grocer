@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     try {
         // Fetch categories from the local JSON file
-        const response = await fetch('/Assets/json_files/Hot_deals_category.json');
+        const response = await fetch('/Assets/json_files/hot_deals_category.json');
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }

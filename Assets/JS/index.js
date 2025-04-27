@@ -108,18 +108,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
 
-    var loginBtn = document.querySelector('.Login_btn');
-    var profileImage = document.querySelector('.profile_image');
-    if(localStorage.getItem('email') != null && loginBtn!=null && profileImage!=null){
-        //alert('User is logged in');
-        loginBtn.classList.add('d-none');
-        profileImage.classList.remove('d-none');
-    }
-    else if(localStorage.getItem('email') == null && loginBtn!=null && profileImage!=null){
-       // alert('User is not logged in');
-        loginBtn.classList.remove = 'd-none';
-        profileImage.classList.add = 'd-none';
-    }
 
 });
 

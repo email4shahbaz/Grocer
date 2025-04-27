@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", async () => {
  async function fetchAndRenderProducts(category, retries = 3) {
 
     try {
-        const response = await fetch(`/Assets/json_files/${category}_product.json`);
+        const response = await fetch(`/Assets/json_files/${category.toLowerCase()}_product.json`);
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -127,17 +127,17 @@ function renderBestProducts(products, category) {
                     <h6>Save ${discount}%</h6>
                 </div>
                 <div class="BestSellCardImage">
-                    <a href="product-details.html?product-id=${productId}&category-file=${category}_product.json">
+                    <a href="product-details.html?product-id=${productId}&category-file=${category.toLowerCase()}_product.json">
                         <img src="${productImage}" 
                             onerror="this.src='/Assets/Images/ERROR/ErrorImage.webp'" 
                             alt="${productName}">
                     </a>
                 </div>
                 <div class="product-overlay-icons">
-                    <button class="wishlist-icon ${wishlist.some(item => item.id === product.id) ? 'in-wishlist' : ''}" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}" data-category="${category}_product.json">
+                    <button class="wishlist-icon ${wishlist.some(item => item.id === product.id) ? 'in-wishlist' : ''}" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}" data-category="${category.toLowerCase()}_product.json">
                         <i class="bi bi-heart"></i>
                     </button>
-                    <button class="eye-icon" data-id="${product.id}" data-category="${category}_product.json">
+                    <button class="eye-icon" data-id="${product.id}" data-category="${category.toLowerCase()}_product.json">
                     <i class="bi bi-eye"></i>
                     </button>
                 </div>

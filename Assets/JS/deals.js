@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             const emptyStars = new Array(5 - deal.rating).fill('<i class="fa fa-star-o"></i>').join(''); // Empty stars
 
             dealCard.innerHTML = `
-                 <a href="product-details.html?product-id=${deal.id}&category-file=${deal.categoryName}.json">
+                 <a href="product-details.html?product-id=${deal.id}&category-file=${deal.categoryName.toLowerCase()}.json">
                     <div class="product-image">
                         <img src="${deal.product_image}" alt="${deal.product_name}">
                         <div class="timer-holder">

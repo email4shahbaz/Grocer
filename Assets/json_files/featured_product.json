@@ -5,7 +5,6 @@
         "price": 3,
         "discountedPrice": 2.85,
         "unit": "500g",
-        "unit": "500g",
         "sku": "FRU001",
         "image": ["Assets/Images/Products/Orange.png"],
         "description": "Fresh Oranges.",

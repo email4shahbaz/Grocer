@@ -10,7 +10,7 @@ document.addEventListener("HeaderFooterScriptsLoaded", ()=> {
 // Function to load categories dynamically
 async function loadCategories() {
     try {
-        const response = await fetch("Assets/json_files/Browse_navbar_categories.json"); // Load categories list
+        const response = await fetch("Assets/json_files/browse_navbar_categories.json"); // Load categories list
         if (!response.ok) throw new Error("Failed to load categories.");
 
         const cats = await response.json();

@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const promotionsSideProducts = document.querySelector('.promotions_side_products');
 
     // Fetch data from the JSON file
-    fetch('/Assets/json_files/promotion_Sub.json')
+    fetch('/Assets/json_files/promotion_sub.json')
         .then((response) => {
             if (!response.ok) {
                 throw new Error(`Failed to fetch data. Status: ${response.status}`);

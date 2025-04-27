@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function saveCart() {
         localStorage.setItem("cart", JSON.stringify(cart));
+        document.body.dispatchEvent(new CustomEvent("cart-updated"));
     }
 
     function updateNavbarCartUI() {

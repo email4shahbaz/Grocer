@@ -191,12 +191,26 @@ document.addEventListener("HeaderFooterScriptsLoaded", () => {
 	// 		})
 	// 		.catch((error) => console.error("Error loading product:", error));
 	// }
+
+    var loginBtn = document.querySelector('.Login_btn');
+    var profileImage = document.querySelector('.profile_image');
+    if(localStorage.getItem('email') != null && loginBtn!=null && profileImage!=null){
+        //alert('User is logged in');
+        loginBtn.classList.add('d-none');
+        profileImage.classList.remove('d-none');
+    }
+    else if(localStorage.getItem('email') == null && loginBtn!=null && profileImage!=null){
+       // alert('User is not logged in');
+        loginBtn.classList.remove = 'd-none';
+        profileImage.classList.add = 'd-none';
+    }
+
 });
 
 async function getCategories() {
     try {
         const response = await fetch(
-            "Assets/json_files/Browse_navbar_categories.json"
+            "Assets/json_files/browse_navbar_categories.json"
         ); // Load categories list
         if (!response.ok) throw new Error("Failed to load categories.");
 
@@ -445,7 +459,7 @@ function renderSuggestions(suggestions) {
                 <span style="font-weight: bold; color: #333;">${
                                         product.name
                                     }</span><br>
-                <span style="font-size: 0.9rem; color: #555;">$${product.price.toFixed(
+                <span style="font-size: 0.9rem; color: #555;">$${product.discountedPrice.toFixed(
                                         2
                                     )}</span>
             </div>
@@ -454,7 +468,7 @@ function renderSuggestions(suggestions) {
         suggestionItem.addEventListener("click", () => {
             const url = new URL(window.location.origin + "/product-details.html");
             url.searchParams.set("product-id", product.id);
-            url.searchParams.set("category-file", product.categoryName+".json");
+            url.searchParams.set("category-file", product.categoryName.toLowerCase()+".json");
             window.location.href = url;
         });
 

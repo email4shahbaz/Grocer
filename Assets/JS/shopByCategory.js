@@ -1,6 +1,6 @@
 async function loadCategories() {
     try {
-        const response = await fetch("Assets/json_files/hotDealsCategories.json"); // Load categories list
+        const response = await fetch("Assets/json_files/hotdealscategories.json"); // Load categories list
         if (!response.ok) throw new Error("Failed to load categories.");
         const cats = await response.json();
         return cats;
