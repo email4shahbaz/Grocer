@@ -3,7 +3,7 @@ const urlParams = new URLSearchParams(window.location.search);
 // return urlParams.get('id');
 
 // Fetch related products using the API
-fetch(`https://grocer.softwaresystems.us/api/v1/products/related-products/${urlParams.get('id')}`)
+fetch(`https://grocer.softwaresystems.us/api/v1/products/related-products/${urlParams.get('product-id')}`)
     .then(response => response.json())
     .then(data => {
         // Log the full response to understand its structure
