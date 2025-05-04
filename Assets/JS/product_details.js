@@ -218,6 +218,7 @@ function addFomoAndBadge(product) {
     
 
     // Add FOMO Message
+   
     const fomoSection = document.createElement("div");
     fomoSection.className = "fomo-message";
 
@@ -230,10 +231,10 @@ function addFomoAndBadge(product) {
     ];
     const randomMessage = fomoMessages[Math.floor(Math.random() * fomoMessages.length)];
 
-    // fomoSection.innerHTML = `
-    //     <i class="bi bi-exclamation-circle-fill"></i>
-    //     ${randomMessage}
-    // `;
+    fomoSection.innerHTML = `
+        <i class="bi bi-exclamation-circle-fill"></i>
+        ${randomMessage}
+    `;
 
     // Add the FOMO message below the product description
     const fomoDiv = document.getElementById("fomo-div");
