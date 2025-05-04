@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
 
         const selectedPaymentMethod = document.querySelector('input[name="payment_method"]:checked');
+        //alert(selectedPaymentMethod.value);
         // if (!selectedPaymentMethod) {
         //     alert("Please select a payment method.");
         //     return;
@@ -92,6 +93,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         saveOrder(selectedPaymentMethod.value);
+
+        if(selectedPaymentMethod.value === "COD"){
+            // Clear the cart
+            localStorage.removeItem("cart");
+            // Dispatch a custom event to update the cart and drawer UI
+            document.body.dispatchEvent(new CustomEvent("cart-updated", { detail: { count: 0 } }));
+        }
+  
     });
 
     // Initial Render

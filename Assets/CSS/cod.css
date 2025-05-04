@@ -20,16 +20,6 @@ label {
     font-weight: 500;
 }
 
-.btn {
-    background-color: #28a745;
-    color: white;
-    font-size: 1rem;
-}
-
-.btn:hover {
-    background-color: #218838;
-}
-
 
 .shippingForm {
     width: 65%;
