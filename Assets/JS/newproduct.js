@@ -21,14 +21,14 @@ document.addEventListener("DOMContentLoaded", async () => {
             throw new Error("Invalid JSON structure: expected an array of products.");
         }
 
-        
+
         // Render each product dynamically
         latestProducts.forEach((product) => {
             const productId = product.id;
             const productName = product.name;
             const productImage = product.image[0]; // Fetch the first image from the array
             const productPrice = product.price.toFixed(2); // Ensure price is formatted to 2 decimal places
-            const productUnit = product.unit ? `/${product.unit}` : ''; 
+            const productUnit = product.unit ? `/${product.unit}` : '';
             const averageRating = product.rating || 0; // Default to 0 if rating is undefined
 
             // Calculate stars
@@ -39,15 +39,16 @@ document.addEventListener("DOMContentLoaded", async () => {
             // Create product card
             const productCard = document.createElement('div');
             productCard.classList.add('col-sm-6', 'col-md-6', 'col-lg-3', 'mb-4', 'GridsTargetContent');
-// Calculate discount percentage if discountedPrice exists
-const discountPercentage = product.discountedPrice ? Math.round(((product.price - product.discountedPrice) / product.price) * 100) : null;
-const featuredCard = document.createElement('div');
+            // Calculate discount percentage if discountedPrice exists
+            const discountPercentage = product.discountedPrice ? Math.round(((product.price - product.discountedPrice) / product.price) * 100) : null;
+            const featuredCard = document.createElement('div');
             productCard.innerHTML = `
                 <div class="ProductsCardSearchANDCategory ProductsCard_Animations ProductCardImage">
                     <div class="badge">Save ${discountPercentage}%</div>
-                    <div class="heart">
+                    
+                    <button class="heart wishlist-icon in-wishlist" data-id=${productId} data-name=${productName} data-price=${productPrice} data-image=${productImage} data-category="featured_product.json">
                         <i class="bi bi-heart"></i>
-                    </div>
+                    </button>
                     <div class="eye">
                         <a wire:navigate href="/Product-details.html?product=${productId}">
                             <i class="bi bi-eye"></i>
@@ -68,13 +69,14 @@ const featuredCard = document.createElement('div');
                                 <h1 class="searchpricetag align-self-center">$${productPrice}${productUnit}</h1>
                             </div>
                             <button class="searchaddbutton addbutton" 
-                                        data-id="${productId}"
-                                        data-name="${productName}" 
-                                        data-price="${product.discountedPrice}" 
-                                        data-image="${productImage}" 
-                                        data-quantity="1">
-                                    <img src="/Assets/Images/SmallIcons/Bag.png" alt="Add to Cart">
-                                </button>
+                                data-id="${productId}"
+                                data-name="${productName}" 
+                                data-price="${product.discountedPrice}" 
+                                data-image="${productImage}" 
+                                data-quantity="1"
+                            >
+                                <img src="/Assets/Images/SmallIcons/Bag.png" alt="Add to Cart">
+                            </button>
                         </div>
                         <div class="d-flex justify-between items-center gap-1 RatingStars">
                             ${'<i class="bi bi-star-fill" style="color: gold; font-size: 1.2rem;"></i>'.repeat(filledStars)}

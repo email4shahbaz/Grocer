@@ -62,10 +62,10 @@ body {
 .webviewCarouselOne,
 .WebViewCarouselTwo {
     overflow-y: auto;
-    padding: 0 4px;
+    padding: 2px 4px;
 }
 .WebViewCarouselTwo {
-    padding: 0 12px;
+    padding: 4px 12px;
     /* margin-bottom: 50px; */
 }
 
@@ -208,6 +208,8 @@ body {
 .BestsellProductsSection {
     overflow-y: auto;
     justify-content: space-between !important;
+    gap: 25px;
+    padding-top: 4px;
 }
 
 .customWidth_80 {
@@ -541,15 +543,37 @@ body {
 
 
 
-.BestSellProductarrowbtnLeft,
-.BestSellProductarrowbtnRight {
+.BestSellProductarrowbtnLeft {
+    position: absolute;
+    top: 40%;
+    left: -55px;
     background-color: #F2F3F4;
     width: 40px;
     height: 40px;
-    border-radius: 50% !important;
+    border-radius: 50%;
     border: none;
     font-size: 24px;
     transition: all 0.3s ease-in-out;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BestSellProductarrowbtnRight {
+    position: absolute;
+    top: 40%;
+    right: -55px;
+    background-color: #F2F3F4;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    font-size: 24px;
+    transition: all 0.3s ease-in-out;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .BestSellProductarrowbtnLeft:hover {

@@ -113,5 +113,51 @@
             "fats": "0.1g",
             "carbohydrates": "13g"
         }
+    },
+    {
+        "id": "4",
+        "name": "Almonds",
+        "price": 3.0,
+        "discountedPrice": 2.76,
+        "unit": "1kg",
+        "sku": "NUTS001",
+        "image": ["/Assets/Images/Products/almonds.jpg"],
+        "discount": 8,
+        "description": "Fresh and organic almonds.",
+        "detailedDescription": "Crunchy and nutritious almonds, perfect for snacking, baking, or adding to desserts. High in protein and vitamins.",
+        "rating": 5,
+        "tags": ["Crunchy", "Organic", "Healthy"],
+        "sold_quantity": 40,
+        "total_quantity": 50,
+        "categoryName": "Nuts",
+        "nutrition": {
+            "calories": 576,
+            "protein": "21g",
+            "fats": "49g",
+            "carbohydrates": "22g"
+        }
+    },
+    {
+        "id": "2",
+        "name": "Chips",
+        "price": 4.5,
+        "discountedPrice": 4.05,
+        "unit": "200g",
+        "sku": "SNACKS001",
+        "image": ["/Assets/Images/Products/chips.png"],
+        "discount": 10,
+        "description": "Crispy chips.",
+        "detailedDescription": "Light and crispy chips, perfect for snacking or parties. Available in a variety of flavors.",
+        "rating": 4,
+        "tags": ["Crispy", "Tasty", "Convenient"],
+        "sold_quantity": 15,
+        "total_quantity": 40,
+        "categoryName": "Snacks",
+        "nutrition": {
+            "calories": 152,
+            "protein": "2g",
+            "fats": "10g",
+            "carbohydrates": "15g"
+        }
     }
 ]
