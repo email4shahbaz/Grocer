@@ -44,16 +44,11 @@ document.addEventListener("DOMContentLoaded", async () => {
             const featuredCard = document.createElement('div');
             productCard.innerHTML = `
                 <div class="ProductsCardSearchANDCategory ProductsCard_Animations ProductCardImage">
-                    <div class="badge">Save ${discountPercentage}%</div>
+                    <!-- Discount Badge -->
+                            ${discountPercentage ? `<span class="discount-badge">Save ${discountPercentage}%</span>` : ''}
+
                     
-                    <button class="heart wishlist-icon in-wishlist" data-id=${productId} data-name=${productName} data-price=${productPrice} data-image=${productImage} data-category="featured_product.json">
-                        <i class="bi bi-heart"></i>
-                    </button>
-                    <div class="eye">
-                        <a wire:navigate href="/Product-details.html?product=${productId}">
-                            <i class="bi bi-eye"></i>
-                        </a>
-                    </div>
+                    
                     <div class="CategoryMainCardImage">
                         <a href="product-details.html?product-id=${productId}&category-file=latest_product.json" class="product-details-link" data-id="${productId}" data-category="latest_product.json">
                             <img src="${productImage}"
@@ -79,10 +74,13 @@ document.addEventListener("DOMContentLoaded", async () => {
                             </button>
                         </div>
                         <div class="d-flex justify-between items-center gap-1 RatingStars">
-                            ${'<i class="bi bi-star-fill" style="color: gold; font-size: 1.2rem;"></i>'.repeat(filledStars)}
-                            ${halfStar ? '<i class="bi bi-star-half" style="color: gold; font-size: 1.2rem;"></i>' : ''}
-                            ${'<i class="bi bi-star" style="color: lightgray; font-size: 1.2rem;"></i>'.repeat(emptyStars)}
-                        </div>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star unChecked"></span>
+                        <div class="col text-center align-self-center"></div>
+                    </div>
                     </div>
                 </div>
             `;
