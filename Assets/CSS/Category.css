@@ -208,6 +208,10 @@ li {
     background: none;
 }
 
+.GridsTargetContent{
+    width: 33.3%;
+}
+
 .CategoryGrid_icons {
     display: flex;
     justify-content: center;
