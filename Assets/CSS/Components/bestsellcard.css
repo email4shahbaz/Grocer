@@ -127,11 +127,11 @@
 }
 
 .BestSellCardOffTag {
-    top: 0px;
-    left: 0px;
+    top: 5px;
+    left: 5px;
     background-color: #FD6020;
     color: white;
-    border-radius: 0px 3px;
+    border-radius: 3px 3px;
     padding: 7px;
     font-size: 12px;
     font-weight: 500;

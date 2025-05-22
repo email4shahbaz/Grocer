@@ -289,7 +289,8 @@ function renderProductDetails(product) {
                         data-id="${product.id}"
                         data-name="${product.name}"
                         data-price="${product.discountedPrice}"
-                        data-image="${product.image}">
+                        data-image="${product.image}"
+                        data-quantity="${product.counting}">
                             Add To Cart
                         <img src="/Assets/Images/SmallIcons/Bagwhite.webp" alt="Cart Icon">
                     </button>
@@ -324,23 +325,27 @@ function renderStars(rating) {
 
 
 
-function setupQuantityControls() {
+document.addEventListener("DOMContentLoaded", function () {
     const incrementButton = document.getElementById("increment-btn");
     const decrementButton = document.getElementById("decrement-btn");
     const quantityDisplay = document.getElementById("counting");
 
+    // Use Number instead of parseInt for accuracy
+    let currentQuantity = Number(quantityDisplay.innerText);
+
     incrementButton.addEventListener("click", () => {
-        const currentQuantity = parseInt(quantityDisplay.innerText, 10);
-        quantityDisplay.innerText = currentQuantity + 1;
+        currentQuantity += 1;
+        quantityDisplay.innerText = currentQuantity;
     });
 
     decrementButton.addEventListener("click", () => {
-        const currentQuantity = parseInt(quantityDisplay.innerText, 10);
         if (currentQuantity > 1) {
-            quantityDisplay.innerText = currentQuantity - 1;
+            currentQuantity -= 1;
+            quantityDisplay.innerText = currentQuantity;
         }
     });
-}
+});
+
 
 
 // function setupFavoriteButton(product, categoryFile) {

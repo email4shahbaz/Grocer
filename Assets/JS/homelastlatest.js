@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <h6>Save ${discount}%</h6>
             </div>
             <div class="card_img p-1">
-                <a href="product-details.html?product-id=${productId}&category-file=popular_product.json" class="product-details-link" data-id="${productId}" data-category="popular_product.json">
+                <a href="product-details.html?product-id=${productId}&category-file=latest_product.json" class="product-details-link" data-id="${productId}" data-category="latest_product.json">
                     <img src="${productImage}" 
                          onerror="this.src='/Assets/Images/ERROR/ErrorImage.webp'" 
                          alt="${productName}">
@@ -51,12 +51,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                 </div>
                 <livewire:components.rating-stars :rating="${productRating}" />
                 <div class="homelastCardPriceAndCartBtn mt-2">
-                    <div class="d-flex">
-                        <h1 class="LastCardPriceTag align-self-center">${productPrice}$</h1>
-                        <h3 class="LastCardCrossPriceTag align-self-center">
-                            &nbsp;&nbsp;<del>${originalPrice}$</del>
-                        </h3>
-                    </div>
+                   <div class="d-flex">
+                                    <h1 class="pricetag align-self-center">${product.discountedPrice}$</h1>
+                                    ${product.price ? `<h1 class="crosspricetag text-decoration-line-through align-self-center mx-2"> ${product.price}$</h1>` : ''}
+                                </div>
                     <div class="text-center align-self-center">
                         <button class="LastCardAddButton" 
                             data-id="${productId}"
