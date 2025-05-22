@@ -98,7 +98,7 @@
         "discountedPrice": 9.2,
         "unit": "2Liter",
         "sku": "BEVERAGE001",
-        "image": ["Assets/Images/Products/beverages.webp"],
+        "image": ["Assets/Images/Products/beverages.png"],
         "discount": 8,
         "description": "Fresh juices.",
         "detailedDescription": "Refreshing and natural fruit juices, perfect for hydration and packed with vitamins. Available in multiple flavors.",

@@ -67,5 +67,24 @@
             "fats": "0.2g",
             "carbohydrates": "10g"
         }
+    },
+     {
+        "id": "4",
+        "name": "Potato",
+        "price": 2,
+        "discountedPrice": 1.8,
+        "sku": "VEG001",
+        "image": ["Assets/Images/Products/Potatto.png"],
+        "description": "Fresh potatoes perfect for daily meals.",
+        "detailedDescription": "These potatoes are sourced from local farms and are rich in nutrients, making them ideal for a variety of dishes.",
+        "rating": 5,
+        "tags": ["Fresh", "Healthy", "Organic"],
+        "categoryName": "Vegetables",
+        "nutrition": {
+            "calories": 77,
+            "protein": "2g",
+            "fats": "0.1g",
+            "carbohydrates": "17g"
+        }
     }
 ]
