@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Save Order and Redirect
     function saveOrder(paymentMethod) {
         const orderId = `ORD-${Date.now()}`;
-        const customerNames = ["John", "Doe", "Alice", "Bob", "Jane"];
+        const customerNames = ["John", "Doe", "Alice", "James", "Jane"];
         const randomCustomerName = customerNames[Math.floor(Math.random() * customerNames.length)];
 
         const newOrder = {
