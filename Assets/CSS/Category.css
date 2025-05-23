@@ -58,8 +58,8 @@ ul {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* width: 100%; */
-    /* flex-wrap: wrap; */
+    width: 100%; 
+    flex-wrap: wrap;
 }
 .CategoryPageCategoryCard{
     width: 25%;

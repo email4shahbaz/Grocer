@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const productName = product.name;
                 const productImage = product.image[0];
                 const productPrice = product.price;
-                const discountedPrice = product.discountedPrice;
                 const productRating = 4; // Default rating for now
 
                 const productCard = document.createElement('div');
@@ -58,8 +57,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                             <h1 class="h2 searchcard_heading">${productName}</h1>
                             <div class="row d-flex">
                                 <div class="col align-self-center">
-                                    <strike class="searchpricetag align-self-center">${productPrice}$</strike>
-                                     <h1 class="searchpricetag align-self-center">${product.discountedPrice}$</h1>
+                                    <h1 class="searchpricetag align-self-center">${productPrice}$</h1>
                                 </div>
                                 <div class="col text-center align-self-center">
                                     <button class="searchaddbutton"
