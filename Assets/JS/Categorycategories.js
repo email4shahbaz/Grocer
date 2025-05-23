@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const categoryResponse = await fetch('Assets/json_files/category_product.json');
         if (!categoryResponse.ok) {
             throw new Error(`HTTP error! Status: ${categoryResponse.status}`);
-        }z
+        }
 
         const categories = await categoryResponse.json();
         console.log(categories);

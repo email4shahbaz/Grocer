@@ -454,31 +454,51 @@
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script>
             function initializeCollapse() {
-                $(".colapse__btn").off('click').on('click', function () {
-                    $(".collapse_Content1").slideToggle("slow");
-                });
-                $(".tags_filter").click(function () {
-                    // Change the background color to green and text color to white on click
-                    $(this).css({
-                        "background-color": "#53B175",
-                        "color": "white"
-                    });
-                });
-                $(".OneByOneGrid").click(function () {
-                    $(".GridsTargetContent").removeClass("col-lg-4 col-md-6 col-sm-6 col-lg-6").addClass(
-                        "col-12");
-                });
+    const gridClasses = "col-12 col-lg-4 col-lg-6 col-md-6 col-sm-6";
 
-                $(".TwoByTwoGrid").click(function () {
-                    $(".GridsTargetContent").removeClass("col-lg-4 col-md-6").addClass("col-lg-6 col-md-6");
-                });
+    // Toggle collapse content on button click
+    $(".collapse__btn").off('click').on('click', function () {
+        $(".collapse_Content1").slideToggle("slow");
+    });
 
-                $(".ThreeByThreeGrid").click(function () {
-                    $(".GridsTargetContent").removeClass("col-12 col-lg-6 col-md-6").addClass(
-                        "col-lg-4 col-md-6");
-                });
-            }
+    // Tag filter styling (active state)
+    $(".tags_filter").off('click').on('click', function () {
+        $(".tags_filter").css({
+            "background-color": "",
+            "color": ""
+        });
+        $(this).css({
+            "background-color": "#53B175",
+            "color": "white"
+        });
+    });
 
+    // Grid: 1 column layout
+    $(".OneByOneGrid").off('click').on('click', function () {
+        $(".GridsTargetContent")
+            .removeClass(gridClasses)
+            .addClass("col-12");
+    });
+
+    // Grid: 2 column layout
+    $(".TwoByTwoGrid").off('click').on('click', function () {
+        $(".GridsTargetContent")
+            .removeClass(gridClasses)
+            .addClass("col-lg-6 col-md-6");
+    });
+
+    // Grid: 3 column layout
+    $(".ThreeByThreeGrid").off('click').on('click', function () {
+        $(".GridsTargetContent")
+            .removeClass(gridClasses)
+            .addClass("col-lg-4 col-md-6");
+    });
+}
+
+// Call this after the DOM is ready
+$(document).ready(function () {
+    initializeCollapse();
+});
 
             $(document).ready(function () {
                 initializeCollapse();

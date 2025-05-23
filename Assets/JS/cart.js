@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         cart.forEach((item, index) => {
             const itemSubtotal = item.price * item.quantity;
-            subtotal += itemSubtotal;
+            subtotal += itemSubtotal; 
 
             const row = `
                 <tr>
