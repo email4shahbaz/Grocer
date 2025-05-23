@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalElement = document.getElementById("total");
     const paymentMethods = document.querySelectorAll('input[name="payment_method"]');
     const placeOrderBtn = document.querySelector(".place_order_btn");
+    
 
     // Retrieve Checkout Data
     const checkoutData = JSON.parse(localStorage.getItem("checkoutData")) || {};
@@ -18,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (cart.length === 0) {
             orderSummaryContainer.innerHTML = "<p>Your cart is empty.</p>";
             subtotalElement.innerText = "$0.00";
-            shippingElement.innerText = `$${shipping.toFixed(2)}`;
+            shippingElement.innerText = `$${shipping.toFixed(2)}`;            
             totalElement.innerText = `$${shipping.toFixed(2)}`; // Only shipping cost if no items
             return;
         }
@@ -38,14 +39,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         subtotalElement.innerText = `$${subtotal.toFixed(2)}`;
-        shippingElement.innerText = `$${shipping.toFixed(2)}`;
         totalElement.innerText = `$${total.toFixed(2)}`;
+        shippingElement.innerText = `$${shipping.toFixed(2)}`;
+        
     }
 
     // Save Order and Redirect
     function saveOrder(paymentMethod) {
         const orderId = `ORD-${Date.now()}`;
-        const customerNames = ["John", "Doe", "Alice", "Bob", "Jane"];
+        const customerNames = ["John", "Doe", "Alice", "James", "Jane"];
         const randomCustomerName = customerNames[Math.floor(Math.random() * customerNames.length)];
 
         const newOrder = {

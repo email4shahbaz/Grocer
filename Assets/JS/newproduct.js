@@ -61,8 +61,11 @@ document.addEventListener("DOMContentLoaded", async () => {
                         <h1 class="h2 searchcard_heading">${productName}</h1>
                         <div class="row d-flex">
                             <div class="col align-self-center">
-                                <h1 class="searchpricetag align-self-center">$${productPrice}${productUnit}</h1>
+                             <h1 class="pricetag align-self-center">$${product.discountedPrice}${productUnit}</h1>
+                                <strike class="crosspricetag align-self-center">$${productPrice}</strike>
+                               
                             </div>
+                            
                             <button class="searchaddbutton addbutton" 
                                 data-id="${productId}"
                                 data-name="${productName}" 

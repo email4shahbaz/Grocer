@@ -5,7 +5,7 @@
         "price": 10,
         "discountedPrice": 9,
         "sku": "BEV001",
-        "image": ["Assets/Images/Products/beverages.webp"],
+        "image": ["Assets/Images/Products/beverages.png"],
         "description": "Fresh Juices.",
         "detailedDescription": "Refreshing and natural fruit juices, perfect for hydration and packed with vitamins. Available in multiple flavors.",
         "rating": 4,

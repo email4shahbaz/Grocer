@@ -22,7 +22,7 @@
             "id": "3",
             "name": "Beveages",
             "image": [
-                "Beverages.webp"
+                "beverages.png"
             ],
             "price": 50.00,
             "discount": 10

@@ -19,9 +19,8 @@
             "calories": 39,
             "protein": "0.9g",
             "fats": "0.3g",
-            "carbohydrates": "10g"  
-        },
-        "discount_percentage": 8
+            "carbohydrates": "10g"
+        }
     },
     {
         "id": "2",
@@ -69,28 +68,23 @@
             "carbohydrates": "10g"
         }
     },
-
-    {
+     {
         "id": "4",
-        "name": "Carrots",
-        "price": 1.0,
-        "discountedPrice": 0.95,
-        "unit": "Kg",
-        "sku": "VEG002",
-        "image": ["/Assets/Images/Products/Potatto.png"],
-        "discount": 5,
-        "description": "Crunchy and fresh carrots, ideal for salads.",
-        "detailedDescription": "These carrots are fresh, crunchy, and packed with nutrients, making them great for salads, soups, and snacking.",
-        "rating": 4,
-        "tags": ["Crunchy", "Fresh", "Nutritious"],
+        "name": "Potato",
+        "price": 2,
+        "discountedPrice": 1.8,
+        "sku": "VEG001",
+        "image": ["Assets/Images/Products/Potatto.png"],
+        "description": "Fresh potatoes perfect for daily meals.",
+        "detailedDescription": "These potatoes are sourced from local farms and are rich in nutrients, making them ideal for a variety of dishes.",
+        "rating": 5,
+        "tags": ["Fresh", "Healthy", "Organic"],
         "categoryName": "Vegetables",
-        "sold_quantity": 30,
-        "total_quantity": 50,
         "nutrition": {
-            "calories": 41,
-            "protein": "0.9g",
-            "fats": "0.2g",
-            "carbohydrates": "10g"
+            "calories": 77,
+            "protein": "2g",
+            "fats": "0.1g",
+            "carbohydrates": "17g"
         }
     }
 ]
