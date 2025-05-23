@@ -1,13 +1,25 @@
+let bestSellSwiper;
 document.addEventListener("DOMContentLoaded", async () => {
     const categoryButtons = document.querySelectorAll('input[type="radio"].best');
     const labels = document.querySelectorAll('label[role="button"].best');
 
 
-
+    bestSellSwiper = new Swiper('.best-sell-swiper', 
+        {
+            loop: true,
+            slidesPerView: 5,
+            spaceBetween: 30,
+            
+            navigation: {
+                nextEl: '.BestSellProductarrowbtnRight',
+                prevEl: '.BestSellProductarrowbtnLeft',
+            },
+        }
+    );
    
 
     categoryButtons.forEach(button => {
-        button.addEventListener('change', () => {
+        button.addEventListener('click', () => {
             const selectedLabel = document.querySelector(`label[for="${button.id}"]`);
             fetchAndRenderProducts(button.value);
             updateActiveButton(selectedLabel, labels);
@@ -47,14 +59,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 // Render products
 function renderBestProducts(products, category) {
-    const desktopContainer = document.querySelector('.BestsellProductsSection');
-    const mobileContainer = document.querySelector('.BestsellProductsSectionMV');
+    const desktopContainer = document.querySelector('.best-sell-swiper-wrapper');
+    //const mobileContainer = document.querySelector('.BestsellProductsSectionMV');
     // Load wishlist from localStorage
     let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
 
     desktopContainer.innerHTML = '';
-    mobileContainer.innerHTML = '';
+   // mobileContainer.innerHTML = '';
 
     products.forEach(product => {
         const productId = product.id;
@@ -120,6 +132,7 @@ function renderBestProducts(products, category) {
 
         // Inside the renderProducts function:
         const desktopCard = document.createElement('div');
+        desktopCard.classList.add('swiper-slide');
 
         desktopCard.innerHTML = `
             <div class="BestSellCard position-relative ProductsCard_Animations ProductCardImage">
@@ -185,8 +198,10 @@ function renderBestProducts(products, category) {
         `;
 
         desktopContainer.appendChild(desktopCard);
-        const mobileCard = desktopCard.cloneNode(true);
-        mobileContainer.appendChild(mobileCard);
+
+        bestSellSwiper.update();
+        //const mobileCard = desktopCard.cloneNode(true);
+        //mobileContainer.appendChild(mobileCard);
     });
 }
 
