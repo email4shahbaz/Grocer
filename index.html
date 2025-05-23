@@ -107,6 +107,11 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="Assets/Images/Banner/Favicon.png" type="image/x-icon">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </head>
 
@@ -349,100 +354,53 @@
                     <h1 class="explorecategory_heading h5">Explore Categories</h1>
                 </div>
             </div>
-
             <div class="row mb-5 bg-white position-relative">
-                <div id="category" class="webviewCarouselOne">
-                    <div class="homecategoryProductsMain flex-nowrap mb-sm-2 mb-md-2 mb-lg-0"></div>
+                <div id="category" class="categories-swiper swiper">
+                    <div class="swiper-wrapper categories-swiper-wrapper">
+                    </div>
 
-                    <button class="CategoryBtnLeft">
-                        <h2 class="m-0"><i class="bi bi-arrow-left-short"></i></h2>
-                    </button>
-                    <button class="CategoryBtnRight">
-                        <h2 class="m-0"><i class="bi bi-arrow-right-short"></i></h2>
-                    </button>
+                   
+                </div>
+                 <div class="CategoryBtnLeft">
+                    <h2 class="m-0"><i class="bi bi-arrow-left-short"></i></h2>
+                </div>
+                <div class="CategoryBtnRight">
+                    <h2 class="m-0"><i class="bi bi-arrow-right-short"></i></h2>
                 </div>
 
-                <div class="MobileViewCategoriesCardOne">
-                    <div class="MobileViewCategoriesCardOneMainDiv"></div>
-                </div>
             </div>
         </div>
 
+         <div class="container mt-4">
+            <div class="d-flex justify-content-between align-items-center head">
+                <div class="">
+                    <h1 class="explorecategory_heading h5">Featured Products</h1>
+                </div>
+            </div>
+            <div class="row mb-5 bg-white position-relative">
+                <div class="swiper featured-swiper ">
+                    <div class="swiper-wrapper featured-swiper-wrapper">
+                    </div>
 
+                   
+                </div>
+                 <div class="FeaturedBtnLeft">
+                    <h2 class="m-0"><i class="bi bi-arrow-left-short"></i></h2>
+                </div>
+                <div class="FeaturedBtnRight">
+                    <h2 class="m-0"><i class="bi bi-arrow-right-short"></i></h2>
+                </div>
+
+            </div>
+        </div>
+
+       
 
 
 
 
         <div class="container mt-5">
-            <!-- {{-- *****************Explore Categories****************** --}}-->
-
-            <!-- {{-- ******************Featured Products***************** --}} -->
-            <div class="container p-0 mt-5" id="NewProductsSection">
-                <div class="d-flex justify-content-between align-items-center head">
-                    <div class="">
-                        <h1 class="explorecategory_heading h5">Featured Products</h1>
-                    </div>
-                    <ul class="d-flex justify-content-between flex-nowrap category_listing2 gap-3">
-                        <li class="All ">
-                            <div class="d-flex">
-                                <input type="radio" value="" class="d-none featured"
-                                    wire:model.live="featuredProductCategory" />
-                                <label for="" role="button" class="categoryLabel featured Active_category">All</label>
-                            </div>
-                        </li>
-                        <!-- @foreach ($categoryLists as $item) -->
-                        <li class="Fruits">
-                            <div class="d-flex">
-                                <input type="radio" wire:model.live="featuredProductCategory" value=""
-                                    class="d-none featured" />
-                                <label for="" role="button" class="categoryLabel featured">Fruits</label>
-                            </div>
-                        </li>
-                        <li class="">
-                            <div class="d-flex">
-                                <input type="radio" wire:model.live="featuredProductCategory" value=""
-                                    class="d-none featured" />
-                                <label for="" role="button" class="categoryLabel featured">Vegitables</label>
-                            </div>
-                        </li>
-                        <li class="">
-                            <div class="d-flex">
-                                <input type="radio" wire:model.live="featuredProductCategory" value=""
-                                    class="d-none featured" />
-                                <label for="" role="button" class="categoryLabel featured">Beverages</label>
-                            </div>
-                        </li>
-
-                        <li class="">
-                            <div class="d-flex">
-                                <input type="radio" wire:model.live="featuredProductCategory" value=""
-                                    class="d-none featured" />
-                                <label for="" role="button" class="categoryLabel featured">Dairy</label>
-                            </div>
-                        </li>
-                        <!-- @endforeach -->
-                    </ul>
-                </div> 
-                <div class="row position-relative ">
-                    <div id="products" class="WebViewCarouselTwo">
-                        <div class="flex-nowrap homefeaturedProductsMain">
-
-                        </div>
-                        <button class="FeaturedBtnLeft">
-                            <h2 class="m-0"><i class="bi bi-arrow-left-short"></i></h2>
-                        </button>
-                        <button class="FeaturedBtnRight">
-                            <h2 class="m-0"><i class="bi bi-arrow-right-short"></i></h2>
-                        </button>
-                    </div>
-                    <!-- {{-- ************Mobile View Featured Card************ --}} -->
-                    <div class="MobileViewFeaturedCard">
-                        <div class="MobileViewFeaturedCardMain">
-                        </div>
-                    </div>
-                    <!-- {{-- ************Mobile View Featured Card************ --}} -->
-                </div>
-            </div>
+           
             <!-- {{-- ********************Featured Products****************** --}}
 
             {{-- **********************Offers*************************** --}} -->
@@ -755,49 +713,8 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(".CategoryBtnLeft").click(function () {
-                $(".webviewCarouselOne").animate({
-                    scrollLeft: "-=250px" // Adjust the value as needed for the scroll distance
-                }, "slow");
-            });
-
-            $(".CategoryBtnRight").click(function () {
-                $(".webviewCarouselOne").animate({
-                    scrollLeft: "+=250px" // Adjust the value as needed for the scroll distance
-                }, "slow");
-            });
-
-            $(".FeaturedBtnLeft").click(function () {
-                $(".WebViewCarouselTwo").animate({
-                    scrollLeft: "-=250px" // Adjust the value as needed for the scroll distance
-                }, "slow");
-            });
-
-            $(".FeaturedBtnRight").click(function () {
-                $(".WebViewCarouselTwo").animate({
-                    scrollLeft: "+=250px" // Adjust the value as needed for the scroll distance
-                }, "slow");
-            });
-        });
-    </script>
-   
-     <script>
-        $(document).ready(function () {
-            $(".BestSellProductarrowbtnLeft").click(function () {
-                $(".BestsellProductsSection").animate({
-                    scrollLeft: "-=250px" // Adjust the value as needed for the scroll distance
-                }, "slow");
-            });
-
-            $(".BestSellProductarrowbtnRight").click(function () {
-                $(".BestsellProductsSection").animate({
-                    scrollLeft: "+=250px" // Adjust the value as needed for the scroll distance
-                }, "slow");
-            });
-        });
-    </script>
+    
+     
 
 
     <!-- Bootstrap JS -->

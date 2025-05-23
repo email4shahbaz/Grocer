@@ -149,7 +149,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 500;
 }
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none; /* Hide Swiper's default arrow icons */
+  content: none;
+}
+
 
 .CategoryBtnRight,
 .FeaturedBtnRight {
@@ -167,6 +175,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 500;
 }
 
 .CategoryBtnLeft:hover {

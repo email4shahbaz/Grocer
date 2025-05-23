@@ -44,10 +44,23 @@ function executeScripts(container) {
 document.addEventListener("DOMContentLoaded", async () => {
     includeHTML("header.html", "header");
     includeHTML("footer.html", "footer");
+    
+     const swiper = new Swiper('.categories-swiper', 
+        {
+            loop: true,
+            slidesPerView: 7,
+            spaceBetween: 30,
+            
+            navigation: {
+                nextEl: '.CategoryBtnRight',
+                prevEl: '.CategoryBtnLeft',
+            },
+        }
+    );
 
+    
 
-    const categoryContainer = document.querySelector('.homecategoryProductsMain');
-    const mobileViewContainer = document.querySelector('.MobileViewCategoriesCardOneMainDiv');
+    const categoryContainer = document.querySelector('.categories-swiper-wrapper');
 
     try {
         // Fetch the category data
@@ -77,10 +90,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             // Create a category card
             const categoryCard = document.createElement('div');
-            categoryCard.classList.add('mt-sm-5', 'mt-md-5', 'mt-lg-0');
+            categoryCard.classList.add('swiper-slide');
+            //categoryCard.classList.add('swiper-slide mt-sm-5', 'mt-md-5', 'mt-lg-0');
 
             categoryCard.innerHTML = `
-                <a href="category-product.html?category-id=${categoryId}&category-file=${category.file}" class="category-card ">
+                <a href="category-product.html?category-id=${categoryId}&category-file=${category.file}">
                     <div class="CategoryCard ${bgClass} text-center border-0">
                         <div class="ImageDiv">
                             <img src="${categoryImage}"
@@ -98,16 +112,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             // Append the category card to both containers
             categoryContainer.appendChild(categoryCard);
-            mobileViewContainer.appendChild(categoryCard.cloneNode(true));
+            //swiper.appendSlide(categoryCard);
         });
+
 
     } catch (error) {
         console.error("Error fetching categories:", error);
         categoryContainer.innerHTML = "<p>Failed to load categories. Please try again later.</p>";
-        mobileViewContainer.innerHTML = "<p>Failed to load categories. Please try again later.</p>";
     }
-
-
 
 });
 
