@@ -290,7 +290,7 @@ function renderProductDetails(product) {
                         data-name="${product.name}"
                         data-price="${product.discountedPrice}"
                         data-image="${product.image}"
-                        data-quantity="${product.counting}">
+                        data-quantity="1">
                             Add To Cart
                         <img src="/Assets/Images/SmallIcons/Bagwhite.webp" alt="Cart Icon">
                     </button>
@@ -336,12 +336,14 @@ document.addEventListener("DOMContentLoaded", function () {
     incrementButton.addEventListener("click", () => {
         currentQuantity += 1;
         quantityDisplay.innerText = currentQuantity;
+        document.getElementById("add-to-cart-btn").dataset.quantity = currentQuantity;
     });
 
     decrementButton.addEventListener("click", () => {
         if (currentQuantity > 1) {
             currentQuantity -= 1;
             quantityDisplay.innerText = currentQuantity;
+            document.getElementById("add-to-cart-btn").dataset.quantity = currentQuantity;
         }
     });
 });
