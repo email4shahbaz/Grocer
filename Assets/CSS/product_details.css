@@ -321,6 +321,7 @@ li {
 
 .counter {
     border-radius: 30px;
+    align-items: center;
     border: 1px solid #E6E6E6;
     padding: 3px;
     display: flex;
@@ -675,6 +676,7 @@ li {
 
     .counter {
         border-radius: 30px;
+        align-items: center;
         border: 1px solid rgb(211, 204, 204);
         padding: 2px;
         /* width: 30%; */
@@ -768,6 +770,7 @@ li {
 
     .counter {
         border-radius: 30px;
+        align-items: center;
         border: 1px solid rgb(211, 204, 204);
         padding: 2px;
         /* width: 27%; */
