@@ -1,8 +1,25 @@
 document.addEventListener("DOMContentLoaded", async () => {
-    const featuredContainer = document.querySelector('.homefeaturedProductsMain');
-    const mobileFeaturedContainer = document.querySelector('.MobileViewFeaturedCardMain');
+    const featuredContainer = document.querySelector('.featured-swiper-wrapper');
+//    const mobileFeaturedContainer = document.querySelector('.MobileViewFeaturedCardMain');
     const categoryInputs = document.querySelectorAll('input[type="radio"].featured');
     const categoryLabels = document.querySelectorAll('.categoryLabel.featured');
+
+
+     const featuredSwiper = new Swiper('.featured-swiper', 
+        {
+            loop: true,
+            slidesPerView: 5,
+            spaceBetween: 30,
+            
+            navigation: {
+                nextEl: '.FeaturedBtnRight',
+                prevEl: '.FeaturedBtnLeft',
+            },
+        }
+    );
+
+    
+
 
     // Ensure labels and inputs are linked and clickable
     categoryInputs.forEach((input, index) => {
@@ -70,8 +87,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             const products = await response.json();
 
             // Clear containers
-            featuredContainer.innerHTML = '';
-            mobileFeaturedContainer.innerHTML = '';
+            //featuredContainer.innerHTML = '';
+            //mobileFeaturedContainer.innerHTML = '';
 
             // Determine the maximum calories value for scaling the progress bar
             const maxCalories = Math.max(...products.map(product => product.nutrition.calories));
@@ -81,6 +98,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 // Calculate discount percentage if discountedPrice exists
                 const discountPercentage = product.discountedPrice ? Math.round(((product.price - product.discountedPrice) / product.price) * 100) : null;
                 const featuredCard = document.createElement('div');
+                featuredCard.classList.add('swiper-slide');
 
                 featuredCard.innerHTML = `
                     <div class="position-relative ProductsCard_Animations ProductCardImage FeaturedProductsCard">
@@ -146,8 +164,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                 featuredContainer.appendChild(featuredCard);
 
                 // Clone for mobile view and append
-                const mobileFeaturedCard = featuredCard.cloneNode(true);
-                mobileFeaturedContainer.appendChild(mobileFeaturedCard);
+               // const mobileFeaturedCard = featuredCard.cloneNode(true);
+               // mobileFeaturedContainer.appendChild(mobileFeaturedCard);
             });
 
             // Render wishlist states
@@ -155,9 +173,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         } catch (error) {
             console.error("Error fetching products:", error);
             featuredContainer.innerHTML = "<p>Failed to load products. Please try again later.</p>";
-            mobileFeaturedContainer.innerHTML = "<p>Failed to load products. Please try again later.</p>";
+            //mobileFeaturedContainer.innerHTML = "<p>Failed to load products. Please try again later.</p>";
         }
     }
+
+    fetchAndRenderFeaturedProducts('featured_product.json', 'All');
 
     // Event listener for the eye button click (Quick View)
     // Event listener for the eye button click (Quick View)
@@ -325,7 +345,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (defaultInput) {
         defaultInput.checked = true;
         categoryLabels[0].classList.add('Active_category');
-        await fetchAndRenderFeaturedProducts('featured_product.json', 'All');
+        //await fetchAndRenderFeaturedProducts('featured_product.json', 'All');
     }
 
     // Initialize wishlist counter on page load
