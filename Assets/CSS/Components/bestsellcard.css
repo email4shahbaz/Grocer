@@ -1,10 +1,17 @@
 .BestSellCard {
-    padding: 10px;
+    padding: 18px;
     border-radius: 3px;
     border: 1px solid rgba(173, 173, 173, 0.25);
     max-width: 250px;
     min-width: 246px;
+    margin-top: .2rem !important;
 }
+
+.BestSellCard:hover{
+    padding: 20px;
+    border-top: 1px solid rgba(173, 173, 173, 0.25) !important;
+}
+
 
 
 /* Show icons on hover */

@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 featuredCard.classList.add('swiper-slide');
 
                 featuredCard.innerHTML = `
-                    <div class="position-relative ProductsCard_Animations ProductCardImage FeaturedProductsCard">
+                    <div class="position-relative ProductsCard_Animations ProductCardImage FeaturedProductsCard mt-2">
                         <div class="productcardImage text-center">
                             <!-- Discount Badge -->
                             ${discountPercentage ? `<span class="discount-badge">Save ${discountPercentage}%</span>` : ''}
