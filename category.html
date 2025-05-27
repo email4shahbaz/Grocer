@@ -360,30 +360,31 @@
 
                         </div>
                         <div class="row">
-                            <div class="col-sm-6 col-md-6 col-lg-6">
-                                <h1 class="search_result">Explore these items</h1>
-                            </div>
-                            <div class="col-lg-2"></div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 sortingBoxMain">
-                                <div class="CategoryGrid_icons">
-                                    <button class="OneByOneGrid">
-                                        <img src="/Assets/Images/SmallIcons/OneByOneGrid.webp" alt="">
-                                    </button>
-                                    <button class="TwoByTwoGrid">
-                                        <img src="/Assets/Images/SmallIcons/TwoByTwoGrid.webp" alt="">
-                                    </button>
-                                    <button class="ThreeByThreeGrid">
-                                        <img src="/Assets/Images/SmallIcons/ThreeByThreeGrid.webp" alt="">
-                                    </button>
-                                </div>
-                                <div class="dropdown item_sorts_by">
-                                    <select wire:model.live="sortBy" class="customSortingSelect">
-                                        <option value="latest">Latest</option>
-                                        <option value="price">Price</option>
-                                    </select>
-                                </div>
-                            </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <h1 class="search_result">Explore these items</h1>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-6 col-md-6 col-lg-4 sortingBoxMain">
+                        <div class="CategoryGrid_icons">
+                            <button class="OneByOneGrid">
+                                <img class="grid-icon" src="/Assets/Images/SmallIcons/OneByOneGrid.webp" alt="One By One Grid">
+                            </button>
+                            <button class="TwoByTwoGrid">
+                                <img class="grid-icon" src="/Assets/Images/SmallIcons/TwoByTwoGrid.webp" alt="Two By Two Grid">
+                            </button>
+                            <button class="ThreeByThreeGrid">
+                                <img class="grid-icon" src="/Assets/Images/SmallIcons/ThreeByThreeGrid.webp" alt="Three By Three Grid">
+                            </button>
                         </div>
+
+                        <div class="dropdown item_sorts_by">
+                            <select wire:model.live="sortBy" class="customSortingSelect">
+                                <option value="latest">Latest</option>
+                                <option value="price">Price</option>
+                            </select>
+                        </div>
+                        </div>
+                    </div>
                         <!-- {{-- ***************************************** --}}
                     {{-- ***************************************** --}}
                     {{-- ***************************************** --}} -->
@@ -472,27 +473,6 @@
             "color": "white"
         });
     });
-
-    // Grid: 1 column layout
-    $(".OneByOneGrid").off('click').on('click', function () {
-        $(".GridsTargetContent")
-            .removeClass(gridClasses)
-            .addClass("col-12");
-    });
-
-    // Grid: 2 column layout
-    $(".TwoByTwoGrid").off('click').on('click', function () {
-        $(".GridsTargetContent")
-            .removeClass(gridClasses)
-            .addClass("col-lg-6 col-md-6");
-    });
-
-    // Grid: 3 column layout
-    $(".ThreeByThreeGrid").off('click').on('click', function () {
-        $(".GridsTargetContent")
-            .removeClass(gridClasses)
-            .addClass("col-lg-4 col-md-6");
-    });
 }
 
 // Call this after the DOM is ready
@@ -517,6 +497,7 @@ $(document).ready(function () {
         <script src="/Assets/JS/category_product.js"></script>
         <script src="/Assets/JS/featured.js"></script>
         <script src="/Assets/JS/bestsell.js"></script>
+        <script src="/Assets/JS/grid.js"></script>
         <script src="/Assets/JS/homelasttopsell.js"></script>
         <script src="/Assets/JS/homelasttrending.js"></script>
         <script src="/Assets/JS/homelastpopular.js"></script>
@@ -527,7 +508,6 @@ $(document).ready(function () {
         <script src="/Assets/JS/wishlist.js"></script>
         <script src="/Assets/JS/mob_search.js"></script>
         <script src="/Assets/JS/Animations.js"></script>
-
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="/Assets/JS/index.js" defer></script>
         <script src="/Assets/JS/promo-popup.js" defer></script>
