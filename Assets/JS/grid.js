@@ -1,6 +1,6 @@
 $(document).ready(function () {
     const gridClasses = "col-12 col-lg-4 col-lg-6 col-md-6 col-sm-6";
-
+    alert();
     // Icon paths
     const icons = {
         oneDefault: "/Assets/Images/SmallIcons/OneByOneGrid.png",
