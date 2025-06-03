@@ -1,11 +1,7 @@
-document.addEventListener("DOMContentLoaded", async () => {
-    const featuredContainer = document.querySelector('.featured-swiper-wrapper');
-//    const mobileFeaturedContainer = document.querySelector('.MobileViewFeaturedCardMain');
-    const categoryInputs = document.querySelectorAll('input[type="radio"].featured');
-    const categoryLabels = document.querySelectorAll('.categoryLabel.featured');
 
 
-     const featuredSwiper = new Swiper('.featured-swiper', 
+const initializeFeaturedSwiper = () => {
+    const featuredSwiper = new Swiper('.featured-swiper', 
         {
             loop: true,
             slidesPerView: 5,
@@ -17,6 +13,16 @@ document.addEventListener("DOMContentLoaded", async () => {
             },
         }
     );
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+    const featuredContainer = document.querySelector('.featured-swiper-wrapper');
+//    const mobileFeaturedContainer = document.querySelector('.MobileViewFeaturedCardMain');
+    const categoryInputs = document.querySelectorAll('input[type="radio"].featured');
+    const categoryLabels = document.querySelectorAll('.categoryLabel.featured');
+
+
+     
 
     
 
@@ -167,6 +173,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                // const mobileFeaturedCard = featuredCard.cloneNode(true);
                // mobileFeaturedContainer.appendChild(mobileFeaturedCard);
             });
+
+            // Initialize Swiper after rendering products
+            initializeFeaturedSwiper();
+            //featuredSwiper.update();
 
             // Render wishlist states
             renderWishlistIcons();

@@ -41,11 +41,8 @@ function executeScripts(container) {
     });
 }
 
-document.addEventListener("DOMContentLoaded", async () => {
-    includeHTML("header.html", "header");
-    includeHTML("footer.html", "footer");
-    
-     const swiper = new Swiper('.categories-swiper', 
+function initializeCategorySwiper(){
+    const categorySwiper = new Swiper('.categories-swiper', 
         {
             loop: true,
             slidesPerView: 7,
@@ -57,8 +54,11 @@ document.addEventListener("DOMContentLoaded", async () => {
             },
         }
     );
+}
 
-    
+document.addEventListener("DOMContentLoaded", async () => {
+    includeHTML("header.html", "header");
+    includeHTML("footer.html", "footer");
 
     const categoryContainer = document.querySelector('.categories-swiper-wrapper');
 
@@ -114,6 +114,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             categoryContainer.appendChild(categoryCard);
             //swiper.appendSlide(categoryCard);
         });
+
+        initializeCategorySwiper(); // Initialize Swiper after adding all categories
 
 
     } catch (error) {
