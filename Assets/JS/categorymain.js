@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
-    const productGrid = document.querySelector('.row.mt-3');
+    //const productGrid = document.querySelector('.row.mt-3');
+    const productGrid = document.querySelector('.GridsTargetContent');
     const paginationContainer = document.querySelector('.pagination-container');
     let currentPage = 1;
     const productsPerPage = 6;
@@ -35,7 +36,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const productRating = 4; // Default rating for now
 
                 const productCard = document.createElement('div');
-                productCard.classList.add('col-sm-6', 'col-md-6', 'col-lg-4', 'mb-4', 'GridsTargetContent');
+                productCard.classList.add('product-card-col');
                 productCard.innerHTML = `
                     <div class="ProductsCardSearchANDCategory ProductsCard_Animations ProductCardImage mt-3">
                         <div class="heart">
@@ -81,6 +82,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             });
 
             console.log(`Products rendered: ${currentProducts.length}`);
+            document.body.dispatchEvent(new CustomEvent("card-grid-generated"));
         }
 
         // Initialize pagination
