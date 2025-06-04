@@ -1,9 +1,4 @@
-let bestSellSwiper;
-document.addEventListener("DOMContentLoaded", async () => {
-    const categoryButtons = document.querySelectorAll('input[type="radio"].best');
-    const labels = document.querySelectorAll('label[role="button"].best');
-
-
+function initializeBestSellSwiper(){
     bestSellSwiper = new Swiper('.best-sell-swiper', 
         {
             loop: true,
@@ -16,6 +11,15 @@ document.addEventListener("DOMContentLoaded", async () => {
             },
         }
     );
+}
+
+
+document.addEventListener("DOMContentLoaded", async () => {
+    const categoryButtons = document.querySelectorAll('input[type="radio"].best');
+    const labels = document.querySelectorAll('label[role="button"].best');
+
+
+ 
    
 
     categoryButtons.forEach(button => {
@@ -198,11 +202,8 @@ function renderBestProducts(products, category) {
         `;
 
         desktopContainer.appendChild(desktopCard);
-
-        bestSellSwiper.update();
-        //const mobileCard = desktopCard.cloneNode(true);
-        //mobileContainer.appendChild(mobileCard);
     });
+    initializeBestSellSwiper();
 }
 
 function updateActiveButton(activeButton, labels) {

@@ -1,8 +1,5 @@
-$(document).ready(function () {
-    const gridClasses = "col-12 col-lg-4 col-lg-6 col-md-6 col-sm-6";
-    alert();
-    // Icon paths
-    const icons = {
+// Add after your DOMContentLoaded block
+ const icons = {
         oneDefault: "/Assets/Images/SmallIcons/OneByOneGrid.png",
         oneActive: "/Assets/Images/SmallIcons/OneByOneGridActive.png",
         twoDefault: "/Assets/Images/SmallIcons/TwoByTwoGrid.png",
@@ -11,28 +8,53 @@ $(document).ready(function () {
         threeActive: "/Assets/Images/SmallIcons/ThreeByThreeGridActive.png"
     };
 
-    function resetIcons() {
-        $(".OneByOneGrid img").attr("src", icons.oneDefault);
-        $(".TwoByTwoGrid img").attr("src", icons.twoDefault);
-        $(".ThreeByThreeGrid img").attr("src", icons.threeDefault);
-    }
+function setGridColumns(cols, icon) {
+     resetIcons();
 
+    // Remove all grid classes from product cards
+    document.querySelectorAll('.GridsTargetContent .product-card-col').forEach(card => {
+
+        if(card.classList.contains('col-12')) {card.classList.remove('col-12'); }
+        if(card.classList.contains('col-6')) {card.classList.remove('col-6'); }
+        if(card.classList.contains('col-4')) {card.classList.remove('col-4'); }
+
+        if (cols === 1) {
+             $(icon).find("img").attr("src", icons.oneActive);
+            card.classList.add('col-12');
+        } else if (cols === 2) {
+            $(icon).find("img").attr("src", icons.twoActive);
+            card.classList.add('col-6');
+        } else { // 3 columns
+            $(icon).find("img").attr("src", icons.threeActive);
+            card.classList.add('col-4');
+        }
+    });
+}
+
+function resetIcons() {
+    $(".OneByOneGrid img").attr("src", icons.oneDefault);
+    $(".TwoByTwoGrid img").attr("src", icons.twoDefault);
+    $(".ThreeByThreeGrid img").attr("src", icons.threeDefault);
+}
+
+//Attach event listeners to grid icons
+document.addEventListener('DOMContentLoaded', () => {
     $(".OneByOneGrid").click(function () {
-        $(".GridsTargetContent").removeClass(gridClasses).addClass("col-12");
-        resetIcons();
-        $(this).find("img").attr("src", icons.oneActive);
+        setGridColumns(1, this);
     });
 
     $(".TwoByTwoGrid").click(function () {
-        $(".GridsTargetContent").removeClass(gridClasses).addClass("col-lg-6 col-md-6");
-        resetIcons();
-        $(this).find("img").attr("src", icons.twoActive);
+        setGridColumns(2, this);
     });
 
     $(".ThreeByThreeGrid").click(function () {
-        $(".GridsTargetContent").removeClass(gridClasses).addClass("col-lg-4 col-md-6");
-        resetIcons();
-        $(this).find("img").attr("src", icons.threeActive);
+        setGridColumns(3, this);
     });
+});
+
+//We have dispatched this custom event to notify when the grid is generated
+// This is useful for any other scripts that need to know when the grid is ready
+document.body.addEventListener("card-grid-generated", () => {
+    $(".ThreeByThreeGrid").trigger("click"); // Set default to 3 columns
 });
 
